@@ -11,7 +11,7 @@
                 "@id": "https://www.vcqru.com/blog.aspx"
             },
             "headline": "Our Blogs",
-            "description": "Welcome to VCQRU, your trusted partner for protecting your brand from the risks of counterfeiting and duplication.",
+            "description": "Test11 GIT Welcome to VCQRU, your trusted partner for protecting your brand from the risks of counterfeiting and duplication.",
             "image": "https://www.vcqru.com/NewContent/front-assets/img/blogs.png",
             "publisher": {
                 "@type": "Organization",

@@ -1,0 +1,414 @@
+ 
+ 05/11/2024 15:32:33 : 2024/11/05 03:32:33 PM 
+ 
+ 05/11/2024 15:32:33 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:32:33 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:32:33 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:32:33 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:32:35 : 2024/11/05 03:32:35 PM 
+ 
+ 05/11/2024 15:32:35 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:32:35 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:32:35 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:32:35 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:32:37 : 2024/11/05 03:32:37 PM 
+ 
+ 05/11/2024 15:32:37 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:32:37 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:32:37 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:32:37 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:32:39 : 2024/11/05 03:32:39 PM 
+ 
+ 05/11/2024 15:32:39 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:32:39 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:32:39 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:32:39 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:32:42 : 2024/11/05 03:32:42 PM 
+ 
+ 05/11/2024 15:32:42 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:32:42 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:32:42 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:32:42 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:32:44 : 2024/11/05 03:32:44 PM 
+ 
+ 05/11/2024 15:32:44 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:32:44 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:32:44 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:32:44 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:32:46 : 2024/11/05 03:32:46 PM 
+ 
+ 05/11/2024 15:32:46 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:32:46 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:32:46 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:32:46 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:32:48 : 2024/11/05 03:32:48 PM 
+ 
+ 05/11/2024 15:32:48 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:32:48 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:32:48 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:32:48 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:32:50 : 2024/11/05 03:32:50 PM 
+ 
+ 05/11/2024 15:32:50 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:32:50 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:32:50 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:32:50 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:32:52 : 2024/11/05 03:32:52 PM 
+ 
+ 05/11/2024 15:32:52 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:32:52 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:32:52 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:32:52 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:32:55 : 2024/11/05 03:32:55 PM 
+ 
+ 05/11/2024 15:32:55 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:32:55 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:32:55 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:32:55 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:32:57 : 2024/11/05 03:32:57 PM 
+ 
+ 05/11/2024 15:32:57 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:32:57 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:32:57 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:32:57 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:32:59 : 2024/11/05 03:32:59 PM 
+ 
+ 05/11/2024 15:32:59 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:32:59 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:32:59 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:32:59 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:33:01 : 2024/11/05 03:33:01 PM 
+ 
+ 05/11/2024 15:33:01 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:33:01 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:33:01 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:33:01 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:33:03 : 2024/11/05 03:33:03 PM 
+ 
+ 05/11/2024 15:33:03 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:33:03 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:33:03 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:33:03 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:33:05 : 2024/11/05 03:33:05 PM 
+ 
+ 05/11/2024 15:33:05 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:33:05 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:33:05 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:33:05 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:33:07 : 2024/11/05 03:33:07 PM 
+ 
+ 05/11/2024 15:33:07 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:33:07 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:33:07 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:33:07 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:33:09 : 2024/11/05 03:33:09 PM 
+ 
+ 05/11/2024 15:33:09 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:33:09 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:33:09 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:33:09 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:33:11 : 2024/11/05 03:33:11 PM 
+ 
+ 05/11/2024 15:33:11 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:33:11 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:33:11 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:33:11 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:33:13 : 2024/11/05 03:33:13 PM 
+ 
+ 05/11/2024 15:33:13 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:33:13 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:33:13 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:33:13 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:33:21 : 2024/11/05 03:33:21 PM 
+ 
+ 05/11/2024 15:33:21 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:33:21 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:33:21 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:33:21 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:33:23 : 2024/11/05 03:33:23 PM 
+ 
+ 05/11/2024 15:33:23 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:33:23 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:33:23 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:33:23 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
+ 
+ 05/11/2024 15:33:25 : 2024/11/05 03:33:25 PM 
+ 
+ 05/11/2024 15:33:25 : http://localhost:60102/ 
+ 
+ 05/11/2024 15:33:25 : Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name. 
+ 
+ 05/11/2024 15:33:25 : 
+   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)
+   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 05/11/2024 15:33:25 : 
+ UserHostAddress: ::1,REMOTE_ADDR: ::1, HTTP_X_FORWARDED_FOR:  
