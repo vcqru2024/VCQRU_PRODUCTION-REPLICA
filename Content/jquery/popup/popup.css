@@ -1,0 +1,295 @@
+.backgroundPopup{
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	background:#000000;
+	border:1px solid #cecece;
+	z-index:9998;
+}
+.popupContent{
+	position:relative;
+	_position:absolute; /* hack for internet explorer 6*/
+	height:auto;
+	width:99%;
+	/*background:#dfdfdf;
+	background:#ffffff;*/
+	/*border:4px solid #CCCCCC;
+	padding:9px 6px 6px 6px;*/
+	z-index:9999;
+	font-size:8pt;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	color:#333;
+	font-weight:bold;
+	margin:0 auto;
+}
+/*.popupContent_loin_v
+{
+	width:30em;
+}*/
+.pop_log_bg{
+	/*background:#ffffff;*/
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	}
+/*.popupContent h1{
+	color:#036;
+	font-size:13pt;
+	padding-bottom:5px;
+}*/
+.popupClose{
+	font-size:1.4em;
+	/*right:0.5em;
+	top:0.2em;*/
+	width:25px;
+	height:25px;
+	position:absolute;
+	color:#000000;
+	font-weight:700;
+	display:block;
+	right:-10px;
+	top:-10px;
+	border:none;
+	background:url(close1.png) no-repeat;
+}
+/*.popupClose:hover{
+	font-size:1.4em;	
+	position:absolute;
+	color:#000000;
+	font-weight:700;
+	display:block;
+	right:-10px;
+	top:-10px;
+	background:url(close1.png) no-repeat;
+}*/
+.popupClose:hover{ cursor: pointer; }
+/*.button{ text-align:center; text-decoration:none; }
+.button:hover{text-decoration:underline; }*/
+.textbox_pop, .textarea_pop, .text_box_small, .drp
+{
+	width:85%;
+	border:1px solid #eeeeee;
+	color:#333;
+	padding:3px;
+	font-size:8pt;
+	outline:none;
+}
+.textbox_pop:hover, .textarea_pop:hover, .text_box_small:hover, .drp:hover
+{
+	border:1px solid #8fc5e3;
+}
+.text_box_small
+{
+	width:55%;
+}
+.drp
+{
+	width:89%;
+}
+.textarea_pop
+{
+	height:30px;
+}
+.astrics
+{
+	color:#f00;
+}
+/*.field_pop
+{
+	width:94%;
+	border:1px solid #e4e4e4;
+	margin:0 auto;
+	padding:6px 8px 6px 8px;
+	margin-bottom:5px;
+	-moz-border-radius:6px;
+	-webkit-border-radius:5px;
+	margin-top:0px;
+	line-height:18px !important;
+	
+}
+
+.field_pop legend
+{
+	margin-left:3px;
+	color:#007ABD ;
+	font-size:11pt;
+	font-weight:bold;/*
+	font-style:italic;*/
+	
+/*}*/
+.apply_sub
+{
+	border:none;
+	cursor:pointer;
+	text-decoration:none;
+}
+
+/* Not Needed*/
+/*.content { padding-top: 2em; }
+.content p { font-size: 1.6em; margin-top: 1em; col }
+*/
+/*---------Service Popup--------*/
+.popupContent_service
+{
+	width:32em;
+}
+.service_field
+{
+	width:98%;
+	border:1px solid #e5e5e5;
+	margin:0 auto;
+	background:#f0f0f0;
+	/*padding:6px 8px 6px 8px;*/
+	margin-bottom:3px;
+	margin-top:6px;
+	line-height:18px !important;
+	
+}
+.regis_popup
+{
+	width:98%;
+	border:1px solid #c0dcf5;
+	margin:0 auto;
+	background:#F9F9F9;
+	/*background:#ffffff;*/
+	padding:6px 2px 6px 2px;
+	margin-bottom:3px;
+	/*margin-top:6px;*/
+	line-height:18px !important;
+	border-top:none;
+	
+}
+.regis_popup span a
+{
+	text-decoration:none;
+	color:Blue;
+}
+.regis_popup span a:hover
+{
+	text-decoration:underline;
+}
+.service_head_p
+{
+	width:98%;
+	background:#e3e3e3;
+	font-size:10pt;
+	/*color:#676767;*/
+	color:#444444;
+	border:1px solid #c0dcf5;
+	border-bottom:1px solid #cccccc;
+	padding:4px 2px 4px 2px;
+	/* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f5f5f5), to(#e3e3e3));
+  
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #f5f5f5, #e3e3e3);
+  
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #f5f5f5, #e3e3e3);
+  
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #f5f5f5, #e3e3e3);
+  
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #f5f5f5, #e3e3e3);
+  -webkit-border-radius: 9px 9px 0px 0px;
+	-moz-border-radius: 9px 9px 0px 0px;
+	border-radius: 9px 9px 0px 0px;
+	margin:0 auto;
+}
+.service_head_p p
+{
+	font-family:Arial, Helvetica, sans-serif;
+	padding:0 5px 0 10px;
+	font-weight:normal;
+	display:inline-block;
+	width:95%;
+}
+.service_head_p p span em
+{
+	font-size:8pt;
+	font-style:normal;  
+}
+.button_all
+{
+	min-width:60px;
+	height:auto;
+	text-align:center;
+	color:#ffffff;
+	cursor:pointer;
+	border:1px solid #004795;
+	background:#095bb4;
+	padding:5px 12px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:8pt;
+	font-weight:bold;
+	/* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#52a1d4), to(#095bb4));
+  
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #52a1d4, #095bb4);
+  
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #52a1d4, #095bb4);
+  
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #52a1d4, #095bb4);
+  
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #52a1d4, #095bb4);
+  -webkit-border-radius: 6px 6px 6px 6px;
+	-moz-border-radius: 6px 6px 6px 6px;
+	border-radius: 6px 6px 6px 6px;
+	-moz-box-shadow: inset 0 0 1px 1px #59a7d7;
+-webkit-box-shadow: inset 0 0 1px 1px#59a7d7;
+box-shadow: inset 0 0 1px 1px #59a7d7;
+}
+
+.button_all_Sec
+{
+ min-width:60px;
+ height:auto;
+ text-align:center;
+ color:#ffffff;
+ cursor:pointer;
+ border:1px solid #004795;
+ background:#5ba9d8;
+ padding:5px 12px;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:8pt;
+ font-weight:bold;
+ /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5ba9d8), to(#5ba9d8));
+  
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #5ba9d8, #5ba9d8);
+  
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #5ba9d8, #5ba9d8);
+  
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #5ba9d8, #5ba9d8);
+  
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #5ba9d8, #5ba9d8);
+  -webkit-border-radius: 6px 6px 6px 6px;
+ -moz-border-radius: 6px 6px 6px 6px;
+ border-radius: 6px 6px 6px 6px;
+ -moz-box-shadow: inset 0 0 1px 1px #59a7d7;
+-webkit-box-shadow: inset 0 0 1px 1px#59a7d7;
+box-shadow: inset 0 0 1px 1px #59a7d7;
+}
+/*---------Service Popup Close--------*/
+/*---------Visit Popup--------*/
+.popupContent_visit
+{
+	width:90%;
+	
+}
+/*---------Visit Popup Close--------*/

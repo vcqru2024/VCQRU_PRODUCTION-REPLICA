@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	padding:0;/*
+	border:none;*/
+	margin:0;
+}
+/*@font-face {
+    /*font-family:HelveticaBold;
+	font-family:oswald;*/
+   /* src: url(http://www.example.org/mycustomfont.ttf) format("truetype");
+	src:url(../font/Oswald-Light.ttf) format("truetype");*/
+	/*background:url(../font/Oswald-Light.ttf);
+	
+}*/
+/*html
+{
+	height:100%;
+}*/
+a img{border:none;}
+body
+{
+	
+	font-size:16px;
+	font-style:normal;
+	padding:0;
+	margin:0 auto;
+	/*background-color:#f00 !important;
+	font-family:"Myriad Pro";*/
+	font-family:oswald;
+	/*font-family:Arial, Helvetica, sans-serif;*/
+}
+#container
+{
+	width:100%;
+	/*font:Arial, Helvetica, sans-serif 9pt;*/
+	font: 9pt oswald;
+	padding-top:3px;
+	display:inline-block;
+}
+
+.left
+{
+	float:left;
+}
+.right
+{
+	float:right;
+}
+#content
+{
+	width:100%;
+	font:9pt oswald ;
+	margin:0 auto;
+}
+#content div.content
+{
+	width:98%;
+	font:9pt oswald ;
+	margin:0 auto;
+}
+#content div.content h6,#content div.content h6 span
+{
+	font-family: oswald;
+	font-size: 21px;
+	color: #333;
+	margin-bottom: 10px;
+	text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.6);
+	background: url(../images/head_border.png) no-repeat bottom left;
+	padding-bottom: 5px;
+}
+#content div.content h6 span
+{
+	font-size:8pt;
+	background:none;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#content div.content span
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #009cae;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	font-weight:bold;
+}
+#content div.content p
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: justify;
+	margin-bottom: 7px;
+	color: #333;
+	text-shadow: none !important;
+}
+ul.list_text, ul.list_text_acc
+{
+	margin-top:5px;
+	list-style:none;
+}
+ul.list_text li, ul.list_text_acc li
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:20px;
+	text-align:justify;
+	margin-bottom:5px;
+	color:#333;
+	padding:0px !important;
+	padding-left:15px !important;
+	text-shadow:none !important;
+	background:url(../images/arrow_black.png) no-repeat left 7px;
+	border:none !important;
+}
+ol.list {
+	margin-top:5px;
+	list-style:circle !important;
+}
+ol.list li {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+line-height: 20px;
+text-align: justify;
+/* margin-bottom: 5px; */
+color: #333;
+padding: 0px !important;
+padding-left: 13px !important;
+text-shadow: none !important;
+background: url(../images/list_bullets.png) no-repeat left 7px;
+background-size: 8px 8px !important;
+border: none !important;
+margin: 5px 0 7px 10px !important;
+}
+
+div.inner_text div.contact_table div.element{padding:7px 1px 1px 1px; font-size:12pt;}
+div.inner_text div.contact_table div.border-right{border-right:solid 1px #f1f1f1;}
+div.inner_text div.contact_table div.border-bottom{border-bottom:solid 1px #f1f1f1;}
+div.contact_cont
+{
+	padding-left:35px;
+}
+div.contact_cont div.contact_text{font-family:ptsans; font-size:14px; text-align:justify;}
+div.contact_cont.office_add{background:url(../images/place.png) no-repeat left top; background-size:24px;}
+div.contact_cont.phone_no{background:url(../images/contact1.png) no-repeat left top; background-size:24px;}
+div.contact_cont.email_id{background:url(../images/email_id.png) no-repeat left top; background-size:24px;}
+div.contact_cont.online_support{background:url(../images/support.png) no-repeat left top; background-size:24px;}
+.map{border:1px solid #cccccc; padding:1px;}

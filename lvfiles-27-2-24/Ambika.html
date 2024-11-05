@@ -1,0 +1,957 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ambicacables</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="vendor/modernizr/modernizr.min.js"></script>
+    <script src="http://qa.accomplishtrades.com/Content/js/jquery-1.11.1.min.js"></script>
+    <script src="http://qa.accomplishtrades.com/Content/js/toastr.min.js"></script>
+    <script src="../Content/js/jquery-1.11.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
+            integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA="
+            crossorigin="anonymous"></script>
+    <style>
+        #lblmob {
+            color: #ffffff;
+        }
+
+        #lbl {
+            color: #ffffff;
+        }
+
+        body {
+            font-family: Poppins;
+        }
+
+        section {
+            position: relative;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            width: 100%;
+            display: table;
+            height: 100vh;
+            background-image: url(../assets/images/Ambika/background-image.png);
+        }
+
+
+        form input {
+            background: #dce0ec !important;
+            border-radius: 3px !important;
+        }
+
+        .HEADING {
+            border-radius: 10px 10px 100px 100px;
+            background: #e40d21;
+            padding: 18px;
+            text-align: center;
+            color: #fff;
+        }
+
+
+        form {
+            overflow: hidden;
+        }
+
+        .form-select {
+            background-color: #dce0ec;
+        }
+
+        select {
+            border: none;
+            background: transparent;
+            /*background-color: blue;*/
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 180px;
+            padding-top: 0px;
+            background-size: 20px;
+            color: #ffffff;
+            font-size: 30px;
+        }
+
+            select option {
+                color: #424146;
+                background: #ffffff;
+            }
+
+        .form-maine {
+            padding: 25px;
+        }
+
+        form {
+            background: #414141;
+            border-radius: 10px;
+            box-shadow: 0px 0px 2px #2f2e2e;
+            margin-top: -135px;
+        }
+
+        .btn {
+            width: 100%;
+            background-color: #fd8802;
+            outline: none;
+            border: none;
+        }
+
+        .logo img {
+            width: 20%;
+        }
+
+        .form-maine input::placeholder {
+            color: #0a0a0a !important;
+        }
+
+
+
+        .icone-maine img {
+            width: 20%;
+            /* margin-right: 10px; */
+            margin: 10px;
+        }
+
+        footer {
+            background: #e30016;
+            padding: 10px;
+        }
+
+            footer a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+        .terms-button {
+            text-decoration: none;
+            color: #fff;
+        }
+
+
+        @media screen and (width: 280px) {
+            .icone-maine label {
+                font-size: 9px !important;
+            }
+        }
+
+
+        @media screen and (max-width: 767px) {
+            form {
+                margin-top: 40px;
+            }
+
+            .revese {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+
+            .icone-maine label {
+                font-size: 12px;
+            }
+
+            .icone-maine label {
+                font-size: 12px;
+            }
+
+            .logo img {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 920px) {
+            form {
+                margin-top: 40px;
+            }
+
+            .logo img {
+                width: 40%;
+            }
+        }
+    </style>
+
+    <script type="text/javascript">
+        var lat = "";
+        var long = "";
+        var getPosition = function (options) {
+            return new Promise(function (resolve, reject) {
+                navigator.geolocation.getCurrentPosition(resolve, reject, options);
+            });
+        }
+
+        $('#otherfield').hide();
+        function Getdata() {
+            debugger;
+            var mobileno = document.querySelector("#Mobile").value;
+            var d = mobileno.slice(0, 1);
+            var c = parseInt(d);
+            if ($('#Mobile').val().replace(/\s+/g, '').length == 0) {
+                $('#lblmob').text('Please Enter Mobile Number !');
+                $('#Mobile').focus();
+                $('#btnsubmit').attr('disabled', false);
+                return false;
+            }
+            if (mobileno.match(/[^$,.\d]/)) {
+                $('#lblmob').text("Mobile Number Shoud Not be Alphabet!");
+                $('#Mobile').val('');
+                return false;
+            }
+            
+            if (mobileno.includes('$')){
+                $('#lblmob').text("Special characters are not allowed.*");
+                $('#Mobile').val('');
+                return false;
+            }
+
+            if (mobileno.length == 10) {
+                $.ajax({
+                    type: "Post",
+                    url: '../Info/MasterHandler.ashx?method=ConsumerDetailsByMobileNo&MobileNo= ' + $("#Mobile").val(),
+                    success: function (data) {
+                        if (c <= 5) {
+                            $('#lblmob').text('Please Enter 10 Digit Mobile No');
+                            $('#Mobile').val('');
+                            return false;
+                        }
+                        else {
+
+                            var Name = data.split('~')[0];
+                            var pin = data.split('~')[6];
+                            var city = data.split('~')[2];
+                            var state = data.split('~')[3];
+                            var shopname = data.split('~')[4];
+                            var Address = data.split('~')[9];
+                            var ddlconsumertype = data.split('~')[5];
+                            var UpiId = data.split('~')[10];
+
+                            if (Name != "") {
+                                $("#Name").val(Name);
+                                document.getElementById('Name').readOnly = true;
+                                $('#chkterm').attr('checked', true);
+                            }
+                            else {
+
+                                $('#ChkCode').hide();
+                                $('#otherfield').show();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#chkterm').attr('checked', false);
+                            }
+                            if (pin != "") {
+                                $("#Pin").val(pin);
+                                document.getElementById('Pin').readOnly = true;
+                                $('#chkterm').attr('checked', true);
+                            }
+                            else {
+                                $('#ChkCode').hide();
+                                $('#otherfield').show();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#chkterm').attr('checked', false);
+                            }
+
+                            if (city != "") {
+                                $("#City").val(city);
+                                //document.getElementById('city').readOnly = true;
+                                $('#chkterm').attr('checked', true);
+                            }
+                            else {
+                                $('#ChkCode').hide();
+                                $('#otherfield').show();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#chkterm').attr('checked', false);
+                            }
+
+                            if (state != "") {
+                                $("#State").val(state);
+                                //document.getElementById('State').readOnly = true;
+                                $('#chkterm').attr('checked', true);
+                            }
+                            else {
+                                $('#ChkCode').hide();
+                                $('#otherfield').show();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#chkterm').attr('checked', false);
+                            }
+                            if (Address != "") {
+                                $("#Address").val(Address);
+                                //document.getElementById('Address').readOnly = true;
+                                $('#chkterm').attr('checked', true);
+                            }
+                            else {
+                                $('#ChkCode').hide();
+                                $('#otherfield').show();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#chkterm').attr('checked', false);
+                            }
+                            if (ddlconsumertype != "") {
+                                $("#ddlconsumertype").val(ddlconsumertype);
+                                document.getElementById('ddlconsumertype').readOnly = true;
+                                $('#chkterm').attr('checked', true);
+                            }
+                            else {
+                                $('#ChkCode').hide();
+                                $('#otherfield').show();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#chkterm').attr('checked', false);
+                            }
+                            if (UpiId != "") {
+                                $("#UpiId").val(UpiId);
+                                document.getElementById('UpiId').readOnly = true;
+                                $('#chkterm').attr('checked', true);
+                            }
+                            else {
+                                $('#ChkCode').hide();
+                                $('#otherfield').show();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#chkterm').attr('checked', false);
+                            }
+                        }
+                    }
+                });
+            }
+            else {
+                $("#Name").val('');
+                document.getElementById('Name').readOnly = false;
+                $("#Pin").val('');
+                document.getElementById('Pin').readOnly = false;
+                $("#City").val('');
+                $("#State").val('');
+                $("#Address").val('');
+                $("#ddlconsumertype").val('');
+                document.getElementById('ddlconsumertype').readOnly = false;
+                $("#UpiId").val('');
+                document.getElementById('UpiId').readOnly = false;
+            }
+        }
+
+        function getaddress() {
+            let pin = document.getElementById("Pin").value;
+            if (pin.length == 6) {
+                $.getJSON("https://api.postalpincode.in/pincode/" + pin, function (data) {
+                    
+                    createHTML(data);
+                })
+                function createHTML(data) {
+                    //alert(data);
+                    if (data[0].Status == "Success") {
+                        var city = "";
+                        var state = "";
+                        var pin = "";
+                        var city = data[0].PostOffice[0]['District'];
+                        var state = data[0].PostOffice[0]['State'];
+                        var Pin = data[0].PostOffice[0]['PinCode'];
+                        $('#lbl').text('');
+                        $("#City").val(city);
+                        $("#State").val(state);
+                        // $("#Pin").val(Pin);
+                        if ($("#City").val() != "") {
+                            document.getElementById('City').readOnly = true;
+                        }
+                        if ($("#State").val() != "") {
+                            document.getElementById('State').readOnly = true;
+                        }
+                    }
+                    else {
+                        $('#lbl').text("Please Enter Valid Pin.");
+                        return false;
+                    }
+                }
+            }
+            else {
+                $("#City").val('');
+                $("#State").val('');
+                $('#lbl').text("Please Enter Valid Pin Code.");
+               
+                return false;
+            }
+        }
+
+
+
+        function valmobile() {
+            var phoneNumber = $('#Mobile').val();
+
+            if (phoneNumber != undefined) {
+                if (phoneNumber.length < 10) {
+                    $('#lbl').text('Please Enter 10 Digit Mobile Number');
+                    return false;
+                }
+                if (phoneNumber.match(/[^$,.\d]/)) {
+                    $('#lbl').text("Please enter numeric value for mobile No.");
+                    return false;
+                }
+
+                var validate = false;
+                var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+
+                if (filter.test(phoneNumber)) {
+                    if (phoneNumber.length == 10) {
+                        var c = phoneNumber.slice(0, 1);
+                        if (c <= 5) {
+                            $('#lbl').text('Not a valid mobile number');
+                            $('#Mobile').val('');
+                            return false;
+                        }
+
+                    }
+                    else {
+                        if (phoneNumber.length > 10) {
+                            $('#lbl').text('Please put 10  digit mobile number');
+                            return false;
+                        }
+
+                    }
+                }
+                else {
+                    if (phoneNumber.length == 9) {
+                        $('#lbl').text('Please Enter  10 Digit mobile number');
+                        $('#Mobile').val('');
+                        return false;
+                    }
+                }
+                if (phoneNumber.match(/[^$,.\d]/)) {
+                    $('#lbl').text("Please enter numeric value for mobile No.");
+                    return false;
+                }
+            }
+        }
+        $(document).ready(function () {
+
+
+            //history.pushState(null, null, 'ambika.html');
+            //window.addEventListener('popstate', function (event) {
+            //    history.pushState(null, null, 'ambika.html');
+            //});
+
+
+            firstfunction();
+            $('#ChkCode').show();
+            $('#Chkfields').hide();
+            $('#mobilefield').hide();
+            //firstfunction();
+            var id = $('#HdnID').val();
+            //alert();
+            if (id == "1") {
+
+                $('#ChkCode').show();
+                $('#Chkfields').hide();
+                $('#mobilefield').hide();
+            }
+
+            else if (id == "Ambika") {
+                $('#ChkCode').hide();
+                $('#otherfield').hide();
+                $('#mobilefield').show();
+                $('#Chkfields').show();
+                var code = $('#HdnCode1').val() + '-' + $('#HdnCode2').val();
+                $("#codeone").val(code);
+            }
+            $("#codeone").mask("99999-99999999");
+
+            $("#btnnxt").on('click', function () {
+                debugger;
+               
+                var codeone = $('#codeone').val();
+
+                if (codeone == "" || codeone == undefined) {
+                    $('#lblmob').text('Please Enter 13 Digit Valid Code');
+                    return false;
+                }
+
+                if (codeone != undefined) {
+
+                    if ($('#codeone').val().length < 14) {
+                        $('#lblmob').text('Please Enter 13 Digit Valid Code');
+                        return false;
+                    }
+                }
+                $('#ChkCode').hide();
+                var rquestpage_Dcrypt = $("#codeone").val();
+                var cookieMobile = getCookie("Mobile");
+                $('#Mobile').val(cookieMobile);
+
+
+                $.ajax({
+                    type: "POST",
+                    url: '../Info/MasterHandler.ashx?method=chkgenuenity&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1],
+                    success: function (data) {
+                        // alert(data);
+                        $.ajax({
+                            type: "POST",
+                            url: '../Info/MasterHandler.ashx?method=chkwarranty&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1] + '&lat=' + lat + '&long=' + long,
+                            success: function (data) {
+                                if (data.split('&')[0] === "1" && data.split('&')[1] === "Auto Max India") {
+                                }
+                                else {
+                                    $('#CompName').val(data.split('&')[1]);
+                                    if ($('#CompName').val() == "Ambica Cable" || $('#CompName').val() == ""  || $('#CompName').val() == undefined) {
+                                        $('#Chkfields').show();
+                                        $('#otherfield').hide();
+                                        $('#mobilefield').show();
+                                        Getdata();
+                                    }
+                                    else {
+                                        alert('Invalid Code');
+                                        $('#ChkCode').show();
+                                        $('#Chkfields').hide();
+                                        $('#otherfield').hide();
+                                        $('#mobilefield').hide();
+                                        return false;
+                                    }
+                                }
+                            }
+                        });
+                    }
+                });
+                //}
+            });
+
+
+
+
+            $('#btnsubmit').on('click', function (e) {
+                e.preventDefault();
+                // $('#btnsubmit').attr('disabled', true);
+                var Mobile = $('#Mobile').val()
+                var pincode = $('#Pin').val()
+                var d = Mobile.slice(0, 1);
+                var c = parseInt(d);
+                if (Mobile.match(/[^$,.\d]/)) {
+                    $('#lbl').text(" Mobile number should not contain any special characters.");
+                    $('#Mobile').val('');
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                if (Mobile.length == 10 && c <= 5) {
+                    $('#lbl').text("Please enter a valid mobile number.");
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                if (Mobile.length != 10) {
+                    $('#lbl').text("Please enter your mobile number.");
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                if ($('#Name').val().replace(/\s+/g, '').length == 0) {
+                    $('#lbl').text('Please Enter Your Name!');
+                    $('#Name').focus();
+                    $('#Name').val('');
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                var name = $('#Name').val();
+                if (name != undefined) {
+
+                    if ($('#Name').val().length < 1) {
+                        $('#lbl').text('Please Enter Valid Name');
+                        return false;
+                    }
+                    var matches = $('#Name').val().match(/\d+/g);
+                    if (matches != null) {
+                        $('#lbl').text('Name should be alphabet only!');
+                        return false;
+                    }
+                    var matches1 = $('#Name').val();
+                    if (matches1.includes('~') || matches1.includes('!') || matches1.includes('@') || matches1.includes('#') || matches1.includes(')') || matches1.includes('_') || matches1.includes('-') || matches1.includes('>') || matches1.includes(',') || matches1.includes('?')
+                        || matches1.includes('$') || matches1.includes('%') || matches1.includes('^') || matches1.includes('&') || matches1.includes('*') || matches1.includes('(') || matches1.includes('+') || matches1.includes('<') || matches1.includes('.')
+                        || matches1.includes('=') || matches1.includes('{') || matches1.includes('}') || matches1.includes('[') || matches1.includes(']') || matches1.includes(':') || matches1.includes(';') || matches1.includes('"') || matches1.includes('/')
+                    ) {
+                        $('#lbl').text('Special characters are not allowed.*');
+                        $('#Name').focus();
+                        $('#btnsubmit').attr('disabled', false);
+                        $('#Name').val('');
+                        return false;
+                    }
+                }
+
+
+
+                var pin = $('#Pin').val();
+                if (pin != undefined) {
+
+                    if ($('#Pin').val().length < 6) {
+                        $('#lbl').text('Please Enter Valid Pin Code');
+                        return false;
+                    }
+                    if (pin.match(/[^$,.\d]/)) {
+                        $('#lbl').text("Please Enter Numeric Value For Pin Code.");
+                        return false;
+                    }
+
+                    var matches1 = $('#Pin').val().match(/[^a-zA-Z0-9 ]/);
+                    if (matches1 != null) {
+                        $('#lbl').text('Pin Code Should Not Contain Any Special Character!');
+                        return false;
+                    }
+                }
+
+                if ($('#City').val().replace(/\s+/g, '').length == 0) {
+                    $('#lbl').text('Please Enter Your City Name!');
+                    $('#City').focus();
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                var city = $('#City').val();
+                if (city != undefined) {
+
+                    if ($('#City').val().length < 1) {
+                        $('#lbl').text('Please Enter valid City');
+                        return false;
+                    }
+                    var matches = $('#City').val().match(/\d+/g);
+                    if (matches != null) {
+                        $('#lbl').text('City Name Should be alphabet only!');
+                        return false;
+                    }
+                    var matchescity = $('#City').val();
+                    if (matchescity.includes('~') || matchescity.includes('!') || matchescity.includes('@') || matchescity.includes('#') || matchescity.includes(')') || matchescity.includes('_') || matchescity.includes('-') || matchescity.includes('>') || matchescity.includes(',') || matchescity.includes('?')
+                        || matchescity.includes('$') || matchescity.includes('%') || matchescity.includes('^') || matchescity.includes('&') || matchescity.includes('*') || matchescity.includes('(') || matchescity.includes('+') || matchescity.includes('<') || matchescity.includes('.')
+                        || matchescity.includes('=') || matchescity.includes('{') || matchescity.includes('}') || matchescity.includes('[') || matchescity.includes(']') || matchescity.includes(':') || matchescity.includes(';') || matchescity.includes('"') || matchescity.includes('/')
+                    ) {
+                        $('#lbl').text('Special characters are not allowed.*');
+                        $('#City').focus();
+                        $('#btnsubmit').attr('disabled', false);
+                        $('#City').val('');
+                        return false;
+                    }
+                }
+
+
+                if ($('#State').val().replace(/\s+/g, '').length == 0) {
+                    $('#lbl').text('Please Enter Your State Name!');
+                    $('#State').focus();
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                var State = $('#State').val();
+                if (State != undefined) {
+
+                    if ($('#State').val().length < 1) {
+                        $('#lbl').text('Please Enter Valid State Name');
+                        return false;
+                    }
+                    var matches = $('#State').val().match(/\d+/g);
+                    if (matches != null) {
+                        $('#lbl').text('State Name Should be alphabet only!');
+                        return false;
+                    }
+                    var matchesstate = $('#City').val();
+                    if (matchesstate.includes('~') || matchesstate.includes('!') || matchesstate.includes('@') || matchesstate.includes('#') || matchesstate.includes(')') || matchesstate.includes('_') || matchesstate.includes('-') || matchesstate.includes('>') || matchesstate.includes(',') || matchesstate.includes('?')
+                        || matchesstate.includes('$') || matchesstate.includes('%') || matchesstate.includes('^') || matchesstate.includes('&') || matchesstate.includes('*') || matchesstate.includes('(') || matchesstate.includes('+') || matchesstate.includes('<') || matchesstate.includes('.')
+                        || matchesstate.includes('=') || matchesstate.includes('{') || matchesstate.includes('}') || matchesstate.includes('[') || matchesstate.includes(']') || matchesstate.includes(':') || matchesstate.includes(';') || matchesstate.includes('"') || matchesstate.includes('/')
+                    ) {
+                        $('#lbl').text('Special characters are not allowed.*');
+                        $('#City').focus();
+                        $('#btnsubmit').attr('disabled', false);
+                        $('#City').val('');
+                        return false;
+                    }
+                }
+
+
+
+                var Address = $('#Address').val();
+                if (Address != undefined) {
+
+                    if ($('#Address').val().length < 1) {
+                        $('#lbl').text('Please Enter Valid Address');
+                        return false;
+                    }
+
+                }
+                if ($('#Address').val().replace(/\s+/g, '').length == 0) {
+                    $('#lbl').text('Please Enter Your Address !');
+                    $('#Address').focus();
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                if ($('#ddlconsumertype').val() == "") {
+                    $('#lbl').text("Please Select Your Role");
+                    return false;
+                }
+                if (!$('#chkterm').prop('checked')) {
+                    $('#lbl').text('Please Click On Checkbox!');
+                    $('#chkterm').focus();
+                     $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+
+
+
+
+                if (code != "") {
+
+                    var cookieNMobile = "Mobile"
+                    var cookieVMobile = $("#Mobile").val();
+                    setCookie(cookieNMobile, cookieVMobile, 1);
+
+                    $.ajax({
+                        type: "POST",
+                        contentType: false,
+                        processData: false,
+
+                        url: '../Info/MasterHandler.ashx?method=verifyotp&mobile=' + $('#Mobile').val() + "&vCode=" + $('#codeone').val() + '&name=' + $('#Name').val() + '&city=' + $('#City').val() + '&state=' + $('#State').val() + '&PinCode=' + $('#Pin').val() + '&Other_Role=' + $("#ddlconsumertype").val() + '&Address=' + $("#Address").val() + '&UPI=' + $("#UpiId").val() + '&comp=Ambica Cable&Comp_ID=Comp-1548',
+                        success: function (data) {
+                            if (data.split('~')[0] !== "failure") {
+                                //alert(data);
+                                //alert('fail');
+                                window.scrollTo(0, 0);
+                                if (data.indexOf("not valid") !== -1) {
+                                    data = data.split(".")[0];
+                                }
+                                $('#HEADING').hide();
+                                $('#Chkfields').hide();
+                                $('#mobilefield').hide();
+                                // $('#fields').hide();
+                                $("form").removeClass("animate__bounceInLeft");
+                                $('#ShowMessage').show();
+                                // $('#chkLine').hide();
+                                $('#p3msg').html(data.split('~')[1]);
+                                $('#p3msg:contains("not")').css('color', 'white');
+                            }
+                            else {
+                                //alert(data);
+                                //alert('pass');
+                                $('#msgcoats').hide();
+                                toastr.error('OTP is not valid. Please provide the valid OTP');
+                                $('#btnskyVerify1').attr('disabled', false);
+                            }
+                        }
+                    });
+                }
+                // }
+                else {
+
+                    $('#btnsubmit').attr('disabled', false);
+                }
+            });
+            $('#btnNext').click(function () {
+                window.location.href = 'https://www.ambicacables.com/';
+            });
+        });
+
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+
+        async function firstfunction() {
+
+            if (navigator.geolocation) {
+                await getPosition()
+                    .then((position) => {
+                        $('#lat').val(position.coords.latitude);
+                        $('#long').val(position.coords.longitude);
+                        var latitude = position.coords.latitude;
+                        var longitude = position.coords.longitude;
+                        lat = latitude;
+                        long = longitude;
+                        alert(lat);
+                        alert(long);
+                        
+                        $.ajax({
+                            type: "POST",
+                            async: true,
+                            url: '../Info/MasterHandler.ashx?method=chklocation&lat=' + latitude + '&long=' + longitude,
+                            success: function (data) {
+                                alert(data);
+                                lat = latitude;
+                                long = longitude;
+                            }
+                        });
+                    })
+                    .catch((err) => {
+                        console.error(err.message);
+                    });
+            } else {
+                // x.innerHTML = "Geolocation is not supported by this browser.";
+            } 
+        }
+    </script>
+
+</head>
+<body>
+    <section>
+        <header>
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="logo  mt-5">
+                        <a href="https://www.ambicacables.com/">
+                            <img src="../assets/images/Ambika/RadiliteLogo.png" />
+                        </a>
+                    </div>
+                   
+                </div>
+            </div>
+        </header>
+        <div class="container mt-3">
+            <div class="row revese animate__backInLeft animate__animated">
+                <div class="col-lg-8">
+                    <div class="row icone-maine my-5">
+                        <div class="col-lg-4  col-sm-4 col-6">
+                            <img src="../assets/images/Ambika/arm.png" />
+                            <label><b>Highly Durable</b></label>
+                        </div>
+                        <div class="col-lg-4 col-sm-4 col-6 ">
+                            <img src="../assets/images/Ambika/heat.png" />
+                            <label><b>Heat Resistant</b></label>
+                        </div>
+                        <div class="col-lg-4 col-sm-4 col-6  ">
+                            <img src="../assets/images/Ambika/life.png" />
+                            <label><b>Long Life</b></label>
+                        </div>
+
+                        <div class="col-lg-4 col-sm-4 col-6 ">
+                            <img src="../assets/images/Ambika/energy-saving.png" />
+                            <label><b>Save Electricity</b></label>
+                        </div>
+
+                        <div class="col-lg-4 col-sm-4 col-6 ">
+                            <img src="../assets/images/Ambika/eco.png" />
+                            <label><b>Eco-Friendly</b></label>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12 mb-sm-5">
+                            <img src="../assets/images/Ambika/product-1.png" class="img-fluid" />
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-lg-4 ">
+                    <form class="animate__bounceInLeft animate__animated">
+                        <input type="hidden" id="CompName" />
+                        <div class="">
+                            <div class="HEADING">
+                                <h6>TO CHECK AUTHENTICITY AND AVAIL BENEFITS</h6>
+                            </div>
+                        </div>
+                        <div id="ChkCode">
+                            <div class="form-maine">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="codeone" maxlength="13" minlength="13" placeholder="Enter 13 Digit Code*" aria-describedby="13-digit-number">
+                                </div>
+                                <div>
+                                    <center>
+                                        <button type="button" id="btnnxt" style="background-color: #e30016; border-radius:40px;" class="btn btn-primary">Next</button>
+                                    </center>
+                                </div>
+                                <label id="lblmob" class="clbl"></label>
+                            </div>
+                        </div>
+                        <div id="Chkfields" class="form-maine">
+                            <div id="mobilefield" style="display: none">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="Mobile" onmouseover="Getdata()"  onkeyup="Getdata()" maxlength="10" placeholder="Mobile Number*" />
+                                </div>
+                            </div>
+                            <div id="otherfield">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" maxlength="50" id="Name" placeholder="Name*">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" maxlength="6" onmouseover="getaddress()" onkeyup="getaddress()" id="Pin" placeholder="Pin Code*">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" maxlength="50" id="City" readonly placeholder="City*">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="State" maxlength="50" readonly placeholder="State*">
+                                </div>
+
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="Address" maxlength="200" placeholder="Address*">
+                                </div>
+
+                                <div class="mb-3">
+                                    <select id="ddlconsumertype" class="form-select form-control">
+                                        <option value="">Types Of Consumers*</option>
+                                        <option value="Wholesaler">Wholesaler</option>
+                                        <option value="Retailer">Retailer</option>
+                                        <option value="Electrician">Electrician</option>
+                                        <option value="Contractor"> Contractor</option>
+                                        <option value="User/Consumer">User/Consumer</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="UpiId" placeholder="Enter your UPI">
+                                </div>
+                                <div class="mb-3 text-center text-white">
+                                    <input type="checkbox" id="chkterm" name="vehicle1" value="Bike">
+                                    <label for="vehicle1"><a href="#" class="terms-button" data-bs-toggle="modal" data-bs-target="#myModal">Terms &amp; condition*</a></label>
+                                </div>
+                            </div>
+
+                            
+                            <label id="lbl"></label>
+                            <button type="submit" id="btnsubmit" class="btn btn-primary" style="background-color: #e30016; border-radius:40px;">SUBMIT</button>
+                        </div>
+                        <div style="display: none;" id="ShowMessage" class="form-maine">
+                            <div class="form-box">
+                                <p id="p3msg" style="overflow: hidden; color: white; font-size: 17px !important; font-weight: 500;" class="displayNone massage_box"></p>
+                                <br />
+                                <center><a href="javascript:void(0)" class="btn btn-primary" style="background-color: #e30016; border-radius:40px;" id="btnNext">Close</a></center>
+                            </div>
+                        </div>
+                        <h5 class="text-white pt-2 qr-heading" style="font-size:18px; text-align:center;">QR/Code Related Support Available on</h5>
+                        <p class=" text-white text-center number-style">
+                            <img src="../assets/images/Ambika/telephone.png" style="width: 20px; color:#fff; text-decoration:none;">  <a href="tel:7353000903" class="text-white " style="text-decoration:none">7353000903</a> /
+                            <img src="../assets/images/Ambika/whatsapp.png" style="width: 20px; color: #fff; text-decoration: none;">  <a href="https://api.whatsapp.com/send?phone=+919355903119&amp;text&amp;type=phone_number&amp;app_absent=1" class="text-white " style="text-decoration:none" target="blank">9355903119</a>
+                        </p>
+
+
+
+                    </form>
+                    <center>
+                        <p class="text-center mt-2"><b />For sales related query 8383908409</p>
+                    </center>
+                    <!--<h6 class="text-center mt-2"><b />For sales related query 8383908409</h6>-->
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <footer class="mt-3">
+            <a href="https://www.ambicacables.com/"> <h6 class="text-white text-center">www.ambicacables.com</h6></a>
+        </footer>
+    </section>
+
+</body>
+</html>

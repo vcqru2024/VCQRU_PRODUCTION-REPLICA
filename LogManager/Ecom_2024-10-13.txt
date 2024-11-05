@@ -1,0 +1,2155 @@
+ 
+ 13/10/2024 00:01:35 : 2024/10/13 12:01:35 AM 
+ 
+ 13/10/2024 00:01:35 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=00:01:34&Code1=None&Code2=None&callercircle=Tamil Nadu&callerno=+918807441871&network=TTSL(GSM)  
+ 
+ 13/10/2024 00:01:35 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 00:01:35 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 00:01:35 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 00:06:35 : 2024/10/13 12:06:35 AM 
+ 
+ 13/10/2024 00:06:35 : https://www.vcqru.com/event/contact-us.aspx 
+ 
+ 13/10/2024 00:06:35 : The file '/event/contact-us.aspx' does not exist. 
+ 
+ 13/10/2024 00:06:35 : 
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 00:06:35 : 
+ UserHostAddress: 52.167.144.230,REMOTE_ADDR: 52.167.144.230, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 00:18:20 : 2024/10/13 12:18:20 AM 
+ 
+ 13/10/2024 00:18:20 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=00:17:57&Code1=None&Code2=None&callercircle=Punjab&callerno=+918427229987&network=Bharti Air 
+ 
+ 13/10/2024 00:18:20 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 00:18:20 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 00:18:20 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 00:27:49 : 2024/10/13 12:27:49 AM 
+ 
+ 13/10/2024 00:27:49 : https://www.vcqru.com/Info/MasterHandler.ashx?method=sendqueryMarketingCompaging 
+ 
+ 13/10/2024 00:27:49 : Object reference not set to an instance of an object. 
+ 
+ 13/10/2024 00:27:49 : 
+   at MasterHandler.ProcessRequest(HttpContext context) in c:\inetpub\wwwroot\httpdocs\Info\MasterHandler.ashx:line 5104
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 00:27:49 : 
+ UserHostAddress: 52.167.144.140,REMOTE_ADDR: 52.167.144.140, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 00:35:11 : 2024/10/13 12:35:11 AM 
+ 
+ 13/10/2024 00:35:11 : https://www.vcqru.com/Info/MasterHandler.ashx?method=chkwarranty&codeone=&codetwo=undefined&lat=undefined&long=undefined 
+ 
+ 13/10/2024 00:35:11 : Incorrect syntax near the keyword 'AND'. 
+ 
+ 13/10/2024 00:35:11 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at ServiceLogic.FindCheckedCode_2(Object9420 Reg) in c:\inetpub\wwwroot\httpdocs\App_code\ServiceLogic.cs:line 177
+   at MasterHandler.checkWarranty(String C1, String C2, String CompId) in c:\inetpub\wwwroot\httpdocs\Info\MasterHandler.ashx:line 14382
+   at MasterHandler.ProcessRequest(HttpContext context) in c:\inetpub\wwwroot\httpdocs\Info\MasterHandler.ashx:line 3976
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 00:35:11 : 
+ UserHostAddress: 152.58.75.165,REMOTE_ADDR: 152.58.75.165, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 00:58:17 : {"ProductId":127,"Productvalue":240,"Userid":"919034615298","claimdate":"2024-10-13 00:58:15.949864"} 
+ 
+ 13/10/2024 00:58:21 : {"ProductId":127,"Productvalue":240,"Userid":"919034615298","claimdate":"2024-10-13 00:58:19.611492"} 
+ 
+ 13/10/2024 00:58:29 : {"ProductId":127,"Productvalue":240,"Userid":"919034615298","claimdate":"2024-10-13 00:58:28.334625"} 
+ 
+ 13/10/2024 00:58:35 : {"ProductId":127,"Productvalue":240,"Userid":"919034615298","claimdate":"2024-10-13 00:58:33.894217"} 
+ 
+ 13/10/2024 01:06:43 : 2024/10/13 01:06:43 AM 
+ 
+ 13/10/2024 01:06:43 : https://www.vcqru.com/adminLogin.aspx?ReturnUrl=/admin/ 
+ 
+ 13/10/2024 01:06:43 : Object reference not set to an instance of an object. 
+ 
+ 13/10/2024 01:06:43 : 
+   at Admin_Login.btnLogin_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\adminLogin.aspx.cs:line 19
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 01:06:43 : 
+ UserHostAddress: 5.188.62.140,REMOTE_ADDR: 5.188.62.140, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 03:10:55 : 2024/10/13 03:10:55 AM 
+ 
+ 13/10/2024 03:10:55 : https://www.vcqru.com/event/contact-us.aspx 
+ 
+ 13/10/2024 03:10:55 : The file '/event/contact-us.aspx' does not exist. 
+ 
+ 13/10/2024 03:10:55 : 
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 03:10:55 : 
+ UserHostAddress: 54.36.148.27,REMOTE_ADDR: 54.36.148.27, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 04:07:27 : 2024/10/13 04:07:27 AM 
+ 
+ 13/10/2024 04:07:27 : https://www.vcqru.com/Info/Careers.aspx 
+ 
+ 13/10/2024 04:07:27 : The file '/Info/Careers.aspx' does not exist. 
+ 
+ 13/10/2024 04:07:27 : 
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 04:07:27 : 
+ UserHostAddress: 85.215.164.204,REMOTE_ADDR: 85.215.164.204, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 04:08:15 : 2024/10/13 04:08:15 AM 
+ 
+ 13/10/2024 04:08:15 : https://www.vcqru.com/..default.aspx 
+ 
+ 13/10/2024 04:08:15 : The file '/..default.aspx' does not exist. 
+ 
+ 13/10/2024 04:08:15 : 
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 04:08:15 : 
+ UserHostAddress: 35.196.139.158,REMOTE_ADDR: 35.196.139.158, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 04:08:35 : 2024/10/13 04:08:35 AM 
+ 
+ 13/10/2024 04:08:35 : https://www.vcqru.com/blog/brand-loyalty.aspx 
+ 
+ 13/10/2024 04:08:35 : Object reference not set to an instance of an object. 
+ 
+ 13/10/2024 04:08:35 : 
+   at blog_brand_loyalty.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\blog\brand-loyalty.aspx.cs:line 36
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 04:08:35 : 
+ UserHostAddress: 34.139.200.124,REMOTE_ADDR: 34.139.200.124, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 04:10:24 : 2024/10/13 04:10:24 AM 
+ 
+ 13/10/2024 04:10:24 : https://www.vcqru.com/digital-marketing-blog.aspx 
+ 
+ 13/10/2024 04:10:24 : The file '/digital-marketing-blog.aspx' does not exist. 
+ 
+ 13/10/2024 04:10:24 : 
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 04:10:24 : 
+ UserHostAddress: 35.243.199.83,REMOTE_ADDR: 35.243.199.83, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 04:14:21 : 2024/10/13 04:14:21 AM 
+ 
+ 13/10/2024 04:14:21 : https://www.vcqru.com/blog/brand-loyalty.aspx 
+ 
+ 13/10/2024 04:14:21 : Object reference not set to an instance of an object. 
+ 
+ 13/10/2024 04:14:21 : 
+   at blog_brand_loyalty.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\blog\brand-loyalty.aspx.cs:line 36
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 04:14:21 : 
+ UserHostAddress: 34.73.88.190,REMOTE_ADDR: 34.73.88.190, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 04:43:09 : 2024/10/13 04:43:09 AM 
+ 
+ 13/10/2024 04:43:09 : https://www.vcqru.com/jobs/contact-us.aspx 
+ 
+ 13/10/2024 04:43:09 : The file '/jobs/contact-us.aspx' does not exist. 
+ 
+ 13/10/2024 04:43:09 : 
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 04:43:09 : 
+ UserHostAddress: 17.241.75.243,REMOTE_ADDR: 17.241.75.243, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 05:29:53 : 2024/10/13 05:29:53 AM 
+ 
+ 13/10/2024 05:29:53 : https://www.vcqru.com/adminLogin.aspx?ReturnUrl=/admin/ 
+ 
+ 13/10/2024 05:29:53 : Object reference not set to an instance of an object. 
+ 
+ 13/10/2024 05:29:53 : 
+   at Admin_Login.btnLogin_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\adminLogin.aspx.cs:line 19
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 05:29:53 : 
+ UserHostAddress: 5.188.62.76,REMOTE_ADDR: 5.188.62.76, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 05:51:56 : 2024/10/13 05:51:56 AM 
+ 
+ 13/10/2024 05:51:56 : https://www.vcqru.com/jobs/job-details-assistant-manager-sales.aspx?jobType="><script >alert(String.fromCharCode(88,83,83))</script> 
+ 
+ 13/10/2024 05:51:56 : A potentially dangerous Request.QueryString value was detected from the client (jobType=""><script >alert(Strin..."). 
+ 
+ 13/10/2024 05:51:56 : 
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_QueryString()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.jobs_job_details_assistant_manager_sales_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\2d4e3380\ca0afd93\App_Web_lkkr2h12.10.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 05:51:56 : 
+ UserHostAddress: 125.230.246.89,REMOTE_ADDR: 125.230.246.89, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 05:51:57 : 2024/10/13 05:51:57 AM 
+ 
+ 13/10/2024 05:51:57 : https://www.vcqru.com/jobs/job-details-human-resource-executive.aspx?jobType="><script >alert(String.fromCharCode(88,83,83))</script> 
+ 
+ 13/10/2024 05:51:57 : A potentially dangerous Request.QueryString value was detected from the client (jobType=""><script >alert(Strin..."). 
+ 
+ 13/10/2024 05:51:57 : 
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_QueryString()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.jobs_job_details_human_resource_executive_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\2d4e3380\ca0afd93\App_Web_tsa2ft0a.4.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 05:51:57 : 
+ UserHostAddress: 125.230.246.89,REMOTE_ADDR: 125.230.246.89, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 06:02:09 : 2024/10/13 06:02:09 AM 
+ 
+ 13/10/2024 06:02:09 : https://www.vcqru.com/Info/Login.aspx?Page=ServiceSettings.aspx 
+ 
+ 13/10/2024 06:02:09 : The file '/Info/Login.aspx' does not exist. 
+ 
+ 13/10/2024 06:02:09 : 
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 06:02:09 : 
+ UserHostAddress: 52.167.144.204,REMOTE_ADDR: 52.167.144.204, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 06:29:37 : 2024/10/13 06:29:37 AM 
+ 
+ 13/10/2024 06:29:37 : https://www.vcqru.com/jobs/job-details-senior-qa-engineer.aspx?jobType="><script >alert(String.fromCharCode(88,83,83))</script> 
+ 
+ 13/10/2024 06:29:37 : A potentially dangerous Request.QueryString value was detected from the client (jobType=""><script >alert(Strin..."). 
+ 
+ 13/10/2024 06:29:37 : 
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_QueryString()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.jobs_job_details_senior_qa_engineer_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\2d4e3380\ca0afd93\App_Web_tsa2ft0a.2.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 06:29:37 : 
+ UserHostAddress: 125.230.246.89,REMOTE_ADDR: 125.230.246.89, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 06:29:37 : 2024/10/13 06:29:37 AM 
+ 
+ 13/10/2024 06:29:37 : https://www.vcqru.com/jobs/job-details-email-marketing-executive.aspx?jobType="><script >alert(String.fromCharCode(88,83,83))</script> 
+ 
+ 13/10/2024 06:29:37 : A potentially dangerous Request.QueryString value was detected from the client (jobType=""><script >alert(Strin..."). 
+ 
+ 13/10/2024 06:29:37 : 
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_QueryString()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.jobs_job_details_email_marketing_executive_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\2d4e3380\ca0afd93\App_Web_lkkr2h12.8.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 06:29:37 : 
+ UserHostAddress: 125.230.246.89,REMOTE_ADDR: 125.230.246.89, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 06:59:26 : https://www.vcqru.com/CodeCheck.aspx?codeone=58354-86858160 
+ 
+ 13/10/2024 07:00:11 : https://www.vcqru.com/CodeCheck.aspx?codeone=58354-86858160 
+ 
+ 13/10/2024 07:16:18 : 3003077827631 
+ 
+ 13/10/2024 07:16:19 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"30030","code2":"77827631","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:16:30 : 2580531456213 
+ 
+ 13/10/2024 07:16:30 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"25805","code2":"31456213","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:16:41 : 6561441818613 
+ 
+ 13/10/2024 07:16:42 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"65614","code2":"41818613","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:16:50 : 6781836110665 
+ 
+ 13/10/2024 07:16:51 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"67818","code2":"36110665","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:16:57 : 5383886003617 
+ 
+ 13/10/2024 07:16:57 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"53838","code2":"86003617","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:17:06 : 6518655180113 
+ 
+ 13/10/2024 07:17:07 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"65186","code2":"55180113","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:17:20 : 2207321462507 
+ 
+ 13/10/2024 07:17:21 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"22073","code2":"21462507","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:17:36 : 6623617140751 
+ 
+ 13/10/2024 07:17:37 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"66236","code2":"17140751","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:17:43 : 4262127178344 
+ 
+ 13/10/2024 07:17:43 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"42621","code2":"27178344","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:17:49 : 7864845053183 
+ 
+ 13/10/2024 07:17:50 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"78648","code2":"45053183","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:17:55 : 5352244516463 
+ 
+ 13/10/2024 07:17:56 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"53522","code2":"44516463","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:18:00 : 2220373158070 
+ 
+ 13/10/2024 07:18:01 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"22203","code2":"73158070","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:18:06 : 7707421512877 
+ 
+ 13/10/2024 07:18:07 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"77074","code2":"21512877","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:18:14 : 7486738775557 
+ 
+ 13/10/2024 07:18:14 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"74867","code2":"38775557","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:18:21 : 7255357421838 
+ 
+ 13/10/2024 07:18:21 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"72553","code2":"57421838","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:18:27 : 5781387502085 
+ 
+ 13/10/2024 07:18:28 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"57813","code2":"87502085","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:18:34 : 1466087133733 
+ 
+ 13/10/2024 07:18:35 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"14660","code2":"87133733","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:18:42 : 2608723112251 
+ 
+ 13/10/2024 07:18:42 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"26087","code2":"23112251","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:18:57 : 2076674141817 
+ 
+ 13/10/2024 07:18:57 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"20766","code2":"74141817","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:19:03 : 7854266244661 
+ 
+ 13/10/2024 07:19:04 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"78542","code2":"66244661","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:19:14 : 8466641378271 
+ 
+ 13/10/2024 07:19:14 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"84666","code2":"41378271","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:19:20 : 5043253342422 
+ 
+ 13/10/2024 07:19:20 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"50432","code2":"53342422","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:19:24 : 2385562222036 
+ 
+ 13/10/2024 07:19:25 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"23855","code2":"62222036","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:20:08 : 4541767837622 
+ 
+ 13/10/2024 07:20:08 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"45417","code2":"67837622","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:20:14 : 2580531456213 
+ 
+ 13/10/2024 07:20:15 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"25805","code2":"31456213","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:20:22 : 6561441818613 
+ 
+ 13/10/2024 07:20:22 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"65614","code2":"41818613","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:20:27 : 2133143687854 
+ 
+ 13/10/2024 07:20:28 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"21331","code2":"43687854","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:20:33 : 5383886003617 
+ 
+ 13/10/2024 07:20:33 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"53838","code2":"86003617","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:20:38 : 6781836110665 
+ 
+ 13/10/2024 07:20:39 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"67818","code2":"36110665","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:20:49 : 6518655180113 
+ 
+ 13/10/2024 07:20:49 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"65186","code2":"55180113","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:20:58 : 2207321462507 
+ 
+ 13/10/2024 07:20:58 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"22073","code2":"21462507","fields":"","latitude":null,"longitude":null,"mobile":"919771386853","status":"Valid"} 
+ 
+ 13/10/2024 07:32:25 : 2024/10/13 07:32:25 AM 
+ 
+ 13/10/2024 07:32:25 : https://www.vcqru.com/Default.aspx 
+ 
+ 13/10/2024 07:32:25 : A potentially dangerous Request.Form value was detected from the client (message="... как 
+ 
+<a href=https://t.me..."). 
+ 
+ 13/10/2024 07:32:25 : 
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\2d4e3380\ca0afd93\App_Web_default.aspx.cdcab7d2.tn2_0kre.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 07:32:25 : 
+ UserHostAddress: 109.194.248.203,REMOTE_ADDR: 109.194.248.203, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 07:35:49 : 2024/10/13 07:35:49 AM 
+ 
+ 13/10/2024 07:35:49 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=07:34:37&Code1=None&Code2=None&callercircle=Uttar Pradesh West&callerno=+919639712991&network=Idea Cellu 
+ 
+ 13/10/2024 07:35:49 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 07:35:49 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 07:35:49 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 07:38:11 : 2024/10/13 07:38:11 AM 
+ 
+ 13/10/2024 07:38:11 : https://www.vcqru.com/..default.aspx 
+ 
+ 13/10/2024 07:38:11 : The file '/..default.aspx' does not exist. 
+ 
+ 13/10/2024 07:38:11 : 
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 07:38:11 : 
+ UserHostAddress: 66.249.79.233,REMOTE_ADDR: 66.249.79.233, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 07:48:31 : 2024/10/13 07:48:31 AM 
+ 
+ 13/10/2024 07:48:31 : https://www.vcqru.com/jobs/job-details-content-writer.aspx?jobType="><script >alert(String.fromCharCode(88,83,83))</script> 
+ 
+ 13/10/2024 07:48:31 : A potentially dangerous Request.QueryString value was detected from the client (jobType=""><script >alert(Strin..."). 
+ 
+ 13/10/2024 07:48:31 : 
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_QueryString()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.jobs_job_details_content_writer_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\2d4e3380\ca0afd93\App_Web_lkkr2h12.4.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 07:48:31 : 
+ UserHostAddress: 125.230.246.89,REMOTE_ADDR: 125.230.246.89, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 07:49:22 : 2024/10/13 07:49:22 AM 
+ 
+ 13/10/2024 07:49:22 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=07:48:39&Code1=None&Code2=None&callercircle=Rajasthan&callerno=+918003142680&network=Bharti Hex 
+ 
+ 13/10/2024 07:49:22 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 07:49:22 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 07:49:22 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 07:53:40 : 2024/10/13 07:53:40 AM 
+ 
+ 13/10/2024 08:19:04 : 2024/10/13 08:19:04 AM 
+ 
+ 13/10/2024 08:19:04 : https://www.vcqru.com/Admin/CommissionSetting.aspx 
+ 
+ 13/10/2024 08:19:04 : Failed to load viewstate.  The control tree into which viewstate is being loaded must match the control tree that was used to save viewstate during the previous request.  For example, when adding controls dynamically, the controls added during a post-back must match the type and position of the controls added during the initial request. 
+ 
+ 13/10/2024 08:19:04 : 
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 08:19:04 : 
+ UserHostAddress: 106.194.69.149,REMOTE_ADDR: 106.194.69.149, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 08:19:27 : 2024/10/13 08:19:27 AM 
+ 
+ 13/10/2024 08:19:27 : https://www.vcqru.com/Admin/CommissionSetting.aspx 
+ 
+ 13/10/2024 08:19:27 : Failed to load viewstate.  The control tree into which viewstate is being loaded must match the control tree that was used to save viewstate during the previous request.  For example, when adding controls dynamically, the controls added during a post-back must match the type and position of the controls added during the initial request. 
+ 
+ 13/10/2024 08:19:27 : 
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 08:19:27 : 
+ UserHostAddress: 106.194.69.149,REMOTE_ADDR: 106.194.69.149, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 08:19:28 : 2024/10/13 08:19:28 AM 
+ 
+ 13/10/2024 08:19:28 : https://www.vcqru.com/Admin/CommissionSetting.aspx 
+ 
+ 13/10/2024 08:19:28 : Failed to load viewstate.  The control tree into which viewstate is being loaded must match the control tree that was used to save viewstate during the previous request.  For example, when adding controls dynamically, the controls added during a post-back must match the type and position of the controls added during the initial request. 
+ 
+ 13/10/2024 08:19:28 : 
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Control.LoadChildViewStateByIndex(ArrayList childState)
+   at System.Web.UI.Control.LoadViewStateRecursive(Object savedState)
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 08:19:28 : 
+ UserHostAddress: 106.194.69.149,REMOTE_ADDR: 106.194.69.149, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 08:19:57 : 2024/10/13 08:19:57 AM 
+ 
+ 13/10/2024 08:19:57 : https://www.vcqru.com/SagarPetro/Instantpayout.aspx 
+ 
+ 13/10/2024 08:19:57 : Error converting data type varchar to datetime. 
+ 
+ 13/10/2024 08:19:57 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SQL_DB.ExecuteDataSet(String text, Object[] args) in C:\inetpub\wwwroot\httpdocs\App_Code\vb\SQL_DB.vb:line 120
+   at SagarPetro_Instantpayout.btnDownloadExcel_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\SagarPetro\Instantpayout.aspx.cs:line 159
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 08:19:57 : 
+ UserHostAddress: 106.194.69.149,REMOTE_ADDR: 106.194.69.149, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 08:20:06 : 2024/10/13 08:20:06 AM 
+ 
+ 13/10/2024 08:20:06 : https://www.vcqru.com/SagarPetro/Instantpayout.aspx 
+ 
+ 13/10/2024 08:20:06 : Error converting data type varchar to datetime. 
+ 
+ 13/10/2024 08:20:06 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SQL_DB.ExecuteDataSet(String text, Object[] args) in C:\inetpub\wwwroot\httpdocs\App_Code\vb\SQL_DB.vb:line 120
+   at SagarPetro_Instantpayout.btnDownloadExcel_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\SagarPetro\Instantpayout.aspx.cs:line 159
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 08:20:06 : 
+ UserHostAddress: 106.194.69.149,REMOTE_ADDR: 106.194.69.149, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 08:30:16 : 2024/10/13 08:30:16 AM 
+ 
+ 13/10/2024 08:30:16 : https://www.vcqru.com/SagarPetro/getuserdetailsbydistrict.aspx 
+ 
+ 13/10/2024 08:30:16 : String was not recognized as a valid DateTime. 
+ 
+ 13/10/2024 08:30:16 : 
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value)
+   at SagarPetro_getuserdetailsbydistrict.btnsearch_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\SagarPetro\getuserdetailsbydistrict.aspx.cs:line 83
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 08:30:16 : 
+ UserHostAddress: 106.194.69.149,REMOTE_ADDR: 106.194.69.149, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 08:58:24 : 2024/10/13 08:58:24 AM 
+ 
+ 13/10/2024 08:58:24 : https://www.vcqru.com/raffle.aspx 
+ 
+ 13/10/2024 08:58:24 : The file '/raffle.aspx' does not exist. 
+ 
+ 13/10/2024 08:58:24 : 
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 08:58:24 : 
+ UserHostAddress: 66.249.79.233,REMOTE_ADDR: 66.249.79.233, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 08:58:43 : 2024/10/13 08:58:43 AM 
+ 
+ 13/10/2024 08:58:43 : https://www.vcqru.com/SagarPetro/Loyalityclaimsgr.aspx 
+ 
+ 13/10/2024 08:58:43 : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Amount'. 
+ 
+ 13/10/2024 08:58:43 : 
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at SagarPetro_Loyalityclaimsgr.FillGrdLoyaltyAwards(String email) in c:\inetpub\wwwroot\httpdocs\SagarPetro\Loyalityclaimsgr.aspx.cs:line 52
+   at SagarPetro_Loyalityclaimsgr.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\SagarPetro\Loyalityclaimsgr.aspx.cs:line 34
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 08:58:43 : 
+ UserHostAddress: 106.194.69.149,REMOTE_ADDR: 106.194.69.149, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 08:59:04 : 2024/10/13 08:59:04 AM 
+ 
+ 13/10/2024 08:59:04 : https://www.vcqru.com/SagarPetro/pfllogin.aspx 
+ 
+ 13/10/2024 08:59:04 : The file '/SagarPetro/pfllogin.aspx' does not exist. 
+ 
+ 13/10/2024 08:59:04 : 
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 08:59:04 : 
+ UserHostAddress: 106.194.69.149,REMOTE_ADDR: 106.194.69.149, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 08:59:34 : 2024/10/13 08:59:34 AM 
+ 
+ 13/10/2024 08:59:59 : 2024/10/13 08:59:59 AM 
+ 
+ 13/10/2024 08:59:59 : https://www.vcqru.com/SagarPetro/Loyalityclaimsgr.aspx 
+ 
+ 13/10/2024 08:59:59 : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Amount'. 
+ 
+ 13/10/2024 08:59:59 : 
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at SagarPetro_Loyalityclaimsgr.FillGrdLoyaltyAwards(String email) in c:\inetpub\wwwroot\httpdocs\SagarPetro\Loyalityclaimsgr.aspx.cs:line 52
+   at SagarPetro_Loyalityclaimsgr.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\SagarPetro\Loyalityclaimsgr.aspx.cs:line 34
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 08:59:59 : 
+ UserHostAddress: 106.194.69.149,REMOTE_ADDR: 106.194.69.149, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 09:00:58 : 2024/10/13 09:00:58 AM 
+ 
+ 13/10/2024 09:00:58 : https://www.vcqru.com/SagarPetro/Loyalityclaimsgr.aspx 
+ 
+ 13/10/2024 09:00:58 : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Amount'. 
+ 
+ 13/10/2024 09:00:58 : 
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at SagarPetro_Loyalityclaimsgr.FillGrdLoyaltyAwards(String email) in c:\inetpub\wwwroot\httpdocs\SagarPetro\Loyalityclaimsgr.aspx.cs:line 52
+   at SagarPetro_Loyalityclaimsgr.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\SagarPetro\Loyalityclaimsgr.aspx.cs:line 34
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 09:00:58 : 
+ UserHostAddress: 106.194.69.149,REMOTE_ADDR: 106.194.69.149, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 09:30:30 : 5555535874700 
+ 
+ 13/10/2024 09:30:30 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"55555","code2":"35874700","fields":"","latitude":null,"longitude":null,"mobile":"919468173896","status":"Valid"} 
+ 
+ 13/10/2024 09:37:24 : 2024/10/13 09:37:24 AM 
+ 
+ 13/10/2024 09:37:24 : https://www.vcqru.com/..default.aspx 
+ 
+ 13/10/2024 09:37:24 : The file '/..default.aspx' does not exist. 
+ 
+ 13/10/2024 09:37:24 : 
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 09:37:24 : 
+ UserHostAddress: 66.249.79.235,REMOTE_ADDR: 66.249.79.235, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 09:42:28 : 7504777215312 
+ 
+ 13/10/2024 09:42:29 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"75047","code2":"77215312","fields":"","latitude":null,"longitude":null,"mobile":"7274873264","status":"Valid"} 
+ 
+ 13/10/2024 09:46:04 : 1734113114006 
+ 
+ 13/10/2024 09:46:05 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"17341","code2":"13114006","fields":"","latitude":null,"longitude":null,"mobile":"918813010704","status":"Valid"} 
+ 
+ 13/10/2024 09:48:15 : 1734113114006 
+ 
+ 13/10/2024 09:48:16 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"17341","code2":"13114006","fields":"","latitude":null,"longitude":null,"mobile":"918813010704","status":"Valid"} 
+ 
+ 13/10/2024 09:48:38 : 1734113114006 
+ 
+ 13/10/2024 09:48:40 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"17341","code2":"13114006","fields":"","latitude":null,"longitude":null,"mobile":"918813010704","status":"Valid"} 
+ 
+ 13/10/2024 09:50:53 : 1734113114006 
+ 
+ 13/10/2024 09:50:54 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"17341","code2":"13114006","fields":"","latitude":null,"longitude":null,"mobile":"918813010704","status":"Valid"} 
+ 
+ 13/10/2024 09:54:00 : 2024/10/13 09:54:00 AM 
+ 
+ 13/10/2024 09:54:00 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=09:52:29&Code1=None&Code2=None&callercircle=Bihar and Jharkhand&callerno=+919798748449&network=RTL(GSM)  
+ 
+ 13/10/2024 09:54:00 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 09:54:00 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 09:54:00 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 10:16:42 : 2024/10/13 10:16:42 AM 
+ 
+ 13/10/2024 10:16:42 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=10:16:09&Code1=None&Code2=None&callercircle=Uttar Pradesh West&callerno=+919761067841&network=Vodafone E 
+ 
+ 13/10/2024 10:16:42 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 10:16:42 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 10:16:42 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 10:20:23 : 5526472566503 
+ 
+ 13/10/2024 10:20:24 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"55264","code2":"72566503","fields":"","latitude":null,"longitude":null,"mobile":"919264461382","status":"Valid"} 
+ 
+ 13/10/2024 10:20:37 : 1753065667276 
+ 
+ 13/10/2024 10:20:38 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"17530","code2":"65667276","fields":"","latitude":null,"longitude":null,"mobile":"919264461382","status":"Valid"} 
+ 
+ 13/10/2024 10:20:48 : 6710227268723 
+ 
+ 13/10/2024 10:20:48 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"67102","code2":"27268723","fields":"","latitude":null,"longitude":null,"mobile":"919264461382","status":"Valid"} 
+ 
+ 13/10/2024 10:20:56 : 5458458550847 
+ 
+ 13/10/2024 10:20:57 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"54584","code2":"58550847","fields":"","latitude":null,"longitude":null,"mobile":"919264461382","status":"Valid"} 
+ 
+ 13/10/2024 10:21:03 : 5458458550847 
+ 
+ 13/10/2024 10:21:04 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"54584","code2":"58550847","fields":"","latitude":null,"longitude":null,"mobile":"919264461382","status":"Valid"} 
+ 
+ 13/10/2024 10:21:17 : 5458458550847 
+ 
+ 13/10/2024 10:21:18 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"54584","code2":"58550847","fields":"","latitude":null,"longitude":null,"mobile":"919264461382","status":"Valid"} 
+ 
+ 13/10/2024 10:22:02 : 1783886843817 
+ 
+ 13/10/2024 10:22:03 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"17838","code2":"86843817","fields":"","latitude":null,"longitude":null,"mobile":"919264461382","status":"Valid"} 
+ 
+ 13/10/2024 10:22:14 : 5580335447500 
+ 
+ 13/10/2024 10:22:14 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"55803","code2":"35447500","fields":"","latitude":null,"longitude":null,"mobile":"919264461382","status":"Valid"} 
+ 
+ 13/10/2024 10:22:26 : 4023662528686 
+ 
+ 13/10/2024 10:22:27 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"40236","code2":"62528686","fields":"","latitude":null,"longitude":null,"mobile":"919264461382","status":"Valid"} 
+ 
+ 13/10/2024 10:22:35 : 4023662528686 
+ 
+ 13/10/2024 10:22:36 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"40236","code2":"62528686","fields":"","latitude":null,"longitude":null,"mobile":"919264461382","status":"Valid"} 
+ 
+ 13/10/2024 10:22:48 : 6220532847535 
+ 
+ 13/10/2024 10:22:48 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"62205","code2":"32847535","fields":"","latitude":null,"longitude":null,"mobile":"919264461382","status":"Valid"} 
+ 
+ 13/10/2024 10:22:52 : 2024/10/13 10:22:52 AM 
+ 
+ 13/10/2024 10:22:52 : https://www.vcqru.com/Consumer/Dashboard.aspx 
+ 
+ 13/10/2024 10:22:52 : Object reference not set to an instance of an object. 
+ 
+ 13/10/2024 10:22:52 : 
+   at Consumer_dashboard.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\Consumer\dashboard.aspx.cs:line 24
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 10:22:52 : 
+ UserHostAddress: 117.214.181.239,REMOTE_ADDR: 117.214.181.239, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 10:22:55 : 8884778523514 
+ 
+ 13/10/2024 10:22:56 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"88847","code2":"78523514","fields":"","latitude":null,"longitude":null,"mobile":"919264461382","status":"Valid"} 
+ 
+ 13/10/2024 10:23:06 : 7388534664016 
+ 
+ 13/10/2024 10:23:07 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"73885","code2":"34664016","fields":"","latitude":null,"longitude":null,"mobile":"919264461382","status":"Valid"} 
+ 
+ 13/10/2024 10:25:34 : 2024/10/13 10:25:34 AM 
+ 
+ 13/10/2024 10:28:36 : 8351577137421 
+ 
+ 13/10/2024 10:28:37 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"83515","code2":"77137421","fields":"","latitude":null,"longitude":null,"mobile":"9050302100","status":"Valid"} 
+ 
+ 13/10/2024 10:28:45 : 7736274382115 
+ 
+ 13/10/2024 10:28:46 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"77362","code2":"74382115","fields":"","latitude":null,"longitude":null,"mobile":"9050302100","status":"Valid"} 
+ 
+ 13/10/2024 10:28:52 : 4475718873711 
+ 
+ 13/10/2024 10:28:53 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"44757","code2":"18873711","fields":"","latitude":null,"longitude":null,"mobile":"9050302100","status":"Valid"} 
+ 
+ 13/10/2024 10:28:58 : 5371617704344 
+ 
+ 13/10/2024 10:28:59 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"53716","code2":"17704344","fields":"","latitude":null,"longitude":null,"mobile":"9050302100","status":"Valid"} 
+ 
+ 13/10/2024 10:29:09 : 1363688860812 
+ 
+ 13/10/2024 10:29:10 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"13636","code2":"88860812","fields":"","latitude":null,"longitude":null,"mobile":"9050302100","status":"Valid"} 
+ 
+ 13/10/2024 10:29:19 : 5737244328422 
+ 
+ 13/10/2024 10:29:19 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"57372","code2":"44328422","fields":"","latitude":null,"longitude":null,"mobile":"9050302100","status":"Valid"} 
+ 
+ 13/10/2024 10:40:53 : 2024/10/13 10:40:53 AM 
+ 
+ 13/10/2024 10:40:53 : https://www.vcqru.com/solutionAPI/codeCheck.aspx?Code1=34341&Code2=48022605&callercircle=None&callerno=+919713763082&network=None 
+ 
+ 13/10/2024 10:40:53 : Incorrect syntax near 'Comp_id'. 
+ 
+ 13/10/2024 10:40:53 : 
+   at codeCheck.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeCheck.aspx.cs:line 105
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 10:40:53 : 
+ UserHostAddress: 14.141.51.210,REMOTE_ADDR: 14.141.51.210, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 10:41:56 : 2024/10/13 10:41:56 AM 
+ 
+ 13/10/2024 10:41:56 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=10:41:20&Code1=None&Code2=None&callercircle=Delhi&callerno=+918447325854&network=Vodafone E 
+ 
+ 13/10/2024 10:41:56 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 10:41:56 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 10:41:56 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 10:42:27 : 2024/10/13 10:42:27 AM 
+ 
+ 13/10/2024 10:42:27 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=10:42:03&Code1=None&Code2=None&callercircle=Delhi&callerno=+918447325854&network=Vodafone E 
+ 
+ 13/10/2024 10:42:27 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 10:42:27 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 10:42:27 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 10:43:38 : 2024/10/13 10:43:38 AM 
+ 
+ 13/10/2024 10:46:29 : 6481845450146 
+ 
+ 13/10/2024 10:46:29 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"64818","code2":"45450146","fields":"","latitude":null,"longitude":null,"mobile":"918683860591","status":"Valid"} 
+ 
+ 13/10/2024 10:46:41 : 5303635851006 
+ 
+ 13/10/2024 10:46:42 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"53036","code2":"35851006","fields":"","latitude":null,"longitude":null,"mobile":"918683860591","status":"Valid"} 
+ 
+ 13/10/2024 10:46:50 : 5303635851006 
+ 
+ 13/10/2024 10:46:51 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"53036","code2":"35851006","fields":"","latitude":null,"longitude":null,"mobile":"918683860591","status":"Valid"} 
+ 
+ 13/10/2024 10:46:52 : 5303635851006 
+ 
+ 13/10/2024 10:46:52 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"53036","code2":"35851006","fields":"","latitude":null,"longitude":null,"mobile":"918683860591","status":"Valid"} 
+ 
+ 13/10/2024 10:56:38 : 2024/10/13 10:56:38 AM 
+ 
+ 13/10/2024 10:56:38 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=10:56:25&Code1=None&Code2=None&callercircle=Kerala&callerno=+919516623756&network=Etisalat D 
+ 
+ 13/10/2024 10:56:38 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 10:56:38 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 10:56:38 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 11:07:02 : 2024/10/13 11:07:02 AM 
+ 
+ 13/10/2024 11:07:02 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=11:05:31&Code1=None&Code2=None&callercircle=Madhya Pradesh and Chhattisgarh&callerno=+919575958064&network=Idea Cellu 
+ 
+ 13/10/2024 11:07:02 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 11:07:02 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 11:07:02 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 11:07:36 : 2024/10/13 11:07:36 AM 
+ 
+ 13/10/2024 11:07:36 : https://www.vcqru.com/Info/MasterHandler.ashx?method=otpsend&mobile=8269687844 
+ 
+ 13/10/2024 11:07:36 : Incorrect syntax near 'Comp_id'. 
+ 
+ 13/10/2024 11:07:36 : 
+   at DataProvider.LogManager.WriteExe(String txt) in c:\inetpub\wwwroot\httpdocs\App_code\Utility.cs:line 1933
+   at Data_Access_Layer.Loyalty_Function.InsertUpdateUserDetails(User_Details obj) in c:\inetpub\wwwroot\httpdocs\App_code\DAL.cs:line 1283
+   at Business_Logic_Layer.User_Details.InsertUpdateUserDetails(User_Details Obj) in c:\inetpub\wwwroot\httpdocs\App_code\BLL.cs:line 2171
+   at MasterHandler.ProcessRequest(HttpContext context) in c:\inetpub\wwwroot\httpdocs\Info\MasterHandler.ashx:line 4472
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 11:07:36 : 
+ UserHostAddress: 152.59.46.8,REMOTE_ADDR: 152.59.46.8, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 11:10:28 : 2024/10/13 11:10:28 AM 
+ 
+ 13/10/2024 11:10:52 : 2024/10/13 11:10:52 AM 
+ 
+ 13/10/2024 11:10:52 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=11:10:52&Code1=None&Code2=None&callercircle=Jammu and Kashmir&callerno=+919306185050&network=RCL(CDMA)  
+ 
+ 13/10/2024 11:10:52 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 11:10:52 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 11:10:52 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 11:13:10 : 5081266812003 
+ 
+ 13/10/2024 11:13:11 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"50812","code2":"66812003","fields":"","latitude":null,"longitude":null,"mobile":"919771197333","status":"Valid"} 
+ 
+ 13/10/2024 11:16:26 : 2024/10/13 11:16:26 AM 
+ 
+ 13/10/2024 11:47:45 : 3775234081258 
+ 
+ 13/10/2024 11:47:46 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"37752","code2":"34081258","fields":"","latitude":null,"longitude":null,"mobile":"918709137922","status":"Valid"} 
+ 
+ 13/10/2024 12:01:31 : 2024/10/13 12:01:31 PM 
+ 
+ 13/10/2024 12:01:31 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=12:01:06&Code1=None&Code2=None&callercircle=Kerala&callerno=+919516623756&network=Etisalat D 
+ 
+ 13/10/2024 12:01:31 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 12:01:31 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 12:01:31 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 12:02:02 : 2024/10/13 12:02:02 PM 
+ 
+ 13/10/2024 12:02:02 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=12:01:40&Code1=None&Code2=None&callercircle=Kerala&callerno=+919516623756&network=Etisalat D 
+ 
+ 13/10/2024 12:02:02 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 12:02:02 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 12:02:02 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 12:03:10 : 2024/10/13 12:03:10 PM 
+ 
+ 13/10/2024 12:03:10 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=12:02:51&Code1=None&Code2=None&callercircle=Madhya Pradesh and Chhattisgarh&callerno=+919685808513&network=Bharti Air 
+ 
+ 13/10/2024 12:03:10 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 12:03:10 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 12:03:10 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 12:04:43 : 2024/10/13 12:04:43 PM 
+ 
+ 13/10/2024 12:04:43 : https://www.vcqru.com/solutionAPI/codeCheck.aspx?Code1=11483&Code2=40152117&callercircle=None&callerno=+919685808513&network=None 
+ 
+ 13/10/2024 12:04:43 : Incorrect syntax near 'Comp_id'. 
+ 
+ 13/10/2024 12:04:43 : 
+   at codeCheck.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeCheck.aspx.cs:line 105
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 12:04:43 : 
+ UserHostAddress: 14.141.51.210,REMOTE_ADDR: 14.141.51.210, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 12:11:23 : 2864251581844 
+ 
+ 13/10/2024 12:11:24 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"28642","code2":"51581844","fields":"","latitude":null,"longitude":null,"mobile":"8950823461","status":"Valid"} 
+ 
+ 13/10/2024 12:11:46 : 2864251581844 
+ 
+ 13/10/2024 12:11:46 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"28642","code2":"51581844","fields":"","latitude":null,"longitude":null,"mobile":"8950823461","status":"Valid"} 
+ 
+ 13/10/2024 12:12:10 : 3013355688376 
+ 
+ 13/10/2024 12:12:10 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"30133","code2":"55688376","fields":"","latitude":null,"longitude":null,"mobile":"8950823461","status":"Valid"} 
+ 
+ 13/10/2024 12:12:14 : 2024/10/13 12:12:14 PM 
+ 
+ 13/10/2024 12:12:14 : https://www.vcqru.com/Consumer/Dashboard.aspx 
+ 
+ 13/10/2024 12:12:14 : Object reference not set to an instance of an object. 
+ 
+ 13/10/2024 12:12:14 : 
+   at Consumer_dashboard.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\Consumer\dashboard.aspx.cs:line 24
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 12:12:14 : 
+ UserHostAddress: 152.58.62.226,REMOTE_ADDR: 152.58.62.226, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 12:12:15 : 2024/10/13 12:12:15 PM 
+ 
+ 13/10/2024 12:12:15 : https://www.vcqru.com/Consumer/Dashboard.aspx 
+ 
+ 13/10/2024 12:12:15 : Object reference not set to an instance of an object. 
+ 
+ 13/10/2024 12:12:15 : 
+   at Consumer_dashboard.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\Consumer\dashboard.aspx.cs:line 24
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 12:12:15 : 
+ UserHostAddress: 152.58.62.226,REMOTE_ADDR: 152.58.62.226, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 12:12:32 : 2024/10/13 12:12:32 PM 
+ 
+ 13/10/2024 12:12:32 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=12:12:11&Code1=None&Code2=None&callercircle=Kerala&callerno=+919516623756&network=Etisalat D 
+ 
+ 13/10/2024 12:12:32 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 12:12:32 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 12:12:32 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 12:12:33 : 3713481752482 
+ 
+ 13/10/2024 12:12:34 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"37134","code2":"81752482","fields":"","latitude":null,"longitude":null,"mobile":"8950823461","status":"Valid"} 
+ 
+ 13/10/2024 12:12:58 : 3713481752482 
+ 
+ 13/10/2024 12:12:59 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"37134","code2":"81752482","fields":"","latitude":null,"longitude":null,"mobile":"8950823461","status":"Valid"} 
+ 
+ 13/10/2024 12:14:04 : 7783116827322 
+ 
+ 13/10/2024 12:14:05 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"77831","code2":"16827322","fields":"","latitude":null,"longitude":null,"mobile":"8950823461","status":"Valid"} 
+ 
+ 13/10/2024 12:15:27 : 3055542703634 
+ 
+ 13/10/2024 12:15:27 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"30555","code2":"42703634","fields":"","latitude":null,"longitude":null,"mobile":"8950823461","status":"Valid"} 
+ 
+ 13/10/2024 12:16:18 : 4146162172513 
+ 
+ 13/10/2024 12:16:19 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"41461","code2":"62172513","fields":"","latitude":null,"longitude":null,"mobile":"8950823461","status":"Valid"} 
+ 
+ 13/10/2024 12:17:24 : 2024/10/13 12:17:24 PM 
+ 
+ 13/10/2024 12:17:24 : https://www.vcqru.com/solutionAPI/codeCheck.aspx?Code1=23827&Code2=54507735&callercircle=None&callerno=+919321811176&network=None 
+ 
+ 13/10/2024 12:17:24 : Incorrect syntax near 'Comp_id'. 
+ 
+ 13/10/2024 12:17:24 : 
+   at codeCheck.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeCheck.aspx.cs:line 105
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 12:17:24 : 
+ UserHostAddress: 14.141.51.210,REMOTE_ADDR: 14.141.51.210, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 12:18:01 : 6222665031327 
+ 
+ 13/10/2024 12:18:02 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"62226","code2":"65031327","fields":"","latitude":null,"longitude":null,"mobile":"916207098087","status":"Valid"} 
+ 
+ 13/10/2024 12:19:20 : 2024/10/13 12:19:20 PM 
+ 
+ 13/10/2024 12:19:20 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=12:18:23&Code1=None&Code2=None&callercircle=Mumbai&callerno=+919321811176&network=RCL(CDMA)  
+ 
+ 13/10/2024 12:19:20 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 12:19:20 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 12:19:20 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 12:24:48 : 2024/10/13 12:24:48 PM 
+ 
+ 13/10/2024 12:24:48 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=12:23:48&Code1=None&Code2=None&callercircle=Maharashtra and Goa&callerno=+919850857294&network=Idea Cellu 
+ 
+ 13/10/2024 12:24:48 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 12:24:48 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 12:24:48 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 12:30:30 : 2024/10/13 12:30:30 PM 
+ 
+ 13/10/2024 12:30:30 : https://www.vcqru.com/solutionAPI/codeCheck.aspx?Code1=80026&Code2=76278467&callercircle=None&callerno=+919850857294&network=None 
+ 
+ 13/10/2024 12:30:30 : Incorrect syntax near 'Comp_id'. 
+ 
+ 13/10/2024 12:30:30 : 
+   at codeCheck.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeCheck.aspx.cs:line 105
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 12:30:30 : 
+ UserHostAddress: 14.141.51.210,REMOTE_ADDR: 14.141.51.210, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 12:36:40 : 5702168878451 
+ 
+ 13/10/2024 12:36:41 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"57021","code2":"68878451","fields":"","latitude":null,"longitude":null,"mobile":"919771197333","status":"Valid"} 
+ 
+ 13/10/2024 12:37:16 : 6360182017315 
+ 
+ 13/10/2024 12:37:17 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"63601","code2":"82017315","fields":"","latitude":null,"longitude":null,"mobile":"919771197333","status":"Valid"} 
+ 
+ 13/10/2024 12:37:48 : 3118410387755 
+ 
+ 13/10/2024 12:37:49 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"31184","code2":"10387755","fields":"","latitude":null,"longitude":null,"mobile":"919771197333","status":"Valid"} 
+ 
+ 13/10/2024 12:38:16 : 4838041247838 
+ 
+ 13/10/2024 12:38:16 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"48380","code2":"41247838","fields":"","latitude":null,"longitude":null,"mobile":"919771197333","status":"Valid"} 
+ 
+ 13/10/2024 12:38:35 : 5726474081561 
+ 
+ 13/10/2024 12:38:36 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"57264","code2":"74081561","fields":"","latitude":null,"longitude":null,"mobile":"919771197333","status":"Valid"} 
+ 
+ 13/10/2024 12:39:03 : 5633086478527 
+ 
+ 13/10/2024 12:39:04 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"56330","code2":"86478527","fields":"","latitude":null,"longitude":null,"mobile":"919771197333","status":"Valid"} 
+ 
+ 13/10/2024 12:39:27 : 3210171032563 
+ 
+ 13/10/2024 12:39:28 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"32101","code2":"71032563","fields":"","latitude":null,"longitude":null,"mobile":"919771197333","status":"Valid"} 
+ 
+ 13/10/2024 12:39:45 : 3210171032563 
+ 
+ 13/10/2024 12:39:46 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"32101","code2":"71032563","fields":"","latitude":null,"longitude":null,"mobile":"919771197333","status":"Valid"} 
+ 
+ 13/10/2024 12:40:05 : 4246238658406 
+ 
+ 13/10/2024 12:40:06 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"42462","code2":"38658406","fields":"","latitude":null,"longitude":null,"mobile":"919771197333","status":"Valid"} 
+ 
+ 13/10/2024 12:43:22 : 7873152272406 
+ 
+ 13/10/2024 12:43:23 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"78731","code2":"52272406","fields":"","latitude":null,"longitude":null,"mobile":"916207098087","status":"Valid"} 
+ 
+ 13/10/2024 12:43:27 : 2024/10/13 12:43:27 PM 
+ 
+ 13/10/2024 12:43:27 : https://www.vcqru.com/solutionAPI/codeCheck.aspx?Code1=15863&Code2=78452369&callercircle=None&callerno=+919516623756&network=None 
+ 
+ 13/10/2024 12:43:27 : Incorrect syntax near 'Comp_id'. 
+ 
+ 13/10/2024 12:43:27 : 
+   at codeCheck.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeCheck.aspx.cs:line 105
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 12:43:27 : 
+ UserHostAddress: 14.141.51.210,REMOTE_ADDR: 14.141.51.210, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 12:44:39 : 2024/10/13 12:44:39 PM 
+ 
+ 13/10/2024 12:44:39 : https://www.vcqru.com/solutionAPI/codeCheck.aspx?Code1=53141&Code2=32426382&callercircle=None&callerno=+919730542204&network=None 
+ 
+ 13/10/2024 12:44:39 : Incorrect syntax near 'Comp_id'. 
+ 
+ 13/10/2024 12:44:39 : 
+   at codeCheck.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeCheck.aspx.cs:line 105
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 12:44:39 : 
+ UserHostAddress: 14.141.51.210,REMOTE_ADDR: 14.141.51.210, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 12:54:31 : 2024/10/13 12:54:31 PM 
+ 
+ 13/10/2024 12:56:10 : 2024/10/13 12:56:10 PM 
+ 
+ 13/10/2024 12:56:10 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=12:55:45&Code1=None&Code2=None&callercircle=Tamil Nadu&callerno=+918807441871&network=TTSL(GSM)  
+ 
+ 13/10/2024 12:56:10 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 12:56:10 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 12:56:10 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 12:58:01 : 2024/10/13 12:58:01 PM 
+ 
+ 13/10/2024 12:58:01 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=12:56:13&Code1=None&Code2=None&callercircle=Tamil Nadu&callerno=+918807441871&network=TTSL(GSM)  
+ 
+ 13/10/2024 12:58:01 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 12:58:01 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 12:58:01 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 13:00:05 : 2024/10/13 01:00:05 PM 
+ 
+ 13/10/2024 13:00:05 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=12:59:18&Code1=None&Code2=None&callercircle=Tamil Nadu&callerno=+918807441871&network=TTSL(GSM)  
+ 
+ 13/10/2024 13:00:05 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 13:00:05 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 13:00:05 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 13:01:15 : 2024/10/13 01:01:15 PM 
+ 
+ 13/10/2024 13:01:15 : https://www.vcqru.com/Consumer/Dashboard.aspx 
+ 
+ 13/10/2024 13:01:15 : Object reference not set to an instance of an object. 
+ 
+ 13/10/2024 13:01:15 : 
+   at Consumer_dashboard.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\Consumer\dashboard.aspx.cs:line 24
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 13:01:15 : 
+ UserHostAddress: 171.60.192.228,REMOTE_ADDR: 171.60.192.228, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 13:01:39 : 2024/10/13 01:01:39 PM 
+ 
+ 13/10/2024 13:02:15 : 2024/10/13 01:02:15 PM 
+ 
+ 13/10/2024 13:02:15 : https://www.vcqru.com/Consumer/Dashboard.aspx 
+ 
+ 13/10/2024 13:02:15 : Object reference not set to an instance of an object. 
+ 
+ 13/10/2024 13:02:15 : 
+   at Consumer_dashboard.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\Consumer\dashboard.aspx.cs:line 24
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 13:02:15 : 
+ UserHostAddress: 171.60.192.228,REMOTE_ADDR: 171.60.192.228, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 13:03:40 : 2024/10/13 01:03:40 PM 
+ 
+ 13/10/2024 13:03:40 : https://www.vcqru.com/Consumer/Dashboard.aspx 
+ 
+ 13/10/2024 13:03:40 : Object reference not set to an instance of an object. 
+ 
+ 13/10/2024 13:03:40 : 
+   at Consumer_dashboard.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\Consumer\dashboard.aspx.cs:line 24
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 13:03:40 : 
+ UserHostAddress: 171.60.192.228,REMOTE_ADDR: 171.60.192.228, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 13:03:40 : 2024/10/13 01:03:40 PM 
+ 
+ 13/10/2024 13:03:40 : https://www.vcqru.com/solutionAPI/codeupdate.aspx?call_date=2024-10-13&call_time=13:02:35&Code1=None&Code2=None&callercircle=Rajasthan&callerno=+919950351860&network=Bharti Hex 
+ 
+ 13/10/2024 13:03:40 : Error converting data type varchar to numeric. 
+ 
+ 13/10/2024 13:03:40 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at codeupdate.UpdateCodeCount() in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 99
+   at codeupdate.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeupdate.aspx.cs:line 25
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 13:03:40 : 
+ UserHostAddress: 35.154.159.246,REMOTE_ADDR: 35.154.159.246, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 13:08:16 : 2024/10/13 01:08:16 PM 
+ 
+ 13/10/2024 13:08:16 : https://www.vcqru.com/Info/MasterHandler.ashx?method=chkwarranty&codeone=&codetwo=undefined&lat=undefined&long=undefined 
+ 
+ 13/10/2024 13:08:16 : Incorrect syntax near the keyword 'AND'. 
+ 
+ 13/10/2024 13:08:16 : 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at ServiceLogic.FindCheckedCode_2(Object9420 Reg) in c:\inetpub\wwwroot\httpdocs\App_code\ServiceLogic.cs:line 177
+   at MasterHandler.checkWarranty(String C1, String C2, String CompId) in c:\inetpub\wwwroot\httpdocs\Info\MasterHandler.ashx:line 14387
+   at MasterHandler.ProcessRequest(HttpContext context) in c:\inetpub\wwwroot\httpdocs\Info\MasterHandler.ashx:line 3976
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ 
+ 13/10/2024 13:08:16 : 
+ UserHostAddress: 112.79.111.227,REMOTE_ADDR: 112.79.111.227, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 13:08:50 : 8306551683322 
+ 
+ 13/10/2024 13:08:51 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"83065","code2":"51683322","fields":"","latitude":null,"longitude":null,"mobile":"919934233313","status":"Valid"} 
+ 
+ 13/10/2024 13:08:56 : 7635615174046 
+ 
+ 13/10/2024 13:08:57 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"76356","code2":"15174046","fields":"","latitude":null,"longitude":null,"mobile":"919934233313","status":"Valid"} 
+ 
+ 13/10/2024 13:09:01 : 5748126261126 
+ 
+ 13/10/2024 13:09:01 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"57481","code2":"26261126","fields":"","latitude":null,"longitude":null,"mobile":"919934233313","status":"Valid"} 
+ 
+ 13/10/2024 13:09:05 : 2107033887160 
+ 
+ 13/10/2024 13:09:05 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"21070","code2":"33887160","fields":"","latitude":null,"longitude":null,"mobile":"919934233313","status":"Valid"} 
+ 
+ 13/10/2024 13:09:09 : 2107033887160 
+ 
+ 13/10/2024 13:09:10 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"21070","code2":"33887160","fields":"","latitude":null,"longitude":null,"mobile":"919934233313","status":"Valid"} 
+ 
+ 13/10/2024 13:09:21 : 2107033887160 
+ 
+ 13/10/2024 13:09:22 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"21070","code2":"33887160","fields":"","latitude":null,"longitude":null,"mobile":"919934233313","status":"Valid"} 
+ 
+ 13/10/2024 13:09:31 : 8031773526675 
+ 
+ 13/10/2024 13:09:32 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"80317","code2":"73526675","fields":"","latitude":null,"longitude":null,"mobile":"919934233313","status":"Valid"} 
+ 
+ 13/10/2024 13:09:37 : 5352376114512 
+ 
+ 13/10/2024 13:09:38 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"53523","code2":"76114512","fields":"","latitude":null,"longitude":null,"mobile":"919934233313","status":"Valid"} 
+ 
+ 13/10/2024 13:09:45 : 8318270715633 
+ 
+ 13/10/2024 13:09:46 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"83182","code2":"70715633","fields":"","latitude":null,"longitude":null,"mobile":"919934233313","status":"Valid"} 
+ 
+ 13/10/2024 13:09:48 : 3180852217750 
+ 
+ 13/10/2024 13:09:49 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"31808","code2":"52217750","fields":"","latitude":null,"longitude":null,"mobile":"916207098087","status":"Valid"} 
+ 
+ 13/10/2024 13:09:51 : 6501740646414 
+ 
+ 13/10/2024 13:09:52 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"65017","code2":"40646414","fields":"","latitude":null,"longitude":null,"mobile":"919934233313","status":"Valid"} 
+ 
+ 13/10/2024 13:10:02 : 4735834172675 
+ 
+ 13/10/2024 13:10:03 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"47358","code2":"34172675","fields":"","latitude":null,"longitude":null,"mobile":"916207098087","status":"Valid"} 
+ 
+ 13/10/2024 13:10:10 : 5854053318405 
+ 
+ 13/10/2024 13:10:11 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"58540","code2":"53318405","fields":"","latitude":null,"longitude":null,"mobile":"916207098087","status":"Valid"} 
+ 
+ 13/10/2024 13:10:11 : 8776125722046 
+ 
+ 13/10/2024 13:10:12 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"87761","code2":"25722046","fields":"","latitude":null,"longitude":null,"mobile":"919934233313","status":"Valid"} 
+ 
+ 13/10/2024 13:10:35 : 6403466203332 
+ 
+ 13/10/2024 13:10:36 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"64034","code2":"66203332","fields":"","latitude":null,"longitude":null,"mobile":"919253075198","status":"Valid"} 
+ 
+ 13/10/2024 13:13:56 : 2024/10/13 01:13:56 PM 
+ 
+ 13/10/2024 13:17:26 : 2024/10/13 01:17:26 PM 
+ 
+ 13/10/2024 13:17:26 : https://www.vcqru.com/solutionAPI/codeCheck.aspx?Code1=61465&Code2=37003824&callercircle=None&callerno=+918016238581&network=None 
+ 
+ 13/10/2024 13:17:26 : Incorrect syntax near 'Comp_id'. 
+ 
+ 13/10/2024 13:17:26 : 
+   at codeCheck.Page_Load(Object sender, EventArgs e) in c:\inetpub\wwwroot\httpdocs\solutionAPI\codeCheck.aspx.cs:line 105
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ 
+ 13/10/2024 13:17:26 : 
+ UserHostAddress: 14.141.51.210,REMOTE_ADDR: 14.141.51.210, HTTP_X_FORWARDED_FOR:  
+ 
+ 13/10/2024 13:17:48 : 2024/10/13 01:17:48 PM 
+ 
+ 13/10/2024 13:24:25 : 8312732818385 
+ 
+ 13/10/2024 13:24:33 : {"CompanyName":"VR KABLE INDIA PRIVATE LIMITED","Logopath":"NA","ServiceId":"","code1":"83127","code2":"32818385","fields":"","latitude":null,"longitude":null,"mobile":"919518864988","status":"Valid"} 

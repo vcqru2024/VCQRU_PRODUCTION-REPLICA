@@ -1,0 +1,505 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="pfl.master.cs" Inherits="Patanjali_pfl" %>
+
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patanjali</title>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <%-- Datatable Css --%>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.9/css/buttons.bootstrap5.min.css" />
+    <%-- Datatable Css --%>
+    <!-- css -->
+    <link rel="stylesheet" href="../Patanjali/assets/css/css.css">
+    <link rel="stylesheet" href="../Patanjali/assets/css/reponsive.css">
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+
+
+
+    <%-- <style>
+        .btn-copy {
+            background-color: blue;
+            color: white;
+        }
+
+        .btn-csv {
+            background-color: green;
+            color: white;
+        }
+
+        .btn-excel {
+            background-color: yellow;
+            color: black;
+        }
+
+        .btn-pdf {
+            background-color: red;
+            color: white;
+        }
+
+        .btn-print {
+            background-color: purple;
+            color: white;
+        }
+
+        .dataTables_wrapper .dataTables_length {
+            margin-top: 10px;
+        }
+
+            .dataTables_wrapper .dataTables_length select {
+                padding: 4px 8px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                background-color: #f5f5f5;
+                font-size: 14px;
+                color: #333;
+            }
+    </style>--%>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function showAlert(title, text, icon) {
+            Swal.fire({
+                title: title,
+                text: text,
+                icon: icon,
+                confirmButtonText: 'OK'
+            });
+        }
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color: #e4e9f7;">
+
+    <form id="form1" runat="server" class="needs-validation" novalidate>
+
+        <cc1:ToolkitScriptManager runat="Server" AsyncPostBackTimeout="20000" EnablePartialRendering="true"
+            EnablePageMethods="true" ID="ScriptManager1" />
+
+        <div>
+            <!-- Side-Bar -->
+            <div class="sidebar" id="sidebar">
+                <div class="menu-bar">
+                    <div class="menu">
+                        <li class="search-box">
+                            <i class='bx bx-search icon'></i>
+                            <input type="text" id="searchInput" placeholder="Search...">
+                        </li>
+                        <ul class="menu-links">
+                            <li id="heatMap" visible="false" runat="server" class="nav-link">
+                                <a href="../Patanjali/heatMap.aspx">
+                                    <i class='bx bx-home-alt icon'></i>
+                                    <span class="text nav-text">HeatMap</span>
+                                </a>
+                            </li>
+                            <li id="DashboardDiv" visible="true" runat="server" class="nav-link">
+                                <a href="../Patanjali/dashboard.aspx">
+                                    <i class='bx bx-home-alt icon'></i>
+                                    <span class="text nav-text">Dashboard</span>
+                                </a>
+                            </li>
+                            <li id="divUsers" visible="true" runat="server" class="nav-link">
+                                <a href="newuser.aspx">
+                                    <i class='bx bx-user-circle icon'></i>
+                                    <span class="text nav-text" id="username">Users</span>
+                                </a>
+                            </li>
+                            <li class="menu-dropdown">
+                                <div class="accordion accordion-flush" id="dropDownMenu">
+                                    <div id="lireports" runat="server" class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                <i class='bx bx-book-open icon'></i>
+                                                <span class="text nav-text">Reports</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                            data-bs-parent="#dropDownMenu">
+                                            <div class="accordion-body">
+                                                <ul>
+                                                    <li runat="server" id="codeverification" class="nav-link">
+                                                        <a href="../Patanjali/CodeVerificationReport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Code Verification</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="enqreport" class="nav-link">
+                                                        <a href="../Patanjali/Enquiry_Details_Report.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Enquiry Details</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="InvalidCodeReport" class="nav-link">
+                                                        <a href="../Patanjali/InvalidCodeReport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Invalid Code Details</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="rptConsumer" class="nav-link">
+                                                        <a href="../Patanjali/pflconsumerdetails.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Consumer Report</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="codescanning" class="nav-link">
+                                                        <a href="../Patanjali/pfl13digitmobilenoscaning.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Code duplicity report</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="statestatus" class="nav-link">
+                                                        <a href="../Patanjali/statewisestatusreport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">State Wise Status</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="productstatus" class="nav-link">
+                                                        <a href="../Patanjali/ProWiseStatusReport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Product Wise Status</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="MobileStatus" class="nav-link">
+                                                        <a href="../Patanjali/mobnowisestatusreport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Mobile Number Wise Status Analysis</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="Companystatus" class="nav-link">
+                                                        <a href="../Patanjali/compcodewisereport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Code Wise Status Count</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="usercode" class="nav-link">
+                                                        <a href="../Patanjali/User_CodeReport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Monthly Code Usage and User Analysis</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="producthistory" class="nav-link">
+                                                        <a href="../Patanjali/Consumer_Purchase_History_Report.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Consumer Product History</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="codestatus" class="nav-link">
+                                                        <a href="../Patanjali/Code Status Report.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Code Status</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="ClickedReport" class="nav-link">
+                                                        <a href="../Patanjali/ClickedReport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Product click tracking report</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="divuserenqrpt" class="nav-link">
+                                                        <a href="../Patanjali/UserEnquiryReport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">User Enquiry Report</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="liproductparticular" runat="server" class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <i class='bx bx-package icon'></i>
+                                                <span class="text nav-text">Product Particulars</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#dropDownMenu">
+                                            <div class="accordion-body">
+                                                <ul>
+                                                    <li runat="server" id="liproductregistration" class="nav-link">
+                                                        <a href="RegisteredProduct.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Product Registration</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="liassignlabel" class="nav-link">
+                                                        <a href="ProductDetails.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Assign Labels to Product</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="SearchCodeDetails" class="nav-link">
+                                                        <a href="SearchCodeDetails.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Assign New Batch No.</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="liOurservice" runat="server" class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                <i class='bx bx-cog icon'></i>
+                                                <span class="text nav-text">Our Service</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#dropDownMenu">
+                                            <div class="accordion-body">
+                                                <ul>
+                                                    <li runat="server" id="liservicesubscription" class="nav-link">
+                                                        <a href="ServicesSubcription.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Service Subscription</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="liserviceSetting" class="nav-link">
+                                                        <a href="ServiceSettings.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Service Setting</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="liLabelSection" runat="server" class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                <i class='bx bx-label icon'></i>
+                                                <span class="text nav-text">Label Section</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFive" class="accordion-collapse collapse"
+                                            data-bs-parent="#dropDownMenu">
+                                            <div class="accordion-body">
+                                                <ul>
+
+<li runat="server" id="liRequestForPrintLabels" class="nav-link">
+                                                        <a href="frmPrintLabelRequest.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Request For Print Labels</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="liLabelReceive" class="nav-link">
+                                                        <a href="FrmLabelDispatch.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Label Receive</span>
+                                                        </a>
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="liScrapParticulars" runat="server" class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                <i class='bx bx-recycle icon'></i>
+                                                <span class="text nav-text">Scrap Particulars</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse"
+                                            data-bs-parent="#dropDownMenu">
+                                            <div class="accordion-body">
+                                                <ul>
+                                                    <li runat="server" id="liscrapsummary" class="nav-link">
+                                                        <a href="Frm_Scrap.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Scrap Summary Report</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="liscraplabelentry" class="nav-link">
+                                                        <a href="FrmScrapEntry.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Scrap Label Entry</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="Companyprofilesec" runat="server" class="nav-link">
+                                <a href="../Patanjali/companyprofile.aspx">
+                                    <i class='bx bx-bar-chart-alt-2 icon'></i>
+                                    <span class="text nav-text" id="Companyprofile">Company Profile</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bottom-content">
+                        <li class="nav-link">
+                            <a href="../Patanjali/Loginpfl.aspx">
+                                <i class='bx bx-log-out icon'></i>
+                                <span class="text nav-text">Logout</span>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <!-- Nav-topbar -->
+            <div class="app-top-bar">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                            <div class="logo-part">
+                                <div class="patanjaliayurved">
+                                    <img src="../Patanjali/assets/img/logo.svg" alt="logo" class="patanjali-logo">
+                                </div>
+                                <button class="toggle btn btn-primary" id="toggle" type="button">
+                                    <i class='bx bxs-left-arrow-circle'></i>
+                                </button>
+                            </div>
+                            <div class="dropdown" id="divprofile" runat="server">
+                                <a href="../Patanjali/companyprofile.aspx">
+                                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="User">
+                                    <div>
+                                        <h6 class="text-dark" id="lblcompname" runat="server"></h6>
+                                        <p>user profile</p>
+                                    </div>
+                                </a>
+                                <!-- <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="User">
+                                    <div>
+                                        <h6>Patanjali</h6>
+                                        <p>user profile</p>
+                                    </div>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul> -->
+                            </div>
+                            <div class="dropdown" id="DivUser" runat="server">
+                                <a href="../Patanjali/pfluserprofile.aspx">
+                                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="User">
+                                    <div>
+                                        <h6 class="text-dark" id="lblUserName" runat="server"></h6>
+                                        <p>user profile</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="page-wrapper">
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <!-- footer -->
+            <footer class="footer inside-footer">
+                <div class="container-fluid">
+                    <p class="text-end">© 2024 Patanjali Ayurved Limited All Rights Reserved.</p>
+                </div>
+            </footer>
+            <!-- footer-end -->
+        </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const body = document.querySelector('body'),
+            sidebar = body.querySelector('#sidebar'),
+            toggle = body.querySelector("#toggle")
+
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        })
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const searchInput = document.getElementById('searchInput');
+            const menuItems = document.querySelectorAll('#dropDownMenu li');
+            const mainItems2 = document.querySelectorAll('#dropDownMenu span');
+            const mainItems3 = document.querySelectorAll('#sidebar ul li');
+
+            function performSearch() {
+
+                const searchTerm = searchInput.value.trim().toLowerCase();
+
+
+                menuItems.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+
+                    if (text.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                mainItems2.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+
+                    if (text.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                mainItems3.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+
+                    if (text.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+            searchInput.addEventListener('keyup', performSearch);
+        });
+    </script>
+
+</body>
+</html>

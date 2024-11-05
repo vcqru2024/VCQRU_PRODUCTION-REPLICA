@@ -1,0 +1,687 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    <script src="vendor/modernizr/modernizr.min.js"></script>
+    <script src="Content/js/jquery-1.11.1.min.js"></script>
+    <script src="../Content/js/toastr.min.js"></script>
+    <link href="../Content/css/toastr.min.css" rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
+            integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA="
+            crossorigin="anonymous"></script>
+
+
+
+    <title>OCI CABLE</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .marmo-solution {
+            background-image: url(./assets/images/oci/bg-img1.jpg);
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: cover;
+            width: 100%;
+            position: relative;
+            display: table;
+            height: 100vh;
+            padding-bottom: 10px;
+        }
+
+            .marmo-solution .marmo-logo {
+                width: 17%;
+                padding: 10px 0px;
+            }
+
+        .form-box {
+            background-color: #e4e7ec8a;
+            display: table;
+            margin: auto;
+            border-radius: 25px;
+            border: 5px solid #fff;
+            padding-bottom: 30px;
+            margin-bottom: 7%;
+        }
+
+            .form-box h5 {
+                text-align: center;
+                width: 99.5%;
+                color: #fff;
+                background-color: #2c4769;
+                padding: 30px 0px;
+                border-bottom-right-radius: 70%;
+                border-bottom-left-radius: 70%;
+                margin: auto;
+                border-top-left-radius: 23px;
+                border-top-right-radius: 23px;
+                margin-bottom: 35px;
+                line-height: 29px;
+                font-size: 18px;
+            }
+
+        .marmo-solution .form-box button {
+            background-color: #00265a;
+            color: #fff;
+            margin-top: 5%;
+            padding: 5px 32px;
+        }
+
+        .width-box {
+            width: 75%;
+            margin: auto;
+        }
+
+            .width-box input {
+                border-radius: 50px;
+                border: 3px solid #fff;
+                background-color: #e4e7ec;
+                margin-bottom: 7px;
+                font-size: 13px;
+                padding: 8px 20px;
+                transition-duration: 0.5s;
+            }
+
+                .width-box input:focus {
+                    color: #212529;
+                    background-color: #e4e7ec;
+                    outline: 0;
+                    box-shadow: 0px 0px 0px;
+                    font-size: 13px;
+                    border: 3px solid #00265a;
+                }
+
+        .marmo-solution .product-box {
+            background-color: #fff;
+            border-radius: 100%;
+            padding: 45px 30px;
+            display: table;
+            margin: auto;
+            text-align: center;
+            box-shadow: 2px 1px 17px #807f7f;
+        }
+
+        .marmo-solution .marmo-product {
+            width: 90%;
+        }
+
+        .icon-box .box {
+            display: flex;
+            background-color: #fff;
+            width: 100%;
+            padding: 10px 35px;
+            box-sizing: border-box;
+            border-radius: 50px;
+            box-shadow: 0px 2px 8px #545151;
+            align-items: center;
+        }
+
+            .icon-box .box img {
+                width: 30%;
+                padding: 10px 20px;
+            }
+
+        .position-box {
+            position: absolute;
+            bottom: -35px;
+            width: 90%;
+            margin: auto;
+            left: 6%;
+        }
+
+        .box p {
+            text-align: center;
+        }
+
+
+        @media screen and (width:280px) {
+            .icon-box .box img {
+                width: 45%;
+            }
+
+            .icon-box .box {
+                padding: 9px 25px 0px 0px;
+            }
+
+            .position-box {
+                margin-top: -65px !important;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .marmo-solution .marmo-logo {
+                width: 50%;
+            }
+
+            .position-box {
+                position: initial;
+                width: 100%;
+                margin-top: -75px;
+                left: 0%;
+            }
+
+            .icon-box .box {
+                margin-bottom: 10px;
+            }
+
+            .marmo-solution .product-box {
+                margin: initial !important;
+            }
+
+            .product_img img {
+                width: 100% !important;
+            }
+
+            .select_opt {
+                text-align: center;
+            }
+        }
+
+
+        @media screen and (width:768px) {
+            .marmo-solution .product-box {
+                margin: 57% 0 0 auto !important;
+            }
+
+            .position-box .col-md-4 {
+                width: 90%;
+                margin: auto;
+            }
+
+            .icon-box .box img {
+                width: 24%;
+            }
+
+            .icon-box .box {
+                margin-bottom: 15px;
+            }
+
+            .product_img img {
+                margin-left: 5%;
+            }
+        }
+
+        @media screen and (min-width:820px)and (max-width:912px) {
+            .marmo-solution .product-box {
+                margin: 100% 0 0 auto;
+                padding: 45px 47px;
+                bottom: -30px;
+                width: 100%;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .marmo-solution .marmo-product {
+                width: 100%;
+            }
+
+            .position-box .col-md-4 {
+                width: 90%;
+                margin: auto;
+            }
+
+            .icon-box .box {
+                margin-bottom: 15px;
+            }
+
+                .icon-box .box img {
+                    width: 17%;
+                }
+
+            .marmo-solution .marmo-logo {
+                width: 35%;
+            }
+
+            .product_img img {
+                width: 100% !important;
+                margin-top: 30% !important;
+            }
+
+            .select_opt {
+                text-align: center;
+            }
+        }
+
+        @media screen and (width:912px) {
+            .position-box {
+                bottom: 100%;
+                width: 90%;
+                top: 65%;
+            }
+        }
+
+        @media screen and (min-width:1024px) {
+            .icon-box .box img {
+                width: 18%;
+                padding: initial;
+            }
+
+            .icon-box .box {
+                padding: 10px 23px 10px 15px;
+            }
+
+            .marmo-solution .product-box {
+                margin: 8% auto;
+            }
+
+            .position-box {
+                bottom: -39px;
+                width: 100%;
+                left: 0%;
+            }
+        }
+
+        @media screen and (width:1280px) {
+            .position-box {
+                bottom: 28px;
+            }
+        }
+
+        @media screen and (min-width:1281px) {
+            .position-box {
+                bottom: -37px;
+                width: 90%;
+                left: 6%;
+            }
+
+            .marmo-solution .product-box {
+                margin: 0%;
+            }
+
+            .icon-box .box {
+                padding: 29px 31px 27px 20px;
+            }
+        }
+
+        .black_box {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+
+        function Getdata() {
+            debugger;
+            var mobileno = document.querySelector("#mobilenumber").value;
+
+            if (mobileno.length == 10) {
+                $.ajax({
+                    type: "Post",
+                    url: '/Info/MasterHandler.ashx?method=ConsumerDetailsByMobileNo&MobileNo= ' + $("#mobilenumber").val(),
+                    success: function (data) {
+                        debugger;
+                        var Name = data.split('~')[0];
+                        var state = data.split('~')[3];
+                        var city = data.split('~')[2];
+                        var Other_Role = data.split('~')[5];
+
+                        if (Name != "")
+                            $("#Name").val(Name);
+
+                        if (city != "")
+                            $("#city").val(city);
+
+                        if (state != "")
+                            $("#state").val(state);
+
+                        if (Other_Role != "")
+                            $("#Usertype").val(Other_Role);
+                    }
+                });
+            }
+        }
+        var getPosition = function (options) {
+            return new Promise(function (resolve, reject) {
+                navigator.geolocation.getCurrentPosition(resolve, reject, options);
+            });
+        }
+
+
+        $('#btnsubmit').on('click', function () {
+            debugger;
+
+            $('#btnsubmit').attr('disabled', true);
+            var phoneNumber = $('#mobilenumber').val();
+
+            if (phoneNumber != undefined) {
+                if (phoneNumber.length < 10) {
+                    toastr.error('Please Enter Valid Mobile Number');
+                }
+                var validate = false;
+                var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+
+                if (filter.test(phoneNumber)) {
+                    if (phoneNumber.length == 10) {
+                        var c = phoneNumber.slice(0, 1);
+                        if (c <= 5) {
+                            $('#p3msg').html('Not a valid mobile number');
+                            validate = false;
+                            $('#mobilenumber').val('');
+                        }
+                        else
+                            validate = true;
+                    } else {
+                        if (phoneNumber.length > 10) {
+                            $('#p3msg').html('Please put 10  digit mobile number');
+
+                            validate = false;
+                        }
+                        else {
+                            validate = false;
+                            $('#btnsubmit').attr('disabled', false);
+                        }
+                    }
+                }
+
+
+
+                else {
+
+                    if (phoneNumber.length == 9) {
+                        $('#p3msg').html('Please Enter Valid mobile number');
+                        $('#mobilenumber').val('');
+                        validate = false;
+                    }
+                    else
+                        validate = false;
+                }
+
+
+                if (phoneNumber.match(/[^$,.\d]/)) {
+                    toastr.error("Please enter numeric value for mobile No.");
+                    validate = false;
+                }
+
+
+            }
+
+            var Name = $('#Name').val();
+            if (Name != undefined) {
+
+                if ($('#Name').val().length < 1) {
+                    toastr.error('Please Enter valid Name');
+                    validate = false;
+                }
+                var matches = $('#Name').val().match(/\d+/g);
+                if (matches != null) {
+                    toastr.error('Name Should be alphabet only!');
+                    validate = false;
+                }
+
+            }
+
+
+            var city = $('#city').val();
+            if (city != undefined) {
+
+                if ($('#city').val().length < 1) {
+                    toastr.error('Please Enter valid City');
+                    validate = false;
+                }
+                var matches = $('#city').val().match(/\d+/g);
+                if (matches != null) {
+                    toastr.error('City Name Should be alphabet only!');
+                    validate = false;
+                }
+
+
+
+
+            }
+
+            //for state
+
+            var state = $('#state').val();
+            if (state != undefined) {
+
+                if ($('#state').val().length < 1) {
+                    toastr.error('Please Enter valid state');
+                    validate = false;
+                }
+                var matches = $('#state').val().match(/\d+/g);
+                if (matches != null) {
+                    toastr.error('state Should be alphabet only!');
+                    validate = false;
+                }
+
+
+            }
+            var role_id = $("#Usertype");
+            if (role_id.val() == "" || role_id.val() == null) {
+                toastr.error("Please Select Role");
+                validate = false;
+            }
+        });
+
+
+        function myfunction() {
+
+            $.ajax({
+                type: "POST",
+                url: '/Info/MasterHandler.ashx?method=chkgenuenity&codeone=' + $("#codeone").val().substring(0, 5) + '&codetwo=' + $("#codeone").val().substring(5, 13) + '&mobile=' + $("#mobilenumber").val() + '&name=' + $("#Name").val() + '&city=' + $("#city").val() + '&State=' + $("#state").val() + '&Other_Role=' + $("#Usertype option:selected ").val() + '&client=Comp-1271',
+                success: function (data) {
+                    if (data.indexOf("not valid") !== -1) {
+                        data = data.split(".")[0];
+                    }
+                    $('#ChkCode').hide();
+                    $('#head').hide();
+                    $('#Chkfields').hide();
+                    $('#CodeHeading').hide();
+                    $('#ShowMessage').show();
+                    $('#chkLine').hide();
+                    //$('#p3msg').html(data.split('~')[1] + "<br/><br/>");
+                    $('#p3msg').html(data);
+                    $('#p3msg:contains("not")').css('color', 'black');
+                }
+            });
+        }
+
+        $('#btnNext').click(function () {
+            window.location.href = 'https://www.ocicables.com/';
+        });
+
+
+
+
+
+
+
+
+        function allowOnlyLetters(e, t) {
+            if (window.event) {
+                var charCode = window.event.keyCode;
+            }
+            else if (e) {
+                var charCode = e.which;
+            }
+            else { return true; }
+            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+                return true;
+            else {
+                alert("Please enter only alphabets");
+                return false;
+            }
+        }
+
+        function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+
+        function isNumber(evt, cntrl_id) {
+            debugger;
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+
+
+            if ($('#' + cntrl_id).val().length == 0) {
+
+                if (parseInt(evt.key) > 6)
+                    return true;
+
+            }
+            if ($('#' + cntrl_id).val().length > 10) {
+
+                return false;
+
+            }
+            if (charCode >= 96 && charCode <= 105) {
+                return true;
+            }
+            if (charCode >= 48 && charCode <= 57)
+                return true;
+            if (charCode == 8)
+                return true;
+            if (charCode == 46)
+                return false;
+
+            return false;
+        }
+
+    </script>
+</head>
+<body>
+    <div class="marmo-solution">
+        <header>
+            <div class="container">
+                <a href="../">
+                    <img src="assets/images/oci/logo (1).png" alt="marmo-logo" class="marmo-logo" />
+                </a>
+
+            </div>
+        </header>
+        <section>
+            <div class="container">
+                <div class="row black_box">
+
+
+                    <div class="col-md-5">
+                        <div class="form-box mt-2 animate__animated animate__fadeInLeft">
+                            <form id="form1" action="" onsubmit="myfunction(); return false;">
+
+
+                                <div class="row">
+                                    <div id="fields">
+                                        <div class="col-12">
+                                            <h5 class="text-uppercase">to check authenticity And Avail Benefits</h5>
+                                        </div>
+
+                                        <div class="width-box">
+                                            <div id="ChkCode">
+                                                <div class="col-sm-12">
+                                                    <input type="text" maxlength="13" id="codeone" class="form-control input1" required onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" placeholder="Enter Unique 13 Digit Code*" />
+                                                </div>
+                                            </div>
+                                            <div id="Chkfields">
+                                                <div id="chkmobile">
+                                                    <div class="col-12">
+                                                        <input type="text" maxlength="10" id="mobilenumber" required onkeyup="Getdata()" data-msg-required="Please Enter Your Moblie Number" class="form-control" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" placeholder="Enter Mobile Number*" />
+                                                    </div>
+                                                </div>
+                                                <div id="otherfld">
+                                                    <div class="col-12">
+                                                        <input type="text" class="form-control" required id="Name" placeholder="Enter Name*" />
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <input type="text" id="city" class="form-control" required placeholder="Enter City*" />
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <input type="text" id="state" class="form-control" required placeholder="Enter State*" />
+                                                    </div>
+
+                                                    <div class="col-12 select_opt">
+
+                                                        <select name="customertype" required id="Usertype" style="border-radius: 50px; border: 3px solid #fff; color: #6c757d; background-color: #e4e7ec; margin-bottom: 7px; font-size: 13px; padding: 8px 15px; transition-duration: 0.5s; display: block; width: 100%;">
+
+                                                            <option value="" selected disabled hidden>Choose Customer Type </option>
+                                                            <option value="Contractor">Contractor</option>
+                                                            <option value="Electrician">Electrician</option>
+                                                            <option value="Shop">Shop</option>
+                                                            <option value="User">User</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-12 text-center">
+                                                    <button type="submit" id="btnsubmit" data-toggle="modal" class="btn text-uppercase">SUBMIT</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div style="display: none;" id="ShowMessage" class="row no-gutters pl-4 pr-4 textmessage">
+                                        <br />
+                                        <center>
+                                            <div class="col-md-12">
+                                                <br />
+
+                                                <div class="form-group" style="margin-left: 7%;">
+                                                    <p id="p3msg" style="overflow: hidden; font-size: 14px !important;" class="displayNone massage_box"></p>
+                                                </div>
+
+
+                                                <a href="https://www.ocicables.com/" class="next_btn" id="btnNext"><b>Close</b> </a>
+
+                                            </div>
+                                        </center>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7">
+                        <div class=" animate__animated animate__backInRight product_img">
+                            <img src="assets/images/oci/Oci-product-img.png" style="width: 73%; margin: auto" alt="oci-logo" class="oci-logo" />
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <a class="navbar-brand" href="https://www.ocicables.com/">
+                            <h5 class="weblink" style="color: #fff; margin-top: -4%">www.ocicables.com</h5>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </section>
+
+    </div>
+
+
+
+
+
+</body>
+</html>

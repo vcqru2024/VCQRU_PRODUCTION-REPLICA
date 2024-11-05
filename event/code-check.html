@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Check</title>
+    <!-- css -->
+    <link rel="stylesheet" href="assets_event/css/css.css">
+    <link rel="stylesheet" href="assets_event/css/style.css">
+    <!-- font-awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/0.9.0/jquery.mask.min.js"></script>
+
+    <script type="text/javascript">
+        //  var baseurl = "..";
+        var baseurl = "https://www.vcqru.com"
+        var Codeone = "";
+        var Codetwo = "";
+        var comp = "";
+        var Id = "";
+        var ctr = "";
+        var lat = "";
+        var long = "";
+
+        $("#codeone").mask("99999-99999999");
+        $("#mobile").mask("9999999999");
+
+        $(document).ready(function () {
+            $('#HEADING').show();
+            debugger;
+            function getUrlVars() {
+                debugger;
+                var vars = [], hash;
+                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                for (var i = 0; i < hashes.length; i++) {
+                    hash = hashes[i].split('=');
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                return vars;
+            };
+            Codeone = getUrlVars()["codeone"];
+            Codetwo = getUrlVars()["codetwo"];
+            comp = getUrlVars()["Comp"];
+            Id = getUrlVars()["ID"];
+            //alert(Id);
+            if (comp === undefined || comp === "undefined") {
+                comp = comp;
+            }
+            else {
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+            }
+            if (Codeone === undefined || Codeone === undefined) {
+                Codeone = Codeone;
+            }
+            else {
+                var HdnCode1 = Codeone;
+                var HdnCode2 = Codetwo;
+                $("#HdnCode1").val(Codeone);
+                $("#HdnCode2").val(Codetwo);
+                $('#HdnID').val(Id);
+                $('#CompName').val(comp);
+            }
+            var id = $('#HdnID').val();
+            if (id == "1") {
+                $('#ChkCode').show();
+                $('#mobilefield').hide();
+            } else if (id == "expo") {
+                $('#ChkCode').hide();
+                $('#mobilefield').show();
+                $('#btnsubmit').show();
+
+                var code = $('#HdnCode1').val() + '-' + $('#HdnCode2').val();
+                $("#codeone").val(code);
+            }
+
+
+
+
+            $("#codeone").mask("99999-99999999");
+            $("#btnnxt").on('click', function () {
+                //alert();
+                debugger;
+                var codeone = $('#codeone').val();
+                if (codeone != undefined) {
+
+                    if ($('#codeone').val().length < 14) {
+                        $('#lblmob').text('Please Enter valid Code');
+                        $("#lblmob").css("color", "red");
+                        validate = false;
+                        return false;
+                    }
+                }
+                //alert(codeone);
+
+                var rquestpage_Dcrypt = $("#codeone").val();
+
+                $.ajax({
+                    type: "POST",
+                    url: baseurl + '/Info/MasterHandler.ashx?method=chkgenuenity&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1],
+                    success: function (data) {
+                        // alert(data);
+                        $.ajax({
+                            type: "POST",
+                            url: baseurl + '/Info/MasterHandler.ashx?method=chkwarranty&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1] + '&lat=' + $('#lat').val() + '&long=' + $('#long').val(),
+                            success: function (data) {
+                                //alert(data);
+                                //  alert(data.split('&')[1]);
+                                $('#CompName').val(data.split('&')[1]);
+
+                                if ($('#CompName').val() == "Pack Plus" || $('#CompName').val() == "") { // || $('#CompName').val() == "undefined"
+                                    //alert('ollk');
+                                    $('#ChkCode').hide();
+                                    $('#mobilefield').show();
+                                    $('#btnsubmit').show();
+                                }
+                                else {
+
+                                    $('#lblmob').text('not valid');
+                                    $('#ChkCode').show();
+                                    validate = false;
+                                    return false;
+                                    //alert('Invalid Code!');
+
+                                }
+                            }
+                        });
+                    }
+                });
+                //}
+            });
+
+
+            // end of the code check process
+
+
+
+
+            $('#btnsubmit').on('click', function () {
+                debugger;
+
+
+                $('#imgloaddersubmit').show();
+                var code = $('#codeone').val();
+                var mobileno = $('#mobile').val();
+                if ($('#mobile').val() == "") {
+                    $('#lbl').text('Please Enter Mobile Number!');
+                    $("#lbl").css("color", "red");
+                    $('#mobile').focus();
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                else {
+                    $('#lbl').text('');
+                }
+
+                if (mobileno.length < 10) {
+                    $('#lbl').text('Please Enter 10 Digit Mobile Number!');
+                    $("#lbl").css("color", "red");
+                    $('#mobile').focus();
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                else {
+                    $('#lbl').text('');
+                }
+
+                $('#btnsubmit').attr('disabled', false);
+                $('#p3msg').html('');
+                if (code != "") {
+                    $('#btnsubmit').attr('disabled', true);
+                    $('#btnsubmit').hide();
+                    $('#imgloaddersubmit').show();
+                    $.ajax({
+                        type: "POST",
+                        contentType: false,
+                        processData: false,
+
+                        url: baseurl + '/Info/MasterHandler.ashx?method=verifyotp&mobile=' + $('#mobile').val() + "&vCode=" + $('#codeone').val() + '&name=NA&EmailAddrs=&Comp_ID=Comp-1292&comp=Pack Plus',
+                        success: function (data) {
+                            // alert(data);
+                            $('#imgloaddersubmit').hide();
+                            if (data.split('~')[0] !== "failure") {
+                                window.scrollTo(0, 0);
+                                if (data.indexOf("not valid") !== -1) {
+                                    data = data.split(".")[0];
+                                }
+                                $('#HEADING').hide();
+                                $('#ChkCode').hide();
+                                $('#mobilefield').hide();
+
+                                $('#ShowMessage').show();
+                                var resltmsg = "";
+                                if ((data.split('~')[1]).includes("invalid") == true) {
+                                    //alert('one');
+                                    resltmsg = "We are unable to verify the Authenticity of this product. Please connect with our customer support on 7353000903";
+                                } else if (data.includes("purchased a Genuine") == true) {
+                                    //alert('two');
+                                    resltmsg = "You have purchased an Authentic Product.";
+                                } else if ((data.split('~')[1]).includes("Already") == true) {
+                                    resltmsg = "The authenticity of this product has already been verified. ";
+                                }
+                                else {
+                                    //lert('three');
+                                    resltmsg = data.split('~')[1];
+                                }
+                                $('#p3msg').html(resltmsg);
+                                $('#p3msg:contains("not")').css('color', 'black');
+                            }
+                            else {
+                                $('#btnsubmit').show();
+                                $('#btnsubmit').attr('disabled', false);
+                            }
+                        }
+                    });
+                }
+                else {
+                    $('#btnsubmit').attr('disabled', false);
+                }
+
+            });
+            $('#btnNext').click(function () {
+                window.location.href = 'https://www.vcqru.com/';
+            });
+        });
+
+        function checkCodeFun() {
+            if ($('#codeone').val().length >= 14) {
+                $('#lblmob').text('');
+            }
+        }
+    </script>
+</head>
+<style>
+    body {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        background-image: url(https://5.imimg.com/data5/SELLER/Default/2023/9/343660384/RF/ZZ/CA/6839371/refined-lubricating-oil.jpg);
+        overflow: hidden;
+    }
+</style>
+
+<body>
+    <section class="landing-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="logo text-center">
+                                <img src="https://www.vcqru.com/NewContent/img-home/logo.png" alt="Logo">
+                            </div>
+                            <h5 class="card-title" id="HEADING">To check authenticity.</h5>
+                            <form runat="server" class="row g-3">
+                                <input type="hidden" id="hdnmob" value="">
+                                <input type="hidden" id="HdnID" value="">
+                                <input type="hidden" id="HdnCode1" value="">
+                                <input type="hidden" id="HdnCode2" value="">
+                                <input type="hidden" id="CompName" value="">
+                                <input type="hidden" id="long" value="">
+                                <input type="hidden" id="lat" value="">
+
+                                <div id="ChkCode">
+                                    <div class="col-12 text-center ">
+
+                                        <input type="text" class="form-control common" onkeyup="checkCodeFun()"
+                                            id="codeone" maxlength="13" minlength="13"
+                                            placeholder="Enter 13 Digit Code*" name="text" />
+                                        <label id="lblmob" class="clbl my-1" style="font-size:16px;"></label>
+                                    </div>
+
+
+                                    <div class="col-12 text-center mt-1">
+                                        <button type="button" id="btnnxt" class="btn btn-primary px-5">Next</button>
+                                    </div>
+
+                                </div>
+
+                                <div id="mobilefield" style="display: none">
+                                    <div class="mb-3 common-icone text-center">
+                                        <input type="text" class="form-control common" id="mobile" maxlength="10"
+                                            placeholder="Enter Mobile Number*" name="phone" />
+                                    </div>
+                                    <label id="lblgetotp" class="clbl"></label>
+                                    <div class="col-12 text-center" style="margin-top:-35px;">
+                                        <label class="clbl mt-1" id="lbl" style="font-size:16px;"></label>
+                                        <button type="button" id="btnsubmit"
+                                            class="btn btn-primary px-5 mt-1">SUBMIT</button>
+                                        <button type="button" style="display: none" id="btnloadsubmit"
+                                            class="form-control"><i class="fa fa-spinner fa-spin"></i>Loading..</button>
+                                    </div>
+                                </div>
+
+                                <div style="display: none;" id="ShowMessage">
+
+                                    <div class="form-box">
+                                        <p id="p3msg"
+                                            style="overflow: hidden; font-size: 16px !important; font-weight: 500; padding-top: 15px"
+                                            class="displayNone massage_box text-center"></p>
+                                        <br />
+                                        <center><a href="javascript:void(0)" class="btn btn-primary"
+                                                id="btnNext">Close</a></center>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <p class="card-text my-3 text-center">QR/Code Related Support Available on</p>
+                            <ul class="support-check">
+                                <li>
+                                    <i class="fa-solid fa-phone text-primary"></i>
+                                    <a href="tel:+911245181074">+91 124 5181074</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-square-envelope text-primary"></i>
+                                    <a href="mailto:">sales@vcqru.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="position-fixed start-0 bottom-0 bg-dark w-100 py-1">
+        <div class="container">
+            <p class="text-center mb-0 text-white" style="font-size: 14px;"><a href="https://www.vcqru.com/"
+                    style="text-decoration:none;" class="text-white">www.vcqru.com</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

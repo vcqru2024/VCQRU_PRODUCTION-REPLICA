@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Orbit-India</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		
+		
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+	
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+		body {
+    margin: 0;
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: white;
+    //background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+        .Orbit-India .card {
+            background-color: var(--bs-dark);
+            border: 3px solid var(--bs-white);
+        }
+
+        .Orbit-India {
+            background-image: url(assets/images/orbit/orbit-bg.jpg);
+            min-height: 100vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .orbit-product {
+            width: 100%;
+            position: absolute;
+            width: 60%;
+            bottom: 0;
+            right: 40px;
+        }
+
+        .orbit-logo {
+            padding: 8px 0;
+            width: 20%;
+
+        }
+        #btnNext{
+            border:0px solid !important;
+        }
+        .form {
+            /* background-color: #000000c2; */
+            /* padding: 30px; */
+            /* border: 2px solid #fff; */
+        }
+
+        .form input {
+            margin-bottom: 6px;
+        }
+
+        .orbit-footer {
+            background-color: #000;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+        .orbit-footer a {
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+
+        }
+        #btnnxt:focus {
+            background-color: #19c880;
+            color:#fff;
+        }
+        .form-box #p3msg{
+            text-align:center;
+        }
+
+        .form h4 {
+            text-align: center;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        .form label {
+            text-align: center;
+            color: #fff;
+            //display: none;
+        }
+
+        .form button {
+            text-align: center;
+            background-color: #19c880;
+            color: #fff;
+            padding: 5px 35px;
+            margin: 10px 0;
+        }
+
+        .form #wlink {
+            text-align: center;
+            color: #fff;
+        }
+
+        .form #wlink a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+
+        @media screen and (max-width: 767px) {
+            .orbit-product {
+			width: 100%;
+			position: absolute;
+			padding: 0 10px 12px 10px;
+			right: 0;
+			}
+
+            .orbit-logo {
+                width: 39%;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 990px) {
+            .orbit-product {
+                width: 50%;
+                bottom: 10px;
+                right: 0;
+            }
+
+        }
+
+        .follow {
+            top: 50%;
+            position: fixed;
+            right: 0;
+            z-index: 1;
+
+        }
+
+        .follow ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: end;
+            flex-direction: column;
+            gap: 0.50rem;
+        }
+
+        .follow ul li {
+            width: 3rem;
+            color: #fff;
+            background-color: #000;
+        }
+
+        .follow ul li p {
+            transform: rotate(90deg);
+			-webkit-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			-o-transform: rotate(90deg);
+            /* background-color: #000; */
+            margin-bottom: 0;
+            text-wrap: nowrap;
+            padding: 1rem;
+        }
+
+        .follow ul li a {
+            width: 3rem;
+            background-color: #000;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .follow ul li a i {
+            font-size: 24px;
+        }
+    </style>
+    <script type="text/javascript">
+
+         var baseurl = "..";
+        /*var baseurl = "http://localhost:51730";*/
+        mobile_val = "";
+        var lat = "";
+        var long = "";
+        var Codeone = "";
+        var Codetwo = "";
+        var comp = "";
+        var ID = "";
+
+
+
+        function Mobile_check() {
+          
+            $('#err_msg').html("");
+            $('#err_msg').css("color", "black");
+
+            var mobile_val = $('#mobile').val();
+            var d = mobile_val.slice(0, 1);
+            var c = parseInt(d);
+
+            if ((mobile_val.length == '') || (mobile_val.length != 10)) {
+                $('#mobilecheck').show();
+                $('#mobilecheck').html("**Please Enter mobile number");
+                $('#mobilecheck').css("color", "red");
+                flag = false;
+                return false;
+            }
+
+            // if the mobile length value is correct and drop down list is not empty then through post api we can easily collect the data from the user
+            if (mobile_val.length == 10) {
+                $('#err_msg').html("");
+                $('#err_msg').css("color", "black");
+
+               
+                $('#mobilecheck').hide();
+                $.ajax({
+                    type: "Post",
+                    url: baseurl + '/Info/MasterHandler.ashx?method=ConsumerDetailsByMobileNo&MobileNo= ' + $("#mobile").val(),
+                   
+                    success: function (data) {
+                      
+                        if (c <= 5) {
+                            $('#mobilecheck').text('Please Enter correct Mobile Number');
+                            $('#mobile').val('');
+                            return false;
+                        }
+                        else {
+                            
+                            var Name = data.split('~')[0];
+                            var pin = data.split('~')[6];
+                            var city = data.split('~')[2];
+                            
+                            
+                            if (Name != "") {
+                                $("#name").val(Name);
+                            }
+                            else {
+                                $("#name").val(Name);
+                                $('#Chkcode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+       
+                            }
+                            if (pin != "") {
+                                $("#Pincode").val(pin);
+                            }
+                            else {
+                                $("#Pincode").val(pin);
+                                $('#Chkcode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+       
+                            }
+       
+                            if (city != "") {
+                                $("#city").val(city);
+                            } else {
+                                $("#city").val(city);
+                                $('#Chkcode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                            } 
+
+                            
+
+                           
+                           
+                            $('#mobilefield').hide();
+                            $('#Chkfields').show();
+                            $('#Otherfield').show();
+                            $('#dealerNamefield').show();
+
+
+                        }
+                    }
+                });
+            }
+            else {
+                $("#name").val('');
+                $("#Pincode").val('');
+                $("#city").val('');
+               
+
+            }
+        }
+
+        /*Pincode Api for the city and the state  */
+        function Pin_check() {
+           
+
+            let pin = document.getElementById("Pincode").value;
+            if (pin.length == 0) {
+                $('#err_msg').hide();
+            }
+            else if (pin.length == 6) {
+	
+					  $('#err_msg').hide();
+                        $('#err_msg').html("");
+                        $('#err_msg').css("color", "black");
+						
+                $.getJSON("https://api.postalpincode.in/pincode/" + pin, function (data) {
+
+                    createHTML(data);
+                });
+                function createHTML(data) {
+                   /* alert(data);*/
+                    if (data[0].Status == "Success") {
+                        var city = "";
+                        var state = "";
+                        var pin = "";
+                        var city = data[0].PostOffice[0]['District'];
+                        var state = data[0].PostOffice[0]['State'];
+                        var Pin = data[0].PostOffice[0]['PinCode'];
+                        $('#Pincode').text('');
+                        $("#city").val(city);
+                        $("#city").attr('readonly', true);
+                      
+
+                        if ($("#city").val() != "") {
+
+                        }
+                        
+                    }
+                    else {
+                        $('#err_msg').show();
+                        $('#err_msg').html("**Please Enter Valid PinCode");
+                        $('#err_msg').css("color", "red");
+                        $("#city").attr('readonly', false);
+                     
+                        flag = false;
+                        return false;
+                    }
+                }
+            }
+
+            else {
+                $("#city").val('');
+               
+                $("#city").attr('readonly', false);
+               
+                $('#err_msg').show();
+                $('#err_msg').html("**Please Enter the 6-digits pin code");
+                $('#err_msg').css("color", "red");
+                flag = false;
+                return false;
+            }
+
+        }
+
+
+        $(document).ready(function () {
+          
+         
+            $('#Chkcode').show();
+            $('#Chkfields').hide();
+            $('#mobilefield').hide();
+            $('#Otherfield').hide();
+            $('#dealerNamefield').hide();
+            $('#textheading').show();
+
+            function getUrlVars() {
+
+             
+                var vars = [], hash;
+                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                //alert(hashes);
+                //alert(hashes.length);
+                for (var i = 0; i < hashes.length; i++) {
+                    hash = hashes[i].split('=');
+                    // alert(hash);
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                return vars;
+            };
+            // alert(getUrlVars()["codeone"]);
+            Codeone = getUrlVars()["codeone"];
+            Codetwo = getUrlVars()["codetwo"];
+            comp = getUrlVars()["codetwo"];
+            ID = getUrlVars()["ID"];
+            //alert(Codeone);
+            if (Codeone != "" && Codetwo != "" && ID != "") {
+
+                //alert(Codeone);
+                $("#HdnCode1").val(Codeone);
+                $("#HdnCode2").val(Codetwo);
+                $('#HdnID').val(ID);
+                $('#CompName').val(comp);
+
+               
+            }
+
+            var id = $('#HdnID').val();
+
+            
+            if (id == "1") {
+
+                $('#ChkCode').show();
+                $('#Chkfields').hide();
+                $('#otherfield').hide();
+                $('#mobilefield').hide();
+            }
+
+            else if (id == "Orbitindia") {
+              
+                
+                $('#Chkcode').hide();
+                $('#Chkfields').show();
+                $('#Otherfield').hide();
+                $('#mobilefield').show();
+                $('#textheading').show();
+               
+
+                var code = $('#HdnCode1').val() + '-' + $('#HdnCode2').val();
+                $("#example13_digit_number").val(code);
+
+
+            }
+
+            $("#example13_digit_number").mask("99999-99999999");
+           
+
+           
+
+            $("#btnnxt").on('click', function (e) {
+                e.preventDefault();
+            
+                var codeone = $('#example13_digit_number').val();
+
+                if (codeone == "" || codeone == undefined) {
+                    $('#cnext').show();
+                    $('#cnext').html('**Please Enter 13 Digit Code');
+                    $('#cnext').css("color", "red");
+                    return false;
+                }
+                else {
+                    $('#cnext').text('');
+                }
+
+                if (codeone != undefined) {
+                    if ($('#example13_digit_number').val().length < 14) {
+                        $('#cnext').show();
+                        $('#cnext').text('**Please Enter 13 Digit Code');
+                        $('#cnext').css("color", "red");
+                        return false;
+                    }
+                    else {
+                        $('#cnext').text('');
+                        $('#cnext').hide();
+                    }
+                }
+
+                var rquestpage_Dcrypt = $("#example13_digit_number").val();
+               
+                $('#btnnxt').hide();
+                $('#btnloadnxt').show();
+               var abbb =  baseurl + '/Info/MasterHandler.ashx?method=chkwarranty&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1] + '&lat=' + lat + '&long=' + long;
+                
+               
+                        $.ajax({
+                            type: "POST",
+                            url: baseurl + '/Info/MasterHandler.ashx?method=chkwarranty&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1] + '&lat=' + lat + '&long=' + long,
+                            success: function (data) {
+                                //alert(data);
+                                $('#btnnxt').show();
+                                $('#btnloadnxt').hide();
+                                if (data.split('&')[1] == "ORBIT ELECTRODOMESTICS INDIA" || data.split('&')[0] == "ORBIT ELECTRODOMESTICS INDIA" || data.split('&')[1] == "") {
+                                    $('#Chkcode').hide();
+                                    $('#Chkfields').show();
+                                    $('#Otherfield').hide();
+                                    $('#mobilefield').show();
+                                    $('#textheading').show();
+
+                                } else if (data.toUpperCase().includes('NOT VALID')) {
+
+                                    $('#Chkcode').hide();
+                                    $('#Chkfields').show();
+                                    $('#Otherfield').hide();
+                                    $('#mobilefield').show();
+                                    $('#textheading').show();
+                                }
+                                else {
+                                    var invalidmsg = "The code " + rquestpage_Dcrypt + " is invalid. Please check and try again!";
+                                    //$('#nextcheck').text(invalidmsg);
+                                    $('#TNTWarrentyFields').hide();
+                                    $('#ShowMessage').show();
+                                    $('#p3msg').html(invalidmsg);
+                                    $('#textheading').hide();
+                                    $('#p3msg:contains("not")').css('color', 'white');
+                                    return false;
+                                } 
+
+                            }
+                        });
+                //    }
+                //});
+
+            });
+
+            // end of the code check process
+
+
+
+            /////validation -
+
+
+            $("#mobile").mask("9999999999");
+            $('#mobile').keyup(function () {
+                Mobile_check();
+            });
+
+            // validation for the namecheck
+            $('#dealerName').keyup(function () {
+						$('#err_msg').hide();
+                        $('#err_msg').html("");
+                        $('#err_msg').css("color", "black");
+
+            });
+
+            function Name_check() {
+                var Name_val = $('#name').val();
+
+                if ((Name_val.length == '')) {
+                    $('#err_msg').show();
+                    $('#err_msg').html("**Please Enter Name");
+                    $('#err_msg').css("color", "red");
+                    flag = false;
+                    return false;
+                }
+
+                if ($('#name').val().match('^[a-z A-Z]{3,30}$')) {
+                    $('#err_msg').hide();
+                }
+                else {
+                    $('#namecheck').show();
+                    $('#err_msg').html("**Please Enter valid name");
+                    $('#err_msg').css("color", "red");
+                    flag = false;
+                    return false;
+                }
+               
+            }
+
+            // Validation for the Pincode
+            $("#Pincode").mask("999999");
+            $('#Pincode').keyup(function () {
+                Pin_check();
+
+            });
+			  $('#dealerName').keyup(function () {
+                Pin_check();
+
+            });
+			
+			
+
+            // validation for the city
+            $('#city').keyup(function () {
+                city_check();
+
+            });
+            function city_check() {
+
+                var city_val = $('#city').val();
+                if ($('#city').val().match('^[a-z A-Z]{3,40}$')) {
+                    $('#err_msg').hide();
+                }
+
+                else {
+                    $('#err_msg').show();
+                    $('#err_msg').html("**Please enter valid city name");
+                    $('#err_msg').css("color", "red");
+                    flag = false;
+                    return false;
+                }
+
+            }
+
+            //---------------------------------------------------------
+
+
+
+            $('#btnsubmit').on('click', function () {
+                /*debugger;*/
+
+                var selectedDate = new Date($('#purchasedate').val());
+                var currentDate = new Date();
+                $('#mobilecheck').hide();
+              //  $('#mobilecheck').val('')
+                $('#err_msg').html("");
+                $('#err_msg').css("color", "black");
+                if ($('#mobile').val().length != 10) {
+                    $('#err_msg').show();
+                    $('#err_msg').html("**Please enter valid mobile number");
+                    $('#err_msg').css("color", "red");
+                    $('#mobile').focus();
+                    flag = false;
+                    return false;
+
+                } else if ($('#name').val().length < 2) {
+                    $('#err_msg').show();
+                    $('#err_msg').html("**Please enter valid name");
+                    $('#err_msg').css("color", "red");
+                    $('#name').focus();
+                    flag = false;
+                    return false;
+
+                } else if ($('#Pincode').val().length < 6) {
+                    $('#err_msg').show();
+                    $('#err_msg').html("**Please enter valid pin code");
+                    $('#err_msg').css("color", "red");
+                    $('#Pincode').focus();
+                    flag = false;
+                    return false;
+
+                } else if ($('#city').val().length < 2) {
+                    $('#err_msg').show();
+                    $('#err_msg').html("**Please enter valid city");
+                    $('#err_msg').css("color", "red");
+                    $('#city').focus();
+                    flag = false;
+                    return false;
+
+                }
+                else if ($('#dealerName').val().length < 3) {
+
+                    $('#err_msg').show();
+                    $('#err_msg').html("**Please enter retailer detail");
+                    $('#err_msg').css("color", "red");
+                    $('#dealerName').focus();
+                    flag = false;
+                    return false;
+                } else if ($('#purchasedate').val() =="") {
+					 $('#err_msg').show();
+                    $('#err_msg').text('Please select date');
+                    $('#err_msg').css("color", "red");
+                    $('.purchasedate').focus();
+
+                    flag = false;
+                    return false;
+
+                }
+                
+                else if (selectedDate > currentDate) {
+                    $('#err_msg').show();
+                    $('#err_msg').text('Please Enter Valid Date');
+                    $('#err_msg').css("color", "red");
+                    $('.purchasedate').focus();
+
+                    flag = false;
+                    return false;
+                }
+
+                  
+
+
+                else if ($('.img_bill').val().length < 2) {
+					 $('#err_msg').show();
+                    $('#err_msg').text('Please Upload Bill Image');
+                    $('#err_msg').css("color", "red");
+                    $('.img_bill').focus();
+
+                    flag = false;
+                    return false;
+
+                }
+                else {
+                    $('#err_msg').hide();
+                    $('#err_msg').html("");
+                    flag = true;
+
+                     }
+
+
+
+                var code = $('#example13_digit_number').val();
+              /*  debugger;*/
+                if (code != "" && flag == true) {
+                    $('#btnsubmit').hide();
+                    $('#btnloadsubmit').show();
+                    //	alert('ok');
+                  /*  $('#btnsubmit').prop('disabled', true);*/
+                    var fd = new FormData();
+                    var files = $('#file-input')[0].files[0];
+                    fd.append('file', files);
+                    var datamsg = "";
+
+                    $.ajax({
+                        type: "POST",
+                        contentType: false,
+                        processData: false,
+                        data: fd,
+                        //url: baseurl + '/Info/MasterHandler.ashx?method=chkgenuenity&codeone=' + code.substring(0, 5) + '&codetwo=' + code.substring(6, 14) + '&mobile=' + $('#mobile').val(),
+                        url: baseurl + '/Info/MasterHandler.ashx?method=chkgenuenity&codeone=' + code.substring(0, 5) + '&codetwo=' + code.substring(6, 14) + '&mobile=' + $('#mobile').val() + '&city=' + $('#city').val() + '&PinCode=' + $('#Pincode').val() + '&name=' + $('#name').val(),
+
+                        success: function (datamsg) {
+                           /* debugger*/
+                            if (datamsg.toUpperCase().includes('ALREADY')) {
+                                $('#TNTWarrentyFields').hide();
+                                $('#ShowMessage').show();
+                                $('#p3msg').html(datamsg);
+                                $('#textheading').hide();
+                                //$('#p3msg').html(datamsg.split(".")[0] + "." + datamsg.split(".pdf")[1]);
+                                $('#p3msg:contains("not")').css('color', 'white');
+                            } else if (datamsg.toUpperCase().includes('NOT VALID')) {
+                                var invalidmsg =  "The code " + code + " is invalid.Please check and try again!";
+                                $('#TNTWarrentyFields').hide();
+                                $('#ShowMessage').show();
+                                $('#textheading').hide();
+                                $('#p3msg').html(invalidmsg);
+                                $('#p3msg:contains("not")').css('color', 'white');
+                            } else {
+                                $.ajax({
+                                    type: "POST",
+                                    contentType: false,
+                                    processData: false,
+                                    data: fd,
+                                    url: baseurl + '/Info/MasterHandler.ashx?method=browsesave&email=&mobile=' + $('#mobile').val() + '&name=' + $('#name').val() + '&billno=' + '&purchasedate=' + $('#purchasedate').val() + '&code=' + code + '&state=&city=' + $('#city').val() + '&dealerName=' + $('#dealerName').val(),
+                                    success: function (data) {
+                                        if (data != "") {
+
+                                            var msg11 = datamsg.split("<br/>")[0];
+                                            //var msg22 = '<br><br>' + datamsg.split("<br/><br/>")[4];
+                                            var msg22 = "";
+                                            var datamsg22 = msg11 + msg22;
+                                            data = data + "<br/><br/>" + datamsg22 + "<br/><br/>To Check Another product <a href='https://qa.vcqru.com/orbitindia.html'>Click Here</a>";
+
+                                            $('#TNTWarrentyFields').hide();
+                                            $('#ShowMessage').show();
+                                            $('#p3msg').html(data);
+                                            $('#p3msg:contains("not")').css('color', 'white');
+                                            $('#textheading').hide();
+                                        } else {
+                                            
+                                            $('#TNTWarrentyFields').hide();
+                                            $('#ShowMessage').show();
+                                            $('#p3msg').html(datamsg);
+                                            $('#p3msg:contains("not")').css('color', 'white');
+                                            $('#textheading').hide();
+                                        }
+                                    }
+                                   });
+                                }
+
+                        }
+                    });
+                } else {
+
+                    $('#btnsubmit').attr('disabled', false);
+                }
+            });
+        });
+
+
+        $(document).on("click", "#btnNext", () => {
+            window.location.href = 'https://www.indiaorbit.in/';
+
+        });
+
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <section class="Orbit-India">
+        <div class="container">
+            <header>
+                <img src="assets/images/orbit/orbit-logo.png" alt="orbit-logo" class="orbit-logo">
+                <!--<img src="img/orbit-logo.png" alt="orbit-logo" class="orbit-logo">-->
+            </header>
+            <div class="follow">
+                <ul>
+                    <li style="height: 10rem;">
+                        <p>FOLLOW ON US</p>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/orbittechnologiespvtltd/" target="_blank">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/orbittechnologies" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <form class="form">
+                                <input type="hidden" id="HdnID" value="">
+                                <input type="hidden" id="HdnCode1" value="">
+                                <input type="hidden" id="HdnCode2" value="">
+                                <input type="hidden" id="CompName" value="">
+                                <input type="hidden" id="long" value="">
+                                <input type="hidden" id="lat" value="">
+
+
+
+                                <h4 id="textheading">TO CHECK AUTHENTICITY AND <br /> REGISTER FOR E WARRANTY,<br>FILL BELOW DETAILS</h4>
+                                <div class="row">
+                                    <div id="TNTWarrentyFields">
+                                        <div id="Chkcode">
+                                            <div class="col-sm-12">
+                                                <input type="text" placeholder="13 Digit No.*" data-msg-required="Please Enter Your13 Digit Code" class="form-control" id="example13_digit_number" minlength="13" maxlength="13" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" title="Enter 13 digit code" />
+                                                <p id="cnext" class="text-center"></p>
+                                                <button type="button" id="btnnxt" class="form-control">Next</button>
+
+                                                <button type="submit" style="display: none" id="btnloadnxt" class="form-control"><i class="fa fa-spinner fa-spin"></i>Loading..</button>
+
+
+                                            </div>
+                                        </div>
+                                        <div id="Chkfields">
+                                            <div class="mobilefield2" id="mobilefield">
+                                                <div class="col-sm-12">
+                                                    <input type="text" placeholder="Mobile No*" class="form-control" id="mobile" required minlength="10" maxlength="10" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" title="Enter 10 digit mobile number" />
+                                                    <p id="mobilecheck"></p>
+                                                </div>
+                                            </div>
+                                            <div class="Otherfield2" id="Otherfield" style="display:none">
+                                                <div class="col-sm-12">
+                                                    <input type="text" maxlength="40" placeholder="Name*" class="form-control" id="name" required />
+                                                </div>
+                                                <div class="col-sm-12">
+
+                                                    <input type="text" maxlength="6" placeholder="Pincode*" class="form-control" id="Pincode" />
+                                                </div>
+
+                                                <div class="col-sm-12">
+
+                                                    <input type="text" maxlength="40" placeholder="City*" class="form-control" id="city" required />
+                                                </div>
+
+
+
+
+                                                <div class="dealerNamefield" id="dealerNamefield" style="display: none">
+                                                    <div class="col-sm-12">
+                                                        <input type="text" maxlength="40" placeholder="Retailer Details/Shop Name*" class="form-control" id="dealerName" required />
+                                                    </div>
+                                                    <div class="col-sm-12">
+
+														<label id="purhase_label" class="">Enter Purchase Date<sup>*</sup></label>
+                                                        <input type="date" id="purchasedate" class="form-control" placeholder="Purchase Date*"  />
+                                                    </div>
+                                                    <div class="col-sm-12">
+
+                                                        <label> Upload Bill Image*</label>
+                                                        <input type="file" id="file-input" class="form-control file-box img_bill" accept="image/*,application/pdf" />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-sm-12 text-center" id="err_msg"> </div>
+
+                                            <div class="col-sm-12 text-center">
+
+                                                <button type="button" id="btnsubmit" class="form-control">Submit</button>
+                                                <button type="submit" style="display: none" id="btnloadsubmit" class="form-control"><i class="fa fa-spinner fa-spin"></i>Loading..</button>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div style="display: none; padding: 30px 30px 30px -10px; border-radius: 15px;" id="ShowMessage">
+                                        <div class="form-box">
+                                            <p id="p3msg" style=" overflow: hidden;" class="massage_box"></p>
+
+                                        </div>
+                                        <div class=" text-center" style="margin-top:-5px;">
+                                            <button type="button" class="" id="btnNext">Close</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <p id="wlink" class="blink_me animate__animated animate__flash">
+                                            QR/Code Related Support Available on
+                                            <br>
+                                            <i class="fa fa-phone" aria-hidden="true"></i><a href="tel:7353000903">
+                                                7353000903
+                                            </a>
+                                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                            <a href="https://api.whatsapp.com/send?phone=+919355903119&amp;text&amp;type=phone_number&amp;app_absent=1"
+                                               target="blank"> 9355903119 </a>
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <img src="assets/images/orbit/orbit-product.png" alt="orbit-product" class="orbit-product">
+                </div>
+            </div>
+
+        </div>
+        <footer class="orbit-footer">
+            <a href="https://www.indiaorbit.in/">
+                www.indiaorbit.in
+            </a>
+        </footer>
+    </section>
+    <script>
+        document.getElementById('purchasedate').addEventListener('change', function () {
+            //this.setAttribute('readonly', 'true');
+        });
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Muscle mountain</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <script src="https://www.avvatarindia.com/assets/js/jquery.min.js"></script>
+    <script src="https://cdn.shopify.com/s/files/1/0610/5776/1495/files/toastr.min.js?v=1695705061"></script>
+    <link href="https://cdn.shopify.com/s/files/1/0610/5776/1495/files/toastr.min.css?v=1695705105" rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/0.9.0/jquery.mask.min.js"></script>
+
+    <style>
+                .banner {
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 100%;
+                    display: table;
+                    background-position: center;
+                    height: 100vh;
+                    background-image: url(https://cdn.shopify.com/s/files/1/0610/5776/1495/files/background.png?v=1694756469);
+                    position: relative;
+                }
+
+                .product img {
+                    position: absolute;
+                    /*bottom: 33px; */
+                    left: 267px;
+                }
+
+                footer {
+                    padding: 7px;
+                    background-color: #f15f22;
+                    color: #fff;
+                    text-align: center;
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                }
+
+                    footer a {
+                        color: #fff;
+                        text-decoration: none;
+                    }
+
+
+                form {
+                    background: #;
+                    border-radius: 10px;
+                    background: #000;
+                    margin-bottom: 66px;
+                }
+
+                /*.btn {
+                width: 100%;
+                background-color: #bd2424;
+                outline: none;
+                border: none;
+                border-radius: 20px;
+              }
+
+              .logo-img img {
+                width: 11%;
+              }*/
+
+                .form-maine input::placeholder {
+                    color: #0a0a0a !important;
+                }
+
+                .banner form input {
+                    background: #dce0ec !important;
+                    border-radius: 3px !important;
+                }
+
+                .HEADING {
+                    padding: 10px;
+                    text-align: center;
+                    color: #fff;
+                    /* border: 1px solid #fff; */
+                }
+
+                    .HEADING h6 {
+                        font-size: 23px;
+                    }
+
+                .form-select {
+                    background-color: #dce0ec;
+                }
+
+                select {
+                    border: none;
+                    background: transparent;
+                    /*background-color: blue;*/
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    width: 180px;
+                    padding-top: 0px;
+                    background-size: 20px;
+                    color: #ffffff;
+                    font-size: 30px;
+                }
+
+                    select option {
+                        color: #424146;
+                        background: #ffffff;
+                    }
+
+                .form-maine {
+                    padding: 0px 25px 25px;
+                }
+
+                .border-round-1 {
+                    border: 4px solid #fff;
+                    position: relative;
+                    margin-top: -170px;
+                }
+
+
+                .logoAuth img {
+                    width: 200px;
+                }
+
+                .text-color {
+                    color: #fff;
+                }
+
+                .heading-color {
+                    color: #bd2424;
+                }
+
+                button.button-sub {
+                    width: 100%;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    background: #f15f22;
+                    color: #fff;
+                    font-weight: 500;
+                }
+
+                a.button-sub {
+                    width: 100%;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    background: #f15f22;
+                    color: #fff;
+                    font-weight: 500;
+                }
+
+                a.button-sub {
+                    text-decoration: none;
+                }
+
+                /*.form-control {
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.8;
+            color: #212529;
+            background-color: #fff !important;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 0.375rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }*/
+
+                .footer h1 {
+                    background: #bd2424;
+                    padding: 7px;
+                    color: #fff;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+
+                ::placeholder {
+                    color: #969696;
+                }
+
+                .social {
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    list-style: none;
+                }
+
+                    .social li a {
+                        text-decoration: none;
+                        color: #fff;
+                        text-transform: uppercase;
+                    }
+
+                        .social li a img {
+                            width: 40px;
+                            margin-right: 10px;
+                        }
+
+                .web {
+                    width: 30px;
+                    margin-right: 10px;
+                }
+
+                .margin-top {
+                    /*margin-top: 50px; */
+                    margin-top: 250px;
+                }
+
+                .footer {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                }
+
+                .body-content-1 img {
+                    width: 40px;
+                    color: #fff;
+                    filter: invert(100%);
+                    margin-right: 10px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    .logoAuth {
+                        text-align: center;
+                    }
+
+                    .product img {
+                        position: initial;
+                        margin-bottom: 32px;
+                    }
+
+                    .margin-top {
+                        margin-top: 50px !important;
+                        position: relative;
+                        margin-top: 0px;
+                        display: flex;
+                        flex-direction: column-reverse;
+                    }
+
+
+                    .banner {
+                        background-position: initial;
+                    }
+
+                        .banner form {
+                            margin-bottom: 26px;
+                        }
+
+                    .social {
+                        display: table;
+                    }
+
+                    .body-content-1 {
+                        text-align: center;
+                    }
+
+
+
+                    .mobile-view-margin {
+                        margin-top: 100px !important;
+                    }
+
+                    iframe {
+                        width: 100%;
+                    }
+
+                    .logoAuth img {
+                        width: 230px;
+                    }
+
+                    .border-round-1 {
+                        border: 4px solid #fff;
+                        position: relative;
+                        margin-top: 0px;
+                    }
+                }
+
+                @media screen and (min-width: 768px) and (max-width: 1024px) {
+                    .mobile-view-margin {
+                        margin-top: 100px !important;
+                    }
+
+                    .border-round-1 {
+                        border: 4px solid #fff;
+                        position: relative;
+                        margin-top: 0px;
+                    }
+
+                    .product img {
+                        position: initial;
+                        display: flex;
+                        flex-direction: column-reverse;
+                        background-position: initial;
+                        width: 100%;
+                    }
+
+
+
+                    .banner {
+                        background-position: unset;
+                    }
+
+                    .HEADING h6 {
+                        font-size: 36px;
+                        font-weight: 600;
+                    }
+
+                    iframe {
+                        width: 100%;
+                    }
+
+
+
+                    .body-content-1 h6 {
+                        text-align: center;
+                        font-size: 30px;
+                    }
+
+                    .heading-color {
+                        color: #bd2424;
+                        font-size: 36px;
+                    }
+
+                    .body-content-1 img {
+                        width: 69px;
+                        margin-bottom: 20px;
+                    }
+
+                    ::placeholder {
+                        font-size: 22px;
+                        background-color: #fff !important;
+                    }
+
+                    .social li a {
+                        font-size: 22px;
+                    }
+
+
+                    .logoAuth {
+                        text-align: center;
+                    }
+                }
+
+
+
+                @media screen and (width: 280px) {
+                    .social li a {
+                        font-size: 14px;
+                    }
+                }
+
+                .header-default .header-panel-top {
+                    display: -webkit-box;
+                    display: -webkit-flex;
+                    display: -moz-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: flex-end;
+                    -moz-box-pack: flex-end;
+                    -ms-flex-pack: flex-end;
+                    -webkit-justify-content: flex-end;
+                    justify-content: flex-end;
+                    -webkit-align-items: center;
+                    -moz-align-items: center;
+                    -ms-align-items: center;
+                    align-items: center;
+                    margin-bottom: -80px;
+                }
+    </style>
+
+    <script>
+        var Codeone = "";
+        var Codetwo = "";
+        var comp = "";
+        var Id = "";
+
+
+        var lat = "";
+        var long = "";
+        var getPosition = function (options) {
+            return new Promise(function (resolve, reject) {
+                navigator.geolocation.getCurrentPosition(resolve, reject, options);
+            });
+        }
+
+
+        $('#otherfield').hide();
+
+        function Getdata() {
+            debugger;
+
+            var mobileno = document.querySelector("#mobilenumber").value;
+            //alert(mobileno);
+            var d = mobileno.slice(0, 1);
+            var c = parseInt(d);
+            if ($('#mobilenumber').val() == "") {
+                toastr.error("Please enter mobile number");
+                $('#btnsubmit').attr('disabled', false);
+                return false;
+            }
+            if (mobileno == "6565656565") {
+                toastr.error("Please enter valid mobile No.");
+                $('#btnsubmit').attr('disabled', false);
+                return false;
+            }
+            if (mobileno.match(/[^$,.\d]/)) {
+                toastr.error("Please enter numeric value for mobile No.");
+                $('#mobilenumber').val() == "";
+                $('#btnsubmit').attr('disabled', false);
+                return false;
+            }
+            else {
+                if (mobileno.length == 10) {
+                    $.ajax({
+                        type: "Post",
+                        url: 'https://www.vcqru.com/Info/MasterHandler.ashx?method=ConsumerDetailsByMobileNo&MobileNo= ' + $("#mobilenumber").val(),
+                        success: function (data) {
+
+                            //alert(data);
+                            if (c <= 5) {
+                                toastr.error('Please Enter 10 Digit Mobile No');
+                                $('#mobilenumber').val('');
+                                return false;
+                            }
+                            else {
+                                //alert(data);
+                                //result = ConsumerName + "~" + Inox_User_Type + "~" + City + "~" + state + "~" + SellerName + "~" + Other_Role + "~" + PinCode;
+                                //alert(data.split('~')[6];);
+                                var Name = data.split('~')[0];
+                                var pin = data.split('~')[6];
+                                var city = data.split('~')[2];
+                                var state = data.split('~')[3];
+                                //var shopname = data.split('~')[4];
+
+                                if (Name != "") {
+                                    $("#Name").val(Name);
+                                    $("#Name").readOnly = true;
+                                    document.getElementById('Name').readOnly = true;
+                                }
+                                else {
+
+                                    $('#ChkCode').hide();
+                                    // $('#btnfinal').show();
+                                    $('#otherfield').show();
+                                    $('#mobilefield').hide();
+                                    $('#Chkfields').show();
+                                }
+                                if (state != "") {
+                                    $("#state").val(state);
+                                    $("#state").readOnly = true;
+                                    document.getElementById('state').readOnly = true;
+                                }
+                                else {
+
+                                    $('#ChkCode').hide();
+                                    //$('#btnfinal').show();
+                                    $('#otherfield').show();
+                                    $('#mobilefield').hide();
+                                    $('#Chkfields').show();
+                                }
+
+                                if (pin != "") {
+                                    $("#pin").val(pin);
+                                    $("#pin").readOnly = true;
+                                   // document.getElementById('pin').readOnly = true;
+                                }
+                                else {
+                                    $('#ChkCode').hide();
+                                    //$('#btnfinal').show();
+                                    $('#otherfield').show();
+                                    $('#mobilefield').hide();
+                                    $('#Chkfields').show();
+                                }
+
+
+                                if (city != "") {
+                                    $("#city").val(city);
+                                    $("#city").readOnly = true;
+                                    document.getElementById('city').readOnly = true;
+                                }
+                                else {
+                                    $('#ChkCode').hide();
+                                    $('#otherfield').show();
+                                    $('#mobilefield').hide();
+                                    $('#Chkfields').show();
+                                }
+
+                            }
+                        }
+                    });
+                }
+            }
+            // });
+            //});
+        }
+
+
+        /*End To Showing textbox after click on other*/
+
+
+        function ValidateAlpha(evt) {
+            var keyCode = (evt.which) ? evt.which : evt.keyCode
+            if ((keyCode < 65 || keyCode > 90) && (keyCode < 97 || keyCode > 123) && keyCode != 32)
+
+                return false;
+            return true;
+        }
+
+        function onlyNumberKey(evt) {
+
+            // Only ASCII character in that range allowed
+            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+            if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+                return false;
+            return true;
+        }
+
+
+        function getaddress() {
+            let pin = document.getElementById("pin").value;
+            if (pin.length == 6) {
+                $.getJSON("https://api.postalpincode.in/pincode/" + pin, function (data) {
+                    createHTML(data);
+                })
+                function createHTML(data) {
+                    //alert(data);
+                    if (data[0].Status == "Success") {
+                        var city = "";
+                        var state = "";
+                        var pin = "";
+                        var city = data[0].PostOffice[0]['District'];
+                        var state = data[0].PostOffice[0]['State'];
+                        var Pin = data[0].PostOffice[0]['PinCode'];
+                        if (city != "") {
+                            $("#city").val(city);
+                            document.getElementById('city').readOnly = true;
+                        }
+                        if (state != "") {
+                            $("#state").val(state);
+                            document.getElementById('state').readOnly = true;
+                        }
+
+
+                        if (pin == "") {
+                            $("#pin").val();
+                        }
+                        else {
+                            $("#pin").val(Pin);
+
+                        }
+                        $('#btnsubmit').attr('disabled', false);
+                    }
+                    else {
+                        toastr.error("Please enter valid pin.");
+                        $('#btnsubmit').attr('disabled', true);
+                        return false;
+                    }
+                }
+            }
+        }
+
+
+
+
+        function pinval() {
+
+            var pin = $('#pin').val();
+            if (pin != undefined) {
+
+                if ($('#pin').val().length < 6) {
+                    toastr.error('Please Enter valid Pin Code');
+                    validate = false;
+                }
+                if (pin.match(/[^$,.\d]/)) {
+                    toastr.error("Please enter numeric value for Pin Code.");
+                    validate = false;
+                }
+
+                var matches1 = $('#pin').val().match(/[^a-zA-Z0-9 ]/);
+                if (matches1 != null) {
+                    toastr.error('Pin Code Should Not Contain any Special Character!');
+                    validate = false;
+                }
+            }
+        }
+
+
+        function namevalid() {
+            var name = $('#Name').val();
+            if (name != undefined) {
+
+                if ($('#Name').val().length < 1) {
+                    toastr.error('Please Enter valid Name');
+                    validate = false;
+                    return false;
+                }
+                var matches = $('#Name').val().match(/\d+/g);
+                if (matches != null) {
+                    toastr.error('Name Should be alphabet only!');
+                    //validate = false;
+                    return false;
+                }
+                var matches1 = $('#Name').val().match(/[^a-zA-Z0-9 ]/);
+                if (matches1 != null) {
+                    toastr.error('Name Should Not Contain any Special Character!');
+                    validate = false;
+                    return false;
+                }
+            }
+        }
+
+        function cityvalid() {
+            var city = $('#city').val();
+            if (city != undefined) {
+
+                if ($('#city').val().length < 1) {
+                    toastr.error('Please Enter valid City');
+                    validate = false;
+                }
+                var matches = $('#city').val().match(/\d+/g);
+                if (matches != null) {
+                    toastr.error('City Name Should be alphabet only!');
+                    validate = false;
+                }
+                var matches1 = $('#city').val().match(/[^a-zA-Z0-9 ]/);
+                if (matches1 != null) {
+                    toastr.error('City Name Should Not Contain any Special Character!');
+                    validate = false;
+                }
+            }
+        }
+
+        function valmobile() {
+            var phoneNumber = $('#mobilenumber').val();
+
+            if (phoneNumber != undefined) {
+                if (phoneNumber.length < 10) {
+                    toastr.error('Please Enter 10 Digit Mobile Number');
+                    return false;
+                }
+                if (phoneNumber == "6565656565") {
+                    toastr.error("Please enter valid mobile No.");
+                    // $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                if (phoneNumber.match(/[^$,.\d]/)) {
+                    toastr.error("Please enter numeric value for mobile No.");
+                    validate = false;
+                    return false;
+                }
+
+                var validate = false;
+                var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+
+                if (filter.test(phoneNumber)) {
+                    if (phoneNumber.length == 10) {
+                        var c = phoneNumber.slice(0, 1);
+                        if (c <= 5) {
+                            $('#p3msg').html('Not a valid mobile number');
+                            validate = false;
+                            $('#mobilenumber').val('');
+                        }
+                        else
+                            validate = true;
+                    } else {
+                        if (phoneNumber.length > 10) {
+                            $('#p3msg').html('Please put 10  digit mobile number');
+
+                            validate = false;
+                        }
+                        else {
+                            validate = false;
+                            $('#btnsubmit').attr('disabled', false);
+                        }
+                    }
+                }
+                else {
+                    if (phoneNumber.length == 9) {
+                        $('#p3msg').html('Please Enter  10 Digit mobile number');
+                        $('#mobilenumber').val('');
+                        validate = false;
+                    }
+                    else
+                        validate = false;
+                }
+                if (phoneNumber.match(/[^$,.\d]/)) {
+                    toastr.error("Please enter numeric value for mobile No.");
+                    validate = false;
+                    return false;
+                }
+            }
+        }
+        $(document).ready(function () {
+            firstfunction();
+            $('#ChkCode').show();
+            $('#Chkfields').hide();
+            $('#mobilefield').hide();
+
+            function getUrlVars() {
+                debugger;
+                var vars = [], hash;
+                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+				
+                for (var i = 0; i < hashes.length; i++) {
+                    hash = hashes[i].split('=');
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+				
+                return vars;
+            };
+
+            Codeone = getUrlVars()["codeone"];
+            Codetwo = getUrlVars()["codetwo"];
+            comp = getUrlVars()["Comp"];
+            Id = getUrlVars()["ID"];
+			//alert(Id);
+
+            if (comp === undefined || comp === "undefined") {
+                comp = comp;
+            }
+            else {
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+            }
+            if (Codeone === undefined || Codeone === undefined) {
+                Codeone = Codeone;
+            }
+            else {
+                var HdnCode1 = Codeone;
+                var HdnCode2 = Codetwo;
+                // $("#codeone").val(code);
+            }
+
+            var id = comp;
+
+			if (Id == "MuscleMountain") {
+                $('#ChkCode').hide();
+                $('#mobilefield').show();
+				   $('#otherfield').hide();
+                $('#Chkfields').show();
+                
+                var code = Codeone + '-' + Codetwo;
+                //alert(code);
+                $("#codeone").val(code);
+            }
+
+
+
+            $("#codeone").mask("99999-99999999");
+
+            $("#btnnxt").on('click', function () {
+                var codeone = $('#codeone').val();
+                if (codeone != undefined) {
+
+                    if ($('#codeone').val().length < 14) {
+                        toastr.error('Please Enter 13 Digit Valid Code');
+                        validate = false;
+                        return false;
+                    }
+                }
+                $('#ChkCode').hide();
+                var rquestpage_Dcrypt = $("#codeone").val();
+                $.ajax({
+                    type: "POST",
+                    url: 'https://www.vcqru.com/Info/MasterHandler.ashx?method=chkgenuenity&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1],
+                    success: function (data) {
+                        $.ajax({
+                            type: "POST",
+                            url: 'https://www.vcqru.com/Info/MasterHandler.ashx?method=chkwarranty&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1] + '&lat=' + $('#lat').val() + '&long=' + $('#long').val(),
+                            success: function (data1) {
+
+                                if (data1.split('&')[0] == "0" && data1.split('&')[1] === "RSR Resource") {
+                                    $('#CompName').val(data.split('&')[1]);
+                                    $('#Chkfields').show();
+                                    $('#otherfield').hide();
+                                    $('#mobilefield').show();
+                                    //$('#btnfinal').hide();
+                                }
+                                else {
+                                    $('#Chkfields').show();
+                                    $('#otherfield').hide();
+                                    $('#mobilefield').show();
+
+                                    //$('#ShowMessage').show();
+
+                                    //$('#p3msg').html(data1);
+                                    //$('#p3msg:contains("not")').css('color', 'white');
+                                }
+                            }
+                        });
+                    }
+                });
+                //}
+            });
+
+            $('#btnsubmit').on('click', function () {
+
+                $('#btnsubmit').attr('disabled', true);
+                var mobilenumber = $('#mobilenumber').val()
+                var pincode = $('#pin').val()
+                var d = mobilenumber.slice(0, 1);
+                var c = parseInt(d);
+                if (mobilenumber.match(/[^$,.\d]/)) {
+                    toastr.error("Please enter numeric value for mobile No.");
+                    $('#mobilenumber').val('');
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                if (mobilenumber == "6565656565") {
+                    toastr.error("Please enter valid mobile No.");
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                if (mobilenumber.length == 10 && c <= 5) {
+                    // toastr.error("Please enter valid mobile No.");
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+
+
+                if (mobilenumber.length != 10) {
+                    toastr.error("Please enter 10 digit of mobile No.");
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                else {
+
+
+
+
+                    var matches = $('#Name').val().match(/\d+/g);
+                    if (matches != null) {
+                        toastr.error('Name Should be alphabet only!');
+                        $('#btnsubmit').attr('disabled', false);
+                        $('#Name').val('');
+                        return false;
+                    }
+
+                    if ($('#Name').val() == "") {
+                        namevalid();
+                        $('#btnsubmit').attr('disabled', false);
+                        return false;
+                    }
+                    var Email = $('#EmailAddrs').val();
+
+                    if (Email != "") {
+                        var check = validateEmail(Email);
+
+                        if (check != true) {
+                            toastr.error('Please Enter valid Email Address!');
+                            return false;
+                        }
+                    }
+                    if (pincode.length != 6) {
+                        pinval();
+                        $('#btnsubmit').attr('disabled', false);
+                        return false;
+                    }
+                    if ($('#pin').val() == "") {
+                        pinval();
+                        $('#btnsubmit').attr('disabled', false);
+                        return false;
+                    }
+                    if ($('#city').val() == "") {
+                        cityvalid();
+                        $('#btnsubmit').attr('disabled', false);
+                        return false;
+                    }
+
+
+
+
+
+                }
+                $('#p3msg').html('');
+
+                if (code != "") {
+                    var rquestpage_Dcrypt = $("#codeone").val();
+                    $.ajax({
+                        type: "POST",
+                        url: 'https://www.vcqru.com/Info/MasterHandler.ashx?method=chkwarranty&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1] + '&lat=' + $('#lat').val() + '&long=' + $('#long').val(),
+                        success: function (data2) {
+                            //alert(data2);
+                            if (data2.split('&')[0] == "0" && data2.split('&')[1] != "RSR Resource") {
+
+
+                                $('#ShowMessage').show();
+                                $('#Chkfields').hide();
+                                $('#mobilefield').hide();
+                                $('#p3msg').html('Invalid Code!');
+                                $('#p3msg:contains("not")').css('color', 'white');
+
+
+                                /*
+                                $('#CompName').val(data.split('&')[1]);
+                                   $('#Chkfields').show();
+                                   $('#otherfield').hide();
+                                   $('#mobilefield').show();
+                                   //$('#btnfinal').hide();
+                                   */
+                            }
+                            else {
+
+
+                                $.ajax({
+                                    type: "POST",
+                                    contentType: false,
+                                    processData: false,
+
+                                    url: 'https://www.vcqru.com/Info/MasterHandler.ashx?method=verifyotp&mobile=' + $('#mobilenumber').val() + "&vCode=" + $('#codeone').val() + '&name=' + $('#Name').val() + '&EmailAddrs=' + $('#EmailAddrs').val() + '&city=' + $('#city').val() + '&state=' + $('#state').val() + '&PinCode=' + $('#pin').val() + '&SellerName=&SellerName=&comp=RSR Resource&Comp_ID=Comp-1573',
+                                    success: function (data) {
+									
+									if(data.split('~')[1]=""){
+									  $('#Chkfields').hide();
+                                            $('#mobilefield').hide();
+                                            // $('#fields').hide();
+                                            $('#ShowMessage').show();
+                                            // $('#chkLine').hide();
+                                            $('#p3msg').html('Service of the coupon '+$('#codeone').val()+' has been deactivated. For more info visit https://www.vcqru.com/assets/images/pdf/FAQ.pdf');
+                                            $('#p3msg:contains("not")').css('color', 'white');
+									}else if (data.split('~')[0] !== "failure") {
+                                            //alert(data);
+                                            //alert('fail');
+                                            window.scrollTo(0, 0);
+                                            if (data.indexOf("not valid") !== -1) {
+                                                data = data.split(".")[0];
+                                            }
+                                            //$('#head').hide();
+                                            $('#Chkfields').hide();
+                                            $('#mobilefield').hide();
+                                            // $('#fields').hide();
+                                            $('#ShowMessage').show();
+                                            // $('#chkLine').hide();
+                                            $('#p3msg').html(data.split('~')[1]);
+                                            $('#p3msg:contains("not")').css('color', 'white');
+                                        }
+                                        else {
+                                            alert(data);
+                                            //alert('pass');
+                                            $('#msgcoats').hide();
+                                            toastr.error('OTP is not valid. Please provide the valid OTP');
+                                            $('#btnskyVerify1').attr('disabled', false);
+                                        }
+                                    }
+                                });
+                            }
+                        }
+                    });
+                }
+                // }
+                else {
+
+                    $('#btnsubmit').attr('disabled', false);
+                }
+            });
+            $('#btnNext').click(function () {
+                window.location.href = 'https://musclemountain.com/';
+            });
+
+            $('.nameSpace').keypress(function (e) {
+                //  alert();
+                var regex = new RegExp("^[a-zA-Z ]+$");
+                var strigChar = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+                if (regex.test(strigChar)) {
+                    return true;
+                }
+                return false
+            });
+            function validateEmail(email) {
+                var re = /\S+@\S+\.\S+/;
+                return re.test(email);
+            }
+        });
+
+
+
+        async function firstfunction() {
+
+            if (navigator.geolocation) {
+                await getPosition()
+                    .then((position) => {
+                        $('#lat').val(position.coords.latitude);
+                        $('#long').val(position.coords.longitude);
+                        var latitude = position.coords.latitude;
+                        var longitude = position.coords.longitude;
+                        lat = latitude;
+                        long = longitude;
+
+                        $.ajax({
+                            type: "POST",
+                            async: true,
+                            url: 'https://www.vcqru.com/Info/MasterHandler.ashx?method=chklocation&lat=' + latitude + '&long=' + longitude,
+                            success: function (data) {
+                                lat = latitude;
+                                long = longitude;
+                            }
+                        });
+                    })
+                    .catch((err) => {
+                        console.error(err.message);
+                    });
+            } else {
+                // x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+    <section class="banner">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="logo mt-5">
+                    <a href="https://musclemountain.com/" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0610/5776/1495/files/Logo_8ec08a97-887d-4705-9413-e3b1e6642b5c.png?v=1695386091"> </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 animate__backInLeft animate__animated">
+
+
+
+
+                    <div class="product ">
+                        <img src="https://cdn.shopify.com/s/files/1/0610/5776/1495/files/Products.png?v=1694756519" class="img-fluid">
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <div id="fields">
+                        <form class="authenticate border-round-1 animate__backInDown animate__animated animate__zoomIn" id="FormDiv">
+                            <div class="HEADING">
+                                <h6>TO CHECK AUTHENTICITY AND AVAIL BENEFITS</h6>
+                            </div>
+                            <div class="form-maine" id="TNTWarrentyFields">
+                                <div id="ChkCode">
+                                    <div class="mb-3">
+                                        <input type="text" id="codeone" class="form-control" placeholder="Enter 13 Digit Code*" minlength="13" maxlength="13" required />
+                                    </div>
+                                    <div>
+                                        <center>
+                                            <button type="button" id="btnnxt" class="button-sub">Next</button>
+
+                                        </center>
+                                    </div>
+                                </div>
+                                <div id="mobilefield" style="display: none">
+                                    <div class="mb-3">
+                                        <input type="text" placeholder="Mobile Number*" data-msg-required="Please Enter 10 Digit Moblie Number" class="form-control" id="mobilenumber" onkeyup="Getdata()" required maxlength="10" minlength="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                    </div>
+
+                                </div>
+
+                                <div id="Chkfields">
+                                    <div id="otherfield">
+                                        <div class="mb-3">
+                                            <input type="text" id="Name" class="form-control nameSpace" placeholder="Name *" minlength="2" maxlength="50" required />
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="email" id="EmailAddrs" placeholder="Email Address" data-msg-required="Please enter your Email Address" class="form-control" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <!-- <label> Dealer / Retailer<sup>*</sup></label> -->
+                                            <input type="text" onkeyup="getaddress()" id="pin" placeholder="Pincode*" class="form-control" required maxlength="6" minlength="6" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" id="city" required placeholder="City*" minlength="2" maxlength="50" data-msg-required="Please Enter Your Address." class="form-control" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required />
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <input type="text" id="state" placeholder="State*" minlength="2" maxlength="50" data-msg-required="Please Enter Your Address." class="form-control" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required />
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <div class="col-12 text-center">
+                                        <button type="button" data-toggle="modal" class="button-sub" id="btnsubmit">SUBMIT</button>
+                                    </div>
+
+
+                                </div>
+                                <div style="display: none;" id="ShowMessage">
+                                    <div class="form-box">
+                                        <p id="p3msg" style="overflow: hidden; font-size: 13px !important; font-weight: 500;color:white;" class="displayNone massage_box"></p>
+                                        <center><a href="https://musclemountain.com/pages/authenticity" class="button-sub" id="btnclick">To Check another code Click Here</a></center>
+                                        <br /><center><a href="javascript:void(0)" class="button-sub" id="btnNext">Close</a></center>
+                                        <br />
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12 text-center mt-3" style="color:white;">
+                                    <p id="wlink" class="blink_me animate__animated animate__flash">
+                                        QR/Code  Related Support Available on <br> <!--i class="fa fa-phone" aria-hidden="true"></i-->
+                                        <img src="https://cdn.shopify.com/s/files/1/0610/5776/1495/files/call.png?v=1695720818" style="width: 20px;">
+                                        <a href="tel:8047278314">08047278314</a> /
+                                        <!--i class="fa fa-whatsapp" aria-hidden="true"></i-->
+                                        <img src="https://cdn.shopify.com/s/files/1/0610/5776/1495/files/whatsapp.png?v=1695720865" style="width: 20px;">
+                                        <a href="https://api.whatsapp.com/send?phone=+919355903119&amp;text&amp;type=phone_number&amp;app_absent=1" target="blank">9355903119</a>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer>
+
+            <a href="https://musclemountain.com/" target="_blank"> www.musclemountain.com</a>
+        </footer>
+
+    </section>
+
+
+</body>
+</html>

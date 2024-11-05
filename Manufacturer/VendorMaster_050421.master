@@ -1,0 +1,679 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="VendorMaster.master.cs" Inherits="Manufacturer_VendorMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register Src="~/UserControl/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="Keyword" content="VCQRU Company, It Company in Gurgon ,IT Company in India ,Check Product Originality ,Consumer Insights ,counterfeit solution provider,customer loyalty service,Customized Solution,Digital Warranty,e-warranty,Fighting Product Duplicate,Identity Fakes,label provider in Delhi,label provider in India,Make Packing Smart,QR code provider in Delhi,QR code provider in India,Run Product Survey,Save Brand,security stickers,Track & Trace Services,security sticker,Brand Protection,Check Product Originality,Consumer Insights,counterfeit solution provider,customer loyalty service,Customized Solution,Digital Warranty,e-warranty,Fighting Product Duplicate,Identity Fakes,label provider in Delhi,label provider in India,Make Packing Smart,qr code provider in Delhi,qr code provider in India,Run Product Survey,Save Brand,security stickers,Track & Trace Services" />
+    <meta name="Description" content="Every person has the right to know whether the product they are buying is genuine or not. We use truly secure and encrypted codes printed on the labels of the product which are impossible to replicate. With the help of secure mobile/web tools, the authenticity of the product can be checked." />
+    <title>VCQRU | We secure you</title>
+
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="VCQRU - Responsive HTML5 Template" />
+    <meta name="author" content="bhanguz.com" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img-1/favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../img-1/favicon.png" />
+    <link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css" />
+
+
+
+
+    <meta name="google-site-verification" content="txvxtnQjnR5uLkfNgi1iX4cTC1AB3282Lqud_kCGEDA" />
+    <!--Analytics Code-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161741227-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        var conStr = '<%# ConfigurationManager.AppSettings["analyticid"] %>'
+        gtag('config', conStr);
+    </script>
+
+    <style>
+        .ajax__calendar_today {
+            padding: 0px 0px 0px 0px;
+        }
+
+        .ajax__calendar_dayname {
+            padding: 0px 0px 0px 0px;
+        }
+    </style>
+    
+    <!-- Vendor CSS -->
+
+    <script src="js/scripts/JScript.js"></script>
+
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../vendor/animate/animate.min.css" />
+    <link rel="stylesheet" href="../vendor/simple-line-icons/css/simple-line-icons.min.css" />
+    <link rel="stylesheet" href="../vendor/owl.carousel/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../vendor/owl.carousel/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="../vendor/magnific-popup/magnific-popup.min.css" />
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme-blog.css" />
+    <link rel="stylesheet" href="../css/theme-shop.css" />
+     <!-- Current Page CSS -->
+    <link rel="stylesheet" href="../vendor/rs-plugin/css/settings.css" />
+    <link rel="stylesheet" href="../vendor/rs-plugin/css/layers.css" />
+    <link rel="stylesheet" href="../vendor/rs-plugin/css/navigation.css" />
+    <link rel="stylesheet" href="../vendor/circle-flip-slideshow/css/component.css" />
+
+    <!-- Demo CSS -->
+
+
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="../css/skins/default.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css" />
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css" />
+
+    <!-- Head Libs -->
+    <script src="../vendor/modernizr/modernizr.min.js"></script>
+
+
+    <script src="../Content/js/jquery-1.11.1.min.js"></script>
+    <%--<script src="Content/js/jquery.min.js"></script>--%>
+    <%--<script src="vendor/jquery/jquery.js"></script>--%>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../Content/jquery/mp_player/inlineplayer.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/jquery/mp_player/flashblock.css" />
+
+    <script type="text/javascript" src="../Content/jquery/mp_player/soundmanager2.js"></script>
+
+    <script type="text/javascript" src="../Content/jquery/mp_player/inlineplayer.js"></script>
+
+
+    <link href="assets/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <script src="js/bootstrap-datepicker.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="../Content/js/jquery-1.7.2.min.js" language="javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- Datatable -->
+    <script src="../Content/js/jquery-1.11.1.min.js"></script>
+    
+    <style>
+        .form-row {
+            color: #868e96;
+        }
+    </style>
+    <script>
+
+        function isNumberKey(sender, evt) {
+            var txt = sender.value;
+            var dotcontainer = txt.split('.');
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (!(dotcontainer.length == 1 && charCode == 46) && charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+        }
+        function checkTextAreaMaxLength(textBox, e, length) {
+
+            var mLen = textBox["MaxLength"];
+            if (null == mLen)
+                mLen = length;
+
+            var maxLength = parseInt(mLen);
+            if (!checkSpecialKeys(e)) {
+                if (textBox.value.length > maxLength - 1) {
+                    if (window.event)//IE
+                    {
+                        e.returnValue = false;
+                        return false;
+                    }
+                    else//Firefox
+                        e.preventDefault();
+                }
+            }
+
+
+        }
+    </script>
+    <script>
+
+        //$('#menu3 li a').click(function myfunction() {
+        //    // location.href = "ServicesSubcription.aspx";
+        //    alert('');
+        //});
+        $(document).ready(function () {
+
+            ActiveSideMenu();
+            //  $('#mainnav1 ul').removeClass("show");
+            //var menuname = window.location.href.substring(window.location.href.indexOf('#') + 1, 6);
+            //alert(menuname);
+            //$('#' + menuname).addClass("show");
+            //  $('#mainnav1 ul').removeClass("show");
+            //$('#' + Varmenu11).addClass("show");
+            // ActiveHeader();
+
+            //   $("li.item-ii").find("li").css("background-color", "red")
+
+            // alert('header');
+
+        });
+        //$('.sub-menu collapse').find("li").click(function () {
+        //    alert('ss');
+        //})
+        function ActiveSideMenu() {
+
+            // var navbox = $('.nav nav-list'); //
+            var navbox = $('.sub-menu'); // $('#menu3');
+            // activate tab on click
+            navbox.on('click', 'a', function (e) {
+
+                //     alert('');
+                var $this = $(this);
+
+                // alert($this.attr('href'));
+                // prevent the Default behavior
+                e.preventDefault();
+
+                // set the hash to the address bar
+                window.location.href = $this.attr('href');
+                // activate the clicked tab
+                //$(this).each(function myfunction() {
+                //    alert($this.find('ul').addClass('show'));
+                //})
+                $this.tab('show');
+                //$('#mainnav1 ul').removeClass("show");
+                //$(this).addClass("show");
+            });
+            //$('.blog a').removeClass("nav-link active");
+            //debugger;
+            //$('.blog a').on('click', function () {
+            //    debugger;
+            //    //$('.blog a').removeClass("nav-link active");
+            //    $(this).addClass('nav-link active');
+            //});
+        }
+        function ActiveHeader(menu11) {
+
+            // debugger;
+            $('#menu ul').removeClass("show");
+            $('#' + menu11).addClass("show");
+
+            //alert(menuname);
+            // $('#' + menuname).addClass("show");
+            //$('#menu2').removeClass("show");
+            //$('#menu3').removeClass("show");
+            //$('#menu4').removeClass("show");
+            //$('#menu5').removeClass("show");
+            //$('#menu6').removeClass("show");
+            //$('#menu7').removeClass("show");
+            //$('#' + menuname).addClass("show");
+
+
+            //$('#mainnav1 ul a').removeClass("nav-link active");
+            //$('#mainnav1 li a').on('click', function () {
+            //    $('#mainnav1 li a').removeClass("nav-link active");
+            //    $(this).addClass('nav-link active');
+            //});
+        }
+
+    </script>
+</head>
+<body onkeydown="return (event.keyCode != 116)">
+    <!--<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="2656.667px" height="1305.993px" viewBox="0 0 2656.667 1305.993" enable-background="new 0 0 2656.667 1305.993"
+                    xml:space="preserve" class="svg-path">
+                    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="8.3335" y1="651.5186" x2="2655.6665" y2="651.5186">
+                        <stop offset="0" style="stop-color: #F0F9FE" />
+                        <stop offset="1" style="stop-color: #C7EAF7" />
+                    </linearGradient>
+                    <path fill="url(#SVGID_1_)" d="M8.333,1305.993c0,0,414.72-705.886,1195-734.326c916.153-33.392,1407.328-406.606,1452.333-574.623
+	                v1308.948H8.333z" />
+                </svg>-->
+                
+    <form id="form1" runat="server">
+
+        <%-- <div>--%>
+
+        <div>
+            <cc1:ToolkitScriptManager runat="Server" AsyncPostBackTimeout="20000" EnablePartialRendering="true"
+                EnablePageMethods="true" ID="ScriptManager1" />
+            <!--- Header Starts here -->
+
+
+            <header id="header" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 0, 'stickySetTop': '-0px', 'stickyChangeLogo': false}">
+                <div class="">
+                <div class="header-body pt-0 pb-0">
+                    <div class="header-top header-top-style-3 header-top-custom">
+                        <div id="divprogress" align="center" style="background-color: #333; opacity: .5; position: fixed; left: 0; height: auto; width: 100%; top: 0px; display: none; z-index: 111; display: none;"
+                            class="NewmodalBackground">
+                            <div style="margin: 300px;" align="center">
+                                <img alt="" src="../Content/images/ajax-loader.gif" /><br />
+                                <span style="color: white;">Please Wait.....<br />
+                                </span> 
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="header-container container-fluid custom-position-initial">
+                        <div class="header-row">
+                            <div class="header-column">
+                                <div class="header-row"> 
+                                    <div class="header-logo"> 
+                                          <a href="https:\\www.vcqru.com">
+                                            <img alt="vcqru" width="130" data-sticky-width="130" data-sticky-top="30" src="../img-1/logo.png" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-column justify-content-end">
+                                
+                                <div class="header-row">
+                                    <div class="header-nav header-nav-stripe">
+                                        
+                                        <div class="header-nav-main-effect-1">  <!--header-nav-main-->
+                                            <%--header-nav-main--%>
+                                                
+                                            <nav>
+                                                <ul class="nav nav-pills justify-content-end" id="mainNav">
+                                                    <li class="dropdown-full-color dropdown-quaternary">
+                                                        Welcome,&nbsp;
+                                                        <asp:Label ID="lblloginName" runat="server">shweta</asp:Label>
+                                                        
+                                                    </li>
+                                                    <li class="dropdown-full-color dropdown-quaternary">
+                                                        <asp:LinkButton Text="Logout" runat="server" ID="imglogout" CausesValidation="false" OnClick="imglogout_Click1" />
+                                                        <%--<asp:ImageButton ID="imglogout"  OnClick="imglogout_Click" ToolTip="Logout" ImageUrl="../Content/images/logout.png"
+                                                            CausesValidation="false" runat="server" />--%>
+                                                    </li>
+
+                                                    <!--<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="40" height="40" class="rounded-circle">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#"><span>Welcome</span> Mahindra & Mahindra LTD</a>
+          <a class="dropdown-item" href="#">Edit Profile</a>
+          <a class="dropdown-item" href="#">Log Out</a>
+        </div>
+      </li> -->                                 <li class="d-sm-none d-xs-none d-lg-block p-0 pull-right">
+                                                    <button type="button" class="navbar-toggle collapsed btn btn-primary" data-toggle="collapse" id="menu-toggle-2">
+                                                <span class="fa fa-bars" aria-hidden="true"></span>
+                                                </button>
+                                                </li>
+                                                
+                                                <li class="d-sm-block d-lg-none p-0 pull-right">
+                                                <button class="navbar-toggle in btn btn-primary" data-toggle="collapse" id="menu-toggle"> <span class="fa fa-bars" aria-hidden="true"></span>
+                                                </button>
+                                               </li>
+                                                </ul>
+                                                
+                                               
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+            </header>
+              
+
+
+            <div id="wrapper">
+
+            <div id="sidebar-wrapper">
+
+         <ul class="sidebar-nav nav-pills nav-stacked" id="mainnav1" data-sort-id="portfolio" data-option-key="filter" data-plugin-options="{'layoutMode': 'fitRows', 'filter': 'profile'}">
+            <li>
+               <a href="#" class="current"><span class="fa-stack fa-lg pull-left"><i class="fa fa-dashboard fa-stack-1x "></i></span> Dashboard</a></li>
+            <li data-toggle="collapse" data-target="#menu1" class="collapsed" aria-expanded="false">
+               <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o fa-stack-1x "></i></span>Reports</a>
+               <ul class="nav-pills nav-stacked sub-menu collapse" style="list-style-type:none;" id="menu1">
+                    <li><a href="frmManfEnquiry.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o"></i></span>Enquiry Detail</a></li>
+                    <li><a href="frmManfEnquiryW.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o"></i></span>Warranty Details</a></li>
+                    <li><a href="FrmGeneratedInvoice.aspx?ID=Label"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o"></i></span>Label Bills</a></li>
+                    <li><a href="FrmLuckyWinners.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o"></i></span>Lucky Winners</a></li>
+                    <li><a href="FrmRunSurveys.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o"></i></span>Run Surveys Details</a></li>
+                    <li><a href="RedeemNextBill.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o"></i></span>Points Adjust in Next billing</a></li>
+                    <li><a href="Redeem.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o"></i></span>Transfer Cash</a></li>
+                    <li><a href="CashDetails.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o"></i></span>Cash Details</a></li>
+                    <li><a href="GiftDetails.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o"></i></span>Award Details</a></li>
+                    <li><a href="Frmcodeverification.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o"></i></span>Code Verification Detail</a></li>
+                    <li><a href="graphicalReport.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o"></i></span>Code Analytical Report</a></li>
+                    <li><a href="FrmStatusReport.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o"></i></span>Account Login Summary</a></li>
+                    <li><a href="PaytmReport.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o"></i></span>Paytm Report</a></li>
+                    <li><a href="PointsReport.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o"></i></span>Points Details</a></li>
+              <li><a href="FrmUserReport.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o"></i></span>User Data Report</a></li>
+                   <li><a href="Transaction.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-mortar-board"></i></span>Transaction Report</a></li>
+                   </ul> 
+            </li>
+            <li data-toggle="collapse" data-target="#menu2" class="collapsed" aria-expanded="false">
+               <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-user-o fa-stack-1x "></i></span>Manage Profile</a>
+                <ul class="nav-pills nav-stacked sub-menu collapse" style="list-style-type:none;" id="menu2">
+                    <li><a href="CompProfile.aspx#menu1"><span class="fa-stack fa-lg pull-left"><i class="fa fa-mortar-board"></i></span>Company Profile</a></li>
+                    <li><a href="frmUploadDocuments.aspx#menu1"><span class="fa-stack fa-lg pull-left"><i class="fa fa-edit"></i></span>Company Document</a></li>
+                    <li><a href="Frmchangepasswords.aspx#menu1"><span class="fa-stack fa-lg pull-left"><i class="fa fa-lock"></i></span>Change Password</a></li>
+               </ul>
+            </li>
+              <li data-toggle="collapse" data-target="#menu3" class="collapsed" aria-expanded="false">
+               <a href="#"> <span class="fa-stack fa-lg pull-left"><i class="fa fa-shopping-basket fa-stack-1x "></i></span>Product Particulars</a>
+                <ul class="nav-pills nav-stacked sub-menu collapse" style="list-style-type:none;" id="menu3">
+                    <li data-option-value=".registration"><a href="RegisteredProduct.aspx#menu2"><span class="fa-stack fa-lg pull-left"><i class="fa fa-shopping-basket"></i></span>Product Registration</a></li>
+                    <li><a href="ProductDetails.aspx#menu2"><span class="fa-stack fa-lg pull-left"><i class="fa fa-shopping-basket"></i></span>Assign Labels to Product</a></li>
+                    <li><a href="frmProductSeries.aspx#menu2"><span class="fa-stack fa-lg pull-left"><i class="fa fa-shopping-basket"></i></span>Product Series Details</a></li>
+               </ul>
+            </li>
+            <li data-toggle="collapse" data-target="#menu4" class="collapsed" aria-expanded="false">
+               <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-wrench fa-stack-1x "></i></span>Our Service</a>
+                <ul class="nav-pills nav-stacked sub-menu collapse" style="list-style-type:none;" id="menu4">
+                    <li><a href="ServicesSubcription.aspx#menu3"><span class="fa-stack fa-lg pull-left"><i class="fa fa-crosshairs"></i></span>Service Subscription</a></li>
+                    <li><a href="ServiceSettings.aspx#menu3"><span class="fa-stack fa-lg pull-left"><i class="fa fa-cog"></i></span>Service Setting</a></li>
+                </ul>
+            </li>
+            <li data-toggle="collapse" data-target="#menu5" class="collapsed" aria-expanded="false">
+               <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-money fa-stack-1x "></i></span>Transaction Settings</a>
+                <ul class="nav-pills nav-stacked sub-menu collapse" style="list-style-type:none;" id="menu5">
+                    <li><a href="BrandLoyaltySettings.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-soccer-ball-o"></i></span>Loyalty Settings</a></li>
+                    <li><a href="BrandLoyaltyAwards.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-trophy"></i></span>Loyalty Awards</a></li>
+                    <li><a href="FrmAwardCourierDispatch.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-gift"></i></span>Gift Dispatch</a></li>
+                    <li><a href="FrmDealerMaster.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-address-book-o"></i></span>Dealer Master</a></li> 
+                    <li><a href="FrmAwardsCourierMaster.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-copy"></i></span>Courier Master</a></li>
+                    <li><a href="FrmGiftMaster.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-gift"></i></span>Gift Master</a></li>
+                    <li><a href="FrmCouponRequest.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-credit-card"></i></span>Coupon Request Master</a></li>
+                    <li><a href="FrmQuestionMaster.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-question-circle-o"></i></span>Question Master</a></li>
+                    <li><a href="BigDataAnalysis.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-database"></i></span>Big Data Analysis</a></li>
+                    <li><a href="TransactionDetails.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-save"></i></span>Transaction Details</a></li>
+                   
+                   
+           
+                </ul>
+            </li>
+            <li data-toggle="collapse" data-target="#menu6" class="collapsed" aria-expanded="false">
+               <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-tags fa-stack-1x "></i></span>Label Section</a>
+                <ul class="nav-pills nav-stacked sub-menu collapse" style="list-style-type:none;" id="menu6">
+                    <li><a href="frmPrintLabelRequest.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-tags"></i></span>Request For Print Labels</a></li>
+                    <li><a href="FrmLabelDispatch.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-tags"></i></span>Label Receive</a></li>
+                    <li><a href="frmPrintLabel.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-tags"></i></span>View Pasted Labels</a></li>
+                    <li><a href="frmPastingReport.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-tags"></i></span>Upload Label Pasting Labels</a></li>
+                    <li><a href="FrmPendingDispatchLabel.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-tags"></i></span>Pending Dispatch Labels</a></li>
+                </ul>
+            </li>
+            <li data-toggle="collapse" data-target="#menu7" class="collapsed" aria-expanded="false">
+                <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-list-alt fa-stack-1x"></i></span>Scrap Particulars</a>
+                <ul class="nav-pills nav-stacked sub-menu collapse" style="list-style-type:none;" id="menu7">
+                    <li><a href="Frm_Scrap.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-list-alt"></i></span>Scrap Summary Report</a></li>
+                    <li><a href="FrmScrapEntry.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-list-alt"></i></span>Scrap Label Entry</a></li>
+                    <li><a href="ScrapcodeEntry.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-list-alt"></i></span>Product Return Entry</a></li>
+                </ul>
+            </li>
+                                 
+            <li data-toggle="collapse" data-target="#menu8" class="collapsed" aria-expanded="false">
+                <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sticky-note-o fa-stack-1x "></i></span>Claim Report<span></span></a>
+                <ul class="nav-pills nav-stacked sub-menu collapse" style="list-style-type:none;" id="menu8">
+                    <li><a href="WarrantyReportVendor.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sticky-note-o"></i></span>Claim Report</a></li>
+
+                </ul>
+            </li>
+              <li data-toggle="collapse" data-target="#menu9" class="collapsed" aria-expanded="false">
+               <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-user-o fa-stack-1x "></i></span>Documents Upload</a>
+                                
+                <ul class="nav-pills nav-stacked sub-menu collapse" style="list-style-type:none;" id="menu9">
+
+                    <li><a href="FrmUploadDealerCode.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-mortar-board"></i></span>Upload Employee Master</a></li>
+                    </ul>
+            </li>
+             
+           
+           
+         </ul>
+      </div>
+             
+                   
+			
+                        <!--div class="col-lg-9 order-1 order-lg-2"-->
+
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+
+                   
+
+           
+
+            <!-- Modal Content Start -->
+            <div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="smallModalLabel">Alert</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="about-section-text1">Are you sure you want to delete ?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-dismiss="modal" onclick="btnYesReceipt_Click" runat="server" id="btnYesReceipt">Ok</button>
+                            <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Content End -->
+
+
+            <style>
+                .ajax__calendar_today {
+                    padding: 0px 0px 0px 0px;
+                }
+
+                .ajax__calendar_dayname {
+                    padding: 0px 0px 0px 0px;
+                }
+            </style>
+
+            <!--- Footer Starts here -->
+
+            <uc1:Footer runat="server" ID="Footer2" />
+
+            <!-- Datatable -->
+
+            <!--  Footer Ends here -->
+        </div>
+
+        <!-- Vendor -->
+        <script src="../vendor/jquery/jquery.min.js"></script>
+        <script src="../vendor/jquery.appear/jquery.appear.min.js"></script>
+        <script src="../vendor/jquery.easing/jquery.easing.min.js"></script>
+        <script src="../vendor/jquery-cookie/jquery-cookie.min.js"></script>
+        <script src="../vendor/popper/umd/popper.min.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../vendor/common/common.min.js"></script>
+        <script src="../vendor/jquery.validation/jquery.validation.min.js"></script>
+        <script src="../vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+        <script src="../vendor/jquery.gmap/jquery.gmap.min.js"></script>
+        <script src="../vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+        <script src="../vendor/isotope/jquery.isotope.min.js"></script>
+        <script src="../vendor/owl.carousel/owl.carousel.min.js"></script>
+        <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="../vendor/vide/vide.min.js"></script>
+
+        <!-- Theme Base, Components and Settings -->
+        <script src="../js/theme.js"></script>
+
+        <!-- Current Page Vendor and Views -->
+        <script src="../vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+        <script src="../vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+        <script src="../vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
+        <script src="../js/views/view.home.js"></script>
+
+        <!-- Theme Custom -->
+        <script src="../js/custom.js"></script>
+
+        <!-- Theme Initialization Files -->
+        <script src="../js/theme.init.js"></script>
+
+        <!-- Examples -->
+        <script src="../js/examples/examples.demos.js"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.dlles.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>
+        <link href="../Content/css/jquery-confirm.css" rel="stylesheet" />
+        <script src="../Content/js/jquery-confirm.js" type="text/javascript"></script>
+        <script>
+            //$(document).ready(function () {
+            //    $('#frmGrdEnquiry').dataTable({
+            //        responsive: true,
+            //         "order": [[ 0, "desc" ]],
+            //    });
+            //})
+
+            $(document).ready(function () {
+                $('.tblSorting').dataTable({
+                    responsive: true,
+                    "order": [[0, "desc"]]
+                });
+
+                //$('.tblSorting').dataTable({
+                //    responsive: true,
+                //    'iDisplayLength': 100,
+                //    "order": [[0, "desc"]]
+                //});
+
+                //$('.tblWarrenty').dataTable({
+                //    responsive: true,
+                //    'iDisplayLength': 100,
+                //    "order": [[ 0, "desc" ]]
+                //});
+            });
+
+            //$(document).ready(function () {
+            //    $('tableSetting').dataTable({
+            //        responsive: true,
+            //        'iDisplayLength': 100,
+            //        "paging": false,
+            //        "ordering": false,
+            //        "searching": false,
+            //        "info": false,
+            //    });
+            //});
+
+            //$(document).ready(function () {
+            //    $('.tableSetting').dataTable({
+            //        responsive: true,
+            //        'iDisplayLength': 100,
+            //        "paging": false,
+            //        "ordering": false,
+            //        "searching": false,
+            //        "info": false,
+            //    });
+            //});
+        </script>
+        <!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+			ga('create', 'UA-12345678-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		 -->
+
+        <%--</div>--%>
+        <script>
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+            $("#menu-toggle-2").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled-2");
+                $('#menu ul').hide();
+            });
+
+            $('#mainnav1 li a').on('click', function () {
+                $('#mainnav1 li a.current').removeClass('current');
+                $(this).addClass('current');
+            });
+            function initMenu() {
+                $('#menu ul').hide();
+                $('#menu ul').children('.current').parent().show();
+                //$('#menu ul:first').show();
+                $('#menu li a').click(
+                    function () {
+                        var checkElement = $(this).next();
+                        if ((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+                            return false;
+                        }
+                        if ((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+                            $('#menu ul:visible').slideUp('normal');
+                            checkElement.slideDown('normal');
+                            return false;
+                        }
+                    }
+                );
+            }
+            $(document).ready(function () {
+                initMenu();
+            });
+        </script>
+
+        <script>
+            var $attach = $('#attach-project-file'),
+                $remove = $('#remove-project-file'),
+                $name = $('#ctl00_ContentPlaceHolder1_compLogo');
+
+            $remove.hide();
+
+            $attach.on('change', function () {
+                var val = $(this).val();
+                if (val !== '') {
+                    
+                    $name
+                        .hide()
+                        .text(val)
+                        .fadeIn();
+
+                   
+                    $remove.fadeIn();
+                } else {
+                    
+                    $name
+                        .hide()
+                        .text('Click to select a file')
+                        .fadeIn();
+
+                    $remove.fadeOut();
+                }
+            });
+
+            
+            $remove.on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                $attach
+                    .val('')
+                    .change();
+            });
+        </script>
+    </form>
+</body>
+</html>

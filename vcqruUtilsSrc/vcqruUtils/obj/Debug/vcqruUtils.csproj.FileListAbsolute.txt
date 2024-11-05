@@ -1,0 +1,11 @@
+E:\vcqru_offline\vcqruUtils\vcqruUtils\bin\Debug\vcqruUtils.exe.config
+E:\vcqru_offline\vcqruUtils\vcqruUtils\bin\Debug\vcqruUtils.exe
+E:\vcqru_offline\vcqruUtils\vcqruUtils\bin\Debug\vcqruUtils.pdb
+E:\vcqru_offline\vcqruUtils\vcqruUtils\obj\Debug\vcqruUtils.csprojResolveAssemblyReference.cache
+E:\vcqru_offline\vcqruUtils\vcqruUtils\obj\Debug\vcqruUtils.frmLogin.resources
+E:\vcqru_offline\vcqruUtils\vcqruUtils\obj\Debug\vcqruUtils.Properties.Resources.resources
+E:\vcqru_offline\vcqruUtils\vcqruUtils\obj\Debug\vcqruUtils.csproj.GenerateResource.Cache
+E:\vcqru_offline\vcqruUtils\vcqruUtils\obj\Debug\vcqruUtils.exe
+E:\vcqru_offline\vcqruUtils\vcqruUtils\obj\Debug\vcqruUtils.pdb
+E:\vcqru_offline\vcqruUtils\vcqruUtils\obj\Debug\vcqruUtils.MDIParentSupport.resources
+E:\vcqru_offline\vcqruUtils\vcqruUtils\obj\Debug\vcqruUtils.frmSupport.resources

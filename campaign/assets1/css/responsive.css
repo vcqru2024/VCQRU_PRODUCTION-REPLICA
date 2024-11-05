@@ -1,0 +1,146 @@
+@media screen and (max-width:1024px) {
+    .video-section video {
+        height: 280px;
+    }
+    .counter .count-left-border {
+        border-left: none !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .app-navbar .navbar-nav .nav-item {
+        margin: 0;
+    }
+
+    .app-navbar .navbar-nav {
+        align-items: start;
+    }
+
+    .app-navbar .navbar-nav .nav-item .dropdown-menu {
+        box-shadow: none;
+    }
+
+    .video-section .carousel .carousel-control-next {
+        right: -20px;
+    }
+
+    .video-section .carousel .carousel-control-prev {
+        left: -20px;
+    }
+
+   /* .industries .industries-logo ul li img {
+        width: 6rem;
+    }*/
+
+    .about-us .about-video {
+        float: unset;
+        width: 100%;
+        margin: 0 0 2rem 0;
+    }
+
+    .sub-menu {
+        height: 300px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .reviews .reviews-card .carousel .carousel-control-next {
+        right: 0;
+    }
+
+    .findon .carousel .carousel-control-next {
+        right: 0;
+    }
+
+    .left-card {
+        margin: 0;
+    }
+    .services-details-header h1{
+        font-size: calc(1.375rem + 1.5vw);
+    }
+    .services-details-content .services-details-img{
+        width: 100%;
+        margin: 0;
+    }
+    .services-details-explore-services .services-details-explore-card .carousel .carousel-control-prev{
+        left: 0;
+    }
+    .services-details-explore-services .services-details-explore-card .carousel .carousel-control-next{
+        right: 0;
+    }
+    .services-details-explore-services .services-details-explore-card .carousel .carousel-inner .carousel-item .carousel-caption{
+        width: auto;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .video-section .carousel .carousel-control-next {
+        right: -10px;
+    }
+
+    .video-section .carousel .carousel-control-prev {
+        left: -10px;
+    }
+
+    .talks-btn {
+        right: 0;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .video-section {
+        margin: 3rem 0;
+    }
+
+    .app-navbar {
+        position: sticky;
+    }
+
+    .header {
+        height: 180px;
+    }
+
+    .footer {
+        padding: 2rem 0 1rem 0;
+    }
+
+    .counter .counter-col ul li p {
+        font-size: 14px;
+    }
+
+    .counter .counter-col ul {
+        gap: 1rem;
+    }
+
+    .services-details-why-choose-us .services-details-why-choose-section .services-details-why-choose-listing ul{
+        column-count:1;
+    }
+    .services-details-why-choose-us .card{
+        background: var(--bs-white);
+    }
+    .counter .counter-col ul{
+        align-items: center;
+    }
+    .counter .counter-col ul li h5{
+        font-size: 16px;
+    }
+    .counter .counter-col ul li .count-img img{
+        height: 1.8rem;
+    }
+    .counter .counter-col ul li .count-img{
+        height: 45px;
+        width: 45px;
+    }
+    .services-details-explore-services .services-details-explore-card .carousel .carousel-inner{
+        height: 400px;
+    }
+    .services-details-faqs .accordion .accordion-item .accordion-button{
+        font-size: 16px;
+    }
+    .industries .industries-logo ul {
+        gap: 1rem;
+        justify-content: start;
+        overflow:hidden;
+    }
+
+}

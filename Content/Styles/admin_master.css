@@ -1,0 +1,117 @@
+﻿.Newfield
+{
+	width: 97%;
+	border: 1px solid #e8f3fd;
+	margin: 0 auto;
+	padding: 2px 0px 6px 0px;
+	margin-bottom: 3px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 5px;
+	margin-top: 2px;
+	font-family: Arial;
+}
+.Newfield legend
+{
+	margin: 3px 20px 3px 13px;
+	padding: 0px 5px 0px 5px;
+	color: #095BB4;
+	font-weight: bold;
+	font-size: 9pt;
+}
+.Newfield_width
+{
+	width: 95%;
+}
+.Newfield_width2
+{
+	width: 94%;
+	margin-bottom: 10px;
+	background: #ffffff;
+}
+.inner_content div fieldset table tr
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #848484;
+	margin: 0 auto; /*display: inline-block;*/
+}
+.big_msg
+{
+	width: 90% !important;
+}
+.alert_boxes_pink, .alert_boxes_yellow, .alert_boxes_blue, .alert_boxes_pink2
+{
+	width: 79%;
+	padding: 10px 6px 10px 50px;
+	background: url(images/success_icon.png) no-repeat 7px center;
+	background-color: #fbe3e4;
+	border: 1px solid #fbc2c4;
+	clear: both;
+	margin: 0 auto;
+	margin-bottom: 7px;
+	webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	color: #fffff;
+}
+.alert_boxes_green
+{
+	width: 79%;
+	padding: 10px 6px 10px 50px;
+	background: url(images/success_icon.png) no-repeat 7px center;
+	background-color: #e6efc2;
+	border: 1px solid #c6d880;
+	clear: both;
+	margin: 0 auto;
+	margin-bottom: 7px;
+	webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	color: #fffff;
+}
+.alert_boxes_pink p, .alert_boxes_yellow p, .alert_boxes_blue p, .alert_boxes_green p, .alert_boxes_pink2 p
+{
+	color: #860006;
+	font-size: 8pt;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 18px;
+	font-weight: normal;
+	background: none !important;
+}
+.reg_txt, .regis_area, .reg_drp
+{
+	border: 1px solid #e3e3e3;
+	width: 94%;
+	outline: none;
+	padding: 3px;
+	color: #2d2d2d; /* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fdfdfd), to(#f2f2f2)); /* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(top, #fdfdfd, #f2f2f2); /* Firefox 3.6+ */
+	background: -moz-linear-gradient(top, #fdfdfd, #f2f2f2); /* IE 10 */
+	background: -ms-linear-gradient(top, #fdfdfd, #f2f2f2); /* Opera 11.10+ */
+	background: -o-linear-gradient(top, #fdfdfd, #f2f2f2);
+}
+.reg_txt:hover, .regis_area:hover, .reg_drp:hover
+{
+	/*border:1px solid #a8bddb;*/
+	border: 1px solid #8fc5e3;
+	width: 94%;
+	outline: none;
+	padding: 3px;
+	color: #2d2d2d;
+}
+.tab_regis
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #2d2d2d;
+	margin: 0 auto;
+	line-height: 27px;
+	font-weight: normal;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+.tab_regis tr td
+{
+	padding-right: 5px;
+}

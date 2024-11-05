@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <!-- css -->
+    <link rel="stylesheet" href="assets_event/css/css.css">
+    <link rel="stylesheet" href="assets_event/css/style.css">
+    <!-- font-awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+    <!-- navbar -->
+    <div class="top-bar">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="iplcm-expo-event.html">
+                        <img src="https://www.vcqru.com/NewContent/img-home/logo.png" alt="Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="socail-links navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li>
+                                <a href="tel:+911245181074">
+                                    <i class="fa-solid fa-phone"></i>
+                                    +91 124 5181074
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:sales@vcqru.com">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    sales@vcqru.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- header -->
+    <section class="header-slider">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-xxl-8 col-xl-8 col-lg-8">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets_event/img/banner.jpg" class="img-fluid" alt="banner">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets_event/img/digital_marketing.jpg" class="img-fluid" alt="banner">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets_event/img/printing_solutions.jpg" class="img-fluid" alt="banner">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="mb-2">Contact us for details</h5>
+                            <form action="" id="myForm" method="post"
+                                class="row row-cols-xxl-2 row-cols-xl-2 row-cols-lg-2 row-cols-md-2 row-cols-1 g-2 needs-validation"
+                                novalidate="">
+                                <div class="col">
+                                    <label for="fullName" class="form-label">Full Name<span>*</span></label>
+                                    <input type="text" class="form-control" id="fullName" name="fullName" value=""
+                                        required="" pattern="[A-Za-z ]+">
+                                </div>
+                                <div class="col">
+                                    <label for="phoneRpf" class="form-label">mobile number<span>*</span></label>
+                                    <input type="number" class="form-control" id="phoneRpf" name="phoneRpf" value=""
+                                        required=""
+                                        oninput="javascript: if (this.value.length !== 10) this.setCustomValidity('Phone number must be exactly 10 digits.'); else this.setCustomValidity('');">
+                                </div>
+                                <div class="col">
+                                    <label for="emailID" class="form-label">Email<span>*</span></label>
+                                    <input type="email" class="form-control" id="emailID" name="emailID" value=""
+                                        required="">
+                                </div>
+                                <div class="col">
+                                    <label for="companyName" class="form-label">company Name<span>*</span></label>
+                                    <input type="text" class="form-control" id="companyName" name="companyName" value=""
+                                        required="">
+                                </div>
+                                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-12">
+                                    <label for="commentMsg" class="form-label">Service Interested
+                                        In<span>*</span></label>
+                                    <input type="text" class="form-control" id="commentMsg" name="commentMsg" value=""
+                                        required="">
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-primary px-5"
+                                        onclick="submitForm()">Submit</button>
+                                </div>
+                                <div class="col">
+                                    <div class="invalid-feedback" id="invalid-feedback"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about us -->
+    <section class="about-us">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-xl-7 mb-2">
+                    <div class="web-heading">
+                        <h1>Comprehensive IT Solutions Tailored <br> to Your Needs - VCQRU</h1>
+                        <p>In today's global marketplace, Protecting products from duplicities and maintaining the
+                            authenticity of your products and preserving brand trust and ensuring consumers confidence
+                            is a major challenge for many brands across various industries such as FMCG, cosmetics, auto
+                            parts, health supplements, consumer electronics and many more. Counterfeit products are
+                            produced using unauthorized similar or low-quality components which deceive customers and
+                            create a threat to public safety. VCQRU offers an innovative and highly effective anti
+                            counterfeit solution to address this problem.</p>
+                    </div>
+                </div>
+                <div class="col-xl-5 mb-2">
+                    <video playsinline="true" autoplay="true" loop="true" controlslist="nodownload"
+                        msallowfullscreen="true" muted="true">
+                        <source src="assets_event/img/about-us.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="col-lg-12">
+                    <p>VCQRU is your trusted partner for protecting your brand from the risks of counterfeiting and
+                        duplication. As an IT organization with vast experience and advanced industry knowledge, we
+                        specialize in providing cutting-edge anti-counterfeit solutions that ensure your products
+                        remain authentic and original. We are a group of young professionals with a distinct purpose
+                        and goals. Our company strongly values quality standards and we believe that adhering to
+                        these contributes significantly to our overall success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- our services -->
+    <section class="our-services">
+        <div class="container">
+            <div class="web-heading mb-4">
+                <h1>VCQRU Services</h1>
+                <p class="text-secondary">VCQRU is one of the leading anti-counterfeit solutions provider company in
+                    India. It offers one-stop
+                    solutions for anti-counterfeiting, personalized QR codes, e-warranty, smart packaging, smart labels,
+                    loyalty building, web design and development, digital marketing services, Track & Trace, cash
+                    transfer, referral services as well as gift vouchers. Our mission is to assist you in expanding your
+                    enterprise and accomplishing unparalleled achievements.
+                </p>
+            </div>
+            <div
+                class="row row-cols-xxl-3 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-1 g-4 justify-content-center">
+                <div class="col d-flex">
+                    <div class="card"
+                        style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 100%, rgba(0, 0, 0, 0.70) 100%), url(./assets_event/img/anti-counterfeit.jpg);">
+                        <div class="card-body">
+                            <h5 class="card-title">Anti Counterfeit Solution</h5>
+                            <p class="card-text">VCQRU provides anti-counterfeiting solutions that enable users to
+                                verify the authenticity of products and help to eliminate counterfeiting.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex">
+                    <div class="card"
+                        style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 100%, rgba(0, 0, 0, 0.70) 100%), url(./assets_event/img/build\ loyalty.jpg);">
+                        <div class="card-body">
+                            <h5 class="card-title">Build Loyalty</h5>
+                            <p class="card-text">Our build loyalty schemes are designed to incentivize existing
+                                customers to continue with your business and also attract new customers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex">
+                    <div class="card"
+                        style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 100%, rgba(0, 0, 0, 0.70) 100%), url(./assets_event/img/cash-transfer2.jpg);">
+                        <div class="card-body">
+                            <h5 class="card-title">Cash Transfer</h5>
+                            <p class="card-text"> VCQRU is providing cash transfer schemes, which are offered to
+                                customers when they made any specific purchase and get a cash refund.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex">
+                    <div class="card"
+                        style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 100%, rgba(0, 0, 0, 0.70) 100%), url(./assets_event/img/E-warranty.jpg);">
+                        <div class="card-body">
+                            <h5 class="card-title">E Warranty</h5>
+                            <p class="card-text">The E Warranty solution provided by VCQRU is an effective way to
+                                simplify the process of making warranty claims for your customers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex">
+                    <div class="card"
+                        style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 100%, rgba(0, 0, 0, 0.70) 100%), url(./assets_event/img/vcqru-left-slider-2.jpg);">
+                        <div class="card-body">
+                            <h5 class="card-title">Printing Services</h5>
+                            <p class="card-text">Turn your visions into vibrant reality with our exceptional Printing
+                                Services – where quality craftsmanship meets your creative aspirations!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex">
+                    <div class="card"
+                        style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 100%, rgba(0, 0, 0, 0.70) 100%), url(./assets_event/img/vcqru-left-slider-4.jpg);">
+                        <div class="card-body">
+                            <h5 class="card-title">Smart Product Labels</h5>
+                            <p class="card-text">Experience the brilliance of technology in every detail with Smart
+                                Product Labels – transforming ordinary products into extraordinary experiences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex">
+                    <div class="card"
+                        style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 100%, rgba(0, 0, 0, 0.70) 100%), url(./assets_event/img/vcqru-left-slider-5.jpg);">
+                        <div class="card-body">
+                            <h5 class="card-title">Hologram Stickers</h5>
+                            <p class="card-text">From security to style, unleash the holographic marvels – Hologram
+                                Stickers: Where protection meets eye-catching perfection!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex">
+                    <div class="card"
+                        style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 100%, rgba(0, 0, 0, 0.70) 100%), url(./assets_event/img/vcqru-left-slider-3.jpg);">
+                        <div class="card-body">
+                            <h5 class="card-title">Adhesive Label</h5>
+                            <p class="card-text">Embrace the seamless blend of innovation and style with Adhesive Label
+                                – where technology meets elegance!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex">
+                    <div class="card"
+                        style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 100%, rgba(0, 0, 0, 0.70) 100%), url(./assets_event/img/Digital-marketing\ \(1\).jpg);">
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Marketing</h5>
+                            <p class="card-text"> VCQRU is one of the leading digital marketing company in PAN India, we
+                                provide the best digital marketing services to clients and helps them to get their ROI.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex">
+                    <div class="card"
+                        style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 100%, rgba(0, 0, 0, 0.70) 100%), url(./assets_event/img/web-design-development.jpg);">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Design and Development</h5>
+                            <p class="card-text">VCQRU is a leading web design and development company in India. We have
+                                a team of professionals who are working on innovative, creative, and effective websites.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex">
+                    <div class="card"
+                        style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 100%, rgba(0, 0, 0, 0.70) 100%), url(./assets_event/img/vcqru-left-slider-1.jpg);">
+                        <div class="card-body">
+                            <h5 class="card-title">Security Labels</h5>
+                            <p class="card-text">Guard your Products with confidence and let Security Labels be your
+                                silent
+                                protectors - a shield of trust that leaves no room for counterfeiting!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex">
+                    <div class="card"
+                        style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 100%, rgba(0, 0, 0, 0.70) 100%), url(./assets_event/img/Patent\ pending\ technology.jpg);">
+                        <div class="card-body">
+                            <h5 class="card-title">Innovation on Peak </h5>
+                            <p class="card-text"> VCQRU is a Patents Pending Company, Changing the Game with Our
+                                Groundbreaking Technology.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end -->
+    <section class="logos">
+        <div class="container">
+            <h2 class="text-center mb-3">Our clients</h2>
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <ul>
+                            <li>
+                                <img src="https://www.vcqru.com/NewContent/img-home/mahindra.png" alt="mahindra">
+
+                            </li>
+                            <li>
+                                <img src="https://www.vcqru.com/NewContent/img-home/patanjali.png" alt="patanjali">
+                            </li>
+                            <li>
+                                <img src="https://www.vcqru.com/NewContent/img-home/amrtanjan.png" alt="amrtanjan">
+                            </li>
+                            <li>
+                                <img src="https://www.vcqru.com/NewContent/img-home/coat.png" alt="coat">
+                            </li>
+                            <li>
+                                <img src="https://www.vcqru.com/NewContent/img-home/johnson-paints.png"
+                                    alt="johnson-paints">
+                            </li>
+                            <li>
+                                <img src="https://www.vcqru.com/NewContent/img-home/steelbird.png" alt="steelbird">
+                            </li>
+                            <li>
+                                <img src="https://www.vcqru.com/NewContent/img-home/skydecore.png" alt="skydecore">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="carousel-item">
+                        <ul>
+                            <li>
+                                <img src="https://www.vcqru.com/NewContent/img-home/auto-park.png" alt="auto-park">
+                            </li>
+                            <li>
+                                <img src="https://www.vcqru.com/NewContent/img-home/flora.png" alt="flora">
+                            </li>
+                            <li>
+                                <img src="https://www.vcqru.com/NewContent/img-home/bsc-paints-logo.png"
+                                    alt="bsc-paints-logo">
+                            </li>
+                            <li>
+                                <img src="https://www.vcqru.com/NewContent/img-home/mahindra.png" alt="mahindra">
+                            </li>
+                            <li>
+                                <img src="https://www.vcqru.com/NewContent/img-home/patanjali.png" alt="patanjali">
+                            </li>
+                            <li>
+                                <img src="https://www.vcqru.com/NewContent/img-home/amrtanjan.png" alt="amrtanjan">
+                            </li>
+                            <li>
+                                <img src="https://www.vcqru.com/NewContent/img-home/coat.png" alt="coat">
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  -->
+    <!-- footer -->
+    <footer class="bg-dark text-white py-1">
+        <div class="container">
+            <p class="text-center mb-0">© Copyright 2024 VCQRU Private Limited | All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- js -->
+    <script src="assets_event/js/index.js"></script>
+    <!-- Loader-js -->
+    <script>
+        // window-loader
+        document.addEventListener("DOMContentLoaded", function () {
+            // Hide the loader once the page has finished loading
+            var loader = document.getElementById("loader-wrapper");
+            loader.style.visibility = "hidden";
+        });
+    </script>
+    <!-- submitForm -->
+    <script>
+        function submitForm() {
+            // Show loading spinner
+            document.getElementById('loader-wrapper').style.visibility = 'visible';
+            // email and mobile number validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phoneRegex = /^\d{10,10}$/; // Adjust the regex based on your mobile number format
+
+            // Get form values
+            var fullName = document.getElementById('fullName').value;
+            var companyName = document.getElementById('companyName').value;
+            var emailID = document.getElementById('emailID').value;
+            var phoneRpf = document.getElementById('phoneRpf').value;
+            var commentMsg = document.getElementById('commentMsg').value;
+
+
+            // if(fullName==""){
+            //     document.getElementById('invalid-feedback').innerHTML('Required');
+            //     return false;
+            // }
+            // if (
+            //     fullName == "" ||
+            //     emailID == "" ||
+            //     phoneRpf == "" ||
+            //     commentMsg == "" ||
+            //     companyName == ""
+            // ) {
+            //     document.getElementById('invalid-feedback').innerHTML('Required');
+            //     return false;
+            // }
+
+            // Validate form
+            if (
+                fullName == "" ||
+                emailID == "" ||
+                phoneRpf == "" ||
+                commentMsg == "" ||
+                companyName == "" ||
+                !emailRegex.test(emailID) ||
+                !phoneRegex.test(phoneRpf)
+            ) {
+                (() => {
+                    'use strict';
+
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    const forms = document.querySelectorAll('#myForm');
+
+                    // Validate email using regex
+                    if (!emailRegex.test(emailID)) {
+                        // Show email validation styles and prevent submission
+                        Array.from(forms).forEach(form => {
+                            form.classList.add('was-validated');
+                        });
+                        return false;
+                    }
+
+                    // Validate phone number using regex
+                    if (!phoneRegex.test(phoneRpf)) {
+                        // Show phone number validation styles and prevent submission
+                        Array.from(forms).forEach(form => {
+                            form.classList.add('was-validated');
+                        });
+                        return false;
+                    }
+
+                    // Loop over them and prevent submission if the form is not valid
+                    Array.from(forms).forEach(form => {
+                        if (!form.checkValidity()) {
+                            // alert("Form validation failed. Please check the highlighted fields.");
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    });
+                })();
+                // Hide loading spinner 
+                document.getElementById('loader-wrapper').style.visibility = 'hidden';
+
+                return false;
+            }
+
+            // Create a new XMLHttpRequest object
+            var xhr = new XMLHttpRequest();
+
+            // Define the AJAX request
+            xhr.open('POST', 'https://www.vcqru.com/Info/MasterHandler.ashx?method=sendqueryMVCRPF2&name=' + encodeURIComponent(fullName) + '&companyName=' + encodeURIComponent(companyName) + '&email=' + encodeURIComponent(emailID) + '&phone=' + encodeURIComponent(phoneRpf) + '&comment=' + encodeURIComponent(commentMsg), true);
+
+            // Set the content type for POST requests
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+            // Define the callback function when the request is successful
+            xhr.onload = function () {
+                // alert(xhr.response);
+                // Hide loading spinner
+                document.getElementById('loader-wrapper').style.visibility = 'hidden';
+                if (xhr.status === 200) {
+                    // Reset form fields to null
+                    document.getElementById('myForm').reset();
+                    // Redirect to thank-you.html after a successful form submission
+                    window.location.href = 'thankyou.html';
+                }
+            };
+
+            // Define the callback function in case of an error
+            xhr.onerror = function (error) {
+                // Hide loading spinner
+                console.error('Error:', error);
+            };
+
+            // Send the request
+            xhr.send();
+        }
+    </script>
+    <!-- loder -->
+    <script>
+        document.onreadystatechange = function () {
+            var loaderWrapper = document.getElementById('loader-wrapper');
+
+            // Show loader when the page is still loading
+            if (document.readyState === 'loading') {
+                loaderWrapper.style.visibility = 'visible';
+            } else {
+                // Hide loader once the page has fully loaded
+                loaderWrapper.style.visibility = 'hidden';
+            }
+        };
+    </script>
+</body>
+
+</html>

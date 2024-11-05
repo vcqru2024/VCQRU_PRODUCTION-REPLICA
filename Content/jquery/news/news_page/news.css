@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+
+.accordion {
+	
+}
+    .accordion h4 {	
+	cursor: pointer;
+}
+
+.accordion p {	
+	margin: 0;	
+}
+.accordion h4.active {
+	background-position: right 5px;
+}
+
+/*news area*/
+.news_display
+{
+	width:100%; 
+	font-family:Arial; 
+	color:#555;
+	margin:0 auto;
+	line-height:18px;
+	display:inline-block;
+	margin-bottom:10px;
+}
+.news_display div.date
+{
+	width:61px;
+	height:53px;
+	background:url(calander.png) no-repeat;
+	float:left;
+	vertical-align:top;
+	text-align:center;
+	font-size: 8pt;
+font-weight: bold;
+line-height: 23px;
+padding-top: 6px;
+font-family: Domine;
+}
+.news_display div.date a
+{
+	font-size:8pt;
+	color:#e5e7eb;
+	
+	
+}
+.news_display div.date a span
+{
+	font-size:14pt;
+	line-height: 30px;
+	color:#000;
+}
+.news_display div.view
+{
+	width:553px;
+	padding-left:10px;  
+	float:left;
+	font-size:12px;
+}
+.news_display div.view h4
+{
+	color:#095bb4;
+	padding-bottom:2px;
+	font-family: Domine;
+	font-size:11pt;
+	padding:5px 0 0px 0;
+}
+.news_display div.view h4 a
+{
+	color:#095bb4;
+	text-decoration:none;
+}
+.news_display div.view h4 a:hover
+{
+	text-decoration:underline;
+}
+.news_display div.view p
+{
+	padding-bottom:0px;
+}

@@ -1,0 +1,1017 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TFN Health – India's No. 1 Food Nutrition Store</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="assets/images/Trueforma/style.css" rel="stylesheet" />
+    <script src="../Content/js/jquery-1.11.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
+            integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA="
+            crossorigin="anonymous"></script>
+
+    <style>
+        .clbl {
+            color: red;
+        }
+
+        form input::placeholder {
+            font-size: 1rem;
+        }
+
+        #Retailer {
+            border-radius: 3px;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        var Codeone = "";
+        var Codetwo = "";
+        var comp = "";
+        var Id = "";
+
+
+        var lat = "";
+        var long = "";
+        var getPosition = function (options) {
+            return new Promise(function (resolve, reject) {
+                navigator.geolocation.getCurrentPosition(resolve, reject, options);
+            });
+        }
+
+        function Getdata2() {
+            $('#lbl').text('');
+            if ($('#Retailer').val() == "-1") {
+                $('#lblmob').text('Please Select Purchase From');
+                $('#Retailer').focus();
+                return false;
+            }
+            if ($('#Retailer').val() == "" && $('#txtother').val() == "") {
+                $('#lblmob').text('Please Enter Purchase From');
+                $('#txtother').focus();
+                return false;
+            }
+            var Purchase = $('#txtother').val();
+            if ($('#Retailer').val() == "" && Purchase != undefined) {
+
+                if ($('#Retailer').val() == "" && $('#txtother').val().length < 1) {
+                    $('#lblmob').text('Please Enter Valid Purchase From');
+                    return false;
+                }
+                var matches = $('#txtother').val().match(/\d+/g);
+                if ($('#Retailer').val() == "" && matches != null) {
+                    $('#lblmob').text('Purchase from should be alphabet only!');
+                    $('#txtother').val('');
+                    $('#txtother').focus();
+                    return false;
+                }
+                var matches12 = $('#txtother').val();
+                if (matches12.includes('~') || matches12.includes('!') || matches12.includes('@') || matches12.includes('#') || matches12.includes(')') || matches12.includes('_') || matches12.includes('-') || matches12.includes('>') || matches12.includes(',') || matches12.includes('?')
+                    || matches12.includes('$') || matches12.includes('%') || matches12.includes('^') || matches12.includes('&') || matches12.includes('*') || matches12.includes('(') || matches12.includes('+') || matches12.includes('<') || matches12.includes('.')
+                    || matches12.includes('=') || matches12.includes('{') || matches12.includes('}') || matches12.includes('[') || matches12.includes(']') || matches12.includes(':') || matches12.includes(';') || matches12.includes('"') || matches12.includes('/')
+                ) {
+                    $('#lblmob').text('Special characters are not allowed.');
+                    $('#txtother').focus();
+                    $('#btnsubmit').attr('disabled', false);
+                    $('#txtother').val('');
+                    return false;
+                }
+            }
+
+
+            debugger;
+            $("#Mobile").mask("9999999999");
+            var mobileno = document.querySelector("#Mobile").value;
+            var d = mobileno.slice(0, 1);
+            var c = parseInt(d);
+            if ($('#Mobile').val().replace(/\s+/g, '').length == 0) {
+                $('#lblmob').text('Please Enter Mobile Number !');
+                $('#Mobile').focus();
+                $('#btnsubmit').attr('disabled', false);
+                return false;
+            }
+            if (mobileno.match(/[^$,.\d]/)) {
+                $('#lblmob').text("Mobile Number Shoud Not be Alphabet!");
+                $('#Mobile').val('');
+                return false;
+            }
+
+            if (mobileno.includes('$')) {
+                $('#lblmob').text("Special characters are not allowed.");
+                $('#Mobile').val('');
+                return false;
+            }
+
+            if (mobileno.length == 10 ) {
+                $.ajax({
+                    type: "Post",
+                    url: '../Info/MasterHandler.ashx?method=ConsumerDetailsByMobileNo&MobileNo= ' + $("#Mobile").val(),
+                    success: function (data) {
+                        if (c <= 5) {
+                            $('#lblmob').text('Please Enter 10 Digit Mobile No');
+                            $('#Mobile').val('');
+                            return false;
+                        }
+                        else {
+
+                            var Name = data.split('~')[0];
+                            var pin = data.split('~')[6];
+                            var city = data.split('~')[2];
+                            var state = data.split('~')[3];
+                            var shopname = data.split('~')[4];
+                            var Address = data.split('~')[9];
+                            var ddlconsumertype = data.split('~')[5];
+                            var UpiId = data.split('~')[10];
+
+                            if (Name != "") {
+                                $("#Name").val(Name);
+                                document.getElementById('Name').readOnly = true;
+
+                            }
+                            else {
+
+                                $('#Chkcode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+
+                            }
+                            if (pin != "") {
+                                $("#Pin").val(pin);
+                                document.getElementById('Pin').readOnly = true;
+
+                            }
+                            else {
+                                $('#Chkcode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+
+                            }
+
+                            if (city != "") {
+                                $("#City").val(city);
+                                document.getElementById('City').readOnly = true;
+                            }
+                            else {
+                                $('#Chkcode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                            }
+
+                            if (state != "") {
+                                $("#State").val(state);
+                                document.getElementById('State').readOnly = true;
+                            }
+                            else {
+                                $('#Chkcode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                            }
+
+                        }
+                    }
+                });
+            }
+            else {
+                $("#Name").val('');
+                $("#Pin").val('');
+                $("#City").val('');
+                $("#State").val('');
+                $("#Address").val('');
+
+            }
+        }
+
+
+        function Getdata() {
+            $('#lbl').text('');
+            $("#Name").val('');
+            $("#Pin").val('');
+            $("#City").val('');
+            $("#State").val('');
+            $("#Address").val('');
+
+            debugger;
+            $("#Mobile").mask("9999999999");
+            var mobileno = document.querySelector("#Mobile").value;
+            var d = mobileno.slice(0, 1);
+            var c = parseInt(d);
+            if ($('#Mobile').val().replace(/\s+/g, '').length == 0) {
+                $('#lblmob').text('Please Enter Mobile Number !');
+                $('#Mobile').focus();
+                $('#btnsubmit').attr('disabled', false);
+                return false;
+            }
+            if (mobileno.match(/[^$,.\d]/)) {
+                $('#lblmob').text("Mobile Number Shoud Not be Alphabet!");
+                $('#Mobile').val('');
+                return false;
+            }
+
+            if (mobileno.includes('$')) {
+                $('#lblmob').text("Special characters are not allowed.");
+                $('#Mobile').val('');
+                return false;
+            }
+
+            if (mobileno.length == 10) {
+
+                if ($('#Retailer').val() == "-1") {
+                    $('#lblmob').text('Please Select Purchase From');
+                    $('#Retailer').focus();
+                    return false;
+                }
+                if ($('#Retailer').val() == "" && $('#txtother').val() == "") {
+                    $('#lblmob').text('Please Enter Purchase From');
+                    $('#txtother').focus();
+                    return false;
+                }
+                if ($('#Retailer').val() == "-1") {
+                    $('#lblmob').text('Please Select Purchase From');
+                    $('#Retailer').focus();
+                    return false;
+                }
+                if ($('#Retailer').val() == "" && $('#txtother').val() == "") {
+                    $('#lblmob').text('Please Enter Purchase From');
+                    $('#txtother').focus();
+                    return false;
+                }
+                var Purchase = $('#txtother').val();
+                if ($('#Retailer').val() == "" && Purchase != undefined) {
+
+                    if ($('#Retailer').val() == "" && $('#txtother').val().length < 1) {
+                        $('#lblmob').text('Please Enter Valid Purchase From');
+                        return false;
+                    }
+                    var matches = $('#txtother').val().match(/\d+/g);
+                    if ($('#Retailer').val() == "" && matches != null) {
+                        $('#lblmob').text('Purchase from should be alphabet only!');
+                        $('#txtother').val('');
+                        $('#txtother').focus();
+                        return false;
+                    }
+                    var matches12 = $('#txtother').val();
+                    if (matches12.includes('~') || matches12.includes('!') || matches12.includes('@') || matches12.includes('#') || matches12.includes(')') || matches12.includes('_') || matches12.includes('-') || matches12.includes('>') || matches12.includes(',') || matches12.includes('?')
+                        || matches12.includes('$') || matches12.includes('%') || matches12.includes('^') || matches12.includes('&') || matches12.includes('*') || matches12.includes('(') || matches12.includes('+') || matches12.includes('<') || matches12.includes('.')
+                        || matches12.includes('=') || matches12.includes('{') || matches12.includes('}') || matches12.includes('[') || matches12.includes(']') || matches12.includes(':') || matches12.includes(';') || matches12.includes('"') || matches12.includes('/')
+                    ) {
+                        $('#lblmob').text('Special characters are not allowed.');
+                        $('#txtother').focus();
+                        $('#btnsubmit').attr('disabled', false);
+                        $('#txtother').val('');
+                        return false;
+                    }
+                }
+
+                $.ajax({
+                    type: "Post",
+                    url: '../Info/MasterHandler.ashx?method=ConsumerDetailsByMobileNo&MobileNo= ' + $("#Mobile").val(),
+                    success: function (data) {
+                        if (c <= 5) {
+                            $('#lblmob').text('Please Enter 10 Digit Mobile No');
+                            $('#Mobile').val('');
+                            return false;
+                        }
+                        else {
+
+                            var Name = data.split('~')[0];
+                            var pin = data.split('~')[6];
+                            var city = data.split('~')[2];
+                            var state = data.split('~')[3];
+                            var shopname = data.split('~')[4];
+                            var Address = data.split('~')[9];
+                            var ddlconsumertype = data.split('~')[5];
+                            var UpiId = data.split('~')[10];
+
+                            if (Name != "") {
+                                $("#Name").val(Name);
+                                document.getElementById('Name').readOnly = true;
+
+                            }
+                            else {
+
+                                $('#Chkcode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+
+                            }
+                            if (pin != "") {
+                                $("#Pin").val(pin);
+                                document.getElementById('Pin').readOnly = true;
+
+                            }
+                            else {
+                                $('#Chkcode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+
+                            }
+
+                            if (city != "") {
+                                $("#City").val(city);
+                            }
+                            else {
+                                $('#Chkcode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                            }
+
+                            if (state != "") {
+                                $("#State").val(state);
+                            }
+                            else {
+                                $('#Chkcode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                            }
+
+
+                        }
+                    }
+                });
+            }
+            else {
+                $("#Name").val('');
+                $("#Pin").val('');
+                $("#City").val('');
+                $("#State").val('');
+                $("#Address").val('');
+
+
+            }
+        }
+
+        function getaddress() {
+            $("#Pin").mask("999999");
+            let pin = document.getElementById("Pin").value;
+            if (pin.length == 6) {
+                $.getJSON("https://api.postalpincode.in/pincode/" + pin, function (data) {
+
+                    createHTML(data);
+                })
+                function createHTML(data) {
+
+                    if (data[0].Status == "Success") {
+                        var city = "";
+                        var state = "";
+                        var pin = "";
+                        var city = data[0].PostOffice[0]['District'];
+                        var state = data[0].PostOffice[0]['State'];
+                        var Pin = data[0].PostOffice[0]['PinCode'];
+                        $('#lbl').text('');
+                        $("#City").val(city);
+                        $("#State").val(state);
+
+                        if ($("#City").val() != "") {
+                            document.getElementById('City').readOnly = true;
+                        }
+                        if ($("#State").val() != "") {
+                            document.getElementById('State').readOnly = true;
+                        }
+                    }
+                    else {
+                        $('#lbl').text("Please Enter Valid Pin.");
+                        $("#Pin").val('');
+                        return false;
+                    }
+                }
+            }
+            else {
+                $("#City").val('');
+                $("#State").val('');
+                $('#lbl').text("Please Enter Valid Pin Code.");
+                document.getElementById('City').readOnly = false;
+                document.getElementById('State').readOnly = false;
+
+                return false;
+            }
+        }
+
+
+
+
+        $(document).ready(function () {
+
+
+
+
+
+
+            firstfunction();
+            $('#Chkcode').show();
+            $('#Chkfields').hide();
+            $('#mobilefield').hide();
+            $('#Otherfield').hide();
+
+
+
+            function getUrlVars() {
+                debugger;
+                var vars = [], hash;
+                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                for (var i = 0; i < hashes.length; i++) {
+                    hash = hashes[i].split('=');
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                return vars;
+            };
+            Codeone = getUrlVars()["codeone"];
+            Codetwo = getUrlVars()["codetwo"];
+            comp = getUrlVars()["Comp"];
+            Id = getUrlVars()["ID"];
+
+            if (comp === undefined || comp === "undefined") {
+                comp = comp;
+            }
+            else {
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+            }
+            if (Codeone === undefined || Codeone === undefined) {
+                Codeone = Codeone;
+            }
+            else {
+                var HdnCode1 = Codeone;
+                var HdnCode2 = Codetwo;
+                // $("#codeone").val(code);
+            }
+
+            var id = comp;
+
+
+
+
+
+
+
+
+            //var id = $('#HdnID').val();
+
+            if (Id == "1") {
+
+                $('#Chkcode').show();
+                $('#Chkfields').hide();
+                $('#mobilefield').hide();
+                $('#Otherfield').hide();
+            }
+
+            else if (Id == "Truefarma") {
+                $('#Chkcode').hide();
+                $('#mobilefield').show();
+                $('#Chkfields').show();
+                $('#Otherfield').hide();
+                var code = Codeone + '-' + Codetwo
+                $("#codeone").val(code);
+            }
+            $("#codeone").mask("99999-99999999");
+
+            $("#btnnxt").on('click', function () {
+                debugger;
+
+                var codeone = $('#codeone').val();
+
+                if (codeone == "" || codeone == undefined) {
+                    $('#lblcode').text('Please Enter 13 Digit Code');
+                    return false;
+                }
+                else {
+                    $('#lblcode').text('');
+                }
+
+                if (codeone != undefined) {
+                    if ($('#codeone').val().length < 14) {
+                        $('#lblcode').text('Please Enter 13 Digit Code');
+                        return false;
+                    }
+                    else {
+                        $('#lblcode').text('');
+                    }
+                }
+
+                var rquestpage_Dcrypt = $("#codeone").val();
+                $('#btnnxt').hide();
+                $('#btnloadnxt').show();
+                // $('#ChkCode').hide();
+                $.ajax({
+                    type: "POST",
+                    url: '../Info/MasterHandler.ashx?method=chkgenuenity&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1],
+                    success: function (data) {
+                        $.ajax({
+                            type: "POST",
+                            url: '../Info/MasterHandler.ashx?method=chkwarranty&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1] + '&lat=' + lat + '&long=' + long,
+                            success: function (data) {
+                                $('#btnnxt').show();
+                                $('#btnloadnxt').hide();
+                                //alert(data.split('&')[1]);
+                                if (data.split('&')[0] === "1" && data.split('&')[1] === "Auto Max India") {
+                                }
+                                else {
+                                    if (data.split('&')[1] == "FOREVER NUTRITION" || data.split('&')[1] == "" || data.split('&')[1] == undefined) {
+                                        $('#Chkcode').hide();
+                                        $('#Chkfields').show();
+                                        $('#Otherfield').hide();
+                                        $('#mobilefield').show();
+
+                                    }
+                                    else {
+                                        alert('Invalid Code');
+                                        $('#Chkcode').show();
+                                        $('#Chkfields').hide();
+                                        $('#mobilefield').hide();
+                                        $('#Otherfield').hide();
+                                        return false;
+                                    }
+                                }
+                            }
+                        });
+                    }
+                });
+                //}
+            });
+
+
+
+
+            $('#btnsubmit').on('click', function (e) {
+                e.preventDefault();
+
+                Getdata2();
+
+                $('#lblmob').text('');
+
+
+                if ($('#Retailer').val() == "-1") {
+                    $('#lbl').text('Please Select Purchase From');
+                    $('#Retailer').focus();
+                    return false;
+                }
+                if ($('#Retailer').val() == "" && $('#txtother').val() == "") {
+                    $('#lbl').text('Please Enter Purchase From');
+                    $('#txtother').focus();
+                    return false;
+                }
+                var Purchase = $('#txtother').val();
+                if ($('#Retailer').val() == "" && Purchase != undefined) {
+
+                    if ($('#Retailer').val() == "" && $('#txtother').val().length < 1) {
+                        $('#lbl').text('Please Enter Valid Purchase From');
+                        return false;
+                    }
+                    var matches = $('#txtother').val().match(/\d+/g);
+                    if ($('#Retailer').val() == "" && matches != null) {
+                        $('#lbl').text('Purchase from should be alphabet only!');
+                        $('#txtother').val('');
+                        $('#txtother').focus();
+                        return false;
+                    }
+                    var matches12 = $('#txtother').val();
+                    if (matches12.includes('~') || matches12.includes('!') || matches12.includes('@') || matches12.includes('#') || matches12.includes(')') || matches12.includes('_') || matches12.includes('-') || matches12.includes('>') || matches12.includes(',') || matches12.includes('?')
+                        || matches12.includes('$') || matches12.includes('%') || matches12.includes('^') || matches12.includes('&') || matches12.includes('*') || matches12.includes('(') || matches12.includes('+') || matches12.includes('<') || matches12.includes('.')
+                        || matches12.includes('=') || matches12.includes('{') || matches12.includes('}') || matches12.includes('[') || matches12.includes(']') || matches12.includes(':') || matches12.includes(';') || matches12.includes('"') || matches12.includes('/')
+                    ) {
+                        $('#lbl').text('Special characters are not allowed.');
+                        $('#txtother').focus();
+                        $('#btnsubmit').attr('disabled', false);
+                        $('#txtother').val('');
+                        return false;
+                    }
+                }
+
+
+
+
+                var Mobile = $('#Mobile').val()
+                var pincode = $('#Pin').val()
+                var d = Mobile.slice(0, 1);
+                var c = parseInt(d);
+                if (Mobile.match(/[^$,.\d]/)) {
+                    $('#lbl').text(" Mobile number should not contain any special characters.");
+                    $('#Mobile').val('');
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                if (Mobile.length == 10 && c <= 5) {
+                    $('#lbl').text("Please enter a valid mobile number.");
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                if (Mobile.length != 10) {
+                    $('#lbl').text("Please enter your mobile number.");
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                if ($('#Name').val().replace(/\s+/g, '').length == 0) {
+                    $('#lbl').text('Please Enter Your Name!');
+                    $('#Name').focus();
+                    $('#Name').val('');
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                var name = $('#Name').val();
+                if (name != undefined) {
+
+                    if ($('#Name').val().length < 1) {
+                        $('#lbl').text('Please Enter Valid Name');
+                        return false;
+                    }
+                    var matches = $('#Name').val().match(/\d+/g);
+                    if (matches != null) {
+                        $('#lbl').text('Name should be alphabet only!');
+                        $('#Name').val('');
+                        $('#Name').focus();
+                        return false;
+                    }
+                    var matches1 = $('#Name').val();
+                    if (matches1.includes('~') || matches1.includes('!') || matches1.includes('@') || matches1.includes('#') || matches1.includes(')') || matches1.includes('_') || matches1.includes('-') || matches1.includes('>') || matches1.includes(',') || matches1.includes('?')
+                        || matches1.includes('$') || matches1.includes('%') || matches1.includes('^') || matches1.includes('&') || matches1.includes('*') || matches1.includes('(') || matches1.includes('+') || matches1.includes('<') || matches1.includes('.')
+                        || matches1.includes('=') || matches1.includes('{') || matches1.includes('}') || matches1.includes('[') || matches1.includes(']') || matches1.includes(':') || matches1.includes(';') || matches1.includes('"') || matches1.includes('/')
+                    ) {
+                        $('#lbl').text('Special characters are not allowed.');
+                        $('#Name').focus();
+                        $('#btnsubmit').attr('disabled', false);
+                        $('#Name').val('');
+                        return false;
+                    }
+                }
+
+
+
+                var pin = $('#Pin').val();
+                if (pin != undefined) {
+
+                    if ($('#Pin').val().length < 6) {
+                        $('#lbl').text('Please Enter Valid Pin Code');
+                        return false;
+                    }
+                    if (pin.match(/[^$,.\d]/)) {
+                        $('#lbl').text("Please Enter Numeric Value For Pin Code.");
+                        return false;
+                    }
+
+                    var matches1 = $('#Pin').val().match(/[^a-zA-Z0-9 ]/);
+                    if (matches1 != null) {
+                        $('#lbl').text('Pin Code Should Not Contain Any Special Character!');
+                        return false;
+                    }
+                }
+
+                if ($('#City').val().replace(/\s+/g, '').length == 0) {
+                    $('#lbl').text('Please Enter Your City Name!');
+                    $('#City').focus();
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                var city = $('#City').val();
+                if (city != undefined) {
+
+                    if ($('#City').val().length < 1) {
+                        $('#lbl').text('Please Enter valid City');
+                        return false;
+                    }
+                    var matches = $('#City').val().match(/\d+/g);
+                    if (matches != null) {
+                        $('#lbl').text('City Name Should be alphabet only!');
+                        return false;
+                    }
+                    var matchescity = $('#City').val();
+                    if (matchescity.includes('~') || matchescity.includes('!') || matchescity.includes('@') || matchescity.includes('#') || matchescity.includes(')') || matchescity.includes('_') || matchescity.includes('-') || matchescity.includes('>') || matchescity.includes(',') || matchescity.includes('?')
+                        || matchescity.includes('$') || matchescity.includes('%') || matchescity.includes('^') || matchescity.includes('&') || matchescity.includes('*') || matchescity.includes('(') || matchescity.includes('+') || matchescity.includes('<') || matchescity.includes('.')
+                        || matchescity.includes('=') || matchescity.includes('{') || matchescity.includes('}') || matchescity.includes('[') || matchescity.includes(']') || matchescity.includes(':') || matchescity.includes(';') || matchescity.includes('"') || matchescity.includes('/')
+                    ) {
+                        $('#lbl').text('Special characters are not allowed.');
+                        $('#City').focus();
+                        $('#btnsubmit').attr('disabled', false);
+                        $('#City').val('');
+                        return false;
+                    }
+                }
+
+
+                if ($('#State').val().replace(/\s+/g, '').length == 0) {
+                    $('#lbl').text('Please Enter Your State Name!');
+                    $('#State').focus();
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                var State = $('#State').val();
+                if (State != undefined) {
+
+                    if ($('#State').val().length < 1) {
+                        $('#lbl').text('Please Enter Valid State Name');
+                        return false;
+                    }
+                    var matches = $('#State').val().match(/\d+/g);
+                    if (matches != null) {
+                        $('#lbl').text('State Name Should be alphabet only!');
+                        return false;
+                    }
+                    var matchesstate = $('#City').val();
+                    if (matchesstate.includes('~') || matchesstate.includes('!') || matchesstate.includes('@') || matchesstate.includes('#') || matchesstate.includes(')') || matchesstate.includes('_') || matchesstate.includes('-') || matchesstate.includes('>') || matchesstate.includes(',') || matchesstate.includes('?')
+                        || matchesstate.includes('$') || matchesstate.includes('%') || matchesstate.includes('^') || matchesstate.includes('&') || matchesstate.includes('*') || matchesstate.includes('(') || matchesstate.includes('+') || matchesstate.includes('<') || matchesstate.includes('.')
+                        || matchesstate.includes('=') || matchesstate.includes('{') || matchesstate.includes('}') || matchesstate.includes('[') || matchesstate.includes(']') || matchesstate.includes(':') || matchesstate.includes(';') || matchesstate.includes('"') || matchesstate.includes('/')
+                    ) {
+                        $('#lbl').text('Special characters are not allowed.');
+                        $('#City').focus();
+                        $('#btnsubmit').attr('disabled', false);
+                        $('#City').val('');
+                        return false;
+                    }
+                }
+
+
+
+                $('#btnsubmit').hide();
+                $('#btnloadsubmit').show();
+
+
+
+                    if (code != "") {
+                        $.ajax({
+                            type: "POST",
+                            contentType: false,
+                            processData: false,
+
+                            url: '../Info/MasterHandler.ashx?method=verifyotp&mobile=' + $('#Mobile').val() + "&vCode=" + $('#codeone').val() + '&name=' + $('#Name').val() + '&city=' + $('#City').val() + '&state=' + $('#State').val() + '&PinCode=' + $('#Pin').val() + '&SellerName=' + $('#Retailer').val() + " " + $('#txtother').val() + '&comp=FOREVER NUTRITION&Comp_ID=Comp-1580',
+                            success: function (data) {
+                                $('#btnsubmit').show();
+                                $('#btnloadsubmit').hide();
+                                if (data.split('~')[0] !== "failure") {
+                                    window.scrollTo(0, 0);
+                                    if (data.indexOf("not valid") !== -1) {
+                                        data = data.split(".")[0];
+                                    }
+                                    $('#HEADING').hide();
+                                    $('#Chkfields').hide();
+                                    $('#mobilefield').hide();
+                                    $('#Otherfield').hide();
+                                    $('#Chkcode').hide();
+                                    $('#ShowMessage').show();
+                                    // $('#chkLine').hide();
+                                    $('#p3msg').html(data.split('~')[1]);
+                                    $('#p3msg:contains("not")').css('color', 'white');
+                                }
+                                else {
+                                    $('#msgcoats').hide();
+                                    toastr.error('OTP is not valid. Please provide the valid OTP');
+                                    $('#btnskyVerify1').attr('disabled', false);
+                                }
+                            }
+                        });
+                    }
+                    // }
+                    else {
+
+                        $('#btnsubmit').attr('disabled', false);
+                    }
+
+
+
+
+            });
+            $('#btnNext').click(function () {
+                window.location.href = 'https://trueforma.in/';
+            });
+        });
+
+
+
+        $(function () {
+            debugger;
+            $("#Retailer").change(function () {
+                if ($(this).val() == "") {
+                    $("#dvother").show();
+                    $('#txtother').prop('required', true);
+
+
+                } else {
+                    $("#dvother").hide();
+                    $("#txtother").val('');
+                    $('#txtother').removeAttr('required');
+
+                }
+            });
+        });
+
+
+        async function firstfunction() {
+
+            if (navigator.geolocation) {
+                await getPosition()
+                    .then((position) => {
+                        $('#lat').val(position.coords.latitude);
+                        $('#long').val(position.coords.longitude);
+                        var latitude = position.coords.latitude;
+                        var longitude = position.coords.longitude;
+                        lat = latitude;
+                        long = longitude;
+
+                        $.ajax({
+                            type: "POST",
+                            async: true,
+                            url: '../Info/MasterHandler.ashx?method=chklocation&lat=' + latitude + '&long=' + longitude,
+                            success: function (data) {
+                                lat = latitude;
+                                long = longitude;
+                            }
+                        });
+                    })
+                    .catch((err) => {
+                        console.error(err.message);
+                    });
+            } else {
+                // x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+    <section class="banner">
+        <div class="container">
+            <div class="row margin-top">
+                <div class="col-lg-8">
+                    <div class="logo">
+                        <img src="../assets/images/Trueforma/Logo.png">
+                    </div>
+
+                    <div class="body-content-1 mt-5">
+
+                        <h6 class="img-1 text-color">
+                            <img src="../assets/images/Trueforma/Sugar-Free.png">SUGAR FREE
+                        </h6>
+                        <h6 class="img-2 text-color">
+                            <img src="../assets/images/Trueforma/clean.png">CLEAN & REAL LABEL
+                        </h6>
+                        <h6 class="img-3 text-color">
+                            <img src="../assets/images/Trueforma/dope.png">DOPE FREE
+                        </h6>
+
+                    </div>
+
+                    <div class="product animate__backInDown animate__animated">
+                        <img src="../assets/images/Trueforma/Products.png" class="img-fluid">
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+                    <h3 class="text-center heading-color">#KHUDSEBEHTAR</h3>
+                    <form class="animate__backInDown animate__animated animate__zoomIn" runat="server">
+                      
+                        <div class="HEADING">
+                            <h6>TO CHECK AUTHENTICITY AND AVAIL BENEFITS</h6>
+                        </div>
+
+                        <div class="form-maine">
+                            <div id="Chkcode">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="codeone" placeholder="Enter 13 Digit Code*" aria-describedby="13-digit-number" required>
+                                </div>
+                                <div class="mb-3">
+                                    <button type="submit" id="btnnxt" class="btn btn-primary">Next</button>
+                                    <button type="submit" style="display: none" id="btnloadnxt" class="btn btn-primary"><i class="fa fa-spinner fa-spin"></i>Loading..</button>
+                                </div>
+                                <label id="lblcode" class="clbl"></label>
+                            </div>
+                            <div id="Chkfields">
+                                <div id="mobilefield">
+                                    <div class="mb-3">
+                                        <select id="Retailer" class="form-select form-control" required>
+                                            <option value="-1">Purchase from*</option>
+                                            <option value="Official Website">Official Website</option>
+                                            <option value="Amazon Marketplace">Amazon Marketplace</option>
+                                            <option value="Flipkart Marketplace">Flipkart Marketplace</option>
+                                            <option value="Authorized Retail Stores">Authorized Retail Stores</option>
+                                            <option value="TATA 1MG">TATA 1MG</option>
+                                            <option value="">Others</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3" id="dvother" style="display: none">
+                                        <input type="text" class="form-control" placeholder="Enter Purchase from*" id="txtother" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" maxlength="10" onkeyup="Getdata()" class="form-control" id="Mobile" placeholder="Mobile Number*" required>
+                                    </div>
+                                    <label id="lblmob" class="clbl"></label>
+                                </div>
+                                <div id="Otherfield">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" maxlength="50" id="Name" placeholder="Name*" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" onkeyup="getaddress()" maxlength="6" onkeypress="return onlyNumberKey(event)" class="form-control" id="Pin" placeholder="Pincode*" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" maxlength="100" id="City" placeholder="City*" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" maxlength="100" id="State" placeholder="State*" required>
+                                    </div>
+
+                                </div>
+                                <button type="submit" id="btnsubmit" class="btn btn-primary">Submit</button>
+                                <button type="submit" style="display: none" id="btnloadsubmit" class="btn btn-primary"><i class="fa fa-spinner fa-spin"></i>Loading..</button>
+                                <label id="lbl" class="clbl"></label>
+                            </div>
+                        </div>
+                        <div style="display: none;" id="ShowMessage">
+
+                            <div class="form-box">
+                                <p id="p3msg" style="overflow: hidden; color: white; font-size: 13px !important; font-weight: 500; margin-left: 7px; margin-right: 7px;" class="displayNone massage_box text-center"></p>
+                                <br />
+                                <center><a href="javascript:void(0)" class="" id="btnNext">Close</a></center>
+                            </div>
+                        </div>
+                        <div class="">
+
+                            <p id="wlink" class="blink_me animate__bounceIn" style="text-align:center;color:white;">
+                                You are requested to contact the Trueforma Support Team for further guidance
+                                <br>
+                                <img src="assets/images/Trueforma/call.png" style="width: 20px;">
+                                <a href="tel:6283233442">6283233442</a> /
+                                <img src="assets/images/Trueforma/whatsapp.png" style="width: 20px;">
+                                <a href="https://api.whatsapp.com/send?phone=+919355903119&amp;text&amp;type=phone_number&amp;app_absent=1" target="blank">9355903119</a>
+                            </p>
+                        </div>
+                        <br />
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <h1 class="text-center">100% authentic & ethical sports nutrition</h1>
+
+        </div>
+    </section>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer-link">
+                    <div class="text-center mobile-view-margin mt-4">
+                        <a href="https://trueforma.in/" style="text-decoration: none; color: #fff; text-transform: uppercase;">
+                            <img src="../assets/images/Trueforma/web.png" class="web"><b>trueforma.nutrition</b>
+                        </a>
+                    </div>
+
+
+
+                    <p class="text-white text-center mt-4">follow us on social media for latest updates, offers & news</p>
+                    <ul class="social text-white">
+                        <li class="mb-3">
+                            <a href="https://www.instagram.com/tfn.health/" target="_blank">
+                                <img src="../assets/images/Trueforma/instagram.png">trueforma.nutrition
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="https://www.facebook.com/tfnnutritions/" target="_blank">
+                                <img src="../assets/images/Trueforma/facebook.png">TrueFormaNutrition
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="https://www.youtube.com/@tfnhealth" target="_blank">
+                                <img src="../assets/images/Trueforma/youtube.png">@trueformanutrition
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="video text-center my-5">
+                        <iframe width="60%" height="315" src="https://www.youtube.com/embed/gDu7VhTTtQY?si=FuXxm-y1mFN7Qigd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

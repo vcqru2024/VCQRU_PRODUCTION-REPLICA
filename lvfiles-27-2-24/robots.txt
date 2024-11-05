@@ -1,0 +1,18 @@
+User-agent: *
+Disallow: /Info/Benefits_Premium.aspx
+Disallow: /Manufacturer/CashDetails.aspx
+Disallow: /government.aspx
+Disallow: /blog-details.html
+Disallow: /blog-details.aspx?blog=4
+Disallow: /Brand_Promotion/Loyalty_Program.html
+Disallow: /blog-details.aspx?blog=5
+Disallow: /Info/MasterHandler.ashx?method=savecoats&mobile=
+Disallow: /Content/includes/m_brochure.pdf
+Disallow: /Info/Content/includes/LABEL%209420.ppt
+Disallow: /Admin/Excel/19-04-2017/Demo/1562359.xls
+Disallow: /contact.html
+Disallow: /about-us.html
+Disallow: /blog.html
+Disallow: /Content/includes/m_brochure.pdf
+
+sitemap: http://www.vcqru.com/sitemap.xml

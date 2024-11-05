@@ -1,0 +1,341 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Browser Bar Icon -->
+    <link rel="shortcut icon" href="assets/images/icons/icon.png">
+
+    <!-- Meta -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Steelbirds</title>
+
+    <!-- Browser Bar Icon -->
+    <link rel="shortcut icon" href="assets/images/icons/icon.png">
+
+    <!-- Meta -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Anti-Counterfeit Solutions, Custom QR Code Generator, Smart Packaging Company | VCQRU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;1,100;1,200;1,300;1,500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tempcss/bootstrap.min.css">
+    <link rel="stylesheet" href="tempcss/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="tempjs/custome.js"></script>
+    <script src="Content/js/jquery-1.11.1.min.js"></script>
+    <style>
+        .hide {
+           display:none;
+        }
+        #nameError {
+            display: none;
+            font-size: 0.8em;
+            color: red;
+        }
+
+            #nameError.visible {
+                display: block;
+            }
+
+        input.invalid {
+            border-color: red;
+        }
+
+        #quantityError {
+            display: none;
+            font-size: 0.8em;
+            color: red;
+        }
+
+            #quantityError.visible {
+                display: block;
+            }
+
+        .imgvisible {
+            display: none;
+        }
+    </style>
+</head>
+<body class="">
+
+    <div>
+
+        <!-- Nav tabs -->
+        <!--<ul class="nav nav-pills nav-justified text-uppercase" role="tablist">
+          <li role="presentation" class="active"><a href="#tab-description" aria-controls="tab-description" role="tab" data-toggle="tab">Description</a></li>
+          <li role="presentation"><a href="#tab-inspiration" aria-controls="tab-inspiration" role="tab" data-toggle="tab">Inspiration</a></li>
+        </ul>-->
+        <!-- Tab panes -->
+        <section class="content_text pt-3 pb-3" id="content_text">
+            <div class="tab-content position_index">
+                <div role="tabpanel" class="tab-pane active" id="tab-description">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <div class="page-header">
+                                    <div class="logo-brand"><a href=""><img src="images/steel_logo.png"></a></div>
+                                </div>
+                                <div class="border-radius10 overflow box_images" style="background: url(images/rays-bg2.jpg); background-size: cover; background-position: center center">
+                                    <!--<div class="product-image imgvisible" id="product"><img src="images/steel-product.png" class="width-100 img-responsive center-block"></div>-->
+                                    <!--<div class="no-image"><img src="images/no-image-icon.png" id="noimage" class="width-100 img-responsive center-block"></div>-->
+                                </div>
+                                <!--<div class="pt-3" id="message" style="display:none">
+                                    <span></span>
+                                    <p class="text-justify">Thank you for buying the Genuine MANGALAM PRODUCT. The product mfg. date is 30/07/2021 and the price of the product is Rs. 200 with the batch number 1324.We always look forward to serving you better.</p>
+                                    <p class="text-justify mb-0">असली मंगलम उत्पाद खरीदने के लिए धन्यवाद। उत्पाद MFG दिनांक 30/07/2021 है और उत्पाद की कीमत रु 200, BATCH 1324 के साथ। हम हमेशा आपकी बेहतर सेवा के लिए तत्पर हैं।</p>
+                                </div>-->
+                                <div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-xs-12">
+                                            <div><h3>Steelbirds</h3></div>
+                                            <div class="product-box">
+                                                <div class="product-detail"><b style="width:auto">Product Number:</b><span id="price" class="hide"></span></div>
+                                                <div class="product-detail"><b style="width:auto">Product Description:</b><span id="mfg" class="hide"></span></div>
+                                                <div class="product-detail"><b style="width:auto">Quantity:</b><span id="batch" class="hide"></span></div>
+                                            </div>
+                                            <div class="mt-3 text-center">
+                                                <a href="http://www.steelbirdhelmet.com/" class="btn btn-danger">Cancel</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Button trigger modal -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div role="tabpanel" class="tab-pane" id="tab-inspiration">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <div class="page-header">
+                                    <p class="lead">Based on <a href="javascript:void(0)" target="_blank">this tweet from @iamdevloper</a> and the National Geographic on page load modal. I liked the design simplicity and marketing copy enough to duplicate in <a href="https://www.getbootstrap.com" target="_blank">Bootstrap</a>.</p>
+                                    </div>
+                        <br>
+                        <img src="https://68.media.tumblr.com/013b065e1e48e2d84b78b8dd10ec5b69/tumblr_ojtqy5FfFz1qjqi9so1_540.png" class="img-responsive">
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+            </div>
+
+        </section>
+        <!-- Subscribe Modal -->
+        <div id="myModal" class="modal fade modal-open modal modal-center" role="dialog" style="display: none;">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <!--<h4 class="modal-title">Please Fill following Details to Serve you better</h4>-->
+                    </div>
+                    <div class="modal-body text-center">
+                        <h3>Please Fill following Details to Serve you better</h3>
+
+                        <div class="form-box">
+                            <!--<form>-->
+                            <!--<div class="form-group">
+        <label for="name">Location</label>
+        <select name="state" id="state" class="form-control">
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+            <option value="Daman and Diu">Daman and Diu</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Lakshadweep">Lakshadweep</option>
+            <option value="Puducherry">Puducherry</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+        </select>
+    </div>-->
+                            <div class="form-group">
+                                <label for="name">Product Number:</label>
+                                <input class="form-control" id="product_number" style="border-width:0; background-color:transparent; border-style:none" type="text" name="product_number" disabled required>
+                                <!--<span role="alert" id="nameError" aria-hidden="true">
+            Please enter Name
+        </span>-->
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Product Description</label>
+                                <!--<input class="form-control" id="Mobile" type="text" name="Mobile" required>-->
+                                <input class="form-control" id="description" style="border-width:0; background-color:transparent; border-style:none" type="text" name="quantity" disabled required>
+                                <!--<span role="alert" id="mobileError" aria-hidden="true">
+            Please enter Mobile No.
+        </span>-->
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="name">Qauntity</label>
+                                <!--<input class="form-control" id="Mobile" type="text" name="Mobile" required>-->
+                                <input class="form-control" id="quantity"  type="text" name="quantity" required>
+                                <span role="alert" id="quantityError" aria-hidden="true">
+                                Please enter Quantity.
+                                </span>
+                            </div>
+                            <!--<div class="form-group">
+        <label for="name">Designation</label>
+        <select name="state" id="state" class="form-control">
+            <option value="CNF">CNF</option>
+            <option value="Dealer">Dealer</option>
+            <option value="Sub-Dealer">Sub-Dealer</option>
+            <option value="Retailer">Retailer</option>
+            <option value="Consumer">Consumer</option>
+
+        </select>
+    </div>-->
+                            <!--</form>-->
+                        </div>
+                        <div class="clear"></div>
+                        <div class="pt-2 pb-4 mb-4 mt-4" style="margin-top: 20px">
+                            <a class="pre-order-btn" href="#" id="submit">Submit</a>
+
+                        </div>
+
+                    </div>
+                    <!--<div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>-->
+                </div>
+
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+        <script src="tempjs/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                debugger;
+                //var code = new URLSearchParams(window.location.search);
+            
+               var code = window.location.search.split('=')[1];
+              
+                $.ajax({
+                    type: "POST",
+                    url: window.location.origin+'/Info/MasterHandler.ashx?method=codeexist&codeone=' + code.split('-')[0] + '&codetwo=' + code.split('-')[1],
+                    success: function (data) {
+                        debugger;
+                        if (data.split(',')[2] === "0") {
+                            $('#product_number').val(data.split(',')[0]);
+                            $('#description').val(data.split(',')[1]);
+                            $('#myModal').modal('show');
+                            $('#batch').addClass('hide');
+                            $('#price').addClass('hide');
+                            $('#mfg').addClass('hide');
+                           
+                        }
+                        else {
+                            $('#batch').text(data.split(',')[2]);
+                          
+                        }
+                        $('#batch').removeClass('hide');
+                        $('#price').removeClass('hide');
+                        $('#mfg').removeClass('hide');
+                        $('#price').text(data.split(',')[0]);
+                        $('#mfg').text(data.split(',')[1]);
+                       // $('#noimage').addClass('imgvisible');
+                       // $('#product').removeClass('imgvisible');
+                        
+                    }
+                });
+
+
+
+  
+        });
+            
+        $('#submit').click(function () {
+            let valid = true;
+            if ($('#quantity').val() == '') {
+                const nameError = document.getElementById("quantityError");
+                nameError.classList.add("visible");
+                $('#quantity').addClass("invalid");
+                nameError.setAttribute("aria-hidden", false);
+                nameError.setAttribute("aria-invalid", true);
+                valid = false;
+            }
+            else {
+                const nameError = document.getElementById("quantityError");
+                nameError.classList.remove("visible");
+                $('#quantity').removeClass("invalid");
+                nameError.setAttribute("aria-hidden", true);
+                nameError.setAttribute("aria-invalid", false);
+                valid = true;
+            }
+           
+            debugger;
+            if (valid) {
+                $('#myModal').modal('toggle');
+                $('#message').show();
+                $('#price').show();
+                $('#mfg').show();
+                $('#exp').show();
+                $('#batch').show();
+                $('#noimage').addClass('imgvisible');
+                $('#product').removeClass('imgvisible');
+                var code = window.location.search.split('=')[1];
+                $.ajax({
+                    type: "POST",
+                    url: window.location.origin + '/Info/MasterHandler.ashx?method=updatequantity&codeone=' + code.split('-')[0] + '&codetwo=' + code.split('-')[1]+'&quantity='+$('#quantity').val(),
+                    success: function (data) {
+                        debugger;
+                        if (data.split("~")[0] === "Successfull") {
+                            alert("Quantity Added successfully!");
+                            $('#batch').removeClass('hide');
+                            $('#price').removeClass('hide');
+                            $('#mfg').removeClass('hide');
+                            $('#price').text(data.split(',')[0]);
+                            $('#mfg').text(data.split(',')[1]);
+                            $('#batch').text(data.split(',')[2]);
+                       
+                        }
+                        else {
+                            alert("facing Some issue try after some time");
+                        }
+                    }
+                });
+            }
+            else {
+                $('#message').hide();
+                $('#price').hide();
+                $('#mfg').hide();
+                $('#exp').hide();
+                $('#batch').hide();
+                $('#noimage').removeClass('imgvisible');
+                $('#product').addClass('imgvisible');
+            }
+
+        });
+        </script>
+
+
+    </div>
+</body>

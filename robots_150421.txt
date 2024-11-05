@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+sitemap: http://www.vcqru.com/sitemap.xml

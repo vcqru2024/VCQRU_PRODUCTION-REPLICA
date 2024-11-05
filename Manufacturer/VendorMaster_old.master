@@ -1,0 +1,627 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="VendorMaster.master.cs" Inherits="Manufacturer_VendorMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register Src="~/UserControl/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+   
+   <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="Keyword" content="security sticker,Brand Protection,Check Product Originality,Consumer Insights,counterfeit solution provider,customer loyalty service,Customized Solution,Digital Warranty,e-warranty,Fighting Product Duplicate,Identity Fakes,label provider in Delhi,label provider in India,Make Packing Smart,qr code provider in Delhi,qr code provider in India,Run Product Survey,Save Brand,security stickers,Track & Trace Services,Neurotags,Original4sure,o4s,sproxil,Nirmal Stickers,Monarch Graphic,Pro Labels,Cosmo Printers,Uflex,Syndicate Labels,Braggart,Coats & Pack,Excel Pack,Sai Pack,J K Label,Manipal Technologies Limited (H.O.),Kumbhat Holographics,Signor Labels,Hira Holovision,Nestor Labels,Durga Holographic,Vishal Holo Solutions [Pvt] Ltd,Hi-Tech Print System,Verma Enterprises,DIPS technologies,Alpha Lasertek India,Holosafe Security Labels,Arora Printing,Cousin Enterprises,Smart Tech Solutions,Prem Printing,S. Anand,Packso Print,Latest Labeling And Solutions,Hira Print Solutions Private Limited,JJ Print Packs,3S Industries,G Mamu ji,Sanskar Printers,ColorBlast,VideoJet,Perfact Color Digital Prints Pvt Ltd,Mahindra and Mahindra,MFN,Windsor,Steelbird,Nutriglow cosmetics,1 Stop Nutrition,Bansi lal and sons,Olympic Auto Industries,JR Fragrence,Deeksha mineral water,ELA group,Suresh Confectionary,Welgo,Mysha Healthworld,Mysha,White Horse,Mstar Oil,Mahindra tractors,Mahindra MStar Super 7.5,Mahindra MStar Super 5,Mahindra MStar Super 6,Mahindra MStar Super 2,Mahindra MStar Super 1,Mahindra MStar Premium 10,Mahindra MStar Premium 7.5,Mahindra MStar Premium 1,Mahindra MStar Classic OIB 20,Mahindra MStar Classic OIB 10,Mahindra MStar Classic OIB  5,Mahindra MStar Classic OIB 1,Mechanic coupon,Flora,competent electricals,energy meters,VCQRU Counterfeit Prevention Solution,VCQRU Refer & Win,VCQRU Thank you customer,VCQRU Customer satisfaction feedback,VCQRU Customer loyalty voucher,VCQRU Lotto,VCQRU Consumer action insights,VCQRU Customization,VCQRU Direct Money Transfer,VCQRU Smart Warrranty Solution,Secure Track & Trace,Companies who provide counterfeit solutions,QR code providers,QR Code label providers in delhi,security stickers,customer loyalty service,digital warranty,e-warranty,track and trace service,Anti counterfeiting,boost sales,make packaging smart,fight against duplicity,save brand,Make packaging work for you,customized solutions,secure track and trace,consumer insights,brand protection,identify fakes,check product originality,run product survey,customer rewards program,customer loyalty program,product promotions,electrical appliances,FMCG Anti counterfeiting,dairy products,buy genuine products,warranty labels,security labels,unique digital codes,advanced technical solutions/services,end to end marketing and packaging solution,unique labeling,variable number codes,data analysis,insure customer safety,consumer trust,product visibility,effective branding and marketing strategies,label sticker printing service,(incorporating the qr code),security sticker,Brand Protection,Check Product Originality,Consumer Insights,counterfeit solution provider,customer loyalty service,Customized Solution,Digital Warranty,e-warranty,Fighting Product Duplicate,Identify Fakes,label provider in Delhi,label provider in India,Make Packing Smartqr code provider in Delhi,qr code provider in India,Run Product Survey,Save Brand,security stickers,Track & Trace Services," />
+    <meta name="Description" content="Every person has the right to know whether the product they are buying is genuine or not. We use truly secure and encrypted codes printed on the labels of the product which are impossible to replicate. With the help of secure mobile/web tools, the authenticity of the product can be checked." />
+ 
+    <title>VCQRU | We secure you</title>
+
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="VCQRU - Responsive HTML5 Template" />
+    <meta name="author" content="bhanguz.com" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img-1/favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../img-1/favicon.png" />
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css" />
+
+
+
+
+    <meta name="google-site-verification" content="txvxtnQjnR5uLkfNgi1iX4cTC1AB3282Lqud_kCGEDA" />
+    <!--Analytics Code-->
+
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-56329391-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    <style>
+        .ajax__calendar_today {
+            padding: 0px 0px 0px 0px;
+        }
+
+        .ajax__calendar_dayname {
+            padding: 0px 0px 0px 0px;
+        }
+    </style>
+
+    <!-- Vendor CSS -->
+
+    <script src="js/scripts/JScript.js"></script>
+
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../vendor/animate/animate.min.css" />
+    <link rel="stylesheet" href="../vendor/simple-line-icons/css/simple-line-icons.min.css" />
+    <link rel="stylesheet" href="../vendor/owl.carousel/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../vendor/owl.carousel/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="../vendor/magnific-popup/magnific-popup.min.css" />
+    <%--<link href="Brand_Promotion/css/font-awesome.min.css" rel="stylesheet" />--%>
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
+    <%--<link rel="stylesheet" href="../css/theme-elements.css" />--%>
+    <link rel="stylesheet" href="../css/theme-blog.css" />
+    <link rel="stylesheet" href="../css/theme-shop.css" />
+
+    <!-- Current Page CSS -->
+    <link rel="stylesheet" href="../vendor/rs-plugin/css/settings.css" />
+    <link rel="stylesheet" href="../vendor/rs-plugin/css/layers.css" />
+    <link rel="stylesheet" href="../vendor/rs-plugin/css/navigation.css" />
+    <link rel="stylesheet" href="../vendor/circle-flip-slideshow/css/component.css" />
+
+    <!-- Demo CSS -->
+
+
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="../css/skins/default.css" />
+
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css" />
+
+    <!-- Head Libs -->
+    <script src="../vendor/modernizr/modernizr.min.js"></script>
+
+
+    <script src="../Content/js/jquery-1.11.1.min.js"></script>
+    <%--<script src="Content/js/jquery.min.js"></script>--%>
+    <%--<script src="vendor/jquery/jquery.js"></script>--%>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../Content/jquery/mp_player/inlineplayer.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/jquery/mp_player/flashblock.css" />
+
+    <script type="text/javascript" src="../Content/jquery/mp_player/soundmanager2.js"></script>
+
+    <script type="text/javascript" src="../Content/jquery/mp_player/inlineplayer.js"></script>
+
+
+    <link href="assets/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <script src="js/bootstrap-datepicker.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="../Content/js/jquery-1.7.2.min.js" language="javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- Datatable -->
+    <script src="../Content/js/jquery-1.11.1.min.js">
+
+    </script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css" />
+    <style>
+        .form-row {
+            color: #868e96;
+        }
+    </style>
+    <script>
+
+        function isNumberKey(sender, evt) {
+            var txt = sender.value;
+            var dotcontainer = txt.split('.');
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (!(dotcontainer.length == 1 && charCode == 46) && charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+        }
+        function checkTextAreaMaxLength(textBox, e, length) {
+
+            var mLen = textBox["MaxLength"];
+            if (null == mLen)
+                mLen = length;
+
+            var maxLength = parseInt(mLen);
+            if (!checkSpecialKeys(e)) {
+                if (textBox.value.length > maxLength - 1) {
+                    if (window.event)//IE
+                    {
+                        e.returnValue = false;
+                        return false;
+                    }
+                    else//Firefox
+                        e.preventDefault();
+                }
+            }
+
+
+        }
+    </script>
+    <script>
+
+        //$('#menu3 li a').click(function myfunction() {
+        //    // location.href = "ServicesSubcription.aspx";
+        //    alert('');
+        //});
+        $(document).ready(function () {
+
+            ActiveSideMenu();
+            //  $('#mainnav1 ul').removeClass("show");
+            //var menuname = window.location.href.substring(window.location.href.indexOf('#') + 1, 6);
+            //alert(menuname);
+            //$('#' + menuname).addClass("show");
+            //  $('#mainnav1 ul').removeClass("show");
+            //$('#' + Varmenu11).addClass("show");
+            // ActiveHeader();
+
+            //   $("li.item-ii").find("li").css("background-color", "red")
+
+            // alert('header');
+
+        });
+        //$('.sub-menu collapse').find("li").click(function () {
+        //    alert('ss');
+        //})
+        function ActiveSideMenu() {
+
+            // var navbox = $('.nav nav-list'); //
+            var navbox = $('.sub-menu'); // $('#menu3');
+            // activate tab on click
+            navbox.on('click', 'a', function (e) {
+
+                //     alert('');
+                var $this = $(this);
+
+                // alert($this.attr('href'));
+                // prevent the Default behavior
+                e.preventDefault();
+
+                // set the hash to the address bar
+                window.location.href = $this.attr('href');
+                // activate the clicked tab
+                //$(this).each(function myfunction() {
+                //    alert($this.find('ul').addClass('show'));
+                //})
+                $this.tab('show');
+                //$('#mainnav1 ul').removeClass("show");
+                //$(this).addClass("show");
+            });
+            //$('.blog a').removeClass("nav-link active");
+            //debugger;
+            //$('.blog a').on('click', function () {
+            //    debugger;
+            //    //$('.blog a').removeClass("nav-link active");
+            //    $(this).addClass('nav-link active');
+            //});
+        }
+        function ActiveHeader(menu11) {
+
+            // debugger;
+            $('#mainnav1 ul').removeClass("show");
+            $('#' + menu11).addClass("show");
+
+            //alert(menuname);
+            // $('#' + menuname).addClass("show");
+            //$('#menu2').removeClass("show");
+            //$('#menu3').removeClass("show");
+            //$('#menu4').removeClass("show");
+            //$('#menu5').removeClass("show");
+            //$('#menu6').removeClass("show");
+            //$('#menu7').removeClass("show");
+            //$('#' + menuname).addClass("show");
+
+
+            //$('#mainnav1 ul a').removeClass("nav-link active");
+            //$('#mainnav1 li a').on('click', function () {
+            //    $('#mainnav1 li a').removeClass("nav-link active");
+            //    $(this).addClass('nav-link active');
+            //});
+        }
+
+    </script>
+</head>
+<body onkeydown="return (event.keyCode != 116)">
+    <form id="form1" runat="server">
+
+        <%-- <div>--%>
+
+        <div class="body">
+
+            <!--- Header Starts here -->
+            <header id="header" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 0, 'stickySetTop': '-0px', 'stickyChangeLogo': false}">
+                <div class="header-body pt-0 pb-0">
+                    <div class="header-top header-top-style-3 header-top-custom">
+                        <div id="divprogress" align="center" style="background-color: #333; opacity: .5; position: fixed; left: 0; height: auto; width: 100%; top: 0px; display: none; z-index: 111; display: none;"
+                            class="NewmodalBackground">
+                            <div style="margin: 300px;" align="center">
+                                <img alt="" src="../Content/images/ajax-loader.gif" /><br />
+                                <span style="color: white;">Please Wait.....<br />
+                                </span>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="header-row">
+                                <div class="header-column justify-content-end">
+                                    <div class="header-row">
+                                        <nav class="header-nav-top langs mr-0">
+                                            <%--class="header-nav-top langs mr-0"--%>
+                                            <ul class="nav nav-pills">
+                                                <li class="blog">
+                                                    <a class="nav-link" href="../default.aspx">Home
+                                                    </a>
+                                                </li>
+                                                <%--<li class="blog">
+													<a class="nav-link" href="../Manufacturer/Dashboard.aspx" >
+														Dashboard
+													</a>
+												</li>--%>
+                                                <%--<li class="dropdown">
+														<a class="dropdown-item dropdown-toggle" href="#">
+															Manufacturer
+														</a>
+														<ul class="dropdown-menu">
+															<li><a class="dropdown-item" href="../Info/M_Movie.aspx">Manufacturer Movie</a></li>
+														<%--	<li><a class="dropdown-item" href="../Content/includes/m_brochure.pdf">Brochure</a></li>-%>
+															<li><a class="dropdown-item" href="../Info/Advantages_Manufacturer.aspx">Benefits of basic membership</a></li>
+															<li><a class="dropdown-item" href="../Info/Benefits_Premium.aspx">Benefits of Premium membership</a></li>
+															<li><a class="dropdown-item" href="../Info/EULA_Manufacturer.aspx">Terms & Conditions</a></li>
+															<li><a class="dropdown-item" href="../Info/Faqs.aspx">FAQ's</a></li>
+
+														</ul>
+													</li>--%>
+                                                <li class="blog">
+                                                    <a class="nav-link" href="../Manufacturer/Advantages_Manufacturer.aspx">Membership
+                                                    </a>
+                                                </li>
+                                                <li class="blog">
+                                                    <a class="nav-link" href="../Manufacturer/Benefits_Premium.aspx">Premium Membership
+                                                    </a>
+                                                </li>
+                                                <li class="blog">
+                                                    <a class="nav-link" href="../Manufacturer/EULA_Manufacturer.aspx">Policy<%--Terms--%>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="nav-link" href="../Manufacturer/Faqs.aspx">FAQ
+                                                    </a>
+
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header-container container custom-position-initial">
+                        <div class="header-row">
+                            <div class="header-column">
+                                <div class="header-row">
+                                    <div class="header-logo">
+                                        <a href="../default.aspx">
+                                            <img alt="vcqru" width="130" data-sticky-width="130" data-sticky-top="30" src="../img-1/logo.png" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-column justify-content-end">
+                                <div class="header-row">
+                                    <div class="header-nav header-nav-stripe">
+                                        <div class="header-nav-main header-nav-main-effect-1">
+                                            <nav>
+                                                <ul class="nav nav-pills" id="mainNav">
+                                                    <li class="dropdown-full-color dropdown-quaternary">
+                                                        <%--<a class="nav-link"  href="../default.aspx#logsign" >
+															Login / Signup
+														</a>--%>
+                                                        <%--<a    >
+															
+														</a>--%>
+                                                        <a>Welcome,&nbsp;
+                                                        <asp:Label ID="lblloginName" runat="server">shweta</asp:Label>
+                                                        </a>
+                                                    </li>
+                                                    <li class="dropdown-full-color dropdown-quaternary">
+                                                        <asp:LinkButton Text="Logout" runat="server" ID="imglogout" CausesValidation="false" OnClick="imglogout_Click1" />
+                                                        <%--<asp:ImageButton ID="imglogout"  OnClick="imglogout_Click" ToolTip="Logout" ImageUrl="../Content/images/logout.png"
+                                                            CausesValidation="false" runat="server" />--%>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div role="main" class="main">
+
+                <div class="container">
+
+                    <div class="row mt-4">
+                        <!--div class="col-lg-3 order-2 order-lg-1"-->
+                        <div class="col-lg-3">
+                            <aside class="sidebar">
+                                <%--href="../Manufacturer/Dashboard.aspx"--%>
+                                <%--	<a ><h4 class="heading-primary">Dashbord</h4></a>--%>
+
+                                <ul id="mainnav1" class="nav nav-list flex-column mb-4 sort-source" data-sort-id="portfolio" data-option-key="filter"
+                                    data-plugin-options="{'layoutMode': 'fitRows', 'filter': 'profile'}">
+                                    <li data-toggle="collapse" data-target="#menu1" class="collapsed" aria-expanded="false" id="menuP">
+                                        <a class="nav-link active" href="CompanyProfile.aspx">Manage Profile</a>
+                                        <ul class="sub-menu collapse show" id="menu1">
+                                            <li><a class="nav-link" href="CompProfile.aspx#menu1">Manage Company Profile</a></li>
+                                            <li><a class="nav-link" href="frmUploadDocuments.aspx#menu1">Manage Company Document</a></li>
+                                            <li><a class="nav-link" href="Frmchangepasswords.aspx#menu1">Change Password</a></li>
+                                        </ul>
+                                    </li>
+                                    <li data-toggle="collapse" data-target="#menu2" class="collapsed" aria-expanded="true" id="menu2P">
+                                        <a class="nav-link" href="#">Product Particulars</a>
+                                        <ul class="sub-menu collapse" id="menu2">
+                                            <li class="nav-item" data-option-value=".registration"><a class="nav-link" href="RegisteredProduct.aspx#menu2">Product Registration</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="ProductDetails.aspx#menu2">Product Details and Assign Labels</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="frmProductSeries.aspx#menu2">Product Series Details For Pasted Labels</a></li>
+                                        </ul>
+                                    </li>
+                                    <li data-toggle="collapse" data-target="#menu3" aria-expanded="true">
+                                        <a class="nav-link" href="ServicesSubcription.aspx">Our Service</a>
+                                        <ul class="sub-menu collapse" id="menu3">
+                                            <li><a class="nav-link" href="ServicesSubcription.aspx#menu3">Service Subscription</a></li>
+                                            <li><a class="nav-link" href="ServiceSettings.aspx#menu3">Service Setting</a></li>
+                                        </ul>
+                                    </li>
+                                    <li data-toggle="collapse" data-target="#menu4" class="collapsed" aria-expanded="false">
+                                        <a class="nav-link" href="#">Transaction Settings</a>
+                                        <ul class="sub-menu collapse" id="menu4">
+                                            <%--<li class="nav-item"><a class="nav-link" href="BrandLoyaltySettings.aspx?Referral=1">Referral Limit Settings</a></li>--%>
+                                            <li class="nav-item"><a class="nav-link" href="BrandLoyaltySettings.aspx">Loyalty Settings</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="BrandLoyaltyAwards.aspx">Loyalty Awards</a></li>
+                                            <%--<li class="nav-item"><a class="nav-link" href="TrackTraceDetails.aspx">Track & Trace Master</a></li>--%>
+                                            <li class="nav-item"><a class="nav-link" href="FrmAwardCourierDispatch.aspx">Gift Dispatch</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="FrmDealerMaster.aspx">Dealer Master</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="FrmAwardsCourierMaster.aspx">Courier Master</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="FrmGiftMaster.aspx">Gift Master</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="FrmCouponRequest.aspx">Coupon Request Master</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="FrmQuestionMaster.aspx">Question Master</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="BigDataAnalysis.aspx">Big Data Analysis</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="TransactionDetails.aspx">Transaction Details</a></li>
+                                            <%--<li class="nav-item"><a class="nav-link" href="FrmClientTestimonial.aspx">Testimonial</a></li>--%>
+                                        </ul>
+                                    </li>
+                                    <li data-toggle="collapse" data-target="#menu41" class="collapsed" aria-expanded="false">
+                                        <a class="nav-link" href="#">Track & Trace Master</a>
+                                        <ul class="sub-menu show" id="menu41">
+                                            <li class="nav-item"><a class="nav-link" href="FrmProductionUnit.aspx">Production Unit Master</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="FrmWarehouse.aspx">Warehouse Master</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="FrmUserTypeMaster.aspx">UserType Master</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="FrmUserTypeTrackTrace.aspx">Add User</a></li>
+                                        </ul>
+                                    </li>
+                                    <li data-toggle="collapse" data-target="#menu5" class="collapsed" aria-expanded="false">
+                                        <a class="nav-link" href="#">Label Section</a>
+                                        <ul class="sub-menu collapse" id="menu5">
+                                            <li class="nav-item"><a class="nav-link" href="frmPrintLabelRequest.aspx">Request For Print Labels</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="FrmLabelDispatch.aspx">Label Receive</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="frmPrintLabel.aspx">View Pasted Labels</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="frmPastingReport.aspx">Upload Label Pasting Labels</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="FrmPendingDispatchLabel.aspx">Pending Dispatch Labels</a></li>
+                                        </ul>
+                                    </li>
+                                    <li data-toggle="collapse" data-target="#menu6" class="collapsed" aria-expanded="false">
+                                        <a class="nav-link" href="#">Scrap Particulars</a>
+                                        <ul class="sub-menu collapse" id="menu6">
+                                            <li class="nav-item"><a class="nav-link" href="Frm_Scrap.aspx">Scrap Label Status Summary</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="FrmScrapEntry.aspx">Scrap Label Entry</a></li>
+                                        </ul>
+                                    </li>
+                                    <%--<li class="nav-item" data-option-value=".medias"><a class="nav-link" href="FrmPayments.aspx">Make/View Payments</a></li>--%>
+                                    <li data-toggle="collapse" data-target="#menu7" class="collapsed" aria-expanded="false">
+                                        <a class="nav-link" href="#">Bills & Reports</a>
+                                        <ul class="sub-menu collapse" id="menu7">
+                                            <li class="nav-item"><a class="nav-link" href="frmManfEnquiryW.aspx">Warranty Details</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="FrmGeneratedInvoice.aspx?ID=Label">Label Bills</a></li>
+                                            <%--<li class="nav-item"><a class="nav-link" href="FrmGeneratedInvoice.aspx?ID=AMC">Service Bills</a></li>--%>
+                                            <li class="nav-item"><a class="nav-link" href="FrmLuckyWinners.aspx">Lucky Winners</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="FrmRunSurveys.aspx">Run Surveys Details</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="RedeemNextBill.aspx">Points Adjust in Next billing</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="Redeem.aspx">Transfer Cash</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="CashDetails.aspx">Cash Details</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="PointsDetails.aspx">Points Details</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="GiftDetails.aspx">Award Details</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="frmManfEnquiry.aspx">Enquiry Detail</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="FrmStatusReport.aspx">Account Login Summary</a></li>
+                                        </ul>
+                                    </li>
+                                    <li data-toggle="collapse" data-target="#menu8" class="collapsed" aria-expanded="false">
+                                        <a class="nav-link" href="#">Claim Report</a>
+                                        <ul class="sub-menu collapse" id="menu8">
+                                            <li class="nav-item"><a class="nav-link" href="WarrantyReportVendor.aspx">Claim Report</a></li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <hr class="invisible mt-5 mb-2" />
+                            </aside>
+                        </div>
+                        <!--div class="col-lg-9 order-1 order-lg-2"-->
+                        <cc1:ToolkitScriptManager runat="Server" AsyncPostBackTimeout="20000" EnablePartialRendering="true"
+                            EnablePageMethods="true" ID="ScriptManager1" />
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Modal Content Start -->
+            <div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="smallModalLabel">Alert</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="about-section-text1">Are you sure you want to delete ?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-dismiss="modal" onclick="btnYesReceipt_Click" runat="server" id="btnYesReceipt">Ok</button>
+                            <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Content End -->
+
+
+            <style>
+                .ajax__calendar_today {
+                    padding: 0px 0px 0px 0px;
+                }
+
+                .ajax__calendar_dayname {
+                    padding: 0px 0px 0px 0px;
+                }
+            </style>
+
+            <!--- Footer Starts here -->
+
+            <uc1:Footer runat="server" ID="Footer2" />
+
+            <!-- Datatable -->
+
+            <!--  Footer Ends here -->
+        </div>
+
+        <!-- Vendor -->
+        <script src="../vendor/jquery/jquery.min.js"></script>
+        <script src="../vendor/jquery.appear/jquery.appear.min.js"></script>
+        <script src="../vendor/jquery.easing/jquery.easing.min.js"></script>
+        <script src="../vendor/jquery-cookie/jquery-cookie.min.js"></script>
+        <script src="../vendor/popper/umd/popper.min.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../vendor/common/common.min.js"></script>
+        <script src="../vendor/jquery.validation/jquery.validation.min.js"></script>
+        <script src="../vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+        <script src="../vendor/jquery.gmap/jquery.gmap.min.js"></script>
+        <script src="../vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+        <script src="../vendor/isotope/jquery.isotope.min.js"></script>
+        <script src="../vendor/owl.carousel/owl.carousel.min.js"></script>
+        <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="../vendor/vide/vide.min.js"></script>
+
+        <!-- Theme Base, Components and Settings -->
+        <script src="../js/theme.js"></script>
+
+        <!-- Current Page Vendor and Views -->
+        <script src="../vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+        <script src="../vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+        <script src="../vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
+        <script src="../js/views/view.home.js"></script>
+
+        <!-- Theme Custom -->
+        <script src="../js/custom.js"></script>
+
+        <!-- Theme Initialization Files -->
+        <script src="../js/theme.init.js"></script>
+
+        <!-- Examples -->
+        <script src="../js/examples/examples.demos.js"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.dlles.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>
+        <link href="../Content/css/jquery-confirm.css" rel="stylesheet" />
+        <script src="../Content/js/jquery-confirm.js" type="text/javascript"></script>
+        <script>
+            //$(document).ready(function () {
+            //    $('#frmGrdEnquiry').dataTable({
+            //        responsive: true,
+            //         "order": [[ 0, "desc" ]],
+            //    });
+            //})
+
+            $(document).ready(function () {
+                $('.tblSorting').dataTable({
+                    responsive: true,
+                    "order": [[0, "desc"]]
+                });
+
+                //$('.tblSorting').dataTable({
+                //    responsive: true,
+                //    'iDisplayLength': 100,
+                //    "order": [[0, "desc"]]
+                //});
+
+                //$('.tblWarrenty').dataTable({
+                //    responsive: true,
+                //    'iDisplayLength': 100,
+                //    "order": [[ 0, "desc" ]]
+                //});
+            });
+
+            //$(document).ready(function () {
+            //    $('tableSetting').dataTable({
+            //        responsive: true,
+            //        'iDisplayLength': 100,
+            //        "paging": false,
+            //        "ordering": false,
+            //        "searching": false,
+            //        "info": false,
+            //    });
+            //});
+
+            //$(document).ready(function () {
+            //    $('.tableSetting').dataTable({
+            //        responsive: true,
+            //        'iDisplayLength': 100,
+            //        "paging": false,
+            //        "ordering": false,
+            //        "searching": false,
+            //        "info": false,
+            //    });
+            //});
+        </script>
+        <!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+			ga('create', 'UA-12345678-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		 -->
+
+        <%--</div>--%>
+    </form>
+</body>
+</html>

@@ -1,0 +1,195 @@
+@media screen and (max-width:1024px) {
+    .counter .count-left-border {
+        border-left: none !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .other-check {
+        margin: 0;
+    }
+
+    .top-btn {
+        height: 40px;
+        width: 40px;
+    }
+
+    .app-navbar .navbar-brand img {
+        height: 3rem;
+    }
+
+    .app-navbar .navbar-nav .nav-item {
+        margin: 0;
+    }
+
+    .app-navbar .navbar-nav {
+        align-items: start;
+    }
+
+    .app-navbar .navbar-nav .nav-item .dropdown-menu {
+        box-shadow: none;
+    }
+
+    .video-section .carousel .carousel-control-next {
+        right: -20px;
+    }
+
+    .video-section .carousel .carousel-control-prev {
+        left: -20px;
+    }
+
+    .sub-menu {
+        height: 300px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .reviews .reviews-card .carousel .carousel-control-next {
+        right: 0;
+    }
+
+    .findon .carousel .carousel-control-next {
+        right: 0;
+    }
+
+    .left-card {
+        margin: 0;
+    }
+
+    .services-details-header h1,
+    .services-details-header h2 {
+        font-size: calc(1.375rem + 1.5vw);
+    }
+
+    .services-details-content .services-details-img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .services-details-explore-services .services-details-explore-card .carousel .carousel-control-prev {
+        left: 0;
+    }
+
+    .services-details-explore-services .services-details-explore-card .carousel .carousel-control-next {
+        right: 0;
+    }
+
+    .services-details-explore-services .services-details-explore-card .carousel .carousel-inner .carousel-item .carousel-caption {
+        width: auto;
+        margin: 2.5rem;
+    }
+
+    .services-details-explore-services .services-details-explore-card .carousel .carousel-inner {
+        height: 400px;
+    }
+
+    .career-core-values .career-core ul {
+        column-count: 2;
+    }
+
+    .company-overview {
+        padding: 2rem 0;
+    }
+
+    /* new css for anitcounter */
+    .header-anti-counterfeiting .heading-anti {
+        margin: 2rem 0;
+    }
+
+    .benefits-anti-counterfeit .card .card-body .border-end {
+        border-right: 0 !important;
+    }
+
+    .slider-cards-row .owl-carousel .owl-nav .owl-prev,
+    .slider-cards-row .owl-carousel .owl-nav .owl-next {
+        position: unset;
+        transform: unset;
+        height: 40px;
+        width: 80px;
+    }
+    .slider-cards-row .owl-carousel .owl-nav{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .video-section .carousel .carousel-control-next {
+        right: -10px;
+    }
+
+    .video-section .carousel .carousel-control-prev {
+        left: -10px;
+    }
+
+    .talks-btn {
+        right: 0;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .app-navbar {
+        position: sticky;
+    }
+
+    .header {
+        height: 180px;
+    }
+
+    .footer {
+        padding: 2rem 0 1rem 0;
+    }
+
+    .counter .counter-col ul li p {
+        font-size: 14px;
+    }
+
+    .counter .counter-col ul {
+        gap: 1rem;
+    }
+
+    .counter .counter-col ul {
+        align-items: center;
+    }
+
+    .counter .counter-col ul li h5 {
+        font-size: 16px;
+    }
+
+    .counter .counter-col ul li .count-img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .services-details-faqs .accordion .accordion-item .accordion-button {
+        font-size: 16px;
+    }
+
+    .industries .industries-logo ul {
+        gap: 1rem;
+        justify-content: start;
+        overflow: hidden;
+    }
+
+    .career-core-values .career-core ul {
+        column-count: 1;
+    }
+
+    .job-form ul li {
+        margin-bottom: 1rem;
+    }
+
+    .services-details-explore-services .services-details-explore-card .carousel .carousel-inner .carousel-item .carousel-caption p {
+        margin-bottom: 1rem;
+    }
+
+    .services-details-explore-services .services-details-explore-card .carousel .carousel-inner .carousel-item .services-explore-icon img {
+        height: 3rem;
+    }
+
+    .slider-media .carousel .carousel-inner {
+        height: 15rem;
+    }
+}

@@ -1,0 +1,28 @@
+@media screen and (max-width:768px) {
+    .sidebar.close {
+        left: 0;
+        width: 100%;
+    }
+
+    .close.sidebar {
+        display: block;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .sidebar.close~.page-wrapper {
+        margin-left: 0px;
+    }
+
+    .page-wrapper {
+        margin-left: 0px;
+    }
+    .app-top-bar .navbar .toggle{
+        position: static;
+    }
+}
+@media screen and (max-width:425px){
+  
+} 

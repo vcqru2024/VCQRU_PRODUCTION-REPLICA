@@ -1,0 +1,133 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/*body {
+    background-color: #a3d1f22b;
+}*/
+
+.career-section .career-img {
+    width: 100%;
+}
+
+.career-section h1 {
+    font-weight: bolder;
+    font-size: 54px;
+    color: #0b4e94;
+    position: absolute;
+    /* top: 10%;*/
+    /*   left: 36%;*/
+    padding: 37px;
+}
+
+.job-box {
+    background-color: #a3d1f22b;
+    padding: 25px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0px 3px 4px #1857c8;
+    margin-bottom: 15px;
+}
+
+    .job-box label {
+        display: block;
+    }
+
+    .job-box span {
+        color: #6495ed;
+    }
+
+    .job-box h5 {
+        color: #1857c8;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+.career-submit input {
+    border: 1px solid #ccc !important;
+    line-height: initial;
+}
+
+.form-control {
+    padding: 5px 10px !important;
+}
+
+.bg-color-box {
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.btn-apply {
+    background-color: cornflowerblue;
+    padding: 5px 25px;
+    text-align: center;
+    border-radius: 50px;
+    color: #fff !important;
+    box-shadow: 0px 3px 1px #1857c8;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    text-decoration: none !important;
+}
+
+    .btn-apply:hover {
+        color: #fff;
+        box-shadow: 0px 0px 0px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+    }
+
+.details {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+.button {
+    padding: 8px 45px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+    .button:hover {
+        text-decoration: none;
+        background-color: #a3f2f1;
+        color: #555d5d;
+    }
+
+.text-b label {
+    font-weight: 600;
+}
+/********** Media     **********************/
+@media screen and (min-width:280px) and (max-width:768px) {
+    .career-section h1 {
+        font-size: 34px;
+        position: initial;
+        text-align: center;
+        margin-top: 100px;
+        padding: 0px;
+    }
+}
+
+@media screen and (min-width:820px) and (max-width:950px) {
+    .career-section h1 {
+        font-size: 34px;
+    }
+}
+
+@media screen and (width: 280px) {
+    .career-section h1 {
+        margin-top: 100px;
+        padding: 0px;
+    }
+}

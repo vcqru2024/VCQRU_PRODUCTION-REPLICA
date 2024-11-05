@@ -1,0 +1,84 @@
+﻿    <fieldset id="ftg" class="Newfield Newfield_width2">
+        <legend>
+            <!--(<label id="lblpronametax" style="color:Blue;">Testing1</label>)Tax-->
+            (<label id="lblpronametax" style="color:Blue;">Tax</label>)
+            Setting Info
+        </legend>
+        <table class="tab_regis" width="98%" cellspacing="2" cellpadding="0">
+            <tbody>
+                <tr id="MytrNew">
+                    <td colspan="3" align="center">
+                        <span id="lblallotmsg" style="color:Red;font-family: Arial; font-size: 12px;"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 36%;" align="right">
+                        <strong><span class="star_red">*</span>Company Name :&nbsp;</strong>
+                    </td>
+                    <td colspan="2">
+                        <label id="ddlcompidfortax" class="textbox_pop"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 36%;" align="right">
+                        <strong>Category Name :&nbsp;</strong>
+                    </td>
+                    <td colspan="2">
+                        <label id="lblcompcat"  class="textbox_pop"></label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="width: 36%; vertical-align: top;" align="right">
+                        <strong>Address :&nbsp;</strong>
+                    </td>
+                    <td colspan="2">
+                        <label id="lblAddress"  class="textbox_pop"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 36%;" align="right"></td>
+                    <td>
+                        <strong>GST :&nbsp;</strong>
+                    </td>
+                    <td>
+                        <strong><!--VAT :-->&nbsp;</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 36%;" align="right">
+                        <strong><span class="star_red">*</span>Label :&nbsp;</strong>
+                    </td>
+                    <td>
+                        <input name="txtLabelServiceTax" maxlength="5" id="txtLabelServiceTax" class="textbox_pop" onkeypress="return isNumberKey(this, event);" onchange="mathRoundForTaxes(this.id);" type="text">
+                    </td>
+                    <td>
+                        <input name="txtLabelVAT" id="txtLabelVAT" value="0" class="textbox_pop" onkeypress="return isNumberKey(this, event);" onchange="mathRoundForTaxes(this.id);" type="text" style="display:none">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 36%;" align="right">
+                        <strong><span class="star_red">*</span>Service :&nbsp;</strong>
+                    </td>
+                    <td>
+                        <input name="txtAmcServiceTax" id="txtAmcServiceTax" class="textbox_pop" onkeypress="return isNumberKey(this, event);" onchange="mathRoundForTaxes(this.id);" type="text">
+                    </td>
+                    <td>
+                        <input name="txtAMCVATx" id="txtAMCVATx" style="display:none" value="0" class="textbox_pop" onkeypress="return isNumberKey(this, event);" onchange="mathRoundForTaxes(this.id);" type="text">
+                    </td>
+                </tr>
+                <tr style="display:none;">
+                    <td style="width: 36%;" align="right">
+                        <strong><span class="star_red">*</span>Offer :&nbsp;</strong>
+                    </td>
+                    <td>
+                        <input name="txtOfferServiceTax" value="0.00" id="txtOfferServiceTax" class="textbox_pop" onkeypress="return isNumberKey(this, event);" onchange="mathRoundForTaxes(this.id);" type="text">
+                    </td>
+                    <td>
+                        <input name="txtOfferVAT" value="0.00" id="txtOfferVAT" class="textbox_pop" onkeypress="return isNumberKey(this, event);" onchange="mathRoundForTaxes(this.id);" type="text">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="text-danger help-block" style="display:none"></p>
+    </fieldset>

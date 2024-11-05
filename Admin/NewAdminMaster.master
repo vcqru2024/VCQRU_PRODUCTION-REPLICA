@@ -1,0 +1,1341 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Admin/NewAdminMaster.master.cs" Inherits="Admin_NewAdminMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
+    <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+    <!-- page specific plugin styles -->
+
+    <!-- text fonts -->
+    <link rel="stylesheet" href="assets/css/ace-fonts.css" />
+    <script src="../Content/js/toastr.min.js"></script>
+    <!-- ace styles -->
+    <link rel="stylesheet" href="assets/css/ace.min.css" />
+    <link href="../Content/css/toastr.min.css" rel="stylesheet" />
+
+    <!--[if lte IE 9]>
+			<link rel="stylesheet" href="../assets/css/ace-part2.min.css" />
+		<![endif]-->
+    <link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+    <link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+    <!-- ace settings handler -->
+    <script src="assets/js/ace-extra.min.js"></script>
+
+    <!-- jquery-confirm files -->
+    <link href="../Content/css/jquery-confirm.css" rel="stylesheet" />
+    <script src="../Content/js/jquery-confirm.js" type="text/javascript"></script>
+    <!--<script type="text/javascript"-->
+    <!--src="dist/jquery-confirm.min.js"></script>-->
+
+    <script type="text/javascript">
+        function logout() {
+
+            $.ajax({
+                type: "POST",
+                url: "<%=ProjectSession.absoluteSiteBrowseUrl%>/Admin/adminhandeler.asmx/logout",
+                data: "{}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (d) {
+                    var Result = d.d;
+                    if (Result == "0") {
+                        toastr.error("Error in logout !");
+                    }
+                    if (Result == "1") {
+                        window.location.href = "<%=ProjectSession.absoluteSiteBrowseUrl%>/admin/Login.aspx";
+
+                    } if (Result == "2") {
+                        //window.location.href = "Index.aspx";
+                        window.location.href = "../Info/Login.aspx";
+                    }
+                }
+            });
+        }
+        $(document).ready(function () {
+            var username = "";
+            username = '<%= Session["User_Type"] %>';
+
+            //if (username = "" || username != "Admin") {
+
+            //    window.location.href = "<= ProjectSession.absoluteSiteBrowseUrl>/admin/Login.aspx";
+            //}
+            //else
+            //{
+            //    window.location.href = "../Info/Login.aspx";
+            //}
+
+
+
+            if (username == "Admin") {
+                $('#lblloginName').val('Admin');
+            }
+            else if (username == "Company") {
+                $.ajax({
+                    type: "POST",
+                    url: "<%=ProjectSession.absoluteSiteBrowseUrl%>/Admin/adminhandeler.asmx/compname",
+                    data: "{}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (d) {
+                        var Result = d.d;
+                        $('#lblloginName').val(Result);
+                    }
+                });
+            }
+
+            $("#accordion").accordion({
+                collapsible: true,
+                heightStyle: "content",
+                animate: 250,
+                header: ".accordion-header"
+            }).sortable({
+                axis: "y",
+                handle: ".accordion-header",
+                stop: function (event, ui) {
+                    // IE doesn't register the blur when sorting
+                    // so trigger focusout handlers to remove .ui-state-focus
+                    ui.item.children(".accordion-header").triggerHandler("focusout");
+                }
+            });
+
+
+        });
+
+        function isNumberKey(sender, evt) {
+            var txt = sender.value;
+            var dotcontainer = txt.split('.');
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (!(dotcontainer.length == 1 && charCode == 46) && charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+        }
+        function formatJsonDate(jsonDate) {
+            // alert(jsonDate);
+            var myDate = new Date(parseInt(jsonDate.substr(6)));
+            // alert(myDate);
+            var output = myDate.getDate() + "\\" + (myDate.getMonth() + 1) + "\\" + myDate.getFullYear();
+            //return (new Date(parseInt(jsonDate.substr(6)))).format("dd/mm/yyyy");
+            return output;
+        }
+        //function formatJSONDate1(jsonDate) {
+        //    alert('');
+        //    var dt22= new Date(jsonDate);
+        //    var newDate = dateFormat(dt22, "mm/dd/yyyy");
+        //    return newDate;
+        //}
+    </script>
+    <script src="js/date.format.js"></script>
+
+    <style type="text/css">
+        .table {
+            margin-bottom: 0px !important;
+            max-width: 100%;
+            width: 100%;
+        }
+    </style>
+
+
+    <%--Start Date Picker--%>
+    <link href="assets/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <script src="js/bootstrap-datepicker.js" type="text/javascript"></script>
+    <%--End Date Picker--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body class="no-skin">
+    <form id="form1" runat="server" enctype="multipart/form-data">
+
+        <div id="divprogress" align="center" style="background-color: #333; opacity: .5; position: fixed; left: 0; height: auto; width: 100%; top: 0px; display: none; z-index: 111;"
+            class="NewmodalBackground">
+            <div style="margin: 300px;" align="center">
+                <img alt="" src="../Content/images/ajax-loader.gif" /><br />
+                <span style="color: white;">Please Wait.....<br />
+                </span>
+            </div>
+        </div>
+        <!-- #section:basics/navbar.layout -->
+        <div id="navbar" class="navbar navbar-default">
+            <script type="text/javascript">
+                try { ace.settings.check('navbar', 'fixed') } catch (e) { }
+            </script>
+
+            <div class="navbar-container" id="navbar-container">
+                <!-- #section:basics/sidebar.mobile.toggle -->
+                <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler">
+                    <span class="sr-only">Toggle sidebar</span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- /section:basics/sidebar.mobile.toggle -->
+                <div class="navbar-header pull-left">
+                    <!-- #section:basics/navbar.layout.brand -->
+                    <a href="#" class="">
+                        <%--<small>
+                            <i class="fa fa-leaf"></i>
+                            Ace Admin
+                        </small>--%>
+                        <img src="../Content/images/logo.png" alt="logo" style="width: 60%;" />
+                    </a>
+
+                    <!-- /section:basics/navbar.layout.brand -->
+
+                    <!-- #section:basics/navbar.toggle -->
+
+                    <!-- /section:basics/navbar.toggle -->
+                </div>
+
+                <!-- #section:basics/navbar.dropdown -->
+                <div class="navbar-buttons navbar-header pull-right" role="navigation">
+                    <ul class="nav ace-nav">
+                        <li class="purple">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <i class="ace-icon fa fa-bell icon-animated-bell"></i>
+                                <span class="badge badge-important">8</span>
+                            </a>
+
+                            <ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+                                <li class="dropdown-header">
+                                    <i class="ace-icon fa fa-exclamation-triangle"></i>
+                                    8 Notifications
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                        <!-- #section:basics/navbar.user_menu -->
+                        <li class="light-blue">
+                            <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                <%--                                <img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />--%>
+                                <span class="user-info">
+                                    <small>Welcome,</small>
+                                    <asp:Label ID="lblloginName" runat="server">Admin</asp:Label>
+                                </span>
+
+                                <i class="ace-icon fa fa-caret-down"></i>
+                            </a>
+
+                            <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+
+
+                                <li class="divider"></li>
+
+                                <li>
+                                    <a href="javascript:;" onclick="return logout();">
+                                        <i class="ace-icon fa fa-power-off"></i>
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- /section:basics/navbar.user_menu -->
+                    </ul>
+                </div>
+
+                <!-- /section:basics/navbar.dropdown -->
+            </div>
+            <!-- /.navbar-container -->
+        </div>
+
+        <!-- /section:basics/navbar.layout -->
+        <div class="main-container" id="main-container">
+            <script type="text/javascript">
+                try { ace.settings.check('main-container', 'fixed') } catch (e) { }
+            </script>
+
+            <!-- #section:basics/sidebar -->
+            <div id="sidebar" class="sidebar                  responsive">
+                <script type="text/javascript">
+                    try { ace.settings.check('sidebar', 'fixed') } catch (e) { }
+                </script>
+
+
+                <ul class="nav nav-list">
+                    <li class="">
+                        <a href="Dashboard.aspx">
+                            <i class="menu-icon fa fa-tachometer"></i>
+                            <span class="menu-text">Dashboard </span>
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+
+
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-money"></i>
+                            <span class="menu-text">Transaction Details </span>
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="CreditBalance.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Credit cash balance
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="CommissionSetting.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Commission Setting
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="AutoCashTransferFileGenerate.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Generate File
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="AutoCashTransferUploadBankStatement.aspx">
+                                    <img src="../images/demo.png" />
+                                    Upload Bank's Statement
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="AutoCashTransferDetails.aspx">
+                                    <img src="../images/generated_bill.png" />
+                                    Update Code Status and IFSC Code Details
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="CashTransferDetails.aspx">
+                                    <img src="../images/generated_bill.png" />
+                                    Claimed Payment Details
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="CashTransferDetails_Bnk.aspx">
+                                    <img src="../images/generated_bill.png" />
+                                    Claimed Bank Payment Details
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="ManualPayout.aspx">
+                                    <img src="../images/generated_bill.png" />
+                                    Manual payout
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                             <li class="">
+                                <a href="dailylimit.aspx">
+                                    <img src="../images/generated_bill.png" />
+                                    IMPS DAILY LIMIT
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="TransactionDetails.aspx">
+                                    <i class="menu-icon fa fa-money"></i>
+                                    Transaction Details
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <img src="../images/generate_code_.png" />
+                            <span class="menu-text">Code Folio </span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+
+                            <li class="">
+                                <a href="CodeGeneration.aspx">
+                                    <img src="../images/generate_code_.png" />
+                                    Code Bank
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="CodeLabelPrint.aspx">
+                                    <img src="../images/demo.png" />
+                                    Print Labels
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="frmDemoPrintLable.aspx">
+                                    <img src="../images/demo.png" />
+                                    Demo Print Labels
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="DemoCodeAllocation.aspx">
+                                    <img src="../images/demo.png" />
+                                    Demo Packet Allocation
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="ViewCodeWiseAllocation.aspx">
+                                    <img src="../images/daily_code_allocation.png" />
+                                    Daily Code Allocation
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="CodeUsesOfCompany.aspx">
+                                    <img src="../images/daily_code_usage.png" />
+                                    Code Usage Status
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="FrmCraeteLabel.aspx">
+                                    <img src="../images/prod_price.png" />
+                                    Create Label
+									<b class="arrow"></b>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="ProductsWiseDetails.aspx">
+                                    <img src="../images/productwisecodedetails.png" />
+                                    Products Wise Code Details
+									<b class="arrow"></b>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="ProFileAuthentiCation.aspx">
+                            <img src="../images/registered_companies.png" />
+                            <span class="menu-text">Registered Companies </span>
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="FrmRetailers.aspx">
+                            <img src="../images/loyalty.png" />
+                            <span class="menu-text">Register Retailer</span>
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <img src="../images/update_com_h.png" />
+                            <span class="menu-text">Service Setting </span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+
+                            <li class="">
+                                <a href="ServiceMaster.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Service Master
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="ServiceFeatureMaster.aspx">
+                                    <img src="../images/rhistory.png" />
+                                    Service Feature Master
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="ServicePriceMaster.aspx">
+                                    <img src="../images/Points.png" />
+                                    Service Price Master
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="ServiceAbouts.aspx">
+                                    <img src="../images/Points.png" />
+                                    Service Terms & Condition
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="ServicesRequest.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Service Request
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="FrmGracePeriod.aspx">
+                                    <img src="../images/generated_bill.png" />
+                                    Grace Period
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <img src="../images/update_com_h.png" />
+                            <span class="menu-text">Coupon Settings </span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="FrmCouponProviderMaster.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Coupon Provider Master
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmCouponMaster.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Coupon Master
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmCouponRequest.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Coupon Request
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="">
+                        <a href="LuckyDraw.aspx">
+                            <img src="../images/loyalty.png" />
+                            <span class="menu-text">Lucky Draw </span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <img src="../images/update_com_h.png" />
+                            <span class="menu-text">Bills & Reports</span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="BigDataAnalysisMaster.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Big Data Analysis Master
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="BigDataAnalysis.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Big Data Analysis
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="BrandLoyaltyAwards.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Brand Loyalty Awards
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmLuckyWinners.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Lucky Winners
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <%-- <li class="">
+                                <a href="FrmLuckyWinners.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Gift Winners
+                                </a>
+                                <b class="arrow"></b>
+                            </li>--%>
+                            <%--   <li class="">
+                                <a href="FrmLuckyWinners.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Coupon Winners
+                                </a>
+                                <b class="arrow"></b>
+                            </li>--%>
+                            <li class="">
+                                <a href="FrmRunSurveys.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Run Surveys Details
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <%--<a href="FrmCashTransfer.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Cash Transfer
+                                </a>--%>
+                                <a href="CashDetails.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Cash Transfer
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <%-- <a href="PointDetails.aspx">
+                                    <img src="../images/Points.png" />
+                                    Points Transaction
+                                </a>--%>
+                                <a href="PointsDetails.aspx">
+                                    <img src="../images/Points.png" />
+                                    Points Transaction
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="GiftDetails.aspx">
+                                    <img src="../images/loyalty.png" />
+                                    Award Details
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmRedeemHistory.aspx">
+                                    <img src="../images/rhistory.png" />
+                                    Redeem History
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="frmProductEnquiry.aspx">
+                                    <img src="../images/product_enquiry.png" />
+                                    Product Enquiry Detail
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmGeneratedInvoices.aspx?ID=Label">
+                                    <img src="../images/generated_bill.png" />
+                                    Label Bills
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmGeneratedInvoices.aspx?ID=AMC">
+                                    <img src="../images/generated_bill.png" />
+                                    Service Bills
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="EmployeeMaster.aspx">
+                                    <img src="../images/generated_bill.png" />
+                                    Employee Master
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="WebsiteHistory.aspx">
+                                    <img src="../images/generated_bill.png" />
+                                    Website Hit Count
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+
+                                <a href="frmCareers.aspx">
+                                    <img src="../images/generated_bill.png" />
+                                    Careers
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <img src="../images/update_com_h.png" />
+                            <span class="menu-text">Master Setting</span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="FrmBankAccount.aspx">
+                                    <img src="../images/prices_h.png" />
+                                    Add Bank Account
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmCourierMaster.aspx">
+                                    <img src="../images/24x24.png" />
+                                    Courier Master
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmCourierDispatch.aspx">
+                                    <img src="../images/shipped.png" />
+                                    Courier Dispatch
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmScrapEntryM.aspx">
+                                    <img src="../images/scrap.png" />
+                                    Scrap Label Entry
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="InterestedForDemo.aspx">
+                                    <img src="../images/prices_h.png" />
+                                    Interested For Demo
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <img src="../images/update_com_h.png" />
+                            <span class="menu-text">Pending Reports</span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="FrmPendingLabelsReceipt.aspx">
+                                    <img src="../images/autoship.png" />
+                                    Pending Print Lables Receipt
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmChannelPartners.aspx">
+                                    <img src="../images/userconfig.png" />
+                                    Become Channel Partner
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmDispatchLabelStatsus.aspx">
+                                    <img src="../images/shipped.png" />
+                                    Pending Dispatch Labels
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="frmPastingReports.aspx">
+                                    <img src="../images/print_h.png" />
+                                    View Label Pasting Report
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <img src="../images/update_com_h.png" />
+                            <span class="menu-text">Additional Settings</span>
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="FrmNewsLetters.aspx">
+                                    <img src="../images/pass_h.png" />
+                                    E-NewsLetter
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmSubscribeUsers.aspx">
+                                    <img src="../images/pass_h.png" />
+                                    Subscribe Users
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmLetsTalk.aspx">
+                                    <img src="../images/pass_h.png" />
+                                    Let's Talk
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmNewsUpdate.aspx">
+                                    <img src="../images/pass_h.png" />
+                                    News Master
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmGallary.aspx">
+                                    <img src="../images/pass_h.png" />
+                                    Album Master
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmUserContent.aspx">
+                                    <img src="../images/pass_h.png" />
+                                    Content Master
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmStateMaster.aspx">
+                                    <img src="../images/prices_h.png" />
+                                    State Master
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmCityMaster.aspx">
+                                    <img src="../images/prices_h.png" />
+                                    City Master
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="FrmCategoryMaster.aspx">
+                                    <img src="../images/prices_h.png" />
+                                    Category Master
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+
+
+
+                            <li class="">
+                                <a href="FrmCustomerMaster.aspx">
+                                    <img src="../images/prices_h.png" />
+                                    Customer Care Master
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="ClientTestimonialMaster.aspx">
+                                    <img src="../images/prices_h.png" />
+                                    Client Testimonial
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="Frmchangepassword.aspx">
+                                    <img src="../images/pass_h.png" />
+                                    Change Password
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="frmPayment.aspx">
+                            <img src="../images/payment_h.png" />
+                            <span class="menu-text">Make/View Payments</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="FrmSendMailaspx.aspx">
+                            <img src="../images/fwd.png" />
+                            <span class="menu-text">Send Mail</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="TermsandConditions.aspx">
+                            <img src="../images/product_enquiry.png" />
+                            <span class="menu-text">T&C History</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="AddBlogPost.aspx">
+                            <img src="../images/addblog.png" />
+                            <span class="menu-text">Add Blog</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="GalleryNew.aspx">
+                            <img src="../images/addblog.png" />
+                            <span class="menu-text">Add Gallery</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="Banner.aspx">
+                            <img src="../images/Uploadbanner.png" />
+                            <span class="menu-text">Upload Banner</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+
+
+                    <li class="">
+                        <a href="AddFunds.aspx">
+                            <img src="../images/payment_h.png" />
+                            <span class="menu-text">Add Funds</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="Customer_Care.aspx">
+                            <img src="../images/product_enquiry.png" />
+                            <span class="menu-text">Customer Care Page</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="FrmResetData.aspx">
+                            <img src="../images/daily_code_usage.png" />
+                            <span class="menu-text">Reset Database</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+                <!-- /.nav-list -->
+
+                <!-- #section:basics/sidebar.layout.minimize -->
+                <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+                    <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+                </div>
+
+                <!-- /section:basics/sidebar.layout.minimize -->
+                <script type="text/javascript">
+                    try { ace.settings.check('sidebar', 'collapsed') } catch (e) { }
+                </script>
+            </div>
+
+            <!-- /section:basics/sidebar -->
+            <div class="main-content">
+                <cc1:ToolkitScriptManager runat="Server" AsyncPostBackTimeout="20000" EnablePartialRendering="true"
+                    EnablePageMethods="true" ID="ScriptManager1" />
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </div>
+
+
+            <!-- /.main-content -->
+
+            <div class="footer">
+                <div class="footer-inner">
+                    <!-- #section:basics/footer -->
+                    <div class="footer-content">
+                        <span class="bigger-120">© Copyright 2012, <span class="blue bolder">VCQRU.com</span>. All right reserved.
+                        </span>
+
+                        &nbsp; &nbsp;
+						<span class="action-buttons">
+                            <a href="#">
+                                <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="ace-icon fa fa-rss-square orange bigger-150"></i>
+                            </a>
+                        </span>
+                    </div>
+
+                    <!-- /section:basics/footer -->
+                </div>
+            </div>
+
+            <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+                <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+            </a>
+        </div>
+        <!-- /.main-container -->
+
+        <!-- basic scripts -->
+
+
+
+        <!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='../assets/js/jquery1x.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+        <script type="text/javascript">
+            if ('ontouchstart' in document.documentElement) document.write("<script src='../assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+        </script>
+        <script src="assets/js/bootstrap.min.js"></script>
+
+        <!-- page specific plugin scripts -->
+        <script src="assets/js/prettify.js"></script>
+
+        <!-- ace scripts -->
+        <script src="assets/js/ace-elements.min.js"></script>
+        <script src="assets/js/ace.min.js"></script>
+
+        <!-- inline scripts related to this page -->
+        <script type="text/javascript">
+            jQuery(function ($) {
+
+                window.prettyPrint && prettyPrint();
+                $('#id-check-horizontal').removeAttr('checked').on('click', function () {
+                    $('#dt-list-1').toggleClass('dl-horizontal').prev().html(this.checked ? '&lt;dl class="dl-horizontal"&gt;' : '&lt;dl&gt;');
+                });
+
+            })
+        </script>
+        <script type="text/javascript">
+            jQuery(function ($) {
+
+                $("#datepicker").datepicker({
+                    showOtherMonths: true,
+                    selectOtherMonths: false,
+                    //isRTL:true,
+
+
+                    /*
+                    changeMonth: true,
+                    changeYear: true,
+                	
+                    showButtonPanel: true,
+                    beforeShow: function() {
+                        //change button colors
+                        var datepicker = $(this).datepicker( "widget" );
+                        setTimeout(function(){
+                            var buttons = datepicker.find('.ui-datepicker-buttonpane')
+                            .find('button');
+                            buttons.eq(0).addClass('btn btn-xs');
+                            buttons.eq(1).addClass('btn btn-xs btn-success');
+                            buttons.wrapInner('<span class="bigger-110" />');
+                        }, 0);
+                    }
+            */
+                });
+
+
+                //override dialog's title function to allow for HTML titles
+                $.widget("ui.dialog", $.extend({}, $.ui.dialog.prototype, {
+                    _title: function (title) {
+                        var $title = this.options.title || '&nbsp;'
+                        if (("title_html" in this.options) && this.options.title_html == true)
+                            title.html($title);
+                        else title.text($title);
+                    }
+                }));
+
+                $("#id-btn-dialog1").on('click', function (e) {
+                    e.preventDefault();
+
+                    var dialog = $("#dialog-message").removeClass('hide').dialog({
+                        modal: true,
+                        title: "<div class='widget-header widget-header-small'><h4 class='smaller'><i class='ace-icon fa fa-check'></i> jQuery UI Dialog</h4></div>",
+                        title_html: true,
+                        buttons: [
+                            {
+                                text: "Cancel",
+                                "class": "btn btn-xs",
+                                click: function () {
+                                    $(this).dialog("close");
+                                }
+                            },
+                            {
+                                text: "OK",
+                                "class": "btn btn-primary btn-xs",
+                                click: function () {
+                                    $(this).dialog("close");
+                                }
+                            }
+                        ]
+                    });
+
+                    /**
+                    dialog.data( "uiDialog" )._title = function(title) {
+                        title.html( this.options.title );
+                    };
+                    **/
+                });
+
+
+                $("#id-btn-dialog2").on('click', function (e) {
+                    e.preventDefault();
+
+                    $("#dialog-confirm").removeClass('hide').dialog({
+                        resizable: false,
+                        modal: true,
+                        title: "<div class='widget-header'><h4 class='smaller'><i class='ace-icon fa fa-exclamation-triangle red'></i> Empty the recycle bin?</h4></div>",
+                        title_html: true,
+                        buttons: [
+                            {
+                                html: "<i class='ace-icon fa fa-trash-o bigger-110'></i>&nbsp; Delete all items",
+                                "class": "btn btn-danger btn-xs",
+                                click: function () {
+                                    $(this).dialog("close");
+                                }
+                            }
+                            ,
+                            {
+                                html: "<i class='ace-icon fa fa-times bigger-110'></i>&nbsp; Cancel",
+                                "class": "btn btn-xs",
+                                click: function () {
+                                    $(this).dialog("close");
+                                }
+                            }
+                        ]
+                    });
+                });
+
+
+
+                //autocomplete
+                var availableTags = [
+                    "ActionScript",
+                    "AppleScript",
+                    "Asp",
+                    "BASIC",
+                    "C",
+                    "C++",
+                    "Clojure",
+                    "COBOL",
+                    "ColdFusion",
+                    "Erlang",
+                    "Fortran",
+                    "Groovy",
+                    "Haskell",
+                    "Java",
+                    "JavaScript",
+                    "Lisp",
+                    "Perl",
+                    "PHP",
+                    "Python",
+                    "Ruby",
+                    "Scala",
+                    "Scheme"
+                ];
+                $("#tags").autocomplete({
+                    source: availableTags
+                });
+
+                //custom autocomplete (category selection)
+                $.widget("custom.catcomplete", $.ui.autocomplete, {
+                    _renderMenu: function (ul, items) {
+                        var that = this,
+                            currentCategory = "";
+                        $.each(items, function (index, item) {
+                            if (item.category != currentCategory) {
+                                ul.append("<li class='ui-autocomplete-category'>" + item.category + "</li>");
+                                currentCategory = item.category;
+                            }
+                            that._renderItemData(ul, item);
+                        });
+                    }
+                });
+
+                var data = [
+                    { label: "anders", category: "" },
+                    { label: "andreas", category: "" },
+                    { label: "antal", category: "" },
+                    { label: "annhhx10", category: "Products" },
+                    { label: "annk K12", category: "Products" },
+                    { label: "annttop C13", category: "Products" },
+                    { label: "anders andersson", category: "People" },
+                    { label: "andreas andersson", category: "People" },
+                    { label: "andreas johnson", category: "People" }
+                ];
+                $("#search").catcomplete({
+                    delay: 0,
+                    source: data
+                });
+
+
+                //tooltips
+                $("#show-option").tooltip({
+                    show: {
+                        effect: "slideDown",
+                        delay: 250
+                    }
+                });
+
+                $("#hide-option").tooltip({
+                    hide: {
+                        effect: "explode",
+                        delay: 250
+                    }
+                });
+
+                $("#open-event").tooltip({
+                    show: null,
+                    position: {
+                        my: "left top",
+                        at: "left bottom"
+                    },
+                    open: function (event, ui) {
+                        ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast");
+                    }
+                });
+
+
+                //Menu
+                $("#menu").menu();
+
+
+                //spinner
+                var spinner = $("#spinner").spinner({
+                    create: function (event, ui) {
+                        //add custom classes and icons
+                        $(this)
+                            .next().addClass('btn btn-success').html('<i class="ace-icon fa fa-plus"></i>')
+                            .next().addClass('btn btn-danger').html('<i class="ace-icon fa fa-minus"></i>')
+
+                        //larger buttons on touch devices
+                        if ('touchstart' in document.documentElement)
+                            $(this).closest('.ui-spinner').addClass('ui-spinner-touch');
+                    }
+                });
+
+                //slider example
+                $("#slider").slider({
+                    range: true,
+                    min: 0,
+                    max: 500,
+                    values: [75, 300]
+                });
+
+
+
+                //jquery accordion
+                $("#accordion").accordion({
+                    collapsible: true,
+                    heightStyle: "content",
+                    animate: 250,
+                    header: ".accordion-header"
+                }).sortable({
+                    axis: "y",
+                    handle: ".accordion-header",
+                    stop: function (event, ui) {
+                        // IE doesn't register the blur when sorting
+                        // so trigger focusout handlers to remove .ui-state-focus
+                        ui.item.children(".accordion-header").triggerHandler("focusout");
+                    }
+                });
+                //jquery tabs
+                $("#tabs").tabs();
+
+
+                //progressbar
+                $("#progressbar").progressbar({
+                    value: 37,
+                    create: function (event, ui) {
+                        $(this).addClass('progress progress-striped active')
+                            .children(0).addClass('progress-bar progress-bar-success');
+                    }
+                });
+
+
+            });
+        </script>
+        <!-- the following scripts are used in demo only for onpage help and you don't need them -->
+        <link rel="stylesheet" href="assets/css/ace.onpage-help.css" />
+        <link rel="stylesheet" href="docs/assets/js/themes/sunburst.css" />
+
+        <script type="text/javascript"> ace.vars['base'] = '..'; </script>
+        <script src="assets/js/ace/elements.onpage-help.js"></script>
+        <script src="assets/js/ace/ace.onpage-help.js"></script>
+        <script src="docs/assets/js/rainbow.js"></script>
+        <script src="docs/assets/js/language/generic.js"></script>
+        <script src="docs/assets/js/language/html.js"></script>
+        <script src="docs/assets/js/language/css.js"></script>
+        <script src="docs/assets/js/language/javascript.js"></script>
+
+    </form>
+</body>
+</html>
+

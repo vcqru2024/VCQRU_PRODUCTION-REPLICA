@@ -1,0 +1,144 @@
+/* LayerSlider Styles */
+
+
+
+.ls-inner {
+	/*position: relative;*/
+	position: absolute;
+}
+
+.ls-inner,
+.ls-layer {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.ls-layer {
+	position: absolute;
+	display: none;
+	background-position: center center;
+}
+
+.ls-active,
+.ls-animating {
+	display: block !important;
+}
+
+.ls-layer > * {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.ls-layer .ls-bg {
+	left: 50%;
+	top: 50%;
+}
+
+.ls-bottom-nav-wrapper a {
+	outline: none;
+}
+
+.ls-nav-prev,
+.ls-nav-next {
+	outline: none;
+}
+
+
+
+/* WP plugin forceResponsive */
+
+.ls-wp-forceresponsive-container {
+	width: 100%;
+	position: relative;
+}
+
+.ls-wp-forceresponsive-helper {
+	position: absolute;
+	margin-left: 50%;
+}
+
+#main {
+	overflow: visible !important;	
+}
+
+/*----------------Sliding Box animation-------------------*/
+.first_ani
+{
+	
+	width:400px;
+	font:14pt Arial, Helvetica, sans-serif;
+	color:#222222;
+	font-weight:bold;
+	padding-left:100px;
+	margin-top:7px !important;
+	clear:both;
+	position:relative;
+	
+}
+.first_ani p
+{
+	background:url(../images/parallex/punch_bg.png) repeat;
+	-webkit-border-radius: 15px 0px 0px 0px;
+	-moz-border-radius: 15px 0px 0px 15px;
+	border-radius: 15px 0px 0px 15px;
+	padding:20px;
+}
+
+.sec_ani, .third_ani
+{
+	width:500px;
+	background:url(../images/parallex/ban_con_bg.png) repeat;
+	font:9pt Arial, Helvetica, sans-serif;
+	/*display:inline-block !important;*/
+	margin-top:7px !important;
+	clear:both;
+	color:#000;
+	position:relative;
+	line-height:20px;
+}
+.sec_ani p, .third_ani p
+{
+	padding:5px;
+	color:#ffffff;
+	text-align:justify;
+}
+.third_ani
+{
+	background:none;
+	clear:both;
+}
+
+
+.sign_up_but {
+-moz-box-shadow:inset 0px -2px 1px 0px #f29c93;
+	-webkit-box-shadow:inset 0px -2px 1px 0px #f29c93;
+	box-shadow:inset 0px -2px 1px 0px #f29c93;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e83d2a), color-stop(1, #ce0100) );
+	background:-moz-linear-gradient( center top, #e83d2a 5%, #ce0100 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e83d2a', endColorstr='#ce0100');
+	background-color:#e83d2a;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:20px;
+	border:1px solid #d83526;
+	display:inline-block;
+	color:#f1f1f1;
+	font-family:arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:9px 19px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #b23e35;
+	cursor:pointer;
+}.sign_up_but:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #e83d2a) );
+	background:-moz-linear-gradient( center top, #ce0100 5%, #e83d2a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#e83d2a');
+	background-color:#ce0100;
+}.sign_up_but:active {
+	position:relative;
+	top:1px;
+}
+/*----------------Sliding Box animation-------------------*/

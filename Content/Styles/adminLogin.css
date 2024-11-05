@@ -1,0 +1,389 @@
+*
+{
+	margin:0;
+	padding:0;
+}
+body
+{
+	
+	font-size:16px;
+	font-style:normal;
+	margin:0 auto;/*
+	background-color:#fff;*/
+	/*font-family:"Myriad Pro";*/
+	background:url(../images/body_bg.png) repeat;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#top_head_p
+{
+	background:#4b4b4b;
+	width:100%;
+	min-height:45px;
+	border-bottom:4px solid #2587d5;
+}
+#top_head
+{
+	width:960px;
+	margin:0 auto;
+}
+
+#login
+{
+	width:100%;
+	/*background:url(../images/log_blackBG.png) repeat;*/
+	display:inline-block;
+	min-height:562px;
+}
+#login div.loginbox_container
+{
+	width:998px;
+	margin:0 auto;
+	background:url(../images/logo.png) no-repeat top center;
+	padding-top:55px;
+	*padding-top:65px;
+	margin-top:80px;
+}
+.l_box_con
+{
+	width:30%;
+	margin:0 auto;
+	padding:7px 6px;
+	margin-top:45px;
+	background:url(../images/log_bg.png) ;
+	-webkit-border-radius: 8px;
+	-moz-border-radius:8px;
+	border-radius: 8px;
+	border:1px solid #cccccc;
+	/*-moz-box-shadow: inset 0 0 5px 5px #888;
+-webkit-box-shadow: inset 0 0 5px 5px#888;
+box-shadow: inset 0 0 5px 5px #888;*/
+	
+}
+.login_table_box
+{
+/*	background:#c2c2c2;*/
+	font-family:Arial, Helvetica, sans-serif;
+	color:#c0c0c0;
+	font-size:9pt;
+	margin:0 auto;
+	-webkit-border-radius: 8px;
+	-moz-border-radius:8px;
+	border-radius: 8px;
+	padding:17px 0px 0px 0px;
+	border:1px solid #191919;
+	background: #ed90b1; /* Old browsers */
+background: -moz-linear-gradient(top,  #5ba9d8 0%, #0a5fb4 49%, #004a97 50%, #095cb5 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5ba9d8), color-stop(49%,#095cb5), color-stop(50%,#004a97), color-stop(100%,#095cb6)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #5ba9d8 0%,#0a5fb4 49%,#004a97 50%,#095cb5 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #5ba9d8 0%,#0a5fb4 49%,#004a97 50%,#095cb5 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #5ba9d8 0%,#0a5fb4 49%,#004a97 50%,#095cb5 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #5ba9d8 0%,#0a5fb4 49%,#004a97 50%,#095cb5 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5ba9d8', endColorstr='#095cb5',GradientType=0 ); /* IE6-9 */
+/*padding:10px;*/
+-moz-box-shadow: inset 0 0 7px 2px #003267;
+-webkit-box-shadow: inset 0 0 7px 2px#003267;
+box-shadow: inset 0 0 7px 2px #003267;
+	
+}
+.login_table
+{
+	margin:0 auto;
+}
+.login_table a
+{
+	color:#dddddd;
+	text-decoration:none;
+}
+.login_table a:hover
+{
+	color:#ffffff;
+	text-decoration:underline;
+}
+.pbox_bg
+{
+	padding:12px 7px;
+	background:#393837;
+	/* Safari 4-5, Chrome 1-9 
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3d3d3d), to(#393837));*/
+  
+  /* Safari 5.1, Chrome 10+ 
+  background: -webkit-linear-gradient(top, #3d3d3d, #393837);*/
+  
+  /* Firefox 3.6+ 
+  background: -moz-linear-gradient(top, #3d3d3d, #393837);*/
+  
+  /* IE 10 
+  background: -ms-linear-gradient(top, #3d3d3d, #393837);*/
+  
+  /* Opera 11.10+ 
+  background: -o-linear-gradient(top, #3d3d3d, #393837);*/
+  
+  /*-moz-box-shadow: inset 0 0 7px 2px #362128;
+-webkit-box-shadow: inset 0 0 7px 2px#362128;
+box-shadow: inset 0 0 7px 2px #362128;*/
+}
+.code_gen
+{
+	background:url(../images/code.png) no-repeat left center;
+}
+.username
+{
+	background:url(../images/user_name.png) no-repeat left center;
+}
+.password
+{
+	background:url(../images/password.png) no-repeat left center;
+}
+.radius_top
+{
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius:5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	border:1px solid #262623;
+	border-bottom:1px solid #191919;
+}
+.radius_bottom
+{
+	-webkit-border-radius: 0px 0px 5px 5px;
+	-moz-border-radius:0px 0px 5px 5px;
+	border-radius: 0px 0px 5px 5px;
+	border:1px solid #262623;
+	border-top:1px solid #4f4e4e;
+}
+
+
+
+.t_box_sign
+{
+	border:none;
+	/*border-bottom:1px solid #09364c;*/
+	width:87%;
+	font-size:9pt;
+	color:#cccccc;
+	padding:7px 2px 7px 20px;
+	margin-bottom:3px;
+	outline:none;
+	margin-top:3px;
+	 /*-moz-box-shadow: inset 0 0 2px 2px #e8e8e8;
+-webkit-box-shadow: inset 0 0 2px 2px#e8e8e8;
+box-shadow: inset 0 0 2px 2px #e8e8e8;
+margin-left:5px;*/
+}
+.but_login
+{
+	width:104px;
+	height:29px;
+	border:none;
+	font-size:10pt;
+	color:#33322e;
+	font-weight:bold;
+	/*padding:3px 13px 3px 13px;
+	margin-bottom:3px;
+	webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	outline:none;
+	margin-top:3px;
+	 -moz-box-shadow: inset 0 0 5px 2px #e8e8e8;
+-webkit-box-shadow: inset 0 0 5px 2px#e8e8e8;
+box-shadow: inset 0 0 5px 2px #e8e8e8;*/
+background:url(../images/log_btn.png) no-repeat;
+cursor:pointer;
+}
+
+.forgot_pass
+{
+	background:#33322e;
+	margin-top:10px;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	-webkit-border-radius: 0px 0px 5px 5px;
+	-moz-border-radius:0px 0px 5px 5px;
+	border-radius: 0px 0px 5px 5px;
+}
+.forgot_pass p
+{
+	padding:7px 7px;
+	border:1px solid #4f4e4e;
+	color:#c0c0c0;
+	/*min-height:15px;*/
+	font-size:8pt;
+	-webkit-border-radius: 0px 0px 7px 7px;
+	-moz-border-radius:0px 0px 7px 7px;
+	border-radius: 0px 0px 7px 7px;
+}
+.forgot_pass p a
+{
+	font-size:10pt;
+	color:#ffffff;
+	text-decoration:none;
+}
+/*----------footer-----------*/
+
+#footer_p
+{
+	width:100%;
+	background:#383637;
+	display:inline-block;
+	border-top:4px solid #2587d5;
+}
+#footer
+{
+	width:961px;
+	background:url(../images/footer_logo.png) no-repeat left center;
+	padding:13px 0;
+	margin:0 auto;
+	
+}
+#footer div.f_menu 
+{
+	width:99%;
+	padding:5px 0 10px 0;
+	text-align:center;
+}
+
+#footer div.f_menu a:hover 
+{
+	color:#fff;
+	font-size:7pt;
+	text-decoration:underline;
+	margin:5px;
+}
+#footer div.f_menu p 
+{
+	color:#777777;
+	font-size:9pt;
+	padding-top:5px;	
+}
+#footer div.f_menu p a 
+{
+	color:#d05d09;
+	font-size:8pt;
+	text-shadow:none;
+	font-weight:bold;
+}
+#footer div.f_menu p a:hover 
+{
+	color:#d05d09;
+	font-size:8pt;
+}
+#footer div.followUs
+{
+	width:300px;
+	color:#dadfeb;
+	font-size:9pt;
+	padding-top:20px;
+}
+#footer div.followUs img
+{
+	margin-top:-7px;
+}
+.genuinity
+{
+   font-family:Arial, Helvetica, sans-serif;
+	color:#f1f1f1;
+	font-size:10pt;
+	font-weight:bold; 
+	margin-bottom:10px;
+	padding-left:3px;
+}
+
+
+/*----------footer close-----------*/
+
+/*-----------tab Style-----------*/
+.tab_menu
+{
+    width:94%;
+    display:inline-block;
+}
+.simp
+	{
+		
+		background:#ffffff;
+		color:#371e00;
+		font-size:9pt;
+		float:left;
+		font-family:Arial, Helvetica, sans-serif;
+		font-weight:bold;
+		padding:7px;
+		border:1px solid #ddd;
+		border-bottom:none;
+		margin-left:5px;
+		-webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius:5px 5px 0px 0px;
+	border-radius:5px 5px 0px 0px;
+	}
+	.simple
+	{
+		background:url(../images/tab_bg.png) repeat-x;
+		color:#ffffff;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:9pt;
+		font-weight:bold;
+		padding:7px;
+		float:left;
+		cursor:pointer;
+		border:1px solid #004795;
+		border-bottom:none;
+		margin-left:5px;
+		-webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius:5px 5px 0px 0px;
+	border-radius:5px 5px 0px 0px;
+	}
+	
+	.tab_cont
+	{
+	    width:94%;
+	    border:1px solid #dddddd;
+	    margin-top:-1px;
+	    background:#ffffff;
+	    font-family:Arial;
+	    font-size:8pt;
+	    color:#555555;
+	    font-weight:normal;
+	    padding:10px;
+	    margin-left:5px;
+	}
+	
+	
+	.pin
+        {
+            width: 100%;
+            margin: 0 auto;
+            max-height:475px;
+            overflow:auto;
+            /*border: 1px solid #f1f1f1;*/
+            padding-bottom: 5px;
+            margin-bottom:5px;
+        }
+        
+        .pin p
+        {
+        	line-height:25px;
+			background-color:#dae8f5;
+			padding-left:5px;
+			font-size:9pt;
+			color:#317db9;
+			/*border-right:1px solid #aecfee;
+			border:1px solid #aecfee;
+			border-top:1px solid #efefef;
+			border-bottom:1px solid #aecfee;*/
+			margin-bottom:7px;
+        }
+        .tab_cont_padd
+        {
+        	padding:10px 0 10px 0;
+        }
+/*-----------tab Style close-----------*/
+
+
+
+.P_radius
+{
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #262623;
+	border-top:1px solid #4f4e4e;
+}

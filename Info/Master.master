@@ -1,0 +1,1326 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Info/Master.master.cs" Inherits="Master" %>
+
+<%@ Register Src="~/UserControl/CheckYourCodes.ascx" TagPrefix="uc1" TagName="CheckYourCodes" %>
+<%--<%@ Register Src="~/UserControl/OurServices.ascx" TagPrefix="uc1" TagName="OurServices" %>--%>
+<%@ Register Src="~/UserControl/abtus.ascx" TagPrefix="uc1" TagName="abtus" %>
+
+
+<%@ Register Src="~/UserControl/Contact.ascx" TagPrefix="uc1" TagName="Contact" %>
+<%@ Register Src="~/UserControl/LoginSignUp.ascx" TagPrefix="uc1" TagName="LoginSignUp" %>
+<%@ Register Src="~/UserControl/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+<%@ Register Src="~/UserControl/TopMenus.ascx" TagPrefix="uc1" TagName="TopMenus" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head runat="server">
+      <meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="Keyword" content="security sticker,Brand Protection,Check Product Originality,Consumer Insights,counterfeit solution provider,customer loyalty service,Customized Solution,Digital Warranty,e-warranty,Fighting Product Duplicate,Identity Fakes,label provider in Delhi,label provider in India,Make Packing Smart,qr code provider in Delhi,qr code provider in India,Run Product Survey,Save Brand,security stickers,Track & Trace Services,Neurotags,Original4sure,o4s,sproxil,Nirmal Stickers,Monarch Graphic,Pro Labels,Cosmo Printers,Uflex,Syndicate Labels,Braggart,Coats & Pack,Excel Pack,Sai Pack,J K Label,Manipal Technologies Limited (H.O.),Kumbhat Holographics,Signor Labels,Hira Holovision,Nestor Labels,Durga Holographic,Vishal Holo Solutions [Pvt] Ltd,Hi-Tech Print System,Verma Enterprises,DIPS technologies,Alpha Lasertek India,Holosafe Security Labels,Arora Printing,Cousin Enterprises,Smart Tech Solutions,Prem Printing,S. Anand,Packso Print,Latest Labeling And Solutions,Hira Print Solutions Private Limited,JJ Print Packs,3S Industries,G Mamu ji,Sanskar Printers,ColorBlast,VideoJet,Perfact Color Digital Prints Pvt Ltd,Mahindra and Mahindra,MFN,Windsor,Steelbird,Nutriglow cosmetics,1 Stop Nutrition,Bansi lal and sons,Olympic Auto Industries,JR Fragrence,Deeksha mineral water,ELA group,Suresh Confectionary,Welgo,Mysha Healthworld,Mysha,White Horse,Mstar Oil,Mahindra tractors,Mahindra MStar Super 7.5,Mahindra MStar Super 5,Mahindra MStar Super 6,Mahindra MStar Super 2,Mahindra MStar Super 1,Mahindra MStar Premium 10,Mahindra MStar Premium 7.5,Mahindra MStar Premium 1,Mahindra MStar Classic OIB 20,Mahindra MStar Classic OIB 10,Mahindra MStar Classic OIB  5,Mahindra MStar Classic OIB 1,Mechanic coupon,Flora,competent electricals,energy meters,VCQRU Counterfeit Prevention Solution,VCQRU Refer & Win,VCQRU Thank you customer,VCQRU Customer satisfaction feedback,VCQRU Customer loyalty voucher,VCQRU Lotto,VCQRU Consumer action insights,VCQRU Customization,VCQRU Direct Money Transfer,VCQRU Smart Warrranty Solution,Secure Track & Trace,Companies who provide counterfeit solutions,QR code providers,QR Code label providers in delhi,security stickers,customer loyalty service,digital warranty,e-warranty,track and trace service,Anti counterfeiting,boost sales,make packaging smart,fight against duplicity,save brand,Make packaging work for you,customized solutions,secure track and trace,consumer insights,brand protection,identify fakes,check product originality,run product survey,customer rewards program,customer loyalty program,product promotions,electrical appliances,FMCG Anti counterfeiting,dairy products,buy genuine products,warranty labels,security labels,unique digital codes,advanced technical solutions/services,end to end marketing and packaging solution,unique labeling,variable number codes,data analysis,insure customer safety,consumer trust,product visibility,effective branding and marketing strategies,label sticker printing service,(incorporating the qr code),security sticker,Brand Protection,Check Product Originality,Consumer Insights,counterfeit solution provider,customer loyalty service,Customized Solution,Digital Warranty,e-warranty,Fighting Product Duplicate,Identify Fakes,label provider in Delhi,label provider in India,Make Packing Smartqr code provider in Delhi,qr code provider in India,Run Product Survey,Save Brand,security stickers,Track & Trace Services," />
+    <meta name="Description" content="Every person has the right to know whether the product they are buying is genuine or not. We use truly secure and encrypted codes printed on the labels of the product which are impossible to replicate. With the help of secure mobile/web tools, the authenticity of the product can be checked." />
+
+    <%--<title>VCQRU | We secure you</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Keyword" content="VCQRU Company, It Company in Gurgon ,IT Company in India ,Check Product Originality ,Consumer Insights ,counterfeit solution provider,customer loyalty service,Customized Solution,Digital Warranty,e-warranty,Fighting Product Duplicate,Identity Fakes,label provider in Delhi,label provider in India,Make Packing Smart,QR code provider in Delhi,QR code provider in India,Run Product Survey,Save Brand,security stickers,Track & Trace Services,security sticker,Brand Protection,Check Product Originality,Consumer Insights,counterfeit solution provider,customer loyalty service,Customized Solution,Digital Warranty,e-warranty,Fighting Product Duplicate,Identity Fakes,label provider in Delhi,label provider in India,Make Packing Smart,qr code provider in Delhi,qr code provider in India,Run Product Survey,Save Brand,security stickers,Track & Trace Services" />
+    <meta name="Description" content="Every person has the right to know whether the product they are buying is genuine or not. We use truly secure and encrypted codes printed on the labels of the product which are impossible to replicate. With the help of secure mobile/web tools, the authenticity of the product can be checked." />
+
+    <script src="Content/js/jquery.min.js" type="text/javascript"></script>
+    <script src="Content/js/jquery-1.11.1.min.js"></script>
+    <script src="Content/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="Content/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="Content/css/bootstrap.css" rel='stylesheet' type='text/css' />
+ 
+    <link href="Content/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="Content/css/my.css" rel="stylesheet" type='text/css' />
+    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css">
+  
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+  
+    <script src="Content/js/jquery.magnific-popup.js" type="text/javascript"></script>
+    <link href="Content/css/popup.css" rel="stylesheet" type="text/css">
+ 
+    <script src="Content/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="Content/js/toastr.min.js"></script>
+    <link href="Content/css/toastr.min.css" rel="stylesheet" />
+    <link href="/Content/css/jquery-confirm.css" rel="stylesheet" />
+    <script src="/Content/js/jquery-confirm.js" type="text/javascript"></script>--%>
+    <meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+		<title>VCQRU | We secure you</title>	
+
+		<meta name="keywords" content="HTML5 Template" />
+		<meta name="description" content="VCQRU - Responsive HTML5 Template" />
+		<meta name="author" content="bhanguz.com" />
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="../img-1/favicon.png" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="../img-1/favicon.png" />
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+		<!-- Web Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css" />
+
+		<!-- Vendor CSS -->
+    
+   
+
+		<link rel="stylesheet" href="../content/vendor/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../content/vendor/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../content/vendor/animate/animate.min.css" />
+		<link rel="stylesheet" href="../content/vendor/simple-line-icons/css/simple-line-icons.min.css" />
+		<link rel="stylesheet" href="../content/vendor/owl.carousel/assets/owl.carousel.min.css" />
+		<link rel="stylesheet" href="../content/vendor/owl.carousel/assets/owl.theme.default.min.css" />
+		<link rel="stylesheet" href="../content/vendor/magnific-popup/magnific-popup.min.css" />
+    <link href="Brand_Promotion/css/font-awesome.min.css" rel="stylesheet" />
+		<!-- Theme CSS -->
+    <link rel="stylesheet" href="../css/theme.css" />
+		<link rel="stylesheet" href="../css/theme.css" />
+		<link rel="stylesheet" href="../css/theme-elements.css" />
+		<link rel="stylesheet" href="../css/theme-blog.css" />
+		<link rel="stylesheet" href="../css/theme-shop.css" />
+
+		<!-- Current Page CSS -->
+		<link rel="stylesheet" href="../content/vendor/rs-plugin/css/settings.css" />
+		<link rel="stylesheet" href="../content/vendor/rs-plugin/css/layers.css" />
+		<link rel="stylesheet" href="../content/vendor/rs-plugin/css/navigation.css" />
+		<link rel="stylesheet" href="../content/vendor/circle-flip-slideshow/css/component.css" />
+		
+		<!-- Demo CSS -->
+
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="../css/skins/default.css" />
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="../css/custom.css" />
+
+		<!-- Head Libs -->
+		<script src="../content/vendor/modernizr/modernizr.min.js"></script>
+
+
+    <script src="../Content/js/jquery-1.11.1.min.js"></script>
+    <%--<script src="Content/js/jquery.min.js"></script>--%>
+    <%--<script src="vendor/jquery/jquery.js"></script>--%>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <!-- Add fancyBox main JS and CSS files -->
+   <%-- <script src="Content/js/jquery.magnific-popup.js" type="text/javascript"></script>
+    <link  href="Content/css/popup.css" rel="stylesheet" type="text/css" />--%>
+   <%-- <script src="../Content/js/toastr.min.js"></script>    
+    <link href="../Content/css/toastr.min.css" rel="stylesheet" />
+
+       
+       
+    <link href="../Content/css/jquery-confirm.css" rel="stylesheet" />
+    <script src="../Content/js/jquery-confirm.js" type="text/javascript"></script>--%>
+    <!--<script type="text/javascript"-->
+   
+    
+
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+            
+           // CatchWebsiteHit();
+            $('#menuone').show();
+            $('#menutwo').hide();
+            $('#quote-carousel').carousel({
+                pause: true,
+                closeBtnInside: true,
+                interval: 4000, // chenged by shweta from 4000 to 50000
+            });
+            $('.popup-with-zoom-anim').magnificPopup({
+                type: 'inline',
+                fixedContentPos: false,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-in'
+            });
+
+
+            $('#cssmenu #menu-button').on('click', function () {
+                
+                var menu = $(this).next('ul');
+                if (menu.hasClass('open')) {
+                    menu.removeClass('open');
+                } else {
+                    menu.addClass('open');
+                }
+            });
+            FillNews();
+            GetIP();
+         
+            //getQueryStrings();
+            getQueryStrings_ResetPwd();
+            
+           //// $('#mainNav li a').removeClass("nav-link active");
+           // $('#mainNav li a').on('click', function () {
+           //     $('#mainNav li a').removeClass("nav-link active");
+           //     $(this).addClass('nav-link active');                
+                
+           //    // $("nav").removeClass("show");
+           // //    $("#btnmenu").addClass("collapsed");
+           //     //alert($(window).scrollTop());
+           //     //alert($(window).scrollTop() -50);
+           //     //$(window).scrollTop($(window).scrollTop() -50);
+           //     //if (menu.hasClass('open')) { 
+           //     //    menu.removeClass('open');
+           //     //} else {
+           //     //    menu.addClass('open');
+           //     //}
+           // });
+
+           //$("#menurow").css("margin-top", "-5px");
+             
+           // $(window).scroll(function () {
+           //     //alert($(window).scrollTop());
+           //     if ($(window).scrollTop() == 0) {
+           //         $("#menurow").css("margin-top", "-5px");
+           //     }
+           //     else if ($(window).scrollTop() > 50) {
+           //         $("#menurow").css("margin-top", "35px");
+
+           //     }
+           // });
+
+        });
+
+<%--        function showclose() {
+            if (<%=IsMobile%> == "1")
+            {
+                //$('#btnmenu').addClass("btn header-btn-collapse-nav collapsed");
+                $("#btnmenu").trigger("click");
+            }
+        }--%>
+            </script>
+    <script type="text/javascript">
+        function CatchWebsiteHit() {
+            $.ajax({
+                type: "post",
+                url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=CatchWebsiteHit',
+                success: function (data) {
+                   
+                }
+            });
+    
+        }
+        function ConfirmResetPWD() {            
+            if ($('#pwd1').val() != $('#pwdConfirm1').val())
+            {
+                // $('#pwdNotMatch').text("Password did not match.");
+                toastr.error("Password did not match.");
+                //  return false;
+            }
+            else{
+
+            
+                var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+                var queryString = location.search.substring(1);
+                var keyValues = queryString.split('&');
+                for (var i in keyValues) {
+                    var key = keyValues[i].split('=');
+                    $.ajax({
+                        type: "post",
+                        url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=setpassword&pwd=' + $('#pwd1').val() + '&value=' + key[1],
+                        success: function (data) {
+                            var result = data;
+                            toastr.info(result);
+                            $('#ResetPwdModal').modal('hide');
+                            
+                        },
+                    });
+                }
+            }
+        }
+         function getQueryStrings_ResetPwd() {
+           
+                var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+                var queryString = location.search.substring(1);
+                var keyValues = queryString.split('&');
+                for (var i in keyValues) {
+                    var key = keyValues[i].split('=');
+                    rquestpage = key[0];
+                    if (rquestpage == "mlt") {
+                        $.ajax({
+                            type: "post",
+                            url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=verifyresetpwd&mlt=' + key[1],
+                            success: function (data) {
+                                debugger;
+                                var result = data;
+                                if (result == "yes") {
+                                    $('#ResetPwdModal').modal();
+                                }
+                            },
+                        });
+                    }
+                    if (rquestpage == "key") {
+                        $('#progress').show();
+                        $.ajax({
+                            type: "post",
+                            url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=verifyaccount&key=' + key[1],
+                            success: function (data) {
+                                var result = data;
+                                toastr.info(result);
+                            },
+                        });
+                        $('#progress').hide();
+                    }
+                    if (rquestpage == "Del") {
+                        $.ajax({
+                            type: "post",
+                            url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=deleteaccount&Del',
+                            success: function (data) {
+                                var result = data;
+                                toastr.info(result);
+                            },
+                        });
+                    }
+                } 
+
+            }
+            function getQueryStrings() {
+           
+                var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+                var queryString = location.search.substring(1);
+                var keyValues = queryString.split('&');
+                for (var i in keyValues) {
+                    var key = keyValues[i].split('=');
+                    rquestpage = key[0];
+                    if (rquestpage == "mlt") {
+                        $.ajax({
+                            type: "post",
+                            url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=verifyresetpwd&mlt=' + key[1],
+                            success: function (data) {
+                                var result = data;
+                                if (result == "yes") {
+                                    $.confirm({
+                                        title: 'Reset Password',
+                                        content: 'url:resetpassword.html',
+                                        onContentReady: function () {
+                                            this.$content.find('label#mltid').text(key[1]);
+                                        },
+                                        boxWidth: '800px',
+                                        useBootstrap: false,
+                                        buttons: {
+                                            sayMyName: {
+                                                text: 'Confirm',
+                                                btnClass: 'btn-warning',
+                                                action: function () {
+                                                    
+                                                    var input = this.$content.find('input#newpwd').val();
+                                                    var cnfinput = this.$content.find('input#confirmpwd').val();
+                                                    var errorText = this.$content.find('.text-danger');
+                                                    if (input == '') {
+                                                        errorText.html('<div class="text-danger help-block">Please enter new password<div>').slideDown(200);
+                                                        return false;
+                                                    } else if (cnfinput == '') {
+                                                        errorText.html('<div class="text-danger help-block">Please enter confirm password<div>').slideDown(200);
+                                                        return false;
+                                                    }
+                                                    if (input == cnfinput) {
+                                                      
+                                                        $.ajax({
+                                                            type: "post",
+                                                            url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=setpassword&pwd=' + cnfinput + '&value=' + key[1],
+                                                            success: function (data) {
+                                                                var result = data;
+                                                                toastr.info(result);
+                                                            },
+                                                        });
+                                                    }
+                                                    else {
+                                                        errorText.html('<div class="text-danger help-block">Password not match<div>').slideDown(200);
+                                                        return false;
+                                                    }
+                                                }
+                                            },
+                                            cancel: function () {
+                                                $.alert('Canceled!');
+                                            }
+                                        }
+                                    });
+                                }
+                                else {
+                                    toastr.info(result);
+                                }
+                            },
+                        });
+                    }
+                    if (rquestpage == "key") {
+                        $('#progress').show();
+                        $.ajax({
+                            type: "post",
+                            url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=verifyaccount&key=' + key[1],
+                            success: function (data) {
+                                var result = data;
+                                toastr.info(result);
+                            },
+                        });
+                        $('#progress').hide();
+                    }
+                    if (rquestpage == "Del") {
+                        $.ajax({
+                            type: "post",
+                            url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=deleteaccount&Del',
+                            success: function (data) {
+                                var result = data;
+                                toastr.info(result);
+                            },
+                        });
+                    }
+                }
+
+            }
+
+            function toggleIcon(e) {
+                $(e.target)
+                    .prev('.panel-heading')
+                    .find(".more-less")
+                    .toggleClass('glyphicon-plus glyphicon-minus');
+            }
+            $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+            $('.panel-group').on('shown.bs.collapse', toggleIcon);
+
+            function FillNews() {
+        
+                $.ajax({
+                    type: "post",
+                     url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=fillnews',
+                    success: function (data) {
+                        var result = data;
+                        $("#news").html(result);
+                    },
+                });
+            }
+            function GetIP() {
+            
+                $.ajax({
+                    type: "POST",
+                    url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=GetIP',
+                    success: function (data) {
+                        var result = data;
+                        $("#AddIP").text(result);
+                    },
+                });
+            }
+            function checkproduct(vl) {
+                //alert(vl);
+                PageMethods.checkNewProduct(vl, onCompleteProduct)
+            }
+            function onCompleteProduct(Result) {
+                if (Result == true) {
+                    document.getElementById("lblRegMsg").innerHTML = "Email Id Already exist.";
+                    //document.getElementById("btnSave").disabled = true;
+                    //document.getElementById("btnSave").className = "save_btn_Sec";
+                    $find("ModalPopupMessage").show();
+                }
+                else {
+                    document.getElementById("lblRegMsg").innerHTML = "";
+                    //document.getElementById("btnSave").disabled = false;
+                    //document.getElementById("btnSave").className = "save_btn";
+                    $find("ModalPopupMessage").hide();
+
+                }
+            }
+
+
+            function logout() {
+         
+                $.ajax({
+                    type: "POST",
+                    url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=logout',
+                    success: function (data) {
+                        var result = data;
+                        $('#menuone').hide();
+                        $('#menutwo').show();
+                        if (result == 1) {
+                            window.location.href = "../Admin/Login.aspx";
+                        }
+                        toastr.success("Logout Sucessfully !");
+                    },
+                });
+            }
+            function subscribenewsletter() {
+           
+                if ($('#txtSend').val() == '') {
+                    toastr.error("Please enter your mail id."); msg = "no"; return false
+                }
+                if ($('#txtSend').val() != '') {
+                    var emailReg = new RegExp("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$");
+                    var valid = emailReg.test($('#txtSend').val());
+                    if (!valid) {
+                        toastr.error("Please enter the correct email."); return false;
+                    }
+                    else {
+                        $.ajax({
+                            type: "POST",
+                            url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=subscribenewsletter&email=' + $('#txtSend').val(),
+                            success: function (data) {
+                                $('#txtSend').val('');
+                                toastr.info(data);
+                            },
+                        });
+                    }
+                }
+            }
+            function sendquery() {
+         
+                if ($('#name').val() == '') {
+                    toastr.error("Please enter Name"); msg = "no"; return false
+                }
+                else {
+                    if ($('#email').val() == '') {
+                        toastr.error("Please enter email"); msg = "no"; return false
+                    }
+                    else {
+                        var emailReg = new RegExp("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$");
+                        var valid = emailReg.test($('#email').val());
+                        if (!valid) {
+                            toastr.error("Please enter the correct email."); return false;
+                        }
+                        else {
+
+                            if ($('#cmobile1').val() == '') {
+                                toastr.error("Please enter your mobile no."); msg = "no"; return false
+                            }
+                       
+                            var v = $('#cmobile1').val().length;
+                            if (v < 10 || v > 12) {
+                                toastr.error("Please enter correct Mobile Number."); return false;
+                            }
+                            // var MobileReg = new RegExp("^[0-9_.+-]+$");
+                            var MobileReg = /[0-9]|\./;
+                            var valid = MobileReg.test($('#cmobile1').val());
+                            if (!valid) {
+                                toastr.error("Please enter the correct mobile no.");
+                                return false;
+                            }
+                            if ($('#comment').val() == '') {
+                                toastr.error("Please enter your message."); msg = "no"; return false
+                            }
+                            else {
+                                $('#progress').show();
+                                $.ajax({
+                                    type: "POST",
+                                    url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=sendquery&name=' + $('#name').val() + '&email=' + $('#email').val() + '&comment=' + $('#comment').val() + '&cmobile=' + $('#cmobile1').val(),
+                                    success: function (data) {
+                                        $('#progress').hide();
+                                        $('#name').val('');
+                                        $('#email').val('');
+                                        $('#cmobile').val('');
+                                        $('#comment').val('');
+                                        toastr.info(data);
+                                    },
+                                });
+                            }
+                        }
+                    }
+                }
+                //$('#progress').hide();
+            }
+            function chkgenuenity() {
+                //alert('');
+                if ($('#codeone').val() == '') {
+                    toastr.error("Please enter Code1"); msg = "no"; return false
+                }
+                else {
+                    if ($('#codetwo').val() == '') {
+                        toastr.error("Please enter Code2"); msg = "no"; return false
+                    }
+                    else {
+                        if ($('#mobile').val() == '') {
+                            toastr.error("Please enter your mobile No."); msg = "no"; return false
+                        }
+                        else {
+                            var v = $('#mobile').val().length;
+                            if (v != 10) {
+                                toastr.error("Please enter correct Mobile Number."); msg = "no"; return false
+                            }
+                            else {
+                                $('#progress').show();
+                                $.ajax({
+                                    type: "POST",
+                                    url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=chkgenuenity&codeone=' + $('#codeone').val() + '&codetwo=' + $('#codetwo').val() + '&mobile=' + $('#mobile').val() + '&RefCd=' + $('#RefCd').val(),
+                                    success: function (data) {
+                                        $('#progress').hide();
+                                        $('#codeone').val('');
+                                        $('#codetwo').val('');
+                                        $('#mobile').val('');
+                                        $('#RefCd').val('');
+                                        //toastr.info(data);
+                                        // $.alert(data);
+                                        $('#p1msg').html(data);
+                                        $('#smallModal').modal();
+                                    },
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+            function validate(evt) {
+                var theEvent = evt || window.event; var key = theEvent.keyCode || theEvent.which; key = String.fromCharCode(key);
+                var regex = /[0-9]|\./;
+                if (!regex.test(key)) {
+                    theEvent.returnValue = false; toastr.error("Input is not Numeric \n Enter numbers only (Like 0 to 9) Or select the letter and press delete button to remove");
+                    if (theEvent.preventDefault) theEvent.preventDefault();
+                }
+            }
+            function alphanumeric(inputtxt) {
+                var TCode = document.getElementById('name').value;
+                if (/[^a-zA-Z ]/.test(TCode)) {
+                    document.getElementById("name").value = TCode.replace(/\d+/g, '');
+                    toastr.error('Input is not alphanumeric \n Enter Characters only between A to Z or a to z');
+                    return false;
+                }
+                return true;
+            }
+            function loadDoc(url) {
+                var result = "No Data Found";
+                if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest();
+                }
+                else {// code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.open("GET", url, false);
+                //sleep.php?milliSeconds=' + milliSeconds + '&nochache=' + nocache
+                xmlhttp.send(null);
+                result = xmlhttp.responseText;
+                return result;
+            }
+
+            function validate(evt) {
+                var theEvent = evt || window.event; var key = theEvent.keyCode || theEvent.which; key = String.fromCharCode(key);
+                var regex = /[0-9]|\./;
+                if (!regex.test(key)) {
+                    theEvent.returnValue = false; toastr.error("Input is not Numeric \n Enter numbers only (Like 0 to 9)");
+                    if (theEvent.preventDefault) theEvent.preventDefault();
+                }
+            }
+        
+        
+    </script>
+     <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>   
+</head>
+<body  style="overflow-x:hidden;"  >
+      <form id="form1" runat="server">
+          
+    <div class="body" >
+   <%-- <div ></div>--%>
+  
+     <%--  <form id="dd">--%>
+    
+    <!--- Main Page Content Starts from here -->
+        <!--- Header Starts here -->
+			<header id="header" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 0, 'stickySetTop': '-0px', 'stickyChangeLogo': false}">
+				<div class="header-body pt-0 pb-0">
+					<%--<div class="header-top header-top-style-3 header-top-custom">
+						<div class="container">
+							<div class="header-row">
+								<div class="header-column justify-content-end" >
+									<div class="header-row" >
+										<nav class="header-nav-top langs mr-0">
+											
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>--%>
+                     <div id="DivMsg" runat="server" style="display:none;">
+                                    <p>
+                                        <asp:Label ID="LblMsgBody" runat="server"></asp:Label></p>
+                                </div>
+                    <uc1:TopMenus runat="server" ID="TopMenus" />
+					<div class="header-container container custom-position-initial">
+						<div class="header-row">
+							<div class="header-column">
+								<div class="header-row">
+									<div class="header-logo">
+										<a href="../default.aspx">
+											<img alt="vcqru" width="130" data-sticky-width="130" data-sticky-top="30" src="img-1/logo.png">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="header-column justify-content-end">
+								<div class="header-row">
+									<div class="header-nav header-nav-stripe">
+										<div class="header-nav-main header-nav-main-effect-1">
+											<nav>
+												<ul class="nav nav-pills" id="mainNav">
+													<li class="dropdown-full-color dropdown-quaternary">
+														<%--<a class="nav-link"  href="../default.aspx#logsign" ></a>--%>
+														<%--	Login / Signup--%>
+                                                              <asp:LinkButton Text="Login / Signup" runat="server" class="nav-link" ID="lnklosign" OnClick="LinkButton1_Click" />
+                                                       	
+                                                        </li><li class="dropdown-full-color dropdown-quaternary">
+                                                         <asp:LinkButton Text="Welcome" Visible="false" class="nav-link" runat="server" ID="lblloginName1" OnClick="lblloginName_Click" />
+                                                        <asp:LinkButton Text="Logout" Visible="false" class="nav-link" runat="server" ID="imglogout" OnClick="imglogout_Click" />
+													
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			
+			<!--- Check Codes Modal Btn Start -->
+			<div>
+				<a class="btn btn-primary tp-caption text-uppercase text-color-light btn-style-fix-index box-shadow-custom" data-toggle="modal" data-target="#Check-Codes" >Check Codes</a>
+			</div>
+			<!--- Check Codes Modal Btn End -->
+			
+			<!--- Check Codes Modal Start -->
+			
+        	<%--Check Your Codes--%>
+					<uc1:CheckYourCodes runat="server" ID="CheckYourCodes" />
+			<!--- Check Codes Modal End -->
+			
+			<!--- Header Ends here -->
+
+
+
+
+
+
+
+
+
+
+			<div role="main" class="main" id="maindiv">
+				<div class="slider-container rev_slider_wrapper" style="height: 700px;">
+					<div id="revolutionSlider" class="slider rev_slider" data-plugin-revolution-slider data-plugin-options="{'delay': 9000, 'gridwidth': 800, 'gridheight': 700, 'responsiveLevels': [4096,1200,992,500]}">
+						<ul>
+                             <li data-transition="fade">
+                                <%--  <img src="img-1/61.jpg"  --%>
+                                <img src="../img-1/1.jpg"
+                                    alt=""
+                                    data-bgposition="center center"
+                                    data-bgfit="cover"
+                                    data-bgrepeat="no-repeat"
+                                    class="rev-slidebg" />
+                                <!--div class="tp-dottedoverlay tp-opacity-overlay"></div-->
+                            </li>
+                            <li data-transition="fade">
+                                <%--<img src="img-1/contact-banner.jpg"  --%>
+                                <img src="../img-1/2.jpg"
+                                    alt=""
+                                    data-bgposition="center center"
+                                    data-bgfit="cover"
+                                    data-bgrepeat="no-repeat"
+                                    class="rev-slidebg" />
+                                <!--div class="tp-dottedoverlay tp-opacity-overlay"></div-->
+                            </li>
+                            <li data-transition="fade">
+
+                                <img src="../img-1/3.jpg"
+                                    alt=""
+                                    data-bgposition="center center"
+                                    data-bgfit="cover"
+                                    data-bgrepeat="no-repeat"
+                                    class="rev-slidebg" />
+                                <!--div class="tp-dottedoverlay tp-opacity-overlay"></div-->
+                            </li>
+                            <li data-transition="fade">
+                                <img src="../img-1/4.jpg"
+                                    alt=""
+                                    data-bgposition="center center"
+                                    data-bgfit="cover"
+                                    data-bgrepeat="no-repeat"
+                                    class="rev-slidebg" />
+                                <!--div class="tp-dottedoverlay tp-opacity-overlay"></div-->
+                            </li>
+                            <li data-transition="fade">
+                                <img src="../img-1/5.jpg"
+                                    alt=""
+                                    data-bgposition="center center"
+                                    data-bgfit="cover"
+                                    data-bgrepeat="no-repeat"
+                                    class="rev-slidebg" />
+                                <!--div class="tp-dottedoverlay tp-opacity-overlay"></div-->
+                            </li>
+                            <li data-transition="fade">
+                                <img src="../img-1/6.jpg"
+                                    alt=""
+                                    data-bgposition="center center"
+                                    data-bgfit="cover"
+                                    data-bgrepeat="no-repeat"
+                                    class="rev-slidebg" />
+                                <!--div class="tp-dottedoverlay tp-opacity-overlay"></div-->
+                            </li>
+                            <li data-transition="fade">
+                                <img src="../img-1/7.jpg"
+                                    alt=""
+                                    data-bgposition="center center"
+                                    data-bgfit="cover"
+                                    data-bgrepeat="no-repeat"
+                                    class="rev-slidebg" />
+                                <!--div class="tp-dottedoverlay tp-opacity-overlay"></div-->
+                            </li>
+                            <li data-transition="fade">
+                                <img src="../img-1/8.jpg"
+                                    alt=""
+                                    data-bgposition="center center"
+                                    data-bgfit="cover"
+                                    data-bgrepeat="no-repeat"
+                                    class="rev-slidebg" />
+                                <!--div class="tp-dottedoverlay tp-opacity-overlay"></div-->
+                            </li>
+							<%--<li data-transition="fade">
+								<img src="img-1/6.jpg"  
+									alt=""
+									data-bgposition="center center" 
+									data-bgfit="cover" 
+									data-bgrepeat="no-repeat" 
+									class="rev-slidebg">
+								<!--div class="tp-dottedoverlay tp-opacity-overlay"></div-->
+							</li>
+							<li data-transition="fade">
+								<img src="img-1/contact-banner.jpg"  
+									alt=""
+									data-bgposition="center center" 
+									data-bgfit="cover" 
+									data-bgrepeat="no-repeat" 
+									class="rev-slidebg">
+								<!--div class="tp-dottedoverlay tp-opacity-overlay"></div-->
+							</li>--%>
+							
+						</ul>
+					</div>
+				</div>				
+				
+				<div id="home-intro" class="home-intro custom-home-intro m-0">
+					<div class="container">
+						<div class="row align-items-center text-center">
+							<div class="col-lg-6 mb-3 mb-lg-0">
+								<p class="text-color-light my-1">
+									Helpline No : (+91)-9711809420
+								</p>
+							</div>
+							<div class="col-lg-6 mb-3 mb-lg-0">
+								<p class="text-color-light my-1">
+									SMS/IVR NO : (+91)-9243029420
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+                
+				<%--<section class="">
+					<div class="container pt-3 pb-4">
+						<div class="row mt-4 mb-0 pt-3 pb-3">
+							<div class="col-md-8">
+								<h2 class="font-weight-semibold mb-0">About Us</h2>
+								<p class="lead font-weight-normal about-section-text">A foray to end forgery</p>
+
+								<p class="about-section-text1">An organization of young but experienced people with a clear mission and objectives, quality 
+									standards are the integral part of our business practices and we believe, that these quality 
+									standards contribute immensely in the overall performance of the organisation.</p>
+								<p class="about-section-text1">The group is providing services to both customers and manufacturers through VCQRU,...</p>
+								<a  href="../Info/About_Us.aspx#About" class="btn about-btn btn-outline btn-quaternary custom-button text-uppercase mt-4 mb-4 mb-md-0 font-weight-bold">read more</a>
+							</div>
+							<div class="col-md-4">
+								<img src="img-1/about.jpg" class="img-fluid box-shadow-custom" /> 
+							</div>
+						</div>
+					</div>
+				</section>--%>
+                
+				
+              <div id="Abouts">
+                    <uc1:abtus runat="server" ID="abtus1" />
+                </div>
+                
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    
+                </asp:ContentPlaceHolder>
+                
+                <%--<div id="services">--%>
+				<%--<uc1:OurServices runat="server" ID="OurServices" />--%>
+                <%--</div>--%>
+                
+               <%-- <div id="blog">
+                <uc1:Blogs runat="server" ID="Blogs" />
+                    </div>--%>
+
+               <%-- <div id="contact">
+                    <uc1:Contact runat="server" ID="Contact1" />
+                </div>
+
+                 <div id="logsign">
+                <uc1:LoginSignUp runat="server" ID="LoginSignUp" />
+
+                 </div>
+                  --%>
+				<%--Product Comparison--%>
+				<section class="">
+					<div class="container pt-3 pb-4">
+						<div class="row mt-4 mb-0 pt-3 pb-3">
+							<div class="col-md-12 text-center mb-5">
+								<h2 class="font-weight-semibold mb-3">Product Comparison</h2>
+								<p class="about-section-text1">Fakes look like original in packaging due to advanced scanning techiques. Hence ordinary purchaser can not differenciate between them. Use Label 9420 to find original and reject fakes.</p>				
+							</div>
+							<div class="col-md-12">
+								<div class="owl-carousel owl-theme" data-plugin-options="{'items': 4, 'autoplay': true, 'autoplayTimeout': 3000}">
+									<div>
+										<img class="img-fluid" src="img-1/img-1.png" alt="">
+									</div>
+									<div>
+										<img class="img-fluid" src="img-1/img-2.png" alt="">
+									</div>
+									<div>
+										<img class="img-fluid" src="img-1/img-3.png" alt="">
+									</div>
+									<div>
+										<img class="img-fluid" src="img-1/img-4.png" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<section class="counters-background">
+					<div class="row counters">
+						<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+							<div class="text-color-style-custome counter">
+								<strong data-to="25000" data-append="+">0</strong>
+								<label>Happy Clients</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+							<div class="counter text-color-style-custome">
+								<strong data-to="15">0</strong>
+								<label>Years in Business</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
+							<div class="counter text-color-style-custome">
+								<strong data-to="352">0</strong>
+								<label>Cups of Coffee</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg-3">
+							<div class="counter text-color-style-custome">
+								<strong data-to="178">0</strong>
+								<label>High Score</label>
+							</div>
+						</div>
+					</div>
+				</section>
+				<%-- <section class="counters-background">
+                    <div class="row counters">
+                        <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+                            <div class="text-color-style-custome counter">
+                                <strong data-to="25000" data-append="+">0</strong>
+                                <label>Happy Clients</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+                            <div class="counter text-color-style-custome">
+                                <strong data-to="6">0</strong>
+                                <label>Years in Business</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
+                            <div class="counter text-color-style-custome">
+                                <strong data-to="352">0</strong>
+                                <label>Cups of Coffee</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="counter text-color-style-custome">
+                                <strong data-to="178">0</strong>
+                                <label>High Score</label>
+                            </div>
+                        </div>
+                    </div>
+                </section>--%>
+            <%--TESTIMONIALS--%>
+            <%-- <section class="section section-center section-no-border section-light destination-feedback" id="VCQvideo">
+                    <div class="row text-center">
+
+
+
+                        <div class="col-md-7" style="text-align:center;">--%>
+            <section class="section-center section-no-border section-light" id="VCQvideo">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 mt-3 mb-3 text-right">
+                            <div class="text-center about-img-style appear-animation" data-appear-animation="jello" data-appear-animation-delay="0">
+                                <%--<iframe width="100%" height="315" src="https://www.www.VCQRU.com/VCQRUConcept.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>--%>
+                                <%--<div >
+                                 
+                                         <video src="http://localhost:40707/CONCEPT%20VCQRU1.COM.mp4" controls="controls"  autoplay="autoplay" width="100%" height="315"
+                                             style="background-color:black;" />
+                                        </div>--%>
+
+
+                                <iframe width="100%" height="415" src="https://www.youtube.com/embed/CnyA-Qv_KN4?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+
+
+
+                                <%--<iframe width="100%" height="315" src="https://www.youtube.com/watch?v=zw271wZCJsA&feature=youtu.be" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>--%>
+                                <%--<iframe width="100%" height="315" src="https://youtu.be/zw271wZCJsA" frameborder="0" ></iframe>--%>
+                                <%--<video src="VCQRUConcept.mp4" controls="controls" autoplay="autoplay" width="100%" height="315" />--%>
+                                <%--<object type="video/mp4"  data="CONCEPT%20VCQRU1.COM.mp4" width="100%" height="315">
+                                        <param name="src" value="~/CONCEPT%20VCQRU1.COM.mp4" />
+                                        <param name="autostart" value="true" />
+                                        <param name="allowfullscreen" value="true" />
+                                        <param name="sound" value="ture" />
+                                        <embed autoplay="true" allowfullscreen="true"></embed>
+                                    </object>--%>
+                            </div>
+                        </div>
+
+                    </div>
+                    <%--  <div class="col-md-7 feedback-padding">
+                            <div class="col-md-12 heading-bottom-space">
+                                <h2 class="font-weight-semibold appear-animation" data-appear-animation="fadeInDown" data-appear-animation-delay="0">TESTIMONIALS</h2>
+                            </div>
+                            <div class="owl-carousel owl-theme" data-plugin-options="{'items':1, 'autoplay': false, 'autoplayTimeout': 5000}">
+                                <div>
+                                    <div class="col">
+                                        <div class="testimonial testimonial-style-2 testimonial-text-style-2">
+                                            <div class="feedback-width testimonial-author">
+                                                <div class="feedback-width-1">
+                                                    <img src="Content/images/testimonials/Raj.jpg" class="img-fluid rounded-border" alt="" />
+                                                </div>
+
+                                                <div class="feedback-width-2">
+                                                 
+                                                    <p><strong>Raj Bahadur On 21 JAN 2014</strong></p>
+                                                    <ul class="social-icons custom-social-icons social-icons-spacing">
+                                                        <li class="social-icons-bg social-icons-facebook">
+                                                            <a href="https://www.facebook.com/vcqru/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                                        <li class="social-icons-bg social-icons-twitter">
+                                                            <a href="https://twitter.com/vcqru?lang=en" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                                        <li class="social-icons-bg social-icons-googleplus">
+                                                            <a href="https://www.linkedin.com/company/9230775/admin/updates/" target="_blank" title="Google Plus">
+                                                                <i class="fa fa-google-plus"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <blockquote>
+                                                <p class="font-open_sens">Very effective all companies should adopt....</p>
+                                            </blockquote>
+                                            <div class="testimonial-arrow-down"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="col">
+                                        <div class="testimonial testimonial-style-2 testimonial-text-style-2">
+                                            <div class="feedback-width testimonial-author">
+                                                <div class="feedback-width-1">
+                                                    <img src="Content/images/testimonials/Himanshu.jpg" class="img-fluid rounded-border" alt="" />
+                                                </div>
+                                                <div class="feedback-width-2">
+                                                    <p>
+                                                        <strong>Himanshu On 05 FEB 2014</strong>
+                                                        <ul class="social-icons custom-social-icons social-icons-spacing">
+                                                            <li class="social-icons-bg social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                                            <li class="social-icons-bg social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                                            <li class="social-icons-bg social-icons-googleplus"><a href="http://www.google.com/" target="_blank" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+                                                        </ul>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <blockquote>
+                                                <p class="font-open_sens">Every Apps are available....</p>
+                                            </blockquote>
+                                            <div class="testimonial-arrow-down"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="col">
+                                        <div class="testimonial testimonial-style-2 testimonial-text-style-2">
+                                            <div class="feedback-width testimonial-author">
+                                                <div class="feedback-width-1">
+                                                    <img src="Content/images/testimonials/BD.jpg" class="img-fluid rounded-border" alt="" />
+                                                </div>
+                                                <div class="feedback-width-2">
+                                                    <p>
+                                                        <strong>SANTOSH KUMAR On 10 FEB 2014</strong>
+                                                        <ul class="social-icons custom-social-icons social-icons-spacing">
+                                                            <li class="social-icons-bg social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                                            <li class="social-icons-bg social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                                            <li class="social-icons-bg social-icons-googleplus"><a href="http://www.google.com/" target="_blank" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+                                                        </ul>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <blockquote>
+                                                <p class="font-open_sens">Should be must for every producers....</p>
+                                            </blockquote>
+                                            <div class="testimonial-arrow-down"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>--%>
+                </div>
+            </section>
+				<%--LET'S TALK--%>
+				<section class="section-center section-no-border section-light">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-md-6 section-box-padding mt-0 mb-0">
+								<div class="alert alert-success d-none mt-1" id="contactSuccess">
+									<strong>Success!</strong> Your message has been sent to us.
+								</div>
+
+								<div class="alert alert-danger d-none mt-4" id="contactError">
+									<strong>Error!</strong> There was an error sending your message.
+									<span class="text-1 mt-2 d-block" id="mailErrorMessage"></span>
+								</div>
+
+								<h3 class="mb-0 mt-2">LET'S TALK</h3>
+								<hr />
+
+
+                                 
+
+
+								<%--<form id="contactForm" action="php/contact-form.php" method="POST">--%>
+                              <%--  <form id="contactForm">--%>
+									<div class="form-row">
+										<div class="form-group col-lg-6">
+											<input type="text" placeholder="name *"  onkeyup='alphanumeric(this);' 
+                                                onblur="if (this.value == '')" 
+                                                maxlength="100" class="form-control" id="name"  />
+										</div>
+										<div class="form-group col-lg-6">
+											<input type="email" placeholder="email *" onblur="if (this.value == '')"  
+                                                 data-msg-email="Please enter a valid email address." 
+                                                maxlength="100" class="form-control"  id="email"   />
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="form-group col">
+											<input type="text" placeholder="mobile No *"   
+                                                   maxlength="13" class="form-control" id="cmobile1"   />
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="form-group col">
+											<textarea maxlength="5000" placeholder="message *" onblur="if (this.value == '')" 
+                                                 rows="4" class="form-control"  id="comment" ></textarea>
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="form-group col">
+											<input runat="server" type="button" value="Send Message" class="btn btn-primary btn-lg"  onclick="return sendquery();"/>
+										</div>
+									</div>
+								<%--</form>--%>
+							</div>
+							<div class="col-md-6 mt-3 text-right">
+								<img src="img-1/fusionfactor_testimonial.jpg" width="80%" class="lest-section-img" alt=""   />
+							</div>
+						</div>
+					</div>
+				</section>
+				
+			</div>
+			<!--- Content Ends here -->
+
+
+
+   
+    
+     <!-- Modal Content Start -->
+   <%--Modal TO SHOW AFTER CHECK YOUR CODES--%>
+            <div class="modal fade" id="smallModal" tabindex="-1" role="alert" aria-labelledby="smallModalLabel" aria-hidden="true" style="">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="smallModalLabel">Code Check Result (VCQRU)</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="about-section-text1" id="p1msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc vehicula lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus.</p>
+                        </div>
+                        <div class="modal-footer">
+
+                            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="modal fade" id="ResetPwdModal" tabindex="-1" role="alert" aria-labelledby="ResetPwdLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p class="about-section-text1" style="color:red;" id="pwdNotMatch"></p>
+                            <h4 class="modal-title" id="ResetPwdLabel">Enter your password for reset</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <%--<p class="about-section-text1" id="p1msg">Limis in faucibus.</p>--%>
+                            <div class="form-row">
+                                    <div class="form-group col">
+                                        Password*
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <input type="password" placeholder="password *"  maxlength="50" class="form-control" name="pwd"
+                                            id="pwd1" />
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        Confirm Password*
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <input type="password" placeholder="password *"  maxlength="50" class="form-control" name="pwd"
+                                            id="pwdConfirm1" />
+                                    </div>
+                                </div>
+                                
+                        </div>
+                        <div class="modal-footer">
+                              
+                            <button type="button" id="myFormSubmit" class="btn btn-primary" onclick="ConfirmResetPWD();">Confirm</button>
+                            <%--<button type="button" class="btn btn-light" data-dismiss="modal" id="btnResetPwd"></button>--%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <div class="modal fade" id="ServiceModal" tabindex="-1" role="alert" aria-labelledby="ServiceModalLabel" aria-hidden="true" style="">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="ServiceModalLabel">Code Check Result (VCQRU)</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="about-section-text1"  id="Servicep1msg"></p>
+                        </div>
+                       <%-- <div class="modal-footer">
+
+                            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                        </div>--%>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Content End -->
+    
+    
+   
+    <!--- Footer Starts here -->
+			<%--Footer User Control--%>
+    <uc1:Footer runat="server" ID="Footer" />
+			<!--  Footer Ends here -->
+        <%--</form>--%>
+
+        </div>
+               </form>   
+      <div align="center" id="progress" style="display: none; position: fixed; left: 0px; height: 100%; width: 100%; z-index: 100001; background-color: #000; opacity: 0.65;" class="NewmodalBackground">
+        <div style="margin-top: 300px;" align="center">
+            <img alt="" src="Content/images/ajax-loader.gif" /><br />
+            <span style="color: White;">Processing.....<br />
+            </span>
+        </div>
+    </div>
+    <!-- Vendor New design -->
+		<script src="../vendor/jquery/jquery.min.js"></script>
+		<script src="../vendor/jquery.appear/jquery.appear.min.js"></script>
+		<script src="../vendor/jquery.easing/jquery.easing.min.js"></script>
+		<script src="../vendor/jquery-cookie/jquery-cookie.min.js"></script>
+		<script src="../vendor/popper/umd/popper.min.js"></script>
+		<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../vendor/common/common.min.js"></script>
+		<%--<script src="../vendor/jquery.validation/jquery.validation.min.js"></script>--%>
+		<script src="../vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+		<script src="../vendor/jquery.gmap/jquery.gmap.min.js"></script>
+		<script src="../vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+		<script src="../vendor/isotope/jquery.isotope.min.js"></script>
+		<script src="../vendor/owl.carousel/owl.carousel.min.js"></script>
+		<script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script src="../vendor/vide/vide.min.js"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="../js/theme.js"></script>
+		
+		<!-- Current Page Vendor and Views -->
+		<script src="../vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+		<script src="../vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="../vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
+		<script src="../js/views/view.home.js"></script>
+		
+		<!-- Theme Custom -->
+		<script src="../js/custom.js"></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="../js/theme.init.js"></script>
+
+		<!-- Examples -->
+		<script src="../js/examples/examples.demos.js"></script>
+     <script src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js'></script>
+        <script src='https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js'></script>+
+         <link href="../Content/css/jquery-confirm.css" rel="stylesheet" />
+    <script src="../Content/js/jquery-confirm.js" type="text/javascript"></script>
+        <script>
+
+  $(document).ready( function () {
+   $('.table').dataTable( {
+     responsive: true,
+     "paging":   false,
+     "ordering": false,
+       "search":false,
+     //"info": true
+    } );
+  } );
+
+
+
+        </script>
+    <!-- End Vendor New design -->
+  
+      <script src="../Content/js/toastr.min.js"></script>    
+    <link href="../Content/css/toastr.min.css" rel="stylesheet" />
+      
+       
+    <link href="../Content/css/jquery-confirm.css" rel="stylesheet" />
+    <script src="../Content/js/jquery-confirm.js" type="text/javascript"></script>
+    <link href="../Content/css/flexslider.css" rel='stylesheet' type='text/css' />
+    <%--<script defer src="Content/js/jquery.flexslider.js"></script>--%>
+    <script type="text/javascript">
+//        $(function () {
+//            SyntaxHighlighter.all();
+//        });
+        //$(window).load(function () {
+        //    $('.flexslider').flexslider({
+        //        animation: "slide",
+        //        start: function (slider) {
+        //            $('body').removeClass('loading');
+        //        }
+        //    });
+        //});
+    </script>
+</body>
+</html>

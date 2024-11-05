@@ -1,0 +1,321 @@
+@media (max-width: 1500px) {
+}
+
+@media (max-width: 1300px) {
+    #header .nav-link {
+    font-weight: 600;
+    font-size: 13px;
+}
+    #header .dropdown-item {
+    padding: 6px 40px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.footer-item ul.footer-links li {
+    list-style: none;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+}
+
+@media (max-width: 1200px) {
+}
+@media (min-width: 991px) and (max-width: 1200px) {
+}
+@media (max-width: 1000px) {
+	.work-process-left .work-process-warp [class*="col-"]:nth-child(even){
+	    margin-top: 0px;
+	}
+}
+@media (max-width: 991px) {
+	#top-header .top-header-left,
+	#top-header .top-header-right{
+		text-align: center;
+		margin: 5px 0px;
+	}
+	#header .navbar-collapse ::selection{
+		color: #fff;
+		background-color: #1d70c9;
+	}
+	#header .navbar-collapse ::-webkit-scrollbar{
+	    background-color: #ccc;
+	    width: 7px;
+	}
+	#header .navbar-collapse ::-webkit-scrollbar-thumb{
+	    background-color: #1d70c9;
+	}
+	#header{
+		padding: 8px 0px;
+	}
+	#header .header-right-btn{
+		display: none;
+	}
+	#header .navbar-collapse {
+		margin-top: 0;
+		position: fixed;
+		background: #FFF !important;
+		width: 100%;
+		height:100%;
+		top: 0;
+		right: 0;
+		z-index: 99;
+		padding: 14px;
+		clear:both;
+	}
+	#header .navbar-collapse .show{
+		width:90%;
+		right:auto;
+	}
+	#header .navbar-toggler {
+		outline: 0;
+		border: 0;
+		font-size: 100%;
+		color: #fff;
+		line-height: 1.5;
+		padding: 7px 20px;
+		border: 0;
+		z-index: 999;
+	}
+	#header .nav-item{
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	#header .nav-link{
+		padding: 15px 0px;
+	}
+	#header .navbar-nav{
+		height: 350px;
+    	overflow-y: scroll;
+	}
+	#header.header-transparent .nav-item .nav-link{
+		padding: 20px;
+	}
+	/* header transparent */
+	#header.header-transparent .nav-item.active .nav-link,
+	#header.header-transparent .nav-item:hover .nav-link,
+	#header.header-transparent .dropdown:hover .dropdown-toggle::after{
+	    color: #1d70c9;
+	}
+	#header.header-transparent .navbar-collapse{
+		background-color: #fff;
+    	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+	}
+	#header.header-transparent .nav-item .nav-link{
+	    color: #343a40;
+	}
+	.about-us-right{
+		padding-left: 0px;
+	}
+	.section-header,
+	.section-footer{
+		width: 100%;
+	}
+	.work-process-col-icon:after{
+		left: 0;
+	}
+	.work-process-col-icon-last:after{
+	    display: block;
+	}
+	.theme-shuffle [class*="col-"]{
+		max-width: 50%;
+	}
+	.sub-footer-left,
+	.sub-footer-right{
+		text-align: center;
+		margin: 5px 0px;
+	}
+	.qr-code {
+		margin-top: 33px;
+		position: relative;
+	}
+	.qr-code .box{
+		width: 168px;
+	}
+    .login-section .login-page .welcome.active{
+        left: 57.6%;
+    }
+    #blog {
+    padding: 50px 0;
+}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (max-width: 990px) {
+	#breadcrumb {
+		padding: 20px 0px 0px;
+		text-align: center;
+		background-size: cover !important;
+	}
+	#slider-carousel h1 {
+		font-size: 30px;
+	}
+
+}
+@media (max-width: 960px) {
+	#slider-carousel h1{
+		font-size: 30px;
+	}
+}
+@media (max-width: 860px) {
+}	
+@media (max-width: 767px) {
+    #header .navbar-nav .nav-item:first-child a {
+    padding: 0;
+    font-size: 25px;
+}
+	#slider-carousel .carousel-caption .box-icon-info {
+		width: 50% !important;
+	}
+	#slider-carousel .carousel-caption .box-icon-info h4{
+		font-size:22px;
+	}
+	#slider-carousel h3{
+		font-size: 16px;
+	}
+	#slider-carousel .carousel-caption .box-icon-info p {
+		font-size: 12px;
+	}
+	.work-process-col {
+		text-align: center;
+		padding-bottom: 0;
+	}
+	#slider-carousel .carousel-caption {
+		width: 90%;
+	}
+	#slider-carousel .work-process-col-icon:after, #slider-carousel .work-process-col-icon:before {
+		display: none;
+	}
+	#slider-carousel .carousel-item {
+		height: 440px;
+		padding: 2em 0;
+	}
+	.work-process-col-icon .iconsvg {
+		width: 50px;
+		height: 50px;
+		padding: 10px;
+	}
+	.about-us-left .about-us-since{
+		right: 30px;
+	}
+	.theme-shuffle [class*="col-"]{
+		max-width: 100%;
+	}
+.login-section .login-page .welcome {
+    position: relative;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    text-align: center;
+    transition: 1s cubic-bezier(.95,.32,.37,1.31);
+    z-index: 2;
+}
+.login-section .login-page .welcome h2{
+  margin: 10px 0;
+}
+.login-section .login-page{
+  height: 734px;
+  overflow: hidden;
+}
+.login-section .login-page .login{
+  position: relative;
+  height: 0;
+}
+
+.login-section .login-page .welcome.active {
+  left: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 0px;
+  transition: 1s cubic-bezier(.95,.32,.37,1.31);
+  z-index: 2;
+}
+.login-section .login-page .login.active{
+  padding-right: 0;
+  padding-top: 25px;
+  min-height: 476px;
+
+}
+.login-section .login-page .sign_up{
+  padding-left: 0;
+}
+.login-section .login-page .welcome .btn{
+  top:0;
+  left: 0;
+  position: relative;
+  margin: 10px auto;
+}
+.login-section .login-page .welcome .sign_in{
+margin: 10px auto;
+left: 50%;
+position: absolute;
+transform: translateX(-50%);
+}
+.login-section .login-page .welcome .social-links{
+  position: relative;
+}
+.forgot_passwerd {
+  padding: 0 2.1em;
+}
+    
+#backtotop{
+    position: relative;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px auto;
+    text-align: center;
+}
+#backtotop a{
+    width: 100%;
+    border-radius: 0px;
+}
+}
+@media (max-width: 700px) {
+}
+
+@media (max-width: 600px) {
+	#breadcrumb h1 {
+		margin-bottom: 30px;
+		color: #fff;
+		font-size: 25px;
+	}
+	#header .navbar-toggler {
+		padding: 2px 11px;
+	}
+	#slider-carousel .carousel-caption .box-icon-info:last-child p{
+		margin-bottom:0;
+	}
+	.social-media-icons li:first-child {
+		display: block;
+		list-style: none;
+		margin-bottom: 15px;
+	}
+
+	.logo img {
+		margin-right: 5px;
+		width: 84px;
+	}
+
+	.s-btn {
+		padding: 10px 10px;
+	}
+}
+@media (max-width: 500px) {
+}
+@media (max-width: 470px) {
+}
+@media (max-width: 400px) {
+
+	
+}
+@media (max-width: 330px) {
+}

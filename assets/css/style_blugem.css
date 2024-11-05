@@ -1,0 +1,208 @@
+ body
+    {
+      margin: 0;
+      padding: 0;
+      
+    }
+
+   
+
+    section.top {
+    background-color: #1f3368;
+    padding: 5px;
+}
+    
+    ul
+    {
+      list-style: none;
+      display:inline-flex;
+      margin: 0;
+      color: #fff;
+    }
+
+   ul li img {
+    /* width: 30px; */
+    height: 30px;
+    /* padding: 0px 0px; */
+    margin: 0px 3px;
+    
+}
+
+.bottom-heder
+{
+  padding:10px;
+}
+
+::placeholder
+{
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+ 
+}
+
+
+
+hr {
+    /* position: relative; */
+    /* top: 20px; */
+    border: none;
+    height: 2px;
+    background: #ffc107;
+    /* margin-bottom: 50px; */
+    opacity: inherit;
+    width: 92%;
+}
+
+
+
+       form {
+        background: #c0222a;
+        border-radius: 10px;
+        box-shadow: 0px 0px 2px #2f2e2e;
+        margin-bottom: 20px;
+      }
+
+      .form-maine {
+        padding: 25px;
+      }
+
+      .HEADING
+      {
+        padding-top: 20px;
+        text-align: center;
+      }
+
+      .footer-linke {
+    color: #fff;
+    text-align: center;
+}
+
+.footer-linke a {
+    color: #fff;
+    text-decoration: none;
+}
+
+      button.btn-2 {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    background: #1f3368;
+    color: #fff;
+    border: none;
+}
+
+.main-head-sub
+{
+  font-size: 32px;
+    font-weight: 300;
+}
+
+.view
+{
+  place-items: center;
+}
+
+.main-head {
+    color: #dfc822;
+    font-size: 70px;
+    font-weight: 700;
+    
+}
+
+footer
+{
+  padding: 10px;
+  text-align: center;
+}
+
+footer a
+{
+  margin: auto;
+  color: #1f3368;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 767px) 
+{
+  .main-head
+  {
+    font-size: 36px;
+  }
+  .main-head-sub {
+    font-size: 18px;
+    
+}
+
+::placeholder
+{
+  font-size: 13px;
+  
+}
+
+.logo img {
+    width: 33%;
+}
+
+.logo
+{
+  text-align: center;
+}
+
+.form-maine {
+    padding: 12px;
+}
+
+.view {
+    
+    flex-direction: column-reverse;
+}
+
+form
+{
+ margin-bottom: 17px;
+}
+
+p {
+    font-size: 16px;
+}
+
+}
+
+
+ @media screen and (width: 280px) {
+           ::placeholder
+{
+  font-size: 10px;
+  
+}
+
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) 
+
+{
+  .logo img {
+    width: 18%;
+}
+
+.view-social-tab
+{
+  text-align: end;
+}
+
+.main-head
+{
+  font-size: 53px;
+}
+
+.main-head-sub {
+    font-size: 23px;
+   
+}
+
+}

@@ -1,0 +1,812 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="pfl.master.cs" Inherits="Patanjali_pfl" %>
+
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagar petroleums private limited</title>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <%-- Datatable Css --%>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.9/css/buttons.bootstrap5.min.css" />
+    <%-- Datatable Css --%>
+    <!-- css -->
+    <link rel="stylesheet" href="../SagarPetro/assets/css/css.css">
+    <link rel="stylesheet" href="../SagarPetro/assets/css/reponsive.css">
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+
+
+     <%-- Loader --%>
+
+    <style>
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+            
+                width: 100vw;
+            height: 100vh;
+            display: none;
+             background: rgba(0, 0, 0, 0.6);
+            
+        }
+
+
+        .cv-spinner {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px #ddd solid;
+            border-top: 4px #2e93e6 solid;
+            border-radius: 50%;
+            animation: sp-anime 0.8s infinite linear;
+        }
+
+
+        @keyframes sp-anime {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <script type="text/javascript">        function showLoader() {            $('#overlay').show();  // Show overlay and spinner        }        function hideLoader() {            $('#overlay').hide();  // Hide overlay and spinner        }        $(document).ready(function () {
+            // Show loader when any button with the class '.btn-primary' is clicked, except the toggle button
+            $('.btn-primary').not(
+                '#toggle, ' +
+                '#ctl00_ContentPlaceHolder1_HyperLinkAadharFront, ' +
+                '#ctl00_ContentPlaceHolder1_HyperLinkAadharBack, ' +
+                '#ctl00_ContentPlaceHolder1_HyperLinkPan, ' +
+                '#ctl00_ContentPlaceHolder1_HyperLinkPass, ' +
+                '#ctl00_ContentPlaceHolder1_HyperLinkShop, ' +
+                '#ctl00_ContentPlaceHolder1_HyperLinkShop1, ' +
+                '#ctl00_ContentPlaceHolder1_HyperLinkShop2'
+            ).click(function () {
+                showLoader();
+            });
+
+
+            // Show loader when any link inside an 'li' element is clicked, except toggle links
+            $('li a').not('#toggle').click(function () {
+                showLoader();
+            });
+
+            // PageRequestManager events for async postbacks (e.g., in ASP.NET WebForms)
+            var prm = Sys.WebForms.PageRequestManager.getInstance();
+            prm.add_beginRequest(function () {
+                showLoader();
+            });
+
+            // Hide loader when the async request completes
+            prm.add_endRequest(function () {
+                hideLoader();
+            });
+        });
+    </script>
+
+    <%-- End Loader --%>
+
+
+
+    <style>
+        /* Blue Theme */
+        .blue {
+            --primary-color: blue;
+            --secondary-color: lightblue;
+        }
+
+        /* Green Theme */
+        .green {
+            --primary-color: green;
+            --secondary-color: lightgreen;
+        }
+
+        /* Yellow Theme */
+        .yellow {
+            --primary-color: yellow;
+            --secondary-color: lightyellow;
+        }
+
+        /* Red Theme */
+        .red {
+            --primary-color: red;
+            --secondary-color: lightcoral;
+        }
+
+        /* Purple Theme */
+        .purple {
+            --primary-color: purple;
+            --secondary-color: lavender;
+        }
+
+        /* Update your existing styles to use variables */
+        body {
+            background-color: var(--secondary-color);
+        }
+
+        .sidebar {
+            background-color: var(--primary-color);
+        }
+
+        /* Add more styles using the variables as needed */
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('.btn-color').click(function (event) {
+                event.preventDefault();
+                var color = $(this).data('color');
+                $('body').removeClass().addClass(color);
+            });
+        });
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function showAlert(title, text, icon) {
+            Swal.fire({
+                title: title,
+                text: text,
+                icon: icon,
+                confirmButtonText: 'OK'
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        function showMessagewithredirect(title, text, icon, redirectUrl) {
+            Swal.fire({
+                icon: icon,
+                title: title,
+                text: text,
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = redirectUrl;
+                }
+            });
+        }
+    </script>
+
+    <script>
+        function performSearch(searchText) {
+            debugger;
+            $('#dataTable tbody tr').each(function () {
+                var row = $(this);
+                var found = false;
+
+                row.find('td').each(function () {
+                    var cellText = $(this).text().toLowerCase();
+                    if (cellText.includes(searchText.toLowerCase())) {
+                        found = true;
+                        return false; // Exit the loop if found
+                    }
+                });
+
+                if (found) {
+                    row.show();
+                } else {
+                    row.hide();
+                }
+            });
+        }
+    </script>
+
+    <script>
+        function restrictEnterKey(event) {
+            // Check if the pressed key is Enter (key code 13)
+            if (event.key === "Enter") {
+                // Prevent the default action
+                event.preventDefault();
+                return false;
+            }
+        }
+</script>
+
+    <script>
+        function downloadGridData(ReportName) {
+           
+            let table = document.getElementById('dataTable');
+            let rows = table.rows;
+            let csvContent = '';
+
+            for (let i = 0; i < rows.length; i++) {
+                let row = rows[i];
+                let cols = row.cells;
+                let rowData = [];
+
+                for (let j = 0; j < cols.length; j++) {
+                    rowData.push(cols[j].innerText);
+                }
+
+                csvContent += rowData.join(',') + '\n';
+            }
+
+            let blob = new Blob([csvContent], { type: 'text/csv' });
+            let link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = ReportName+'.csv';
+            link.click();
+        }
+    </script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color: #e4e9f7;">
+    <form id="form1" runat="server" class="needs-validation" onkeypress="return restrictEnterKey(event)" novalidate>
+        <cc1:ToolkitScriptManager runat="Server" AsyncPostBackTimeout="20000" EnablePartialRendering="true"
+            EnablePageMethods="true" ID="ScriptManager1" />
+        <div>
+            <!-- Side-Bar -->
+            <div class="sidebar" id="sidebar">
+                <div class="menu-bar">
+                    <div class="menu">
+                        <li class="search-box">
+                            <i class='bx bx-search icon'></i>
+                            <input type="text" id="searchInput" placeholder="Search...">
+                        </li>
+                        <ul class="menu-links">
+                            <li id="DashboardDiv" visible="true" runat="server" class="nav-link">
+                                <a href="../SagarPetro/dashboard.aspx">
+                                    <i class='bx bx-home-alt icon'></i>
+                                    <span class="text nav-text">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="menu-dropdown">
+                                <div class="accordion accordion-flush" id="dropDownMenu">
+                                    <div id="divusersall" runat="server" class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseusers" aria-expanded="false" aria-controls="collapseusers">
+                                                <i class='bx bx-package icon'></i>
+                                                <span class="text nav-text">Users</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseusers" class="accordion-collapse collapse"
+                                            data-bs-parent="#dropDownMenu">
+                                            <div class="accordion-body">
+                                                <ul>
+                                                    <%-- <li runat="server" id="liroletype" class="nav-link">
+                                                        <a href="userroletype.aspx">
+                                                           <i class='bx bx-user-circle icon'></i>
+                                                            <span class="text nav-text">User Role</span>
+                                                        </a>
+                                                    </li>--%>
+                                                    <li id="divUsers" runat="server" class="nav-link">
+                                                        <a href="newuser.aspx">
+                                                            <i class='bx bx-user-circle icon'></i>
+                                                            <span class="text nav-text" id="username">Users Details</span>
+                                                        </a>
+                                                    </li>
+                                                      <li id="LiConnectedpeople" runat="server" class="nav-link">
+                                                        <a href="Connectedpeople.aspx">
+                                                            <i class='bx bx-user-circle icon'></i>
+                                                            <span class="text nav-text" id="Connectedpeople">Connected People</span>
+                                                        </a>
+                                                    </li>
+                                                     <li id="divloyalitity" runat="server" class="nav-link">
+                                                        <a href="addloyalitygifts.aspx">
+                                                            <i class='bx bx-user-circle icon'></i>
+                                                            <span class="text nav-text" id="loyalitity">Add Loyalty Gift</span>
+                                                        </a>
+                                                    </li>
+                                                      <li id="loyalityclaim" runat="server" class="nav-link">
+                                                        <a href="Loyalityclaimsgr.aspx">
+                                                            <i class='bx bx-user-circle icon'></i>
+                                                            <span class="text nav-text" id="loyalityclaimdetails">Loyalty Claim</span>
+                                                        </a>
+                                                    </li>
+                                                     <li id="divuserkyc" runat="server" class="nav-link">
+                                                        <a href="frmkycsgr.aspx">
+                                                            <i class='bx bx-user-circle icon'></i>
+                                                            <span class="text nav-text" id="userkyc">Users KYC</span>
+                                                        </a>
+                                                    </li>
+                                                     <li id="liuserclaimcash" runat="server" class="nav-link">
+                                                        <a href="Cashreddemrpt.aspx">
+                                                            <i class='bx bx-user-circle icon'></i>
+                                                            <span class="text nav-text" id="userclaimcash">Cash Claim Details</span>
+                                                        </a>
+                                                    </li>
+                                                    <li id="Li2" runat="server" class="nav-link">
+                                                        <a href="bannersagar.aspx">
+                                                            <i class='bx bx-user-circle icon'></i>
+                                                            <span class="text nav-text" id="banner">Banner</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="lireports" runat="server" class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                <i class='bx bx-book-open icon'></i>
+                                                <span class="text nav-text">Reports</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                            data-bs-parent="#dropDownMenu">
+                                            <div class="accordion-body">
+                                                <ul>
+                                                    <li runat="server" id="codeverification" class="nav-link">
+                                                        <a href="../SagarPetro/CodeVerificationReport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Code Verification</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="enqreport" class="nav-link">
+                                                        <a href="../SagarPetro/Enquiry_Details_Report.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Enquiry Details</span>
+                                                        </a>
+                                                    </li>
+                                                     <li runat="server" id="usercounts" class="nav-link">
+                                                        <a href="../SagarPetro/Userrptsgr.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Users Count</span>
+                                                        </a>
+                                                    </li>
+                                                     <li runat="server" id="codedetails" class="nav-link">
+                                                        <a href="../SagarPetro/couponstatus.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Code Status</span>
+                                                        </a>
+                                                    </li>
+                                                     <li runat="server" id="redeemtionrpt" class="nav-link">
+                                                        <a href="../SagarPetro/Redemption_rpt.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Redeemtion Details</span>
+                                                        </a>
+                                                    </li>
+                                                      <li runat="server" id="productwisepoint" class="nav-link">
+                                                        <a href="../SagarPetro/productwisepointearnreport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Points earned against product</span>
+                                                        </a>
+                                                    </li>
+                                                   <%--   <li runat="server" id="Scoredetails" class="nav-link">
+                                                        <a href="../SagarPetro/Scoredetails.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">User Score Details</span>
+                                                        </a>
+                                                    </li>--%>
+                                                      <li runat="server" id="UserviewScoredetails" class="nav-link">
+                                                        <a href="../SagarPetro/getuserdetailsbydistrict.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">User Wise Score Details</span>
+                                                        </a>
+                                                    </li>
+                                                     <li runat="server" id="transactionsummery" class="nav-link">
+                                                        <a href="../SagarPetro/transactiondetailsrpt.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Transaction Summery</span>
+                                                        </a>
+                                                    </li>
+                                                     <li runat="server" id="transactiondetails" class="nav-link">
+                                                        <a href="../SagarPetro/transactiondetailsfull.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Transaction Details</span>
+                                                        </a>
+                                                    </li>
+                                                       <li runat="server" id="instantpayout" class="nav-link">
+                                                        <a href="../SagarPetro/Instantpayout.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Instant Payout Details</span>
+                                                        </a>
+                                                    </li>
+                                                      <li runat="server" id="monthwisereport" class="nav-link">
+                                                        <a href="../SagarPetro/monthwisereport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Month Wise Data</span>
+                                                        </a>
+                                                    </li>
+                                                   <%-- <li runat="server" id="InvalidCodeReport" class="nav-link">
+                                                        <a href="../SagarPetro/InvalidCodeReport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Invalid Code Details</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="rptConsumer" class="nav-link">
+                                                        <a href="../SagarPetro/pflconsumerdetails.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Consumer Report</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="codescanning" class="nav-link">
+                                                        <a href="../SagarPetro/pfl13digitmobilenoscaning.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Code duplicity report</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="statestatus" class="nav-link">
+                                                        <a href="../SagarPetro/statewisestatusreport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">State Wise Status</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="productstatus" class="nav-link">
+                                                        <a href="../SagarPetro/ProWiseStatusReport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Product Wise Status</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="MobileStatus" class="nav-link">
+                                                        <a href="../SagarPetro/mobnowisestatusreport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Mobile Number Wise Status Analysis</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="Companystatus" class="nav-link">
+                                                        <a href="../SagarPetro/compcodewisereport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Code Wise Status Count</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="usercode" class="nav-link">
+                                                        <a href="../SagarPetro/User_CodeReport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Mothly code usage and user analysis</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="producthistory" class="nav-link">
+                                                        <a href="../SagarPetro/Consumer_Purchase_History_Report.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Consumer Product History</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="codestatus" class="nav-link">
+                                                        <a href="../SagarPetro/Code Status Report.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Code Status</span>
+                                                        </a>
+                                                    </li>--%>
+                                                   <%-- <li runat="server" id="ClickedReport" class="nav-link">
+                                                        <a href="../SagarPetro/ClickedReport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Product click tracking report</span>
+                                                        </a>
+                                                    </li>--%>
+                                                   <%-- <li runat="server" id="Li2" class="nav-link">
+                                                        <a href="../SagarPetro/UserEnquiryReport.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">User Enquiry Report</span>
+                                                        </a>
+                                                    </li>--%>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="liproductparticular" runat="server" class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <i class='bx bx-package icon'></i>
+                                                <span class="text nav-text">Product Particulars</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#dropDownMenu">
+                                            <div class="accordion-body">
+                                                <ul>
+                                                    <li runat="server" id="liproductregistration" class="nav-link">
+                                                        <a href="RegisteredProduct.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Product Registration</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="liassignlabel" class="nav-link">
+                                                        <a href="ProductDetails.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Assign Labels to Product</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="SearchCodeDetails" class="nav-link">
+                                                        <a href="SearchCodeDetails.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Assign New Batch No.</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="liOurservice" runat="server" visible="false" class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                <i class='bx bx-cog icon'></i>
+                                                <span class="text nav-text">Our Service</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#dropDownMenu">
+                                            <div class="accordion-body">
+                                                <ul>
+                                                    <li runat="server" id="liservicesubscription" class="nav-link">
+                                                        <a href="ServicesSubcription.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Service Subscription</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="liserviceSetting" class="nav-link">
+                                                        <a href="ServiceSettings.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Service Setting</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="liLabelSection" runat="server" class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                <i class='bx bx-label icon'></i>
+                                                <span class="text nav-text">Label Section</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFive" class="accordion-collapse collapse"
+                                            data-bs-parent="#dropDownMenu">
+                                            <div class="accordion-body">
+                                                <ul>
+
+                                                      <li runat="server" id="liRequestForPrintLabels" class="nav-link">
+                                                        <a href="frmPrintLabelRequest.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Request For Print Labels</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="liLabelReceive" class="nav-link">
+                                                        <a href="FrmLabelDispatch.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Label Receive</span>
+                                                        </a>
+                                                    </li>
+                                                  
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="liScrapParticulars" runat="server" class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                <i class='bx bx-recycle icon'></i>
+                                                <span class="text nav-text">Scrap Particulars</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse"
+                                            data-bs-parent="#dropDownMenu">
+                                            <div class="accordion-body">
+                                                <ul>
+                                                    <li runat="server" id="liscrapsummary" class="nav-link">
+                                                        <a href="Frm_Scrap.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Scrap Summary Report</span>
+                                                        </a>
+                                                    </li>
+                                                    <li runat="server" id="liscraplabelentry" class="nav-link">
+                                                        <a href="FrmScrapEntry.aspx">
+                                                            <i class='bx bx-radio-circle-marked icon'></i>
+                                                            <span class="text nav-text">Scrap Label Entry</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="Li1" visible="true" runat="server" class="nav-link">
+                                <a href="../SagarPetro/companyprofile.aspx">
+                                    <i class='bx bx-bar-chart-alt-2 icon'></i>
+                                    <span class="text nav-text" id="Companyprofile">Company Profile</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bottom-content">
+                       <%-- <li class="nav-link">
+                            <a href="../SagarPetro/Loginpfl.aspx">
+                                <i class='bx bx-log-out icon'></i>
+                                <span class="text nav-text">Logout</span>
+                            </a>
+                        </li>--%>
+                         <li class="nav-link">
+                           <asp:Button ID="btnlogout" Text="Logout" runat="server" OnClick="btnlogout_Click" />
+                        </li>
+                    </div>
+
+                    <%-- <div class="color-selection">
+                        <button class="btn-color" data-color="blue">Blue</button>
+                        <button class="btn-color" data-color="green">Green</button>
+                        <button class="btn-color" data-color="yellow">Yellow</button>
+                        <button class="btn-color" data-color="red">Red</button>
+                        <button class="btn-color" data-color="purple">Purple</button>
+                    </div>--%>
+                </div>
+            </div>
+            <!-- Nav-topbar -->
+            <div class="app-top-bar">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                            <div class="logo-part">
+                                <div class="patanjaliayurved">
+                                    <asp:Image CssClass="sagar-logo" AlternateText="VCQRU" src="img/sagarlogo.png" runat="server" ID="imgLogo" />
+                                </div>
+                                <button class="toggle btn btn-primary" id="toggle" type="button">
+                                    <i class='bx bxs-left-arrow-circle'></i>
+                                </button>
+                            </div>
+                            <div id="Showcashbalance" class="fw-medium" visible="false" runat="server">Cash Balance : <asp:Label ID="CashBalanceAmount" runat="server"></asp:Label></div>
+                            <div class="dropdown" id="divprofile" runat="server">
+                                <a href="../SagarPetro/companyprofile.aspx">
+                                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="User">
+                                    <div>
+                                        <h6 class="text-dark" id="lblcompname" runat="server"></h6>
+                                        <p>user profile</p>
+                                    </div>
+                                </a>
+                                <!-- <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="User">
+                                    <div>
+                                        <h6>Patanjali</h6>
+                                        <p>user profile</p>
+                                    </div>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul> -->
+                            </div>
+                            <div class="dropdown" id="DivUser" runat="server">
+                                <a href="../SagarPetro/pfluserprofile.aspx">
+                                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="User">
+                                    <div>
+                                        <h6 class="text-dark" id="lblUserName" runat="server"></h6>
+                                        <p>user profile</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="page-wrapper">
+                
+                  <div id="overlay">
+                    <div class="cv-spinner">
+                        <span class="spinner"></span>
+                    </div>
+                </div>
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <!-- footer -->
+            <footer class="footer inside-footer">
+                <div class="container-fluid">
+                    <p class="text-end">© 2024 Sagar petroleums private limited All Rights Reserved.</p>
+                </div>
+            </footer>
+            <!-- footer-end -->
+        </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+
+    <script>
+        const body = document.querySelector('body'),
+            sidebar = body.querySelector('#sidebar'),
+            toggle = body.querySelector("#toggle")
+
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        })
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const searchInput = document.getElementById('searchInput');
+            const menuItems = document.querySelectorAll('#dropDownMenu li');
+            const mainItems2 = document.querySelectorAll('#dropDownMenu span');
+            const mainItems3 = document.querySelectorAll('#sidebar ul li');
+
+            function performSearch() {
+             
+                const searchTerm = searchInput.value.trim().toLowerCase();
+
+
+                menuItems.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+
+                    if (text.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                mainItems2.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+
+                    if (text.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                mainItems3.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+
+                    if (text.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+            searchInput.addEventListener('keyup', performSearch);
+        });
+    </script>
+
+    <script type="text/javascript">
+        document.addEventListener('keypress', function (e) {
+            if (e.keyCode === 13 && e.target.tagName === 'INPUT' && e.target.type === 'text') {
+                e.preventDefault(); // Suppress the Enter key
+            }
+        });
+</script>
+
+    
+</body>
+</html>

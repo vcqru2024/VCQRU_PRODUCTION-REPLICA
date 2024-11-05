@@ -1,0 +1,1292 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Power USA</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- font-family -->
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <script src="vendor/modernizr/modernizr.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
+            integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA=" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        body {
+            font-family: 'Jost' !important;
+        }
+
+        .landing-ui {
+            min-height: 100vh;
+            background: url('/assets/images/Tesla%20Power%20USA/bg-one.jpg') no-repeat center center/cover;
+            animation: changeBg 8s infinite;
+        }
+
+        @keyframes changeBg {
+            0% {
+                background: url('../assets/images/Tesla%20Power%20USA/bg-one.jpg') no-repeat center center/cover;
+            }
+
+            25% {
+                background: url('../assets/images/Tesla%20Power%20USA/bg-two.png') no-repeat center center/cover;
+            }
+
+            50% {
+                background: url('../assets/images/Tesla%20Power%20USA/bg-three.png') no-repeat center center/cover;
+            }
+
+            75% {
+                background: url('../assets/images/Tesla%20Power%20USA/bg-four.png') no-repeat center center/cover;
+            }
+
+            100% {
+                background: url('../assets/images/Tesla%20Power%20USA/bg-one.jpg') no-repeat center center/cover;
+            }
+        }
+
+        .landing-ui .card {
+            border: 0;
+            box-shadow: var(--bs-box-shadow);
+            margin: 3rem 0;
+        }
+
+            .landing-ui .card .card-body {
+                padding: 2rem;
+            }
+
+                .landing-ui .card .card-body .logo {
+                    margin-bottom: 1.50rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                    .landing-ui .card .card-body .logo img {
+                        height: 3.50rem;
+                    }
+
+                /* form */
+                .landing-ui .card .card-body .tab .card-title {
+                    margin-bottom: 0.50rem;
+                }
+
+        /* .landing-ui .card .card-body .tab .card-title span {
+                font-size:20px;
+            } */
+        .fs-18 {
+            font-size: 18px !important;
+        }
+
+        .fs-14 {
+            font-size: 14px !important;
+        }
+
+        .landing-ui .card .card-body .tab .card-text {
+            margin-bottom: 0;
+            color: #4B5563;
+        }
+
+        .landing-ui .card .card-body .tab {
+            margin-top: 1rem;
+        }
+
+        .landing-ui .card .card-body .btn {
+            width: 100%;
+            border-radius: 2px;
+            background-color: #E31E24;
+            box-shadow: var(--bs-box-shadow-sm);
+            color: var(--bs-white);
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 0.75rem;
+        }
+
+        .landing-ui .card .card-body .tab {
+            display: none;
+        }
+
+            .landing-ui .card .card-body .tab .success-msg {
+                padding: 2rem;
+                background-color: rgba(52, 199, 89, 16%);
+                border-radius: var(--bs-border-radius-lg);
+                border: 1px solid #34C759;
+                text-align: center;
+                margin-top: 1rem;
+            }
+
+                .landing-ui .card .card-body .tab .success-msg h5 {
+                    color: #34C759;
+                    margin-bottom: 1rem;
+                }
+
+                .landing-ui .card .card-body .tab .success-msg p {
+                    color: var(--bs-secondary);
+                    margin-bottom: 0;
+                }
+
+                .landing-ui .card .card-body .tab .success-msg .animation-gif {
+                    mix-blend-mode: darken;
+                    height: 4rem;
+                }
+
+        .landing-ui .card .card-body .card-title {
+            margin-bottom: 0.25rem;
+        }
+
+            .landing-ui .card .card-body .card-title span {
+                font-size: 20px;
+            }
+
+        .landing-ui .card .card-body .card-text {
+            margin-bottom: 0;
+            color: var(--bs-secondary);
+        }
+
+        .landing-ui .card .card-body .form-control {
+            border-radius: 2px;
+            background-color: #F3F4F6;
+            font-weight: 600;
+            padding: 0.75rem;
+        }
+
+            .landing-ui .card .card-body .form-control::placeholder {
+                color: #ADAAAF;
+            }
+
+        .landing-ui .card .card-body .form-label {
+            font-weight: 700;
+            text-transform: capitalize;
+            color: #5F5E62;
+        }
+
+        /* .landing-ui .card .card-body .form-label span {
+                color: var(--bs-danger);
+            } */
+
+        /* footer */
+        .footer {
+            background-color: #E31E24;
+            padding: 0.25rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            z-index: 1000;
+        }
+
+            .footer a {
+                color: var(--bs-white);
+            }
+
+            .footer p {
+                margin-bottom: 0;
+                font-size: 14px;
+                color: var(--bs-white);
+            }
+
+        /* custom-radio */
+        .custom-radio .form-check {
+            padding: 0;
+            margin-bottom: 0;
+            position: relative;
+        }
+
+            .custom-radio .form-check .form-check-label {
+                border: 2px solid var(--bs-border-color);
+                padding: 1rem;
+                border-radius: var(--bs-border-radius-sm);
+                text-transform: capitalize;
+                font-weight: 600;
+                font-size: 18px;
+                overflow: hidden;
+                width: 100%;
+                text-align: center;
+                color: var(--bs-secondary);
+                cursor: pointer;
+                height: 100%;
+            }
+
+                .custom-radio .form-check .form-check-label img {
+                    height: 2.50rem;
+                    width: 2.50rem;
+                    margin: 0 auto;
+                    display: block;
+                    background-color: var(--bs-white);
+                    margin-bottom: 0.25rem;
+                    border-radius: var(--bs-border-radius-sm);
+                }
+
+            .custom-radio .form-check .form-check-input {
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: 0.50rem;
+            }
+
+            .custom-radio .form-check input:checked ~ .form-check-label {
+                background-color: #E31E24;
+                color: var(--bs-white);
+            }
+
+        @media screen and (max-width:768px) {
+            .landing-ui .card .card-body .logo img {
+                height: 2.50rem;
+            }
+        }
+    </style>
+    <style>
+        .landing-ui .card-left .invalid-feedback {
+            display: block;
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            z-index: 10000;
+            width: 100%;
+            height: 100%;
+            display: none;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .cv-spinner {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px #ddd solid;
+            border-top: 4px #2e93e6 solid;
+            border-radius: 50%;
+            animation: sp-anime 0.8s infinite linear;
+        }
+
+        @keyframes sp-anime {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .is-hide {
+            display: none;
+        }
+    </style>
+
+    <script>
+        function showAlert(title, text, icon) {
+            Swal.fire({
+                title: title,
+                text: text,
+                icon: icon,
+                confirmButtonText: 'OK'
+            });
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('regForm').addEventListener('keydown', function (event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $("#Pincode").mask("999999");
+        var lat = "";
+        var BaseURL = "../";
+        var long = "";
+        var code1 = "";
+        var code2 = "";
+        var comp = "";
+        var Id = "";
+        var getPosition = function (options) {
+            return new Promise(function (resolve, reject) {
+                navigator.geolocation.getCurrentPosition(resolve, reject, options);
+            });
+        }
+        function Postalcode() {
+            let pin = document.getElementById("pincode").value;
+            //if (pin.match(/[^0-9]/)) {
+            //    showAlert('Error', 'Please enter a valid pincode', 'error');
+            //    return false;
+            //}
+            if (pin.length == 6) {
+                $.getJSON("https://api.postalpincode.in/pincode/" + pin, function (data) {
+                    createHTML(data);
+                })
+                function createHTML(data) {
+                    if (data[0].Status == "Success") {
+                        var city = "";
+                        var state = "";
+                        var pin = "";
+                        var city = data[0].PostOffice[0]['District'];
+                        var state = data[0].PostOffice[0]['State'];
+                        var Pin = data[0].PostOffice[0]['PinCode'];
+                        $("#city").val(city).prop('readonly', true);
+                        $("#state").val(state).prop('readonly', true);
+                    }
+                    else {
+                        $("#city").val('').prop('readonly', false);
+                        $("#state").val('').prop('readonly', false);
+                    }
+                }
+            }
+        }
+        function Mobile_check() {
+            var mobile_val = $('#mobile').val();
+            var d = mobile_val.slice(0, 1);
+            var c = parseInt(d);
+            if (c <= 5) {
+                showAlert('Error', 'Please enter valid mobile number', 'error');
+                $('#mobile').val('');
+                return false;
+            }
+            else if (mobile_val.length == 10) {
+                $('#overlay').show();
+                $.ajax({
+                    type: "Post",
+                    url: '../Info/MasterHandler.ashx?method=ConsumerDetailsByMobileNo&MobileNo= ' + $("#mobile").val() + '&compid=Comp-1722',
+                    success: function (data) {
+
+                        $('#overlay').hide();
+                        var details = data.split('~');
+                        var Name = details[0];
+                        var pin = details[6];
+
+                        var city = details[2];
+                        var state = details[3];
+                        var BankName = details[7];
+                        var AccountNumber = details[8];
+                        var IfscCode = details[9];
+                        var AccountHolderName = details[12];
+                        var UpiId = details[10];
+                        var EmailID = details[14];
+                       
+
+                        $("#AccountNumber, #ConfirmAccountNumber").val(AccountNumber).prop('readonly', AccountNumber !== "");
+                        $("#IfscCode").val(IfscCode).prop('readonly', IfscCode !== "");
+                        $("#AccountHolderName").val(AccountHolderName).prop('readonly', AccountHolderName !== "");
+                        $("#upi").val(UpiId).prop('readonly', UpiId !== "");
+
+                        if (UpiId !== "") {
+                            $('#kyc').prop('checked', true);
+                        }
+                        else if (AccountNumber != "" && IfscCode != "" && AccountHolderName != "") {
+                            $('#Bank').prop('checked', true);
+                        }
+                        else {
+                            $('#kyc').prop('checked', false);
+                            $('#Bank').prop('checked', false);
+                        }
+                        if (Name) {
+                            $("#name").val(Name);
+                        } else {
+                            $('#Chkcode').hide();
+                            $('#mobilefield').hide();
+                            $('#Chkfields').show();
+                            $('#Otherfield').show();
+                            $('#headline').hide();
+                        }
+                        if (pin) {
+                            $("#pincode").val(pin);
+                        } else {
+                            $('#Chkcode').hide();
+                            $('#mobilefield').hide();
+                            $('#Chkfields').show();
+                            $('#Otherfield').show();
+                            $('#headline').hide();
+                        }
+                        if (city) {
+                            $("#city").val(city);
+                        }
+                        else {
+                            $('#Chkcode').hide();
+                            $('#mobilefield').hide();
+                            $('#Chkfields').show();
+                            $('#Otherfield').show();
+                            $('#headline').hide();
+                        }
+
+                        if (state) {
+                            $("#state").val(state);
+                        } else {
+                            $('#Chkcode').hide();
+                            $('#mobilefield').hide();
+                            $('#Chkfields').show();
+                            $('#Otherfield').show();
+                            $('#headline').hide();
+                        }
+                        if (EmailID) {
+                            $("#emailid").val(EmailID);
+                        } else {
+                            $('#Chkcode').hide();
+                            $('#mobilefield').hide();
+                            $('#Chkfields').show();
+                            $('#Otherfield').show();
+                            $('#headline').hide();
+                        }
+                        var selectedValue = $('input[name="paymentMode"]:checked').val();
+                        if ($("#state").val() != "" && $("#emailid").val() != "" && $("#city").val() != "" && $("#pincode").val() != "" && $("#name").val() != "" && selectedValue != "") {
+                            $('#btnnextdetails').text('SUBMIT/ दर्ज करे');
+                        }
+                    }
+                });
+            }
+
+            else {
+                $("#name").val('');
+                $("#city").val('');
+                $("#state").val('');
+                $("#emailid").val('');
+            }
+        }
+
+        function ValidateAccount() {
+            var AccountNumber = $('#AccountNumber').val();
+            if (AccountNumber != undefined) {
+                if ($('#AccountNumber').val().length < 1) {
+                    showAlert('Error', 'Please enter valid account number', 'error');
+                    return false;
+                }
+            }
+
+            var ConfirmAccountNumber = $('#ConfirmAccountNumber').val();
+            if (ConfirmAccountNumber != undefined) {
+                if ($('#ConfirmAccountNumber').val().length < 1) {
+                    showAlert('Error', 'Please enter valid re-account number', 'error');
+                    return false;
+                }
+            }
+        }
+
+        function ACNamevalid() {
+            var name = $('#AccountHolderName').val();
+            if (name != undefined) {
+                if ($('#AccountHolderName').val().length < 1) {
+                    showAlert('Error', 'Please enter valid account holder name', 'error');
+                    return false;
+                }
+                var matches = $('#AccountHolderName').val().match(/\d+/g);
+                if (matches != null) {
+                    showAlert('Error', 'Account holder name should be alphabet only', 'error');
+                    return false;
+                }
+                var matches1 = $('#AccountHolderName').val().match(/[^a-zA-Z0-9 ]/);
+                if (matches1 != null) {
+                    showAlert('Error', 'Account holder name should Not Contain any special sharacter', 'error');
+                    return false;
+                }
+            }
+        }
+
+
+        $(document).ready(function () {
+
+            $('#Chkcode').show();
+            $('#Chkfields').hide();
+            $('#divdetails').hide();
+            $('#divkyc').hide();
+
+            function getUrlVars() {
+                // debugger;
+                var vars = [], hash;
+                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                for (var i = 0; i < hashes.length; i++) {
+                    hash = hashes[i].split('=');
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                return vars;
+            };
+
+            code1 = getUrlVars()["codeone"];
+            code2 = getUrlVars()["codetwo"];
+            comp = getUrlVars()["Comp"];
+            Id = getUrlVars()["ID"];
+
+            if (comp === undefined || comp === "undefined") {
+                comp = comp;
+            }
+            else {
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+            }
+            if (code1 === undefined || code1 === undefined) {
+                code1 = code1;
+            }
+            else {
+                $('#HdnCode1').val(code1);
+                $('#HdnCode2').val(code2);
+            }
+
+            var id = Id;
+
+            if (id == "1") {
+
+                $('#Chkcode').show();
+                $('#Chkfields').hide();
+                $('#divdetails').hide();
+                $('#divkyc').hide();
+            }
+            else if (id == "Tesla") {
+                $('#Chkcode').hide();
+                $('#Chkfields').show();
+                $('#Otherfield').hide();
+                $('#mobilefield').show();
+                var code = $('#HdnCode1').val() + '-' + $('#HdnCode2').val();
+                $("#example13-digit-number").val(code);
+            }
+            $("#example13-digit-number").mask("99999-99999999");
+            $("#btnnxt").on('click', function (e) {
+                e.preventDefault();
+                var codeone = $('#example13-digit-number').val();
+                code1 = codeone.split('-')[0];
+                code2 = codeone.split('-')[1];
+                if (!codeone) {
+                    showAlert('Error', 'Please enter codes', 'error');
+                    return false;
+                }
+                else if ($('#example13-digit-number').val().length < 14) {
+                    showAlert('Error', 'Please enter valid codes', 'error');
+                    return false;
+                }
+                var rquestpage_Dcrypt = $("#example13-digit-number").val();
+                $('#btnnxt').hide();
+                $('#btnloadnxt').show();
+                $('#overlay').show();
+                $.ajax({
+                    type: "POST",
+                    url: BaseURL + 'Info/MasterHandler.ashx?method=chkwarranty&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1] + '&lat=' + lat + '&long=' + long,
+                    success: function (data) {
+                        $('#overlay').hide();
+                        $('#btnnxt').show();
+                        $('#btnloadnxt').hide();
+                        if (data.split('&')[1] == "TESLA POWER INDIA PRIVATE LIMITED" || data.split('&')[1] == "" || data.split('&')[1] == undefined) {
+                            $('#Chkcode').hide();
+                            $('#Chkfields').show();
+                            $('#Otherfield').hide();
+                            $('#mobilefield').show();
+                        }
+                        else {
+                            $('#Chkcode').show();
+                            $('#Chkfields').hide();
+                            $('#mobilefield').hide();
+                            $('#Otherfield').hide();
+                            return false;
+                        }
+                    }
+                });
+            });
+            $("#mobile").mask("9999999999");
+            $('#mobile').keyup(function () {
+                Mobile_check();
+            });
+
+            function Name_check() {
+                if ($('#name').val() == '') {
+                    showAlert('Error', 'Please enter name', 'error');
+                    return false;
+                }
+                if (!$('#name').val().match('^[a-zA-Z ]{3,30}$')) {
+                    showAlert('Error', 'Please enter valid name', 'error');
+                    return false;
+                }
+            }
+            function city_check() {
+                if (!$('#city').val().match('^[a-z A-Z]{3,40}$')) {
+                    showAlert('Error', 'Please enter valid city name', 'error');
+                    return false;
+                }
+            }
+            function State_check() {
+                if (!$('#state').val().match('^[a-z A-Z]{3,40}$')) {
+                    showAlert('Error', 'Please enter valid state name', 'error');
+                    return false;
+                }
+            }
+
+
+            $('input[name="paymentMode"]').change(function () {
+                if ($(this).val() === 'CHKUPI') {
+                    $('#divupi').show();
+                    $('#divbank').hide();
+                } else if ($(this).val() === 'CHKBANK') {
+                    $('#divupi').hide();
+                    $('#divbank').show();
+                }
+            });
+
+            function Upi_check() {
+                if (!$('#upi').val().match('^[0-9A-Za-z.-]{2,256}@[A-Za-z]{2,64}$')) {
+                    showAlert('Error', 'Please enter valid upi id', 'error');
+                    return false;
+                }
+            }
+            $('#btnnextdetails').on('click', function (e) {
+                e.preventDefault();
+
+                var selectedValue = $('input[name="paymentMode"]:checked').val();
+                if ($("#state").val() != "" && $("#city").val() != "" && $("#pincode").val() != "" && $("#name").val() != "" && selectedValue != "") {
+                    finnalsubmit();
+                }
+
+
+                var mobileone = $('#mobile').val();
+                if ((mobileone == "") || (mobileone == undefined)) {
+                    showAlert('Error', 'Please enter mobile number', 'error');
+                    return false;
+                }
+                if (mobileone.length != 10) {
+                    showAlert('Error', 'Please enter 10-digits mobile number', 'error');
+                    return false;
+                }
+                if ($('#name').val() == '') {
+                    showAlert('Error', 'Please enter name', 'error');
+                    return false;
+                }
+                if (!$('#name').val().match('^[a-zA-Z ]{3,30}$')) {
+                    showAlert('Error', 'Please enter valid name', 'error');
+                    return false;
+                }
+                if ($('#pincode').val().length < 6) {
+                    showAlert('Error', 'Please enter a valid pincode', 'error');
+                    $('#Chkcode').hide();
+                    $('#mobilefield').hide();
+                    $('#Chkfields').show();
+                    $('#Otherfield').show();
+                    return false;
+                }
+                let pin = document.getElementById("pincode").value;
+                if (pin.match(/[^0-9]/)) {
+                    showAlert('Error', 'Please enter a valid pincode', 'error');
+                    return false;
+                }
+                if (!$('#city').val().match('^[a-z A-Z]{3,40}$')) {
+                    showAlert('Error', 'Please enter valid city name', 'error');
+                    $('#Chkcode').hide();
+                    $('#mobilefield').hide();
+                    $('#Chkfields').show();
+                    $('#Otherfield').show();
+                    return false;
+                }
+                if (!$('#state').val().match('^[a-z A-Z]{3,40}$')) {
+                    showAlert('Error', 'Please enter valid state name', 'error');
+                    $('#Chkcode').hide();
+                    $('#mobilefield').hide();
+                    $('#Chkfields').show();
+                    $('#Otherfield').show();
+                    return false;
+                }
+                if ($('#city').val() == '') {
+                    showAlert('Error', 'Please enter a valid city name', 'error');
+                    return false;
+                }
+                if ($('#state').val() == '') {
+                    showAlert('Error', 'Please enter a valid state name', 'error');
+                    return false;
+                }
+                var email = $('#emailid').val().trim();
+                if (!validateEmail(email)) {
+                    showAlert('Error', 'Please enter a valid email address', 'error');
+                    return false;
+                }
+
+                if (mobileone != "") {
+                    $('#Chkcode, #Chkfields, #Otherfield, #mobilefield').hide();
+                    $('#divkyc').show();
+                    $('#txthead').html(' Transaction Details/ लेनदेन की जानकारी');
+                }
+            });
+            //function validateEmail(email) {
+            //    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            //    return emailRegex.test(email);
+            //}
+            function validateEmail(email) {
+                // If email is null, undefined, or empty, return true (since it's not mandatory)
+                if (email === null || email === undefined || email.trim() === "") {
+                    return true;
+                }
+
+                // Otherwise, validate the email format
+                var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                return emailRegex.test(email)
+                    ;
+            }
+
+            $('#btnsubmit').on('click', function (e) {
+                e.preventDefault();
+                finnalsubmit();
+
+            });
+            $('#btnNext').click(function () {
+                window.location.href = 'https://www.vcqru.com/Tesla.aspx';
+            });
+            $('#btnlogin').click(function () {
+                window.location.href = 'https://www.vcqru.com/login.aspx';
+            });
+        });
+
+        function finnalsubmit() {
+            var selectedValue = $('input[name="paymentMode"]:checked').val();
+            if (selectedValue == "CHKUPI") {
+                if ($('#upi').val() == "") {
+                    showAlert('Error', 'Please enter upi id', 'error');
+                    return false;
+                }
+                if (!$('#upi').val().match('^[0-9A-Za-z.-]{2,256}@[A-Za-z]{2,64}$')) {
+                    showAlert('Error', 'Please enter valid upi id', 'error');
+                    return false;
+                }
+                var code = $('#example13-digit-number').val();
+                if (code != "") {
+                    $('#overlay').show();
+                    $.ajax({
+                        type: "POST",
+                        contentType: false,
+                        processData: false,
+                        url: BaseURL + 'Info/MasterHandler.ashx?method=verifyotp&mobile=' + $('#mobile').val() + "&vCode=" + $('#example13-digit-number').val() + '&EmailAddrs=' + $('#emailid').val() + '&name=' + $('#name').val() + '&PinCode=' + $('#pincode').val() + '&city=' + $('#city').val() + '&state=' + $('#state').val() + '&UPI=' + $("#upi").val() + '&teslapayoutmode=UPI' + '&Other_Role=UPI' + '&Comp_ID=Comp-1722' + '&comp=TESLA POWER INDIA PRIVATE LIMITED',
+                        success: function (data) {
+                            $('#overlay').hide();
+                            $('#btnsubmit').show();
+                            $('#btnloadsubmit').hide();
+                            if (data.split('~')[0] !== "failure") {
+                                window.scrollTo(0, 0);
+                                if (data.indexOf("not valid") !== -1) {
+                                    data = data.split(".")[0];
+                                }
+                                $('#Chkfields').hide();
+                                $('#mobilefield').hide();
+                                $('#Otherfield').hide();
+                                $('#Chkcode').hide();
+                                $('#ShowMessage').show();
+                                $('#divkyc').hide();
+                                $('#divupi').hide();
+                                $('#divbank').hide();
+                                $('#divhead').hide();
+                                $('#headline').hide();
+                                if (data.split("~")[1].includes('won')) {
+                                    $('#divSuccessmsg').show();
+                                    $('#divalready').hide();
+                                    $('#msgsuccess').html(data.split("~")[1]);
+                                }
+                                else {
+                                    $('#divSuccessmsg').hide();
+                                    $('#divalready').show();
+                                    $('#msgalready').html(data.split("~")[1]);
+                                }
+                            }
+                            else {
+                                showAlert('Error', data.split('~')[1], 'error');
+                            }
+                        }
+                    });
+                }
+            }
+            else if (selectedValue == "CHKBANK") {
+                if ($('#AccountHolderName').val() == "") {
+                    ACNamevalid();
+                    return false;
+                }
+                if ($('#AccountNumber').val() == "") {
+                    showAlert('Error', 'Please enter valid account number', 'error');
+                    return false;
+                }
+                if ($('#ConfirmAccountNumber').val() == "") {
+                    showAlert('Error', 'Confirm account number should be same as per account number', 'error');
+                    return false;
+                }
+                var x = $('#AccountNumber').val();
+                var y = $('#ConfirmAccountNumber').val();
+                if (x != y) {
+                    showAlert('Error', 'Confirm account number should be same as per account number', 'error');
+                    return false;
+                }
+                if ($('#AccountNumber').val().length < 9) {
+                    showAlert('Error', 'Please enter valid account number', 'error');
+                    return false;
+                }
+                if ($('#ConfirmAccountNumber').val().length < 9) {
+                    showAlert('Error', 'Please enter valid re-account number', 'error');
+                    return false;
+                }
+                var IfscCode = $('#IfscCode').val();
+                if (IfscCode.length != 11) {
+                    showAlert('Error', 'Please enter 11 digit of ifsc code', 'error');
+                    return false;
+                }
+
+                var ifscCode = document.getElementById('IfscCode').value;
+
+
+                var ifscchk = true;
+                if (ifscCode.length == 11) {
+                    $('#overlay').show();
+                    $.ajax({
+                        type: "POST",
+                        url: BaseURL + 'Info/MasterHandler.ashx?method=CheckIfcCode&IfcCode=' + ifscCode,
+                        success: function (data) {
+                            $('#overlay').hide();
+                            if (data === "0") {
+                                showAlert('Error', 'Invalid IFSC Code', 'error');
+                                $('#Chkfields').hide();
+                                $('#mobilefield').hide();
+                                $('#Otherfield').hide();
+                                $('#Chkcode').hide();
+                                $('#ShowMessage').hide();
+                                $('#divkyc').show();
+                                $('#divupi').hide();
+                                $('#divbank').show();
+                                $('#divhead').show();
+                                ifscchk = false;
+                                return false;
+                            }
+                            else {
+                                var code = $('#example13-digit-number').val();
+                                if (code != "" && ifscchk == true) {
+                                    $('#overlay').show();
+                                    $.ajax({
+                                        type: "POST",
+                                        contentType: false,
+                                        processData: false,
+                                        url: BaseURL + 'Info/MasterHandler.ashx?method=verifyotp&mobile=' + $('#mobile').val() + "&vCode=" + $('#example13-digit-number').val() + '&name=' + $('#name').val() + '&PinCode=' + $('#pincode').val() + '&city=' + $('#city').val() + '&EmailAddrs=' + $('#emailid').val() + '&state=' + $('#state').val() + '&AccountNumber=' + $('#AccountNumber').val() + '&IfscCode=' + $('#IfscCode').val() + '&AccountHolderName=' + $('#AccountHolderName').val() + '&teslapayoutmode=Bank' + '&Other_Role=Bank' + '&Comp_ID=Comp-1722' + '&comp=TESLA POWER INDIA PRIVATE LIMITED',
+                                        success: function (data) {
+                                            $('#overlay').hide();
+                                            $('#btnsubmit').show();
+                                            $('#btnloadsubmit').hide();
+                                            if (data.split('~')[0] !== "failure") {
+                                                window.scrollTo(0, 0);
+                                                if (data.indexOf("not valid") !== -1) {
+                                                    data = data.split(".")[0];
+                                                }
+                                                $('#Chkfields').hide();
+                                                $('#mobilefield').hide();
+                                                $('#Otherfield').hide();
+                                                $('#Chkcode').hide();
+                                                $('#ShowMessage').show();
+                                                $('#divkyc').hide();
+                                                $('#divupi').hide();
+                                                $('#divbank').hide();
+                                                $('#divhead').hide();
+                                                $('#headline').hide();
+                                                if (data.split("~")[1].includes('won')) {
+                                                    $('#divSuccessmsg').show();
+                                                    $('#divalready').hide();
+                                                    $('#msgsuccess').html(data.split("~")[1]);
+                                                }
+                                                else {
+                                                    $('#divSuccessmsg').hide();
+                                                    $('#divalready').show();
+                                                    $('#msgalready').html(data.split("~")[1]);
+                                                }
+                                            }
+                                            else {
+                                                showAlert('Error', data.split('~')[1], 'error');
+                                            }
+                                        }
+                                    });
+                                }
+                                else {
+                                    $('#divupi').hide();
+                                    $('#divbank').show();
+                                }
+                            }
+
+                        },
+                        error: function (xhr, status, error) {
+                            showAlert('Error', 'Error: ' + error, 'error');
+                            return false;
+                        }
+                    });
+                }
+                if (ifscchk == false) {
+                    $('#divupi').hide();
+                    $('#divbank').show();
+                    return false;
+                }
+
+
+            }
+            else {
+                // showAlert('Error', 'Please select kyc type', 'error');
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div id="overlay">
+        <div class="cv-spinner">
+            <span class="spinner"></span>
+        </div>
+    </div>
+    <section class="landing-ui">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-6 col-xl-6 col-lg-6 mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="logo">
+                                <img src="assets/images/Tesla%20Power%20USA/autoz-logo.svg" alt="Logo">
+                                <img src="assets/images/Tesla%20Power%20USA/tesla-logo.svg" alt="Logo">
+                            </div>
+                            <h4 class="card-title text-center" id="headline">
+                                Welcome! <span class="fs-5">
+                                    /
+                                    स्वागत
+                                </span>
+                            </h4>
+                            <form id="regForm" action="" runat="server" class="needs-validation" novalidate>
+                                <asp:HiddenField ID="hdnmob" runat="server" />
+                                <asp:HiddenField ID="HdnID" runat="server" />
+                                <asp:HiddenField ID="HdnCode1" runat="server" />
+                                <asp:HiddenField ID="HdnCode2" runat="server" />
+                                <asp:HiddenField ID="CompName" runat="server" />
+                                <asp:HiddenField ID="long" runat="server" />
+                                <asp:HiddenField ID="lat" runat="server" />
+                                <!-- One "tab" for each step in the form: -->
+                                <div class="tab" style="display: block;">
+                                    <div class="row g-3">
+                                        <div class="col-12" id="divhead">
+                                            <h5 class="card-title text-dark-emphasis" id="txthead">
+                                                Personal Details
+                                                <span class="fs-6">
+                                                    /
+                                                    व्यक्तिगत विवरण
+                                                </span>
+                                            </h5>
+                                            <p class="card-text">
+                                                Please fill in all required fields before proceeding to get
+                                                benefits. / लाभ प्राप्त करने के लिए आगे बढ़ने से पहले कृपया सभी
+                                                आवश्यक फ़ील्ड भरें।
+                                            </p>
+                                        </div>
+                                        <div id="Chkcode" class="col-12">
+                                            <div class="row row-cols-1 g-3">
+                                                <div class="col">
+                                                    <label for="example13-digit-number" class="form-label">
+                                                        Enter 13
+                                                        Digit Code <span class="fs-14">
+                                                            / 13 अंकीय कोड दर्ज
+                                                            करें
+                                                        </span> <span class="text-danger">*</span>
+                                                    </label>
+                                                    <input type="text" maxlength="13" id="example13-digit-number"
+                                                           placeholder="13 digits code" class="form-control" />
+                                                </div>
+                                                <div class="col">
+                                                    <button type="submit" id="btnnxt" class="btn">
+                                                        Next/
+                                                        अगला
+                                                    </button>
+                                                    <button type="submit" style="display: none" id="btnloadnxt"
+                                                            class="btn">
+                                                        <i class="fa fa-spinner fa-spin"></i>Loading..
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="Chkfields" class="col-12">
+                                            <div class="row row-cols-1 g-3">
+                                                <div class="col" id="mobilefield">
+                                                    <div class="form-group">
+                                                        <label for="MobileNumber" class="form-label">
+                                                            Mobile
+                                                            Number <span class="fs-14">/ मोबाइल नंबर</span>
+                                                            <span class="text-danger">*</span>
+                                                        </label>
+                                                        <input type="text" id="mobile" placeholder="Mobile No"
+                                                               maxlength="10"
+                                                               onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
+                                                               class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div id="Otherfield" class="mb-3">
+                                                        <div class="row row-cols-xxl-2 row-cols-xl-2 row-cols-lg-2 row-cols-md-2 row-cols-1 g-3">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label for="UserName" class="form-label">
+                                                                        User
+                                                                        Name
+                                                                        /Firm
+                                                                        Name <span class="fs-14">
+                                                                            / नाम/फर्म का
+                                                                            नाम
+                                                                        </span><span class="text-danger">*</span>
+                                                                    </label>
+                                                                    <input type="text" maxlength="30" id="name"
+                                                                           placeholder="User Name /Firm Name"
+                                                                           class="form-control" name="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label for="pincode" class="form-label">
+                                                                        <br />
+                                                                        pin code <span class="fs-14">
+                                                                            / पिन
+                                                                            कोड
+                                                                        </span><span class="text-danger">*</span>
+                                                                    </label>
+                                                                    <input type="text" id="pincode"
+                                                                           placeholder="Pincode"
+                                                                           onkeyup="Postalcode();"
+                                                                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); if (this.value.length !== 6) this.setCustomValidity('Pin code must be exactly 6 digits.'); else this.setCustomValidity('');"
+                                                                           maxlength="6" class="form-control" name="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label for="city" class="form-label">
+                                                                        city <span class="fs-14">/ शहर</span><span class="text-danger">*</span>
+                                                                    </label>
+                                                                    <input type="text" maxlength="30" id="city"
+                                                                           placeholder="City" class="form-control"
+                                                                           name="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label for="state" class="form-label">
+                                                                        state <span class="fs-14">
+                                                                            /
+                                                                            राज्य
+                                                                        </span><span class="text-danger">*</span>
+                                                                    </label>
+                                                                    <input type="text" id="state" maxlength="50"
+                                                                           placeholder="State" class="form-control"
+                                                                           name="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label for="state" class="form-label">
+                                                                        Email Id<span class="fs-14">
+                                                                            / ईमेल
+                                                                            आईडी
+                                                                        </span>
+                                                                    </label>
+                                                                    <input type="text" id="emailid" maxlength="50"
+                                                                           placeholder="Email" class="form-control"
+                                                                           name="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-btns">
+                                                        <button class="btn" id="btnnextdetails">Next/ अगला</button>
+                                                        <button type="submit" style="display: none"
+                                                                id="btnnextdetailsload" class="btn">
+                                                            <i class="fa fa-spinner fa-spin"></i>Loading..
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12" id="divkyc">
+                                            <div class="row row-cols-1 g-3">
+                                                <div class="col text-center">
+                                                    <h5 class="card-title text-dark-emphasis">
+                                                        KYC Details <span class="fs-6">/ KYC विवरण</span>
+                                                    </h5>
+                                                    <p class="card-text">
+                                                        Please select one payment method./ कृपया एक
+                                                        भुगतान विधि चुनें.
+                                                    </p>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="custom-radio">
+                                                        <div class="row g-4 justify-content-center">
+                                                            <div class="col-lg-4 col-6">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                           value="CHKUPI" name="paymentMode" id="kyc">
+                                                                    <label class="form-check-label" for="kyc">
+                                                                        <img src="assets/images/Tesla Power USA/upi-icon.svg"
+                                                                             alt="UPI">
+                                                                        UPI/ यूपीआई
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-6">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                           value="CHKBANK" name="paymentMode"
+                                                                           id="Bank">
+                                                                    <label class="form-check-label" for="Bank">
+                                                                        <img src="assets/images/Tesla Power USA/bank-icon.svg"
+                                                                             alt="Bank">
+                                                                        Bank/ बैंक
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col" id="divupi" style="display: none">
+                                                    <div class="form-group">
+                                                        <label for="UPIId" class="form-label">
+                                                            UPI Id <span class="fs-14">/ यूपीआई आईडी</span><span class="text-danger">*</span>
+                                                        </label>
+                                                        <input type="text" id="upi" placeholder="UPI ID"
+                                                               class="form-control" name="UPIId">
+                                                    </div>
+                                                </div>
+                                                <div class="col" id="divbank" style="display: none">
+                                                    <div class="row row-cols-xxl-2 row-cols-xl-2 row-cols-lg-2 row-cols-md-2 row-cols-1 g-3">
+                                                        <div class="col">
+                                                            <label for="AccountHolderName" class="form-label">
+                                                                Account Holder Name <span class="fs-14">
+                                                                    / खाता धारक
+                                                                    का
+                                                                    नाम
+                                                                </span><span class="text-danger">*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control"
+                                                                   id="AccountHolderName"
+                                                                   placeholder="Account Holder Name" maxlength="30"
+                                                                   autocomplete="off"
+                                                                   onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.charCode==32">
+                                                        </div>
+                                                        <div class="col">
+                                                            <label for="AccountNumber" class="form-label">
+                                                                Bank Account Number <span class="fs-14">
+                                                                    / बैंक खाता
+                                                                    संख्या
+                                                                </span><span class="text-danger">*</span>
+                                                            </label>
+                                                            <input type="text" placeholder="Bank Account Number*"
+                                                                   id="AccountNumber" minlength="9" maxlength="18"
+                                                                   data-msg-required="Please Enter Bank Account Number*"
+                                                                   class="form-control" pattern="[0-9]+"
+                                                                   title="only numbers" autocomplete="off"
+                                                                   oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                                        </div>
+                                                        <div class="col">
+                                                            <label for="ConfirmAccountNumber" class="form-label">
+                                                                Confirm Bank Account Number <span class="fs-14">
+                                                                    /
+                                                                    बैंक खाता संख्या
+                                                                    की
+                                                                    पुष्टि करें
+                                                                </span><span class="text-danger">*</span>
+                                                            </label>
+                                                            <input type="text"
+                                                                   placeholder="Confirm Bank Account Number*"
+                                                                   minlength="9" maxlength="18" class="form-control"
+                                                                   id="ConfirmAccountNumber" pattern="[0-9]+"
+                                                                   title="only numbers" autocomplete="off"
+                                                                   oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                                                        </div>
+                                                        <div class="col">
+                                                            <label for="IfscCode" class="form-label">
+                                                                <br />
+                                                                IFSC Code <span class="fs-14">
+                                                                    / आई एफ एस सी
+                                                                    कोड
+                                                                </span><span class="text-danger">*</span>
+                                                            </label>
+                                                            <input type="text" placeholder="IFSC Code*"
+                                                                   onkeypress="return ValidateAlphaNumeric1(event);"
+                                                                   id="IfscCode" maxlength="11"
+                                                                   data-msg-required="IFSC Code*."
+                                                                   class="form-control mb-1"
+                                                                   style="text-transform: uppercase"
+                                                                   pattern="[A-Za-z0-9]+"
+                                                                   title="letters or numbers only" autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-btns mt-3">
+                                                <button class="btn" id="btnsubmit">SUBMIT/ दर्ज करे</button>
+                                                <button type="submit" style="display: none" id="btnloadsubmit"
+                                                        class="btn">
+                                                    <i class="fa fa-spinner fa-spin"></i>Loading..
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-12" style="display: none;" id="ShowMessage">
+                                            <div class="success-msg" id="divSuccessmsg" style="display: none">
+                                                <div class="mb-2">
+                                                    <img src="../assets/images/Tesla Power USA/animation.gif"
+                                                         alt="animation" class="animation-gif">
+                                                    <img src="../assets/images/Tesla Power USA/animation.gif"
+                                                         alt="animation" class="animation-gif"
+                                                         style="transform: rotate(-90deg);">
+                                                </div>
+                                                <h5>Congratulations</h5>
+                                                <p id="msgsuccess" class="fw-bold"></p>
+                                            </div>
+                                            <div class="success-msg" id="divalready" style="display: none">
+                                                <div class="mb-2 text-center">
+                                                    <img src="assets/images/Tesla%20Power%20USA/alert-icon-red-11.png"
+                                                         style="height: 3rem;" />
+                                                </div>
+                                                <p id="msgalready" class="fw-bold"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row row-cols-xxl-2 row-cols-xl-2 row-cols-lg-2 row-cols-md-2 row-cols-1">
+                <div class="col">
+                    <p class="text-md-start text-center">© 2024 Tesla Power USA All rights reserved.</p>
+                </div>
+                <div class="col">
+                    <p class="text-md-end text-center">
+                        Designed and developed by <a href="https://www.vcqru.com/" target="_blank">
+                            VCQRU Private
+                            Limited.
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-end -->
+</body>
+
+</html>

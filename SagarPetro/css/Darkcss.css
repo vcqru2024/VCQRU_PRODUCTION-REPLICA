@@ -1,0 +1,34 @@
+﻿/* Dark Theme Styles */
+
+/* Body Background */
+body {
+    background-color: #333;
+}
+
+/* Sidebar Background */
+.sidebar {
+    background-color: #222;
+}
+
+/* Navbar Background */
+.app-top-bar {
+    background-color: #222;
+}
+
+/* Footer Background */
+.footer {
+    background-color: #222;
+}
+
+/* Text Color */
+.text {
+    color: #fff;
+}
+
+/* Button Styles */
+.btn {
+    background-color: #333;
+    color: white;
+}
+
+/* Add more styles as needed */

@@ -1,0 +1,171 @@
+/* Add here all your CSS customizations */
+.icon-header-class{
+	color:#ef2a2b;
+	font-size:15px;
+}
+.icon-header-class1{
+	color:#000;
+	font-size:15px;
+}
+.form-slider {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #fff;
+    background-color: transparent;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.form-group1{
+	width:100%;
+}
+.slider-foom-padding{
+	padding: 0px 30px;
+}
+.slider-btn-style {
+    border-radius: 5px;
+    padding: 9px 25px !important;
+}
+.forcefullwidth_wrapper_tp_banner{
+	position:relative !important;
+}
+.slider-form{
+	position: absolute;
+    bottom: 32%;
+    padding:0% 10%;
+	z-index:999999;
+}
+.slider-bg-form{
+	background: rgba(0, 0, 0, 0.3);
+}
+html .btn-outline.btn-custom {
+    color: #fff;
+    background-color: transparent;
+    background-image: none;
+    border-color: #fff;
+}
+.box-shadow-custom {
+    box-shadow: 10px 10px 74px -15px rgba(0, 0, 0, 0.33);
+}
+.bg-color-style:hover .testimonial-author .icon-size {
+    color: #fd840f;
+}
+.services-icon{
+	width: 70px;
+    height: 70px;
+    text-align: center;
+    border: solid 2px #fff;
+    padding: 1.2em 0 0 0;
+    margin: 0 auto;
+	background: #fff;
+    border-radius: 50px;
+}
+.icon-services{
+	font-size: 2.2em;
+    line-height: 27px;
+    color: #fd840f;
+}
+.counters-background{
+	background:#f0f0f0;
+	padding: 50px 0px;
+}
+.feedback-padding{
+	padding: 11px 90px;
+}
+.feedback-width{
+	width:100%
+}
+.feedback-width-1{
+	width:50%;
+	float:left;
+}
+.feedback-width-2{
+	width:50%;
+	float:left;
+}
+.feedback-padding{
+	padding: 11px 90px;
+}
+.testimonial-text-style-2{
+	text-align:right !important;
+}
+.owl-dots{
+	text-align:right !important;
+	margin-right: 26px;
+}
+.testimonial-text-style-2 .feedback-width-2 p{
+	text-align:right !important;
+	margin-right: 26px !important;
+}
+.social-icons-bg{
+	background:#fd840f;
+}
+.social-icons-spacing{
+	margin: 21px !important;
+}
+.rounded-border{
+	border-radius: 15px;
+	-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.41)
+}
+.about-section-text{
+	color:#5f5e29;
+}
+.about-section-text1{
+	color:#777;
+}
+.view-more-btn{
+	color:#fff;
+	border-color:#fff;
+}
+.text-color-style-custome{
+	color:#000;
+}
+@media only screen and (max-width: 40000px) and (min-width: 1600px) {
+.slider-form{
+	position: absolute;
+    bottom: 45%;
+    padding:0% 23%;
+	z-index:999999;
+}
+.slider-foom-padding {
+    padding: 0px 30px 15px;
+}
+}
+@media only screen and (max-width: 980px) {
+.slider-form{
+	position: absolute;
+    bottom: 10%;
+    padding:0% 80%;
+	z-index:999999;
+}
+.slider-foom-padding {
+    padding: 0px 30px 15px;
+}
+}
+@media only screen and (max-width: 575px) {
+.slider-form{
+	position: absolute;
+    bottom: 0%;
+    padding:0% 8%;
+	z-index:999999;
+}
+.slider-foom-padding {
+    padding: 0px 30px 2px;
+}
+}
+@media only screen and (max-width: 320px) {
+.slider-form{
+	position: absolute;
+    bottom: -27px;
+    padding:0% 8%;
+	z-index:999999;
+}
+.slider-foom-padding {
+    padding: 0px 30px 2px;
+}
+}

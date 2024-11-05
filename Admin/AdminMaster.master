@@ -1,0 +1,271 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs"
+    Inherits="admin_AdminMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>VCQRU</title>
+	<meta name="google-site-verification" content="KIoiLaFt2yT8E3UYsjCd5-o98FMsgrjGK7BXFLU2KO0" />
+    <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="../css/style1.css" rel="stylesheet" type="text/css" />
+    <link href="../images/tiny.png" rel="shortcut icon" type="images/x-icon" />
+    <script type="text/javascript">
+function CallPrint12(strid,msg)
+{
+ var prtContent = document.getElementById(strid);
+ var WinPrint = window.open('','','letf=0,top=0,width=700 ,height=600,toolbar=0,scrollbars=0,status=0');
+ var content="<div align='center'><img src='../images/logo.png' width='266' height='90'/></div><br/>"+msg+"<br/>"+prtContent.innerHTML;
+ WinPrint.document.write(content);
+ WinPrint.document.close();
+ WinPrint.focus();
+ WinPrint.print();
+ WinPrint.close();
+ 
+ //prtContent.innerHTML=strOldOne;
+} 
+
+function openpopup(popurl){
+var winpops=window.open(popurl,"_blank","status=yes,toolbar=no,location=no,menu=no,width=600,height=550,screenX=150,screenY=100")
+}
+
+function openpopup_binary(popurl){
+var winpops=window.open(popurl,"_blank","status=yes,location=yes,scrollbars=yes,screenX=0,screenY=0,width=970,height=550,left=0,top=0")
+
+}
+function openpopup1(popurl){
+var winpops=window.open(popurl,"_blank","status=yes,location=yes,scrollbars=yes,screenX=0,screenY=0,width=520,height=350,left=0,top=0")
+
+}
+function back()
+{
+document.getElementById("tab1").style.backgroundColor="Gray";
+document.getElementById("tab1").innerHTML="asa";
+}
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!--container starts-->
+    <!--header starts-->
+    <div id="upper">
+    </div>
+    <div id="header_cont">
+        <a href="http://www.infranix.com/9420"></a>
+        <div style="width:1000px; min-height:55px; margin:0 auto; padding-top:10px;">
+            <div class="logo" style="cursor:pointer; float:left;">
+                <img alt="" src="../images/logo.png" width="188" height="51" />
+            </div>
+            <div id="cont_right" style="float:right; padding-top:12px; margin-right:10px;">
+                <div class="login_box1">
+                    <table width="100%" border="0">
+                        <tr>
+                           <%-- <td width="25px">
+                                <div>
+                                    <a href="AdminPanel.aspx" style="cursor:pointer;">
+                                        <img src="../images/Button/user.png" alt="usre" />
+                                    </a>
+                                    <div>
+                            </td>--%>
+                          <%--  <td width="100px">
+                                <div style="float: left;" class="dash_heading">
+                                    <a href="AdminPanel.aspx">My Dashboard</a>
+                                </div>
+                            </td>--%>
+                            <td align = "right">
+                                <div>
+                                    <a href="../index.aspx">
+                                        <img src="../images/Button/logout.png" alt="logout" />
+                                    </a>
+                                </div>
+                            </td>
+                            <td align = "right">
+                                <div class="dash_heading">
+                                    <a href="../index.aspx">Logout </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                              <%--  <div class="welcome_user">
+                                    <a href="AdminPanel.aspx"><em>Welcome</em>, <span>
+                                        <%=Convert.ToString(Session["User_Id"]) %></span></a></div>--%>
+                            </td>
+                        </tr>
+                    </table>                    
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div id="container">
+        <br />
+        <div id="content" style="min-height: 508px;">
+            <div class="admin_cont" style="cursor:pointer;">
+                <table class="tab" id="tbb">
+               
+                    <tr>
+                     <td class="td_wid" style ="width:10%;">
+                            <a href="NewsUpdate.aspx">
+                                <img src="../images/Button/8.png" alt="" /></a>
+                        </td>
+                    
+                    
+                     <td class="td_wid" style ="width:10%;">
+                            <a href="Gallary.aspx">
+                                <img src="../images/Button/Photo_Gal.png" alt="" height="35px" width="35px" /></a>
+                        </td>
+                    
+                        <td class="td_wid" style ="width:10%;">
+                        <a href="UserContent.aspx">
+                                <img src="../images/Button/7.png" alt="" /></a>
+                        </td>
+                    
+                       <td class="td_wid" style ="width:70%;">
+                            
+                        </td>
+                       <%--<td class="td_wid">
+                            <a href="BidMaster.aspx">
+                                <img src="../images/bid.png" alt="" height="35px" width="35px" /></a>
+                        </td>--%>
+                        <%--<td class="td_wid">
+                            <a href="FrmRetailer_Master.aspx">
+                                <img src="../images/Button/2.png" alt="" height="35px" width="35px" /></a>
+                        </td>--%>
+                       <%-- <td class="td_wid">
+                            <a href="ProductMaster.aspx">
+                                <img src="../images/shopping_icon.png" alt="" height="35px" width="35px" /></a>
+                        </td>--%>
+                        
+                        <%--<td class="td_wid">
+                            <a href="Man_Request.aspx">
+                                <img src="../images/Button/4.png" /></a>
+                        </td>
+                        <td class="td_wid">
+                            <a href="FrmBonanza_Master.aspx">
+                                <img src="../images/Button/5.png" alt="" /></a>
+                        </td>
+                         <td class="td_wid">
+                            <a href="Frm_CreateAPI.aspx">
+                                <img src="../images/Button/api-icon.gif" alt="" height="35px" width="38px" /></a>
+                        </td>--%>
+                        <%--<td class="td_wid">
+                            <a href="Reward_Master.aspx">
+                                <img src="../images/Button/incentiv.jpg" alt="" /></a>
+                        </td>
+                        <td class="td_wid">
+                            <a href="TDSForm.aspx">
+                                <img src="../images/Button/tax.png" alt="" /></a>
+                        </td>
+                        
+                        <td class="td_wid">
+                            <a href="MasterSetting.aspx">
+                                <img src="../images/Button/7.png" alt="" /></a>
+                        </td>--%>
+                       
+                        <%--<td class="td_wid">
+                            <a href="AccSetting.aspx">
+                                <img src="../images/Button/9.png" alt="" /></a>
+                        </td>
+                       
+                        <td class="td_wid">
+                            <a href="RptLongCode.aspx">
+                                <img src="../images/Button/transaction.png" /></a>
+                        </td>   
+                         <td class="td_wid">
+                            <a href="FrmMailBox.aspx">
+                                <img src="../images/mail.png" /></a>
+                        </td>  --%>               
+                       
+                    </tr>
+                    <tr>
+                     <td>
+                            <a href="NewsUpdate.aspx">News</a>
+                        </td>
+                    
+                     <td >
+                            <a href="Gallary.aspx">Gallery</a>
+                        </td>
+                        
+                    <td>
+                    <a href="UserContent.aspx">Content</a>
+                    </td>
+                    
+                       <%-- <td>
+                            <a href="AdminPanel.aspx">Member</a>
+                        </td>
+                      <td>
+                            <a href="BidMaster.aspx">Bid Master</a>
+                        </td>
+                        <td>
+                            <a href="FrmRetailer_Master.aspx">Retailer</a>
+                        </td>
+                       <td>
+                            <a href="ProductMaster.aspx">Shoping</a>
+                        </td>--%>
+                        
+                       <%-- <td>
+                            <a href="Man_Request.aspx">Request</a>
+                        </td>
+                        <td>
+                            <a href="FrmBonanza_Master.aspx">Jackpot</a>
+                        </td>
+                         <td>
+                            <a href="Frm_CreateAPI.aspx">API</a>
+                        </td>
+                        <td>
+                            <a href="Reward_Master.aspx">Rewards</a>
+                        </td>
+                        <td>
+                            <a href="TDSForm.aspx">Deductions</a>
+                        </td>
+                        
+                        <td>
+                            <a href="MasterSetting.aspx">Masters</a>
+                        </td>--%>
+                       
+                        <%--<td>
+                            <a href="AccSetting.aspx">Settings</a>
+                        </td>
+                     
+                        <td>
+                            <a href="RptLongCode.aspx">Report</a>
+                        </td>
+                         <td>
+                            <a href="FrmMailBox.aspx">Mail</a>
+                        </td>--%>
+                      
+                    </tr>
+                  
+                   
+                                        
+                </table>
+            </div>
+            <form runat="server">
+            <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnablePageMethods="true" ></cc1:ToolkitScriptManager>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </form>
+        </div>
+    </div>
+    <!--content close-->
+    <!--footer starts-->
+    <div id="p_footer">
+        <div id="footer">
+            <div class="f_menu">
+                <%--<a href="index.aspx">Home</a><span>|</span> <a href="about.aspx">About Us</a><span>|</span> <a href="terms.aspx">
+                    Terms &amp; Conditions</a><span>|</span> <a href="privacy.aspx">Privacy Policy</a><span>|</span>
+                <a href="legal.aspx">Legal</a><span>|</span> <a href="faq.aspx">FAQs</a><span>|</span> <a href="franchisee.aspx">Franchisee</a><span>|</span>
+                <a href="contact.aspx">Contact</a>--%>
+                <p>
+                    © 2011, All Right Reserved,VCQRU
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--footer close-->
+    <!--container close-->
+</body>
+</html>

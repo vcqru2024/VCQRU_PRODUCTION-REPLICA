@@ -1,0 +1,739 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Layout.master.cs" Inherits="Layout" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- css -->
+    <link rel="stylesheet" href="../NewContent/front-assets/css/css.css">
+    <link rel="stylesheet" href="../NewContent/front-assets/css/responsive.css">
+    <link rel="stylesheet" href="../NewContent/front-assets/css/style.css">
+     <link rel="stylesheet" href="../NewContent/front-assets/css/owl.carousel.min.css">
+
+    <!-- fav-icon -->
+    <link rel="icon" type="image/x-icon" href="../NewContent/front-assets/img/fav-icon.svg">
+    <!-- font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+ <!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WD5LP52W');</script>
+<!-- End Google Tag Manager -->
+
+<script type="text/javascript" id="sa-dynamic-optimization" data-uuid="2edfef13-9abd-4c86-adb2-6cf1e7d8b471" src="data:text/javascript;base64,dmFyIHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO3NjcmlwdC5zcmMgPSAiaHR0cHM6Ly9kYXNoYm9hcmQubGlua2dyYXBoLmNvbS9zY3JpcHRzL2R5bmFtaWNfb3B0aW1pemF0aW9uLmpzIjtzY3JpcHQuZGF0YXNldC51dWlkID0gIjJlZGZlZjEzLTlhYmQtNGM4Ni1hZGIyLTZjZjFlN2Q4YjQ3MSI7c2NyaXB0LmlkID0gInNhLWR5bmFtaWMtb3B0aW1pemF0aW9uLWxvYWRlciI7ZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChzY3JpcHQpOw=="></script>
+
+
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WD5LP52W"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+     <!-- fix-items -->
+    <button type="button" onclick="topFunction()" title="Top" id="top-btn" class="btn top-btn">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+    <!-- loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+    <%-- let's talk --%>
+    <div class="talks-btn"><a href="contact-us.aspx" title="Let's Talk"><img src="../NewContent/front-assets/img/talks.jpg" alt="Let's talk"></a></div>
+    <%-- let's talk --%>
+    <!-- navbar -->
+    <div class="app-navbar">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-md-8 d-md-block d-none">
+                        <div class="top-left-links">
+                            <ul>
+                                <li>
+                                    <a href="../about-us.aspx">About us</a>
+                                </li>
+                                <li>
+                                    <a href="../blog.aspx">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="../news-event.aspx">News & Event</a>
+                                </li>
+                                <li>
+                                    <a href="../contact-us.aspx">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-4">
+                        <div class="navbar-btns">
+                           <a href="https://www.vcqru.com/CodeCheck.aspx"
+                                class="nav-link bg-success text-white px-3 d-lg-none d-block">Verify Coupon</a>
+                            <a href="https://www.vcqru.com/login.aspx" class="btn btn-light"><i class="fa fa-user"></i> <span
+                                    class="d-lg-block d-none">Login/Signup</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="https://www.vcqru.com">
+                        <img src="../newContent/front-assets/img/vcqru-logo.png" alt="VCQRU Logo">
+                    </a>
+                    <a href="https://www.vcqru.com/Nicolt.aspx" class="other-check btn btn-sm" target="_blank">Check Nikolt coupons here</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+                                <ul class="dropdown-menu">
+                                    <div class="container">
+                                        <div class="sub-menu">
+                                            <div
+                                                class="row row-cols-xxl-5 row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-1 g-3">
+                                                <div class="col d-flex">
+                                                    <a href="../anti-counterfeiting-solutions.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/product-icons/anti-counterfeit.svg"
+                                                            alt="Anti-Counterfeit">
+                                                        Anti-Counterfeit
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../cash-transfer-system.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/product-icons/cash-transfer.svg"
+                                                            alt="Cash Transfer">
+                                                        Cash Transfer
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../digital-e-warranty-management-solution.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/product-icons/e-warranty.svg"
+                                                            alt="E- Warranty">
+                                                        E- Warranty
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../customer-loyalty-program.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/product-icons/build-loyalty.svg"
+                                                            alt="Build Loyalty">
+                                                        Build Loyalty
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../smart-labels-qr-code.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/product-icons/smart-labels.svg"
+                                                            alt="Smart Labels">
+                                                        Smart Labels
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../customer-reward-schemes.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/product-icons/gift-coupon.svg"
+                                                            alt="Gift Coupon">
+                                                        Gift Coupon
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../customer-referral-program.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/product-icons/referral-services.svg"
+                                                            alt="Referral Services">
+                                                        Referral Services
+                                                    </a>
+                                                </div>
+
+                                                <div class="col d-flex">
+                                                    <a href="../track-and-trace-solutions.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/product-icons/track-trace.svg"
+                                                            alt="Track & Trace">
+                                                        Track & Trace
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../website-design-and-development-company.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/product-icons/website-design-development.svg"
+                                                            alt="Web Development">
+                                                        Web Development
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="https://digitalmarketing.vcqru.com/" target="_blank"
+                                                        class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/product-icons/digital-marketing.svg"
+                                                            alt="Digital Marketing">
+                                                        Digital Marketing
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Industries
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <div class="container">
+                                        <div class="sub-menu">
+                                            <div
+                                                class="row row-cols-xxl-5 row-cols-xl-5 row-cols-lg-4 row-cols-md-2 row-cols-1 g-3">
+                                                <div class="col d-flex">
+                                                    <a href="../anti-counterfeit-solution-for-fmcg-industry.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/industry-icon/FMCG.svg" alt="FMCG">
+                                                        FMCG
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../anti-counterfeit-solutions-for-cosmetic-industry.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/industry-icon/cosmetics.svg"
+                                                            alt="Cosmetics">
+                                                        Cosmetics
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../anti-counterfeit-solution-for-consumer-electronics-industry.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/industry-icon/consumer-electronics.svg"
+                                                            alt="Consumer">
+                                                        Consumer Electronics
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../anti-counterfeiting-solutions-for-auto-parts-industry.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/industry-icon/auto-parts.svg"
+                                                            alt="Auto Parts">
+                                                        Auto Parts
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../anti-counterfeit-solution-for-health-supplements-industry.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/industry-icon/health-supplements.svg"
+                                                            alt="Health Supplements">
+                                                        Health Supplements
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../anti-counterfeit-solutions-for-agro-industry.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/industry-icon/agro.svg" alt="Agro">
+                                                        Agro
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../anti-counterfeit-solution-for-tobacco-industry.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/industry-icon/tobacco.svg" alt="Tobacco">
+                                                        Tobacco
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../anti-counterfeit-solutions-for-liquor-industry.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/industry-icon/liquor.svg" alt="Liquor">
+                                                        Liquor
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../anti-counterfeit-solution-for-bfsi-industry.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/industry-icon/bfsi.svg" alt="BFSI">
+                                                        BFSI
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../anti-counterfeit-solutions-for-electronic-and-electricals-industry.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/industry-icon/electronic-electricals.svg"
+                                                            alt="Electronics & Electricals">
+                                                        Electronics & Electricals
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../anti-counterfeit-solution-for-ecommerce-industry.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/industry-icon/ecommerce.svg"
+                                                            alt="E-Commerce">
+                                                        E-Commerce
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../anti-counterfeit-solutions-for-education-and-stationery-industry.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/industry-icon/education-stationery.svg"
+                                                            alt="education">
+                                                        Education & Stationery
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../brand-protection-solutions-for-sports-fitness-industry.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/industry-icon/sports-fitness.svg"
+                                                            alt="Sports and Fitness">
+                                                        Sports & Fitness
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../anti-counterfeit-solutions-for-apparel-and-fashion-industry.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/industry-icon/apparels-fashion.svg"
+                                                            alt="Apparels & Fashion">
+                                                        Apparels & Fashion
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../anti-counterfeiting-solutions-for-government-industry.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/industry-icon/government.svg"
+                                                            alt="Government">
+                                                        Government
+                                                    </a>
+                                                </div>
+                                                <div class="col d-flex">
+                                                    <a href="../anti-counterfeit-solutions-for-pharma-industry.aspx" class="dropdown-item">
+                                                        <img src="../newContent/front-assets/img/industry-icon/pharma.svg" alt="Pharma">
+                                                        Pharma
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../our-media.aspx">Media</a>
+                            </li>
+                            <li class="nav-item d-lg-block d-none">
+                                <a class="nav-link bg-success text-white px-3"
+                                    href="https://www.vcqru.com/CodeCheck.aspx">Verify Coupon</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- navbar-end -->
+	<form runat="server" id="Myforms" class="needs-validation" novalidate>
+     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+			</form>
+    <!-- Subscribe Our Newsletter -->
+    <section class="subscribe" id="subscribe"></section>
+<%-- footer --%>
+     <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row g-xl-4 g-lg-3 g-md-3 g-3">
+                    <div class="col-xl-3 col-lg-3 col-md-6">
+                        <h6>Get in Touch With VCQRU</h6>
+                        <p>Welcome to VCQRU, your trusted partner for protecting your brand from the risks of
+                            counterfeiting and duplication.</p>
+                        <ul class="address">
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Unit: 1502-03, 15th Floor, Tower-4, DLF Corporate Greens, Sector-74A, Gurgaon, Haryana -
+                                122004.
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone-volume"></i>
+                                <a href="tel:1245181074">+91-124 5181074</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <a href="mailto:sales@vcqru.com" class="text-lowercase">sales@vcqru.com</a>
+                            </li>
+                        </ul>
+                        <div class="social-links">
+                            <ul>
+                                <li>
+                                    <a href="https://www.facebook.com/vcqru/" target="_blank" title="Facebook">
+                                        <i class="fa-brands fa-square-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/company/vcqru-wesecureyou/" target="_blank"
+                                        title="Linkedin">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/vcqru_wesecureyou/" target="_blank"
+                                        title="Instagram">
+                                        <i class="fa-brands fa-square-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/Vcqru_Official" target="_blank" title="Twitter">
+                                        <i class="fa-brands fa-square-x-twitter"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6">
+                        <h6>Business Solutions</h6>
+                        <ul>
+                            <li>
+                                <a href="../anti-counterfeiting-solutions.aspx">Anti-Counterfeit</a>
+                            </li>
+                            <li>
+                                <a href="../customer-loyalty-program.aspx">Build Loyalty</a>
+                            </li>
+                            <li>
+                                <a href="../cash-transfer-system.aspx">Cash Transfer</a>
+                            </li>
+                            <li>
+                                <a href="../digital-e-warranty-management-solution.aspx">E- Warranty</a>
+                            </li>
+                            <li>
+                                <a href="https://digitalmarketing.vcqru.com/" target="_blank">Digital Marketing</a>
+                            </li>
+                            <li>
+                                <a href="../customer-reward-schemes.aspx">Gift Coupon</a>
+                            </li>
+                            <li>
+                                <a href="../smart-labels-qr-code.aspx">Smart Labels</a>
+                            </li>
+                            <li>
+                                <a href="../customer-referral-program.aspx">Referral Services</a>
+                            </li>
+                            <li>
+                                <a href="../track-and-trace-solutions.aspx">Track & Trace</a>
+                            </li>
+                            <li>
+                                <a href="../website-design-and-development-company.aspx">Website Design & Development</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6">
+                        <h6>Industries We Cover</h6>
+                        <ul>
+                            <li>
+                                <a href="../anti-counterfeit-solution-for-fmcg-industry.aspx">FMCG</a>
+                            </li>
+                            <li>
+                                <a href="../anti-counterfeit-solutions-for-cosmetic-industry.aspx">Cosmetic Industry</a>
+                            </li>
+                            <li>
+                                <a href="../anti-counterfeit-solution-for-consumer-electronics-industry.aspx">Consumer Electronics</a>
+                            </li>
+                            <li>
+                                <a href="../anti-counterfeiting-solutions-for-auto-parts-industry.aspx">Auto Parts</a>
+                            </li>
+                            <li>
+                                <a href="../anti-counterfeit-solution-for-health-supplements-industry.aspx">Health Supplements</a>
+                            </li>
+                            <li>
+                                <a href="../anti-counterfeit-solutions-for-agro-industry.aspx">Agro</a>
+                            </li>
+                            <li>
+                                <a href="../packaging.aspx">Packaging</a>
+                            </li>
+                            <li>
+                                <a href="../anti-counterfeit-solution-for-tobacco-industry.aspx">Tobacco</a>
+                            </li>
+                            <li>
+                                <a href="../anti-counterfeit-solutions-for-liquor-industry.aspx">Liquor</a>
+                            </li>
+                            <li>
+                                <a href="../industries.aspx" class="text-primary">View More</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6">
+                        <h6>Quick Links</h6>
+                        <ul>
+                            <li>
+                                <a href="../default.aspx">Home</a>
+                            </li>
+                            <li>
+                                <a href="../about-us.aspx">About Us</a>
+                            </li>
+                            <li>
+                                <a href="../contact-us.aspx">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="../career.aspx">Career</a>
+                            </li>
+                            <li>
+                                <a href="../our-media.aspx">Our Media</a>
+                            </li>
+                            <li>
+                               <a href="../about-our-mentor.aspx">About Our Mentor</a>
+                            </li>
+                            <li>
+                                <a href="../blog.aspx">Blog</a>
+                            </li>
+                            <li>
+                                <a href="../terms-conditions.aspx">Terms and Conditions</a>
+                            </li>
+                            <li>
+                                <a href="../privacy-policy.aspx">Privacy Policy</a>
+                            </li>
+                            <li>
+                               <a href="../refund-policy.aspx">Refund Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="text-center mb-0">© Copyright 2024 VCQRU Private Limited | All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <%-- footer-end --%>
+    <%-- js-links --%>
+     <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../NewContent/front-assets/js/index.js"></script>
+     <script src="../NewContent/front-assets/js/owl.carousel.min.js"></script>
+     
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                center: true,
+                navText: [
+                    "<i class='fa fa-angle-left'></i>",
+                    "<i class='fa fa-angle-right'></i>"
+                ],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            });
+        });
+    </script>
+    <%-- shared --%>
+    <script src="../shared/subscribe.js"></script>
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true" novalidate>
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-5" id="staticBackdropLabel"></h5>
+                    <button type="button"  class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="refreshPage()"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" id="myForm" method="post"
+                        class="row row-cols-xxl-2 row-cols-xl-2 row-cols-lg-2 row-cols-md-2 row-cols-1 g-3 needs-validation"
+                        novalidate>
+                        <div class="col">
+                            <label for="industry" class="form-label">Choose Your Industry:</label>
+                            <select class="form-select bg-none border" id="industries" name="industries" required>
+                                <option value="" selected disabled>Select industries </option>
+                                <option value="FMCG">FMCG</option>
+                                <option value="Cosmetics">Cosmetics</option>
+                                <option value="Consumer Electronics">Consumer Electronics</option>
+                                <option value="Auto Parts">Auto Parts</option>
+                                <option value="Health Supplements">Health Supplements</option>
+                                <option value="Agro">Agro</option>
+                                <option value="Tobacco">Tobacco</option>
+                                <option value="Liquor">Liquor </option>
+                                <option value="BFSI">BFSI</option>
+                                <option value="Electronics and Electricals">Electronics and Electricals</option>
+                                <option value="E-Commerce">E-Commerce</option>
+                                <option value="Education and Stationery">Education and Stationery</option>
+                                <option value="Sports and Fitness">Sports and Fitness</option>
+                                <option value="Apparel and Fashion">Apparel and Fashion</option>
+                                <option value="Government">Government</option>
+                                <option value="Pharma">Pharma </option>
+                                <option value="other">other</option>
+                            </select>
+                            <%--<div class="invalid-feedback">please choose an industries</div>--%>
+                        </div>
+                        <div class="col">
+                              <label type="services" class="form-label">Choose Services:</label>
+                            <select class="form-select bg-none border" id="services" name="services" required>
+                            <option value="" selected disabled>select Services </option>
+                            <option value="Anti Counterfeiting">Anti Counterfeiting</option>
+                            <option value="Cash Transfer">Cash Transfer</option>
+                            <option value="E- Warranty">E- Warranty</option>
+                            <option value="Build Loyalty">Build Loyalty</option>
+                            <option value="Smart Labels">Smart Labels</option>
+                            <option value="Gift Coupon">Gift Coupon</option>
+                            <option value="Referral Services">Referral Services</option>
+                            <option value="Track and Trace">Track and Trace</option>
+                            <option value="Website Design & Development">Website Design & Development</option>
+                            <option value="Digital Marketing">Digital Marketing</option>
+                            <option value="other">other</option>
+                        </select>
+                       <%-- <div class="invalid-feedback">please choose a services:</div>--%>
+                        </div>
+                        <div class="col">
+                            <label for="bussiness" class="form-label">Business Name:</label>
+                            <input type="text" class="form-control" id="bussiness" name="bussiness"
+                                placeholder="Enter business name" required>
+                            <div class="invalid-feedback">please enter bussiness name </div>
+                        </div>
+                        <div class="col">
+                            <label for="name" class="form-label">Name:</label>
+                            <input type="text" class="form-control" id="name" name="name" maxlength="20" oninput="this.value =this.value.replace(/[^A-Za-z]/g, '').substring(0,20)"  value="" placeholder="Enter name"
+                                pattern="^[A-Za-z]+(?: [A-Za-z]+)*$" required>
+                            <div class="invalid-feedback">please enter name </div>
+                        </div>
+                        <div class="col">
+                            <label for="number" class="form-label"> Mobile Number:</label>
+                            <input type="number" class="form-control" id="number" name="number" placeholder="Enter number"
+                                required maxlength="10"
+                                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); if (this.value.length !== 10) this.setCustomValidity('Phone number must be exactly 10 digits.'); else this.setCustomValidity('');"
+                                required>
+                            <div class="invalid-feedback">Please enter valid Mobile number.</div>
+
+                        </div>
+                       <div class="col">
+                        <label for="emailid" class="form-label">Email ID:</label>
+                        <input type="emailid" class="form-control" id="emailid" name="emailid"
+                            placeholder="Enter email Id" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                       </div>
+                       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-12">
+                        <label for="message" class="form-label">Message:</label>
+                        <textarea type="text" class="form-control bg-none border" id="message" name="message" rows="3"
+                            placeholder="Enter a Message" required></textarea>
+                      <%--  <div class="invalid-feedback">Please enter your message.</div>--%>
+                       </div>
+                       
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="refreshButton" class="btn btn-secondary" data-bs-dismiss="modal" onclick="refreshPage()">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <script>
+         function submitForm() {
+             // Show loading spinner
+             document.getElementById('loader-wrapper').style.visibility = 'visible';
+             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+             const phoneRegex = /^\d{10,10}$/; // Adjust the regex based on your mobile number format
+             // Get form values
+             debugger;
+             var industries = document.getElementById('industries').value;
+             var services = document.getElementById('services').value;
+             var bussiness = document.getElementById('bussiness').value;
+             var name = document.getElementById('name').value;
+             var emailid = document.getElementById('emailid').value;
+             var number = document.getElementById('number').value;
+             var message = document.getElementById('message').value;
+             // var fullName = firstName + " " + lastName;
+
+             // Validate form
+             if (bussiness === "" || name === "" || emailid === "" || number === "" || !emailRegex.test(emailid) || !phoneRegex.test(number)) {
+                 (() => {
+                     'use strict'
+                     // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                     const forms = document.querySelectorAll('.needs-validation')
+                     // Validate email using regex
+                     if (!emailRegex.test(emailid)) {
+                         // Show email validation styles and prevent submission
+                         Array.from(forms).forEach(form => {
+                             form.classList.add('was-validated');
+                         });
+                         return false;
+                     }
+
+                     // Validate phone number using regex
+                     if (!phoneRegex.test(number)) {
+                         // Show phone number validation styles and prevent submission
+                         Array.from(forms).forEach(form => {
+                             form.classList.add('was-validated');
+                         });
+                         return false;
+                     }
+                     // Loop over them and prevent submission
+                     Array.from(forms).forEach(form => {
+                         if (!form.checkValidity()) {
+                             event.preventDefault();
+                             event.stopPropagation();
+                         }
+                         form.classList.add('was-validated');
+                     });
+                 })();
+                 // Hide loading spinner
+                 document.getElementById('loader-wrapper').style.visibility = 'hidden';
+                 return false;
+             }
+
+             // Create a new XMLHttpRequest object
+             var xhr = new XMLHttpRequest();
+
+             // Define the AJAX request
+             xhr.open('POST', 'https://qa.vcqru.com/Info/MasterHandler.ashx?method=sendqueryDeMO&name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(emailid) + '&phone=' + encodeURIComponent(number) + '&comment=' + encodeURIComponent(message) + '&Industry=' + encodeURIComponent(industries) + '&Services=' + encodeURIComponent(services) + '&Business_Name=' + encodeURIComponent(bussiness), true);
+
+             // Set the content type for POST requests
+             xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+             // Define the callback function when the request is successful
+             xhr.onload = function () {
+                 // alert(xhr.response);
+                 // Hide loading spinner
+                 document.getElementById('loader-wrapper').style.visibility = 'hidden';
+                 if (xhr.status === 200) {
+                     // Reset form fields to null
+                     document.getElementById('myForm').reset();
+                     // Redirect to thank-you.html after a successful form submission
+                     window.location.href = '../thank-you.aspx';
+                 }
+             };
+
+             // Define the callback function in case of an error
+             xhr.onerror = function (error) {
+                 // Hide loading spinner
+                 console.error('Error:', error);
+             };
+
+             // Send the request
+             xhr.send();
+         }
+     </script>
+    <!-- loder -->
+    <script>
+        document.onreadystatechange = function () {
+            var loaderWrapper = document.getElementById('loader-wrapper');
+
+            // Show loader when the page is still loading
+            if (document.readyState === 'loading') {
+                loaderWrapper.style.visibility = 'visible';
+            } else {
+                // Hide loader once the page has fully loaded
+                loaderWrapper.style.visibility = 'hidden';
+            }
+        };
+    </script>
+    <script>
+        function refreshPage() {
+            location.reload();
+        }
+    </script> 
+    <%-- loder-end --%>
+    <%-- top-btn --%>
+    <script>
+            var mybutton = document.getElementById("top-btn"); function scrollFunction() { document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? mybutton.style.visibility = "visible" : mybutton.style.visibility = "hidden" } function topFunction() { document.body.scrollTop = 0, document.documentElement.scrollTop = 0 } window.onscroll = function () { scrollFunction() };
+    </script>
+    <%-- top-btn-end --%>
+</body>
+</html>

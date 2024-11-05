@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterVcqru.master.cs" Inherits="Info_MasterVcqru" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+      <meta name="Keyword" content="security sticker,Brand Protection,Check Product Originality,Consumer Insights,counterfeit solution provider,customer loyalty service,Customized Solution,Digital Warranty,e-warranty,Fighting Product Duplicate,Identity Fakes,label provider in Delhi,label provider in India,Make Packing Smart,qr code provider in Delhi,qr code provider in India,Run Product Survey,Save Brand,security stickers,Track & Trace Services,Neurotags,Original4sure,o4s,sproxil,Nirmal Stickers,Monarch Graphic,Pro Labels,Cosmo Printers,Uflex,Syndicate Labels,Braggart,Coats & Pack,Excel Pack,Sai Pack,J K Label,Manipal Technologies Limited (H.O.),Kumbhat Holographics,Signor Labels,Hira Holovision,Nestor Labels,Durga Holographic,Vishal Holo Solutions [Pvt] Ltd,Hi-Tech Print System,Verma Enterprises,DIPS technologies,Alpha Lasertek India,Holosafe Security Labels,Arora Printing,Cousin Enterprises,Smart Tech Solutions,Prem Printing,S. Anand,Packso Print,Latest Labeling And Solutions,Hira Print Solutions Private Limited,JJ Print Packs,3S Industries,G Mamu ji,Sanskar Printers,ColorBlast,VideoJet,Perfact Color Digital Prints Pvt Ltd,Mahindra and Mahindra,MFN,Windsor,Steelbird,Nutriglow cosmetics,1 Stop Nutrition,Bansi lal and sons,Olympic Auto Industries,JR Fragrence,Deeksha mineral water,ELA group,Suresh Confectionary,Welgo,Mysha Healthworld,Mysha,White Horse,Mstar Oil,Mahindra tractors,Mahindra MStar Super 7.5,Mahindra MStar Super 5,Mahindra MStar Super 6,Mahindra MStar Super 2,Mahindra MStar Super 1,Mahindra MStar Premium 10,Mahindra MStar Premium 7.5,Mahindra MStar Premium 1,Mahindra MStar Classic OIB 20,Mahindra MStar Classic OIB 10,Mahindra MStar Classic OIB  5,Mahindra MStar Classic OIB 1,Mechanic coupon,Flora,competent electricals,energy meters,VCQRU Counterfeit Prevention Solution,VCQRU Refer & Win,VCQRU Thank you customer,VCQRU Customer satisfaction feedback,VCQRU Customer loyalty voucher,VCQRU Lotto,VCQRU Consumer action insights,VCQRU Customization,VCQRU Direct Money Transfer,VCQRU Smart Warrranty Solution,Secure Track & Trace,Companies who provide counterfeit solutions,QR code providers,QR Code label providers in delhi,security stickers,customer loyalty service,digital warranty,e-warranty,track and trace service,Anti counterfeiting,boost sales,make packaging smart,fight against duplicity,save brand,Make packaging work for you,customized solutions,secure track and trace,consumer insights,brand protection,identify fakes,check product originality,run product survey,customer rewards program,customer loyalty program,product promotions,electrical appliances,FMCG Anti counterfeiting,dairy products,buy genuine products,warranty labels,security labels,unique digital codes,advanced technical solutions/services,end to end marketing and packaging solution,unique labeling,variable number codes,data analysis,insure customer safety,consumer trust,product visibility,effective branding and marketing strategies,label sticker printing service,(incorporating the qr code),security sticker,Brand Protection,Check Product Originality,Consumer Insights,counterfeit solution provider,customer loyalty service,Customized Solution,Digital Warranty,e-warranty,Fighting Product Duplicate,Identify Fakes,label provider in Delhi,label provider in India,Make Packing Smartqr code provider in Delhi,qr code provider in India,Run Product Survey,Save Brand,security stickers,Track & Trace Services," />
+    <meta name="Description" content="Every person has the right to know whether the product they are buying is genuine or not. We use truly secure and encrypted codes printed on the labels of the product which are impossible to replicate. With the help of secure mobile/web tools, the authenticity of the product can be checked." />
+      <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

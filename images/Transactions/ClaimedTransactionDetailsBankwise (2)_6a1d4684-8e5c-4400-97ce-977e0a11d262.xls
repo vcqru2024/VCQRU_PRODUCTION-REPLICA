@@ -1,0 +1,31 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Sheet0</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table><tr><td>S.No.</td><td>User Name</td><td>MobileNo</td><td>Sum Of Amount</td><td>Account No.</td><td>Account HolderNm</td><td>Bank Name</td><td>IFSC Code</td><td>Claim Date</td><td>ClaimID</td><td>Payment Status</td><td>TxnDate</td><td>Txn ID</td><td>Remarks</td></tr><tr><td>
+                                        1
+                                    </td><td>
+                                      
+                                      <span id="ctl00_ContentPlaceHolder1_GridView1_ctl02_lblUserName">anil</span>
+                                        
+                                    </td><td>
+                                        <span id="ctl00_ContentPlaceHolder1_GridView1_ctl02_lblMobileNo">919991500298</span>
+                                    </td><td>
+                                        <span id="ctl00_ContentPlaceHolder1_GridView1_ctl02_lblConsumerName"></span>
+                                    </td><td>
+                                        <span id="ctl00_ContentPlaceHolder1_GridView1_ctl02_lblEmail">50100463645217</span>
+                                    </td><td>
+                                        <span id="ctl00_ContentPlaceHolder1_GridView1_ctl02_lblEmail">anil</span>
+                                    </td><td>
+                                        <span id="ctl00_ContentPlaceHolder1_GridView1_ctl02_lblEmail">HDFC BANK</span>
+                                    </td><td>
+                                        <span id="ctl00_ContentPlaceHolder1_GridView1_ctl02_lblEmail">HDFC0009267</span>
+                                    </td><td>
+                                        <span id="ctl00_ContentPlaceHolder1_GridView1_ctl02_lblClaimDate">05/02/2024 16:04:43</span>
+                                    </td><td>
+                                        <span id="ctl00_ContentPlaceHolder1_GridView1_ctl02_lblClaimID">953</span>
+                                    </td><td>
+                                        <span id="ctl00_ContentPlaceHolder1_GridView1_ctl02_lblStatus">Rejected</span>
+                                    </td><td>
+                                        <span id="ctl00_ContentPlaceHolder1_GridView1_ctl02_lblTxnDate">Feb 28 2024 12:00AM</span>
+                                    </td><td>
+                                        <span id="ctl00_ContentPlaceHolder1_GridView1_ctl02_lblTxnID">576949555</span>
+                                    </td><td>
+                                        <span id="ctl00_ContentPlaceHolder1_GridView1_ctl02_lblRemarks">Payment transferred successfully</span>
+                                    </td></tr></table></body></html>

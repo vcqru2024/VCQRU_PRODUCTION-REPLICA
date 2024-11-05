@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Ram Gopal & Sons</title>
+
+    <style>
+        .RamGopalSons_section {
+            /* background-image: url(assets/images/RGS-images/RGM-bg.png);
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: cover;
+            width: 100%;
+
+            height: 100vh; */
+            /* position: relative;
+            display: flex; */
+        }
+
+
+            .RamGopalSons_section header .rgs-logo {
+                width: 17%;
+            }
+
+            .RamGopalSons_section header {
+                background-color: #2c322d;
+                padding: 10px 0;
+                width: 100%;
+                margin-bottom: 10px;
+                box-shadow: 0px 2px 2px #6d6969;
+            }
+
+        .text-heading {
+            width: 80%;
+            margin: 50px 0;
+        }
+
+        /* for the validation */
+        #auth {
+            text-align: center;
+        }
+
+        .rgs-form {
+            background-color: #c4cabd;
+            padding: 30px;
+            gap: 7;
+            /*text-align: center;*/
+        }
+
+            .rgs-form input, select {
+                margin-bottom: 7px;
+            }
+
+                .rgs-form input::placeholder {
+                    color: #212529;
+                }
+
+            .rgs-form button {
+                background-color: #1f5208;
+                color: #d1af6d;
+                border: 0;
+                padding: 6px 50px;
+                border-radius: 4px;
+                margin: 15px 0;
+            }
+
+                .rgs-form button:focus {
+                    background-color: #1f5208;
+                    color: #fff;
+                }
+
+            .rgs-form h4 {
+                color: #2c322d;
+                padding: 10px;
+            }
+
+        .RGS-footer {
+            text-align: center;
+            width: 100%;
+            background-color: #2c322d;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+            .RGS-footer a {
+                text-decoration: none;
+                color: #d1af6d;
+                padding: 10px 0;
+                background-color: #2c322d;
+            }
+
+        #wlink {
+            color: #000;
+            text-align: center;
+        }
+
+            #wlink a {
+                text-decoration: none;
+                color: #000;
+                font-weight: 600;
+            }
+
+        .product-box {
+            border: 2px solid;
+            padding: 10px;
+        }
+            /* .product-slider-box {
+            margin-top: 13%;
+        } */
+
+
+            .product-box .product-1, .product-2, .product-3 {
+                width: 30%;
+            }
+
+        .bg-img {
+            position: absolute;
+            width: 90%;
+            bottom: 40px;
+            z-index: -1;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .form-control {
+            appearance: auto !important;
+        }
+
+        @media screen and (width:820px),(width:768px),(width:1024px) {
+            .bg-img {
+                width: 100% !important;
+            }
+        }
+
+
+        /* @media screen and (width:1024px) {
+            .bg-img {
+                position: absolute !important;
+            }
+        } */
+        @media screen and (min-width:768px) {
+            .bg-img {
+                width: 65%;
+                position: initial;
+            }
+
+            .product-box .product-1, .product-2, .product-3 {
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .RamGopalSons_section header .rgs-logo {
+                width: 36%;
+            }
+
+            .text-heading {
+                width: 100%;
+                margin: 30px 0;
+            }
+
+            .bg-img {
+                margin-bottom: 40px;
+            }
+
+            .bg-img {
+                position: initial;
+            }
+        }
+
+        @media screen and (min-width:820px) and (max-width:912px) {
+            .text-heading {
+                width: 100%;
+                margin: 50px 0;
+            }
+
+            .product-box .product-1, .product-2, .product-3 {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width:920px) and (max-width:1300px) {
+            .bg-img {
+                position: initial;
+                width: 100%;
+            }
+
+            .product-box .product-1, .product-2, .product-3 {
+                width: 80%;
+            }
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/0.9.0/jquery.mask.min.js"></script>
+    <script type="text/javascript">
+        //var baseurl = "..";
+        //var baseurl = "https://qa.vcqru.com"
+        var baseurl = ".."
+        var Codeone = "";
+        var Codetwo = "";
+        var comp = "";
+        var Id = "";
+        var ctr = "";
+
+        var lat = "";
+        var long = "";
+        var getPosition = function (options) {
+            return new Promise(function (resolve, reject) {
+                navigator.geolocation.getCurrentPosition(resolve, reject, options);
+            });
+        }
+
+        // form this function we may easily collect the data to the our database by using the post api
+
+        function Mobile_check() {
+
+            debugger;
+            if ($('#countrycode').val() == "" || $('#countrycode').val() == null) {
+                $('#mobilecheck').show();
+                $('#mobilecheck').html("**Please Select Country");
+                $('#mobilecheck').css("color", "red");
+                mobile_err = false;
+                return false;
+
+            }
+
+            var mobile_val = $('#mobile').val();
+            var d = mobile_val.slice(0, 1);
+            var c = parseInt(d);
+
+            if ((mobile_val.length == '') || (mobile_val.length < 5)) {
+                $('#mobilecheck').show();
+                $('#mobilecheck').html("**Please Enter mobile number");
+                $('#mobilecheck').css("color", "red");
+                mobile_err = false;
+                return false;
+            }
+            $('#mobilecheck').hide();
+
+            // if the mobile length value is correct and drop down list is not empty then through post api we can easily collect the data from the user
+
+            if (mobile_val.length < 5) {
+                $("#name").val('');
+                $("#mail").val('');
+                $("#city").val('');
+                $("#country").val('');
+                mobile_err = false;
+                return false;
+                /* //debugger;*/
+                // $('#mobilecheck').hide();
+                
+                // $('#mobilecheck').css("color", "red");
+            }
+            else {
+                $('#mobilecheck').html("");
+                /* $("#whats").val('');*/
+
+            }
+        }
+
+        function Getdata() {
+
+            var mobile_val = $('#mobile').val();
+            var d = mobile_val.slice(0, 1);
+            var c = parseInt(d);
+
+
+
+            if ($('#country :selected').val() == "" || $('#country :selected').val() == null) {
+                $('#mobilecheck').show();
+                $('#mobilecheck').text('Please select Country');
+                $('#mobilecheck').css("color", "red");
+                // Age_err = false;
+                return false;
+            }
+            else {
+                // $('#mobilecheck').text('');
+            }
+
+
+            if ((mobile_val.length == '') || (mobile_val.length < 5)) {
+                $('#mobilecheck').show();
+                $('#mobilecheck').html("**Please Enter mobile number");
+                $('#mobilecheck').css("color", "red");
+                mobile_err = false;
+                return false;
+            }
+            $('#mailcheck').hide();
+
+            // if the mobile length value is correct and drop down list is not empty then through post api we can easily collect the data from the user
+
+            if (mobile_val.length >= 5) {
+                /* //debugger;*/
+                // $('#mobilecheck').hide();
+                $('#btnnxtMob').hide();
+                $('#btnloadnxtMob').show();
+                $.ajax({
+                    type: "Post",
+                    url: baseurl + '/Info/MasterHandler.ashx?method=ConsumerDetailsByMobileNo&MobileNo= ' + $('#mobile').val() + '&CountryCode= ' + $('#countrycode').val(),
+                    success: function (data) {
+                        debugger;
+                        if (c <= 0) {
+                            $('#mobilecheck').text('**Please Enter Correct Mobile Number');
+                            $('#btnnxtMob').show();
+                            $('#btnloadnxtMob').hide();
+                            $('#mobile').val('');
+                            return false;
+                        }
+                        else {
+                            $('#btnsubmit').show();
+                            $('#btnloadnxtMob').hide();
+                            $("#name").val(TName);
+                            $('#Chkcode').hide();
+                            $('#mobilefield').hide();
+                            $('#Chkfields').show();
+                            $('#Otherfield').show();
+
+                            var TName = data.split('~')[0];
+                            var TInoxUsertype = data.split('~')[1];
+                            var Tcity = data.split('~')[2];
+                            var Tstate = data.split('~')[3];
+                            var Tshopname = data.split('~')[4];
+                            var TOtherRole = data.split('~')[5];
+                            var Tpin = data.split('~')[6];
+                            var TEmail = data.split('~')[7];
+                            var TCompid = data.split('~')[8];
+                            var TAddress = data.split('~')[9];
+                            var TUPI = data.split('~')[10];
+                            var TGendor = data.split('~')[11];
+                            var TAgegroup = data.split('~')[12];
+                            var TCountry = data.split('~')[13];
+
+                            //alert(data);
+
+                            if (TName != "") {
+                                $("#name").val(TName);
+                            }
+                            else {
+                                $("#name").val(TName);
+                                $('#Chkcode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                            }
+
+
+                            if (TEmail != "") {
+                                $("#mail").val(TEmail);
+                            }
+                            else {
+                                $("#mail").val(TEmail);
+                                $('#Chkcode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                            }
+
+                            if (Tcity != "") {
+                                $("#city").val(Tcity);
+                            }
+                            else {
+                                $("#city").val(Tcity);
+                                $('#Chkcode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                            }
+
+                            if (TCountry != "") {
+                                $("#country").val(TCountry);
+                            }
+                            else {
+                                $("#country").val(TCountry);
+                                $('#Chkcode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                            }
+                            //if (TGendor != "") {
+                            //    $('#gender :selected').val(TGendor);
+                            //}
+                            //else {
+                            //    $('#gender :selected').val(TGendor);
+                            //    $('#Chkcode').hide();
+                            //    $('#mobilefield').hide();
+                            //    $('#Chkfields').show();
+                            //    $('#Otherfield').show();
+                            //}
+                            //if (TAgegroup != "") {
+                            //    $('#age :selected').val(TAgegroup);
+                            //}
+                            //else {
+                            //    $('#age :selected').val(TAgegroup);
+                            //    $('#Chkcode').hide();
+                            //    $('#mobilefield').hide();
+                            //    $('#Chkfields').show();
+                            //    $('#Otherfield').show();
+                            //}
+
+                            if (TName != "" && TEmail != "" && Tcity != "" && TCountry != ""/* && TGendor != "" && TAgegroup != ""*/) {
+                                btnsubmitFunAuto();
+                            }
+
+                        }
+                    }
+                });
+            }
+            else {
+                $("#name").val('');
+                $("#mail").val('');
+                $("#city").val('');
+                $("#country").val('');
+                /* $("#whats").val('');*/
+
+            }
+        }
+
+        function btnsubmitFunAuto() {
+            var country_val = $('#hdncountry').val();
+
+            var code = $('#example13-digit-number').val();
+            //alert(code);
+            if ($('#example13-digit-number').val() != "") {
+
+                $('#btnnxtMob').hide();
+                $('#btnloadnxtMob').show();
+                var url = baseurl + '/Info/MasterHandler.ashx?method=verifyotp&mobile='
+                    + encodeURIComponent($('#mobile').val())
+                    + "&CountryCode=" + encodeURIComponent($('#countrycode').val())
+                    + "&vCode=" + encodeURIComponent($('#example13-digit-number').val())
+                    + '&name=' + encodeURIComponent($('#name').val())
+                    + '&city=' + encodeURIComponent($('#city').val())
+                    + '&country=' + encodeURIComponent($('#hdncountry').val())
+                    + '&EmailAddrs=' + encodeURIComponent($('#mail').val())
+                    /* + '&gender=' + encodeURIComponent($('#gender :selected').val()) 
+                    + '&Age=' + encodeURIComponent($('#age :selected').val()) */
+                    + '&comp=' + encodeURIComponent('Ram Gopal and Sons')
+                    + '&Comp_ID=Comp-1626';
+                $.ajax({
+                    type: "POST",
+                    contentType: false,
+                    processData: false,
+
+                    url: url,
+                    success: function (data) {
+
+                        //alert(data.split('&')[1])
+                        $('#btnsubmit').show();
+                        $('#btnloadsubmit').hide();
+                        if (data.split('~')[0] !== "failure") {
+                            window.scrollTo(0, 0);
+                            if (data.indexOf("not valid") !== -1) {
+                                data = data.split(".")[0];
+                            }
+
+                            /*$('#HEADING').hide();*/
+                            $('#Chkfields').hide();
+                            $('#mobilefield').hide();
+                            $('#Otherfield').hide();
+                            $('#Chkcode').hide();
+                            $('#auth').hide();
+                            $('#ShowMessage').show();
+                            $('#p3msg').show();
+                            $('#p3msg').html(data.split('~')[1]);
+                            $('#p3msg:contains("not")').css('color', 'black');
+                        }
+
+                        else {
+
+                            $('#auth').hide();
+                            $('#p3msg').hide();
+                            toastr.error('Something Went Wrong');
+                            $('#btnskyVerify1').attr('disabled', false);
+                        }
+                    }
+                });
+            }
+
+            else {
+                $('#btnsubmit').attr('disabled', false);
+            }
+        }
+        $(document).ready(function () {
+
+            ////debugger;
+            $('#Chkcode').show();
+            $('#Chkfields').hide();
+            $('#mobilefield').hide();
+            $('#Otherfield').hide();
+
+
+
+
+            var country_err = true;
+            var city_err = true;
+            var name_err = true;
+            var mobile_err = true;
+            var Mail_err = true;
+            //var Gender_err = true;
+            //var Age_err = true;
+            var What_err = true;
+
+            // alert(window.location.href);
+
+            function getUrlVars() {
+                // //debugger;
+                var vars = [], hash;
+                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+
+
+                for (var i = 0; i < hashes.length; i++) {
+                    hash = hashes[i].split('=');
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                return vars;
+            };
+
+            Codeone = getUrlVars()["codeone"];
+            Codetwo = getUrlVars()["codetwo"];
+            comp = getUrlVars()["Comp"];
+
+            Id = getUrlVars()["ID"];
+
+            if (comp === undefined || comp === "undefined") {
+                comp = comp;
+            }
+            else {
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+            }
+            if (Codeone === undefined || Codeone === undefined) {
+                Codeone = Codeone;
+            }
+            else {
+                var HdnCode1 = Codeone;
+                var HdnCode2 = Codetwo;
+                // $("#codeone").val(code);
+            }
+
+            var id = comp;
+
+
+            if (id == "1") {
+                ////debugger;
+                $('#Chkcode').show();
+                $('#Chkfields').hide();
+                $('#mobilefield').hide();
+                /* alert(2);*/
+                $('#Otherfield').hide();
+                // $('#btnnxtMob').show();
+                //$('#btnsubmit').hide();
+
+            }
+
+            else if (id == "Ram Gopal and Sons") {
+                ////debugger;
+                $('#Chkcode').hide();
+                $('#Chkfields').show();
+                $('#mobilefield').show();
+
+                /* alert(2);*/
+                $('#Otherfield').hide();
+                var code = Codeone + '-' + Codetwo
+                // var code = $('#HdnCode1').val() + '-' + $('#HdnCode2').val();
+                $("#example13-digit-number").val(code);
+                $('#btnnxtMob').show();
+                $('#btnsubmit').hide();
+            }
+
+
+
+            //Api For bind country in dropdown
+
+            $.ajax({
+                type: "POST",
+                url: baseurl + '/Info/MasterHandler.ashx?method=GetCountrylistwithcode',
+                success: function (data) {
+                    $.each(JSON.parse("[" + data + "]"), function (index, record) {
+                        // start a loop on the current record in the iteration
+                        $.each(record, function (index2, sub_record) {
+                            $('#country').append('<option value="' + sub_record.CountryCode + '">' + sub_record.Country + '</option>');
+                        });
+                    });
+                }
+            });
+
+            $("#country").change(function () {
+                var selectedValue = $(this).val();
+                var selectedtext = $(this).find(':selected').text();
+                $('#hdncountry').val(selectedtext);
+                $("#countrycode").val(selectedValue);
+
+                $('#mailcheck').html('');
+                if ($('#mobile').val().length >= 10) {
+                    $('#Chkcode').hide();
+                    $('#Chkfields').show();
+                    $('#mobilefield').show();
+
+                    /* alert(2);*/
+                    $('#Otherfield').hide();
+                }
+
+
+            });
+
+            $("#example13-digit-number").mask("99999-99999999");
+            $("#btnnxt").on('click', function (e) {
+                e.preventDefault();
+                /*   //debugger;*/
+
+                var codeone = $('#example13-digit-number').val();
+
+                if (codeone == "" || codeone == undefined) {
+                    $('#codecheck').html('**Please Enter 13 Digit Code');
+                    $('#codecheck').css("color", "red");
+                    return false;
+                }
+
+                else {
+                    $('#codecheck').text('');
+                }
+
+                if (codeone != undefined) {
+                    if ($('#example13-digit-number').val().length < 14) {
+                        $('#codecheck').text('**Please Enter 13 Digit Code');
+                        $('#codecheck').css("color", "red");
+                        return false;
+                    }
+                    else {
+                        $('#codecheck').text('');
+                        $('#codecheck').hide();
+                    }
+
+                }
+
+                var rquestpage_Dcrypt = $("#example13-digit-number").val();
+                $('#btnnxt').hide();
+                $('#btnloadnxt').show();
+
+                $.ajax({
+                    type: "POST",
+                    url: baseurl + '/Info/MasterHandler.ashx?method=chkgenuenity&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1],
+                    success: function (data) {
+                        debugger;
+                        //alert(data)
+                        $.ajax({
+                            type: "POST",
+                            url: baseurl + '/Info/MasterHandler.ashx?method=chkwarranty&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1] + '&lat=' + lat + '&long=' + long,
+                            success: function (data) {
+                                debugger;
+                                $('#btnnxt').show();
+                                $('#btnloadnxt').hide();
+
+
+                                if (data.split('&')[0] === "1" && data.split('&')[1] === "Auto Max India") {
+
+                                }
+                                else {
+
+                                    // this is used to know from api  which company name
+                                    //  alert(data.split('&')[1])
+
+                                    if (data.split('&')[1] == "Ram Gopal and Sons" || data.split('&')[1] == "" || data.split('&')[1] == undefined) {
+                                        $('#Chkcode').hide();
+                                        $('#Chkfields').show();
+                                        $('#Otherfield').hide();
+                                        $('#mobilefield').show();
+
+                                        $('#btnsubmit').hide();
+                                        //$('#btnloadnxt').show();
+
+                                    }
+                                    else {
+                                        $('#nextcheck').text('**Invalid Code');
+                                        $('#nextcheck').css("color", "red");
+                                        $('#Chkcode').show();
+                                        // alert('Invalid Code');
+                                        //$('#Chkcode').show();
+                                        //$('#Chkfields').hide();
+                                        //$('#mobilefield').hide();
+                                        //$('#Otherfield').hide();
+                                        return false;
+                                    }
+                                }
+                            }
+                        });
+                    }
+                });
+
+            });
+
+            // end of the code check process
+
+
+            // validation for the mobile number
+            $("#mobile").mask("999999999999999");
+
+            $('#mobile').keyup(function () {
+                // Mobile_check();
+
+            });
+
+
+            /*Validation for the Mail */
+            $('#mail').keyup(function () {
+                Mail_check();
+
+            });
+
+            function Mail_check() {
+                var Mail_val = $('#mail').val();
+                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                //if (Mail_val.length == null) {
+                //    $('#mailcheck').show();
+                //    $('#mailcheck').html("**Please enter Email 2");
+                //    $('#mailcheck').css("color", "red");
+                //    Mail_err = false;
+                //    return false;
+                //}
+                debugger;
+
+                                /*else*/ if (Mail_val != "") {
+                    if (!regex.test(Mail_val)) {
+                        $('#mailcheck').show();
+                        $('#mailcheck').html("**Please enter valid Email");
+                        $('#mailcheck').css("color", "red");
+                        Mail_err = false;
+                        return false;
+                    }
+
+                    else {
+                        $('#mailcheck').hide();
+                    }
+                }
+                else {
+                    $('#mailcheck').hide();
+                }
+            }
+
+
+            // validation for the namecheck
+            $('#name').keyup(function () {
+                Name_check();
+
+            });
+
+            function Name_check() {
+                var Name_val = $('#name').val();
+
+                            //if ((Name_val.length == '')) {
+                            //    $('#namecheck').hide();
+                            //}
+                debugger;
+                            /*else*/ if (Name_val != "") {
+                    if ($('#name').val().match('^[a-z A-Z]{3,30}$')) {
+                        $('#namecheck').hide();
+                    }
+
+                    else {
+
+                        $('#namecheck').show();
+                        $('#namecheck').html("**Please Enter valid name");
+                        $('#namecheck').css("color", "red");
+                        name_err = false;
+                        return false;
+                    }
+                }
+                else {
+                    $('#namecheck').hide();
+                }
+            }
+
+            // validation for the country
+            $('#country').click(function () {
+                Country_check();
+
+            });
+
+            function Country_check() {
+
+                if ($('#country :selected').val() == "" || $('#country :selected').val() == null) {
+                    country_err = false;
+                    return false;
+                }
+                else {
+                    $('#mobilecheck').hide();
+                    $('#mobilecheck').html('');
+                }
+            }
+
+            // validation for the gender
+            //$('#gender').click(function () {
+            //    gender_check();
+
+            //});
+
+            //function gender_check() {
+
+            //    if ($('#gender :selected').val() == "" || $('#gender :selected').val() == null) {
+            //        $('#gendercheck').text('Please select Gender');
+            //        $('#gendercheck').css("color", "red");
+            //        Gender_err = false;
+            //        return false;
+            //    }
+            //    else {
+            //        $('#gendercheck').text('');
+            //    }
+            //}
+
+
+            // validation for the age
+            //$('#age').click(function () {
+            //    Age_check();
+
+            //});
+
+            //function Age_check() {
+            //    //alert($('#age :selected').text());
+            //    if ($('#age :selected').val() == "" || $('#age :selected').val() == null) {
+            //        $('#agecheck').text('Please select Age Group');
+            //        $('#agecheck').css("color", "red");
+            //        Age_err = false;
+            //        return false;
+            //    }
+            //    else {
+            //        $('#agecheck').text('');
+            //    }
+            //}
+
+            // validation for the city
+            $('#city').keyup(function () {
+                city_check();
+
+            });
+
+            function city_check() {
+
+                var city_val = $('#city').val();
+                            //if ((city_val.length == '')) {
+                            //    $('#citycheck').hide();
+                            //}
+
+                            /*else*/ if (city_val != "") {
+                    if ($('#city').val().match('^[a-z A-Z]{3,40}$')) {
+                        $('#citycheck').hide();
+                    }
+
+                    else {
+                        $('#citycheck').show();
+                        $('#citycheck').html("**Please enter valid city name");
+                        $('#citycheck').css("color", "red");
+                        city_err = false;
+                        return false;
+                    }
+                }
+                else {
+                    $('#citycheck').hide();
+                }
+            }
+
+            $('#btnsubmit').on('click', function (e) {
+
+                e.preventDefault();
+                //debugger;
+
+                var country_val = $('#hdncountry').val();
+
+                Mobile_check();
+                Mail_err = true;
+
+
+                Mail_check();
+                city_err = true;
+                city_check();
+                name_err = true;
+                Name_check();
+                if (/*(country_err != true) ||*/ (mobile_err != true) || (Mail_err != true) || (city_err != true) || (name_err != true)) {
+                    return false;
+
+                }
+
+                $('#btnsubmit').hide();
+                $('#btnloadsubmit').show();
+
+
+                var code = $('#example13-digit-number').val();
+                //alert(code);
+                if (code != "") {
+                    var url = baseurl + '/Info/MasterHandler.ashx?method=verifyotp&mobile='
+                        + encodeURIComponent($('#mobile').val())
+                        + "&CountryCode=" +encodeURIComponent($('#countrycode').val())
+                        + "&vCode=" + encodeURIComponent($('#example13-digit-number').val())
+                        + '&name=' + encodeURIComponent($('#name').val())
+                        + '&city=' + encodeURIComponent($('#city').val())
+                        + '&country=' + encodeURIComponent($('#hdncountry').val())
+                        + '&EmailAddrs=' + encodeURIComponent($('#mail').val())
+                        /* + '&gender=' + encodeURIComponent($('#gender :selected').val()) 
+                        + '&Age=' + encodeURIComponent($('#age :selected').val()) */
+                        + '&comp=' + encodeURIComponent('Ram Gopal and Sons')
+                        + '&Comp_ID=Comp-1626';
+                    $.ajax({
+                        type: "POST",
+                        contentType: false,
+                        processData: false,
+
+                        url: url,
+                        success: function (data) {
+
+                            //alert(data.split('&')[1])
+                            $('#btnsubmit').show();
+                            $('#btnloadsubmit').hide();
+                            if (data.split('~')[0] !== "failure") {
+                                window.scrollTo(0, 0);
+                                if (data.indexOf("not valid") !== -1) {
+                                    data = data.split(".")[0];
+                                }
+
+                                /*$('#HEADING').hide();*/
+                                $('#Chkfields').hide();
+                                $('#mobilefield').hide();
+                                $('#Otherfield').hide();
+                                $('#Chkcode').hide();
+                                $('#auth').hide();
+                                $('#ShowMessage').show();
+                                $('#p3msg').show();
+                                $('#p3msg').html(data.split('~')[1]);
+                                $('#p3msg:contains("not")').css('color', 'black');
+                            }
+
+                            else {
+
+                                $('#auth').hide();
+                                $('#p3msg').hide();
+                                toastr.error('Something Went Wrong');
+                                $('#btnskyVerify1').attr('disabled', false);
+                            }
+                        }
+                    });
+                }
+
+                else {
+                    $('#btnsubmit').attr('disabled', false);
+                }
+            });
+
+            $('#btnNext').click(function () {
+
+                window.location.href = 'https://www.eagleshenna.com/';
+            });
+
+
+        });
+
+
+
+    </script>
+
+</head>
+<body>
+    <section class="RamGopalSons_section">
+        <header class="text-center">
+            <a href="https://www.eagleshenna.com/" target="_blank"><img src="assets/images/RGS-images/RGS-logo.svg" alt="logo" class="rgs-logo" /></a>
+        </header>
+        <div class="rgs-body-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="rgs-form">
+                            <form>
+                                <!--<input type="text" id="" value="">
+                                <input type="text" id="" value="">
+                                <input type="text" id="" value="">
+                                <input type="text" id="" value="">
+                                <input type="text" id="" value="">
+                                <input type="text" id="" value="">-->
+
+                                <div class="row">
+                                    <div class="col-sm-12 text-align">
+                                        <h4 id="auth">TO CHECK AUTHENTICITY</h4>
+
+                                    </div>
+                                    <div id="Chkcode">
+
+                                        <!--13 digit-code -->
+                                        <div class="row">
+
+                                            <div class="col-12">
+                                                <input type="text" maxlength="13" id="example13-digit-number" placeholder="13 Digit Number*" class="form-control" />
+                                                <span id="codecheck" class="cspn"></span>
+
+                                                <button type="submit" id="btnnxt" class="form-control">Next</button>
+                                                <button type="submit" style="display: none" id="btnloadnxt" class="form-control"><i class="fa fa-spinner fa-spin"></i>Loading..</button>
+                                                <span id="nextcheck" class="cspn"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div id="Chkfields">
+                                        <!--this is for the mobile-->
+
+                                        <div class="mobilefield" id="mobilefield">
+                                            <div class="col-12">
+                                                <select class="form-select form-control" style="appearance: none !important;" id="country" aria-label="Default select example">
+                                                    <option value="" disabled="disabled" selected="selected">Select Country</option>
+                                                </select>
+                                                <span id="countrycheck" class="cspn"></span>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <input type="text" readonly class="form-control" id="countrycode">
+                                                </div>
+                                                <div class="col-9">
+                                                    <input type="text" maxlength="50" minlength="10" id="mobile" placeholder="Enter Mobile/Whatsapp number*" class="form-control" />
+
+                                                    <span id="mobilecheck" class="cspn"></span>
+                                                </div>
+                                                <input type="hidden" style="display:none" class="form-control" id="hdncountry">
+                                            </div>
+
+                                            <div class="col-12 mb-3">
+                                                <center>
+                                                    <button type="button" id="btnnxtMob" onclick="Getdata()" class="form-control">Next</button>
+                                                    <button type="button" style="display: none" id="btnloadnxtMob" class="form-control"><i class="fa fa-spinner fa-spin"></i>Loading..</button>
+
+                                                </center>
+                                            </div>
+                                        </div>
+                                        <!-- this div is used in the else condition when the cidw is not successed -->
+                                        <div class="Otherfield" id="Otherfield" style="display: none">
+
+                                            <div class="col-12">
+                                                <input type="text" maxlength="40" id="mail" placeholder="Email" class="form-control" />
+                                                <span id="mailcheck" class="cspn"></span>
+
+                                            </div>
+
+                                            <div class="col-12">
+                                                <input type="text" maxlength="40" id="name" placeholder="Name" class="form-control" />
+                                                <span id="namecheck" class="cspn"></span>
+
+                                            </div>
+
+
+                                            <div class="col-12">
+                                                <input type="text" maxlength="40" id="city" placeholder="City" class="form-control" />
+                                                <span id="citycheck" class="cspn"></span>
+
+                                            </div>
+                                            <!--<div class="col-12">
+                                                <select id="gender" class="form-control">
+                                                    <option value="" disabled="disabled" selected="selected">Gender</option>
+                                                    <option value="Male">Male</option>
+                                                    <option value="Female">Female</option>
+                                                    <option value="Others">Others</option>
+                                                </select>
+                                                <span id="gendercheck" class="cspn"></span>
+                                            </div>-->
+                                            <!--<div class="col-12">
+                                                <select id="age" maxlength="40" class="form-control">
+                                                    <option value="" disabled="disabled" selected="selected">Age Group</option>
+                                                    <option value="20-35years">20-35years</option>
+                                                    <option value="36-50years">36-50years</option>
+                                                    <option value="51-65years">51-65years</option>
+                                                    <option value="66-80 years">66-80 years</option>
+                                                    <option value="80+years">80+years</option>
+
+                                                </select>
+                                                <span id="agecheck" class="cspn"></span>
+
+                                            </div>-->
+
+                                        </div>
+
+                                        <button type="submit" id="btnsubmit" class="form-control">Submit</button>
+                                        <button type="submit" style="display: none" id="btnloadsubmit" class="form-control"><i class="fa fa-spinner fa-spin"></i>Loading..</button>
+                                    </div>
+
+                                    <!--end of the checkfield id-->
+                                    <div style="display: none; border: dotted; padding:10px;" id="ShowMessage">
+                                        <div class="form-box">
+                                            <p id="p3msg" style="overflow: hidden; font-size: 15px !important; font-weight: 500;" class="displayNone massage_box text-center"></p>
+                                            <center><a href="javascript:void(0)" class="" id="btnNext" style="color: blue; font-weight: bold;">Close</a></center>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-sm-12">
+                                        <p id="wlink" class="blink_me animate__animated animate__flash">
+                                            For any help/Query related support contact on
+                                            <br>
+                                            <!-- <i class="fa fa-phone" aria-hidden="true"></i> -->
+                                            <!-- <a href="tel:9650056956"> -->
+                                            <!-- 9650056956 -->
+                                            <!-- </a> -->
+                                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                            <a href="https://api.whatsapp.com/send?phone=+919650056956&amp;text&amp;type=phone_number&amp;app_absent=1" target="blank"> 9650056956 </a>
+                                        </p>
+
+                                    </div>
+
+
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="right-section text-center">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <img src="assets/images/RGS-images/text.png" alt="text-heading" class="text-heading" />
+                                </div>
+                            </div>
+                            <div class="product-slider-box">
+
+                                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="product-box">
+                                                        <img src="assets/images/RGS-images/product/product1.png" alt="product-1" class="product-1" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <div class="product-box">
+                                                        <img src="assets/images/RGS-images/product/product2.png" alt="product-2" class="product-2" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="product-box">
+                                                        <img src="assets/images/RGS-images/product/product3.png" alt="product-3" class="product-3" />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="product-box">
+                                                        <img src="assets/images/RGS-images/product/product1.png" alt="product-1" class="product-1" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <div class="product-box">
+                                                        <img src="assets/images/RGS-images/product/product2.png" alt="product-2" class="product-2" />
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-sm-4">
+                                                    <div class="product-box">
+                                                        <img src="assets/images/RGS-images/product/product3.png" alt="product-3" class="product-3" />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="product-box">
+                                                        <img src="assets/images/RGS-images/product/product1.png" alt="product-1" class="product-1" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="product-box">
+                                                        <img src="assets/images/RGS-images/product/product2.png" alt="product-2" class="product-2" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="product-box">
+                                                        <img src="assets/images/RGS-images/product/product3.png" alt="product-3" class="product-3" />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="assets/images/RGS-images/RGM-bg.png" class="img-fluid bg-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="RGS-footer">
+            <a href="https://www.eagleshenna.com/" target="_blank">www.eagleshenna.com</a>
+        </footer>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /Info/Benefits_Premium.aspx
+Disallow: /Manufacturer/CashDetails.aspx
+Disallow: /government.aspx
+Disallow: /CodeCheck.aspx
+Disallow: /login.aspx
+Disallow: /Default.aspx
+
+
+Sitemap: https://www.vcqru.com/sitemap.xml

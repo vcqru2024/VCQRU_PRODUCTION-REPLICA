@@ -1,0 +1,65 @@
+
+
+
+html,body{padding:0; margin:0;}
+body.bg{background:url(../bg.jpg)no-repeat left center ; background-size:cover; padding-top:3%; padding-bottom:5%; text-align:center; height:100%;}
+.buttons{margin-top:8%;}
+a{outline:none !important;}
+
+.top-header{ background:#f7f7f7; padding:15px 0; border-bottom:1px solid #e9e9e9;}
+.top-header .header h3{ font-family:oswald-light; font-size:32px;}
+.top-header .header .logo{text-align:left;}
+.top-header .header .header-txt{text-align:right;}
+a{outline:none !important;}
+
+#heading{}
+#heading h3{font-family:oswald-light; font-size:32px; border-bottom:1px solid #f8e4e4; padding-bottom:20px; position:relative;}
+#heading h3:after{content:"";position:absolute; top:53px; background:#ff787d; width:10%; height:5px; left:0;}
+#heading  .media-content{font-family:oswald-light; font-size:20px; color:#000; line-height:30px; }
+#heading .media-body section h4 i{font-family:oswald-light; font-size:18px; color:#00ac7a; border-bottom:1px solid #00ac7a; text-transform:uppercase; margin-right:10px;}
+
+#heading .media-body section p{font-family:oswald-light; font-size:18px; color:#7c7c7c;  margin-right:10px;}
+
+footer{background:#f7f7f7; padding:15px 0; text-align:center; border-top:1px solid #e9e9e9;}
+footer p{color:#a1a1a1; font-family:oswald-light; font-size:17px; margin-bottom:0px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==========================================================*/
+/*============= 11> MEDIA QUIERY START ================*/
+/*==========================================================*/
+@media (min-width:1200px)
+{
+
+}
+
+@media(min-width:992px) and (max-width:1199px) {
+
+}
+
+@media(min-width:768px) and (max-width:991px) {
+.top-header .header .logo{text-align:center;}
+.top-header .header .header-txt{text-align:center;}
+}
+
+@media(max-width:767px) {
+.top-header .header .logo{text-align:center;}
+.top-header .header .header-txt{text-align:center;}
+ }
+ 
+@media(max-width:480px) {
+	}

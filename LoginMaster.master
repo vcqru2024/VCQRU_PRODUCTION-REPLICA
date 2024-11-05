@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="LoginMaster.master.cs" Inherits="LoginMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCQRU</title>
+    <link rel="stylesheet" type="text/css" href="../CSSS/css/main.css">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSSS/css/pnotify.custom.min.css" />
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="container body-content">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            <hr />
+        <footer>
+            <p class="text-center">&copy; 2023 -  VCQRU.COM</p>
+        </footer>
+    </div>
+        <!-- Essential javascripts for application to work-->
+  <script src="../CSSS/js/jquery-3.2.1.min.js"></script>
+    <script src="../CSSS/js/popper.min.js"></script>
+    <script src="../CSSS/js/bootstrap.min.js"></script>
+    <script src="../CSSS/js/main.js"></script>
+    <script src="../CSSS/js/plugins/pace.min.js"></script>
+    <script src="../CSSS/js/pnotify.custom.min.js"></script>
+    <script type="text/javascript">
+        $('.login-content [data-toggle="flip"]').click(function () {
+            $('.login-box').toggleClass('flipped');
+            return false;
+        });</script>
+    </div>
+    </form>
+</body>
+</html>

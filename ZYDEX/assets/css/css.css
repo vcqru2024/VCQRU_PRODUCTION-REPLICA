@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* login-page */
+.login-page {
+    background: url('../img/login-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.login-page .top-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.login-page .top-header,
+.footer {
+    background: #0F62AC;
+    padding: 0.50rem 0;
+}
+
+.login-page .top-header h5 {
+    margin-bottom: 0;
+    color: var(--bs-white);
+    font-weight: 600;
+}
+
+.login-page .card {
+    margin: 2rem 0 4rem 0;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: var(--bs-white);
+}
+
+.login-page .card {
+    border: 0;
+    border-radius: var(--bs-border-radius-sm);
+    background-color: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(2px);
+}
+
+.login-page .card .card-body {
+    padding: 2rem;
+}
+
+.login-page .card .card-body .logo {
+    height: 2.50rem;
+    margin-bottom: 2rem;
+}
+
+.login-page .card .card-body .card-title {
+    color: #0F62AC;
+    font-weight: 700;
+}
+
+.login-page .card .card-body .card-text {
+    color: var(--bs-secondary);
+}
+
+.form-label {
+    font-size: 14px;
+    color: var(--bs-dark);
+    font-weight: 600;
+}
+
+.form-label span {
+    color: var(--bs-danger);
+}
+
+.form-control,
+.form-select {
+    border-radius: 2px !important;
+}
+
+.btn {
+    border-radius: 2px !important;
+}
+
+.login-page .card .card-body .btn {
+    background-color: #0F62AC;
+    color: var(--bs-white);
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: var(--bs-box-shadow-sm);
+    padding: 0.75rem;
+}
+
+.login-page .card .card-body form .form-control {
+    padding: 0.75rem !important;
+}
+
+.login-page .card .card-body .for-support {
+    position: relative;
+}
+
+.login-page .card .card-body .for-support hr {
+    border-style: dashed;
+}
+
+.login-page .card .card-body .for-support span {
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    background-color: #e5ead0;
+    font-size: 16px;
+    color: var(--bs-secondary);
+    padding: 0 1rem;
+    font-weight: 500;
+}
+
+.login-page .card .card-body .for-support ul {
+    display: flex;
+    padding: 0.50rem 0 0 0;
+    list-style: none;
+    gap: 1rem;
+    justify-content: center;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.login-page .card .card-body .for-support ul li {
+    display: flex;
+    gap: 0.25rem;
+    color: var(--bs-secondary);
+    align-items: center;
+}
+
+.login-page .card .card-body .for-support ul li a {
+    text-decoration: none;
+    color: var(--bs-secondary);
+    font-size: 16px;
+}
+
+/* top-navbar */
+.qr-codes .topbar-nav {
+    box-shadow: var(--bs-box-shadow-sm);
+    background-color: var(--bs-white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.qr-codes .topbar-nav .navbar .navbar-nav {
+    gap: 1rem;
+}
+
+.qr-codes .topbar-nav .navbar .navbar-nav .nav-item .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 500;
+    color: #0F62AC;
+    padding: 0.25rem 0.50rem;
+}
+
+.qr-codes .topbar-nav .navbar .navbar-nav .nav-item .nav-link:hover {
+    background-color: rgb(15 98 172 / 10%);
+}
+
+.qr-codes .topbar-nav .navbar .navbar-nav .nav-item .nav-link i {
+    font-size: 18px;
+}
+
+.qr-codes .topbar-nav .navbar .navbar-brand img {
+    height: 2rem;
+}
+
+.qr-codes .action-row {
+    margin-bottom: 1rem;
+}
+
+.qr-codes .action-row ul {
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+    gap: 1rem;
+    justify-content: end;
+}
+
+.qr-codes .action-row .search-bar {
+    position: relative;
+}
+
+.qr-codes .action-row .search-bar i {
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--bs-secondary);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.qr-codes .action-row .search-bar .form-control {
+    padding-left: 3rem;
+    border-width: 2px;
+}
+
+.qr-codes .action-row ul li .btn {
+    border-width: 2px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    text-transform: capitalize;
+}
+
+.qr-codes .action-row ul li:last-of-type .btn {
+    background-color: #0F62AC;
+    color: var(--bs-white);
+    border-color: #0F62AC;
+}
+
+.qr-codes .action-row ul li:nth-last-child(2) .btn {
+    border-color: #0F62AC;
+    color: #0F62AC;
+    background-color: var(--bs-white);
+}
+
+/* qr-codes */
+.qr-codes .card {
+    border: 0;
+    box-shadow: var(--bs-box-shadow-sm);
+    margin: 2rem 0 4rem 0;
+}
+
+.qr-codes .card .card-body .profile-details {
+    padding: 2rem;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.40) 100%, rgba(0, 0, 0, 0.40) 100%), url('../img/sunny-meadow-landscape.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+    border-radius: var(--bs-border-radius-lg);
+    position: relative;
+}
+
+.qr-codes .card .card-body .profile-details h5 {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.qr-codes .card .card-body .profile-details h5,
+.qr-codes .card .card-body .profile-details p {
+    color: var(--bs-white);
+}
+
+.qr-codes .card .card-body .profile-details p {
+    margin-bottom: 0;
+}
+
+.qr-codes .card .card-body .profile-details .btn {
+    border-radius: 2px;
+    margin: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.qr-codes .app-table {
+    border-radius: var(--bs-border-radius-lg);
+    /* border: 1px solid var(--bs-border-color);*/
+}
+
+.qr-codes .app-table .table {
+    margin-bottom: 0;
+}
+
+.qr-codes .app-table .table thead tr th {
+    background-color: rgba(15, 98, 172, 0.24);
+}
+
+.qr-codes .app-table .table thead tr th,
+.qr-codes .app-table .table tbody tr th {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--bs-dark);
+    text-transform: capitalize;
+    text-wrap: nowrap;
+}
+
+.qr-codes .app-table .table tbody tr td {
+    font-size: 14px;
+    color: var(--bs-secondary);
+    text-transform: capitalize;
+}
+
+.form-app .modal-header,
+.form-app .modal-footer- {
+    padding-top: 0.50rem;
+    padding-bottom: 0.50rem;
+}
+
+.form-app .modal-footer .btn {
+    text-transform: capitalize;
+}
+
+.form-app .modal-footer .btn-primary {
+    background-color: #0F62AC;
+}
+
+/* width */
+.form-app .modal .modal-dialog .modal-content .modal-body::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+.form-app .modal .modal-dialog .modal-content .modal-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+.form-app .modal .modal-dialog .modal-content .modal-body::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+.form-app .modal .modal-dialog .modal-content .modal-body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.app-table .dataTables_length {
+    margin-bottom: 0.50rem;
+}
+
+.app-table .dataTables_paginate {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 6px 12px;
+    border: 2px solid var(--bs-border-color);
+    color: var(--bs-secondary);
+    background-color: var(--bs-white);
+    border-radius: var(--bs-border-radius-lg);
+    text-decoration: none;
+    margin: 0 0.25rem;
+    cursor: pointer;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #0056b3 !important;
+    color: var(--bs-white);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: #0056b3 !important;
+    border: 1px solid #0056b3 !important;
+    color: white !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+    background-color: #e9ecef !important;
+    color: var(--bs-secondary);
+}
+/* app-breadcrumb */
+.app-breadcrumb{
+    margin: 2rem 0;
+}
+.app-breadcrumb .breadcrumb .breadcrumb-item{
+    font-weight: 500;
+    color: #0F62AC;
+}
+.app-breadcrumb .breadcrumb .breadcrumb-item.active{
+    color: var(--bs-secondary);
+}

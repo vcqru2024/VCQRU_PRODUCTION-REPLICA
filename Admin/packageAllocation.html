@@ -1,0 +1,70 @@
+﻿<fieldset id="ftg" class="Newfield Newfield_width2">
+            <table class="tab_regis" width="98%" cellspacing="2" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td style="width: 36%;" align="right">
+                        <strong><h3 class="blue lighter smaller">Email</h3></strong>
+                    </td>
+                    <td colspan="2" style="text-align:center">
+                        <input id="txtemail" onchange="return checkemail();" class="textbox_pop" />
+                        <label id="lblmsg" style="color:red"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 36%;" align="right">
+                        <strong><h3 class="blue lighter smaller"> Company Name </h3></strong>
+                    </td>
+                    <td colspan="2" style="text-align:center">
+                        <input id="txtcompname" class="textbox_pop" />
+
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="width: 36%; vertical-align: top;" align="right">
+                        <strong><h3 class="blue lighter smaller">Contact Person</h3></strong>
+                    </td>
+                    <td colspan="2" style="text-align:center">
+                        <input id="txtperson" class="textbox_pop" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 36%; vertical-align: top;" align="right">
+                        <strong><h3 class="blue lighter smaller">Contact No</h3></strong>
+                    </td>
+                    <td colspan="2" style="text-align:center">
+                        <input id="txtmobile" onkeypress="return isNumberKey(this, event);" maxlength="13" class="textbox_pop" />
+                    </td>
+                </tr>
+
+                <tr>                    
+                    <td colspan="3" style="text-align:center;border-bottom:1px solid #ddd">
+                        Packet Info
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 36%; vertical-align: top;" align="right">
+                        <strong><h3 class="blue lighter smaller">Packet Type</h3></strong>
+                    </td>
+                    <td colspan="2" style="text-align:center">
+                        <select id="ddlpkgtype" class="reg_txt"></select>
+                    </td>
+                </tr>
+                <tr id="trpkg" style="display:none">
+                    <td style="width: 36%; vertical-align: top;" align="right">
+                        <strong><h3 class="blue lighter smaller">Available Packet</h3></strong>
+                    </td>
+                    <td colspan="2" style="text-align:center">
+                        <select id="ddlpkg" class="reg_txt"></select>
+                    </td>
+                </tr>   
+            </tbody>
+        </table>
+        <p class="text-danger help-block" style="display:none;color:red"></p>
+    
+</fieldset>
+<!--<script type="text/javascript">
+    function totallabels() {
+        $('#lblCodes').text = parseInt($('#ddlNoPacket').val()) * parseInt($('#lblNoCode').val());
+    }
+</script>-->

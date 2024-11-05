@@ -1,0 +1,7 @@
+Mobile Number :   919015590638 :  customer_number :  919015590638 | call_status : success | call_uuid : 122334 | call_date : 1232211 | call_time : 12345 :  19/12/2022 04:04:37
+Mobile Number :   919730180513 :  customer_number :  919730180513 | call_status : success | call_uuid : 122334 | call_date : 1232211 | call_time : 12345 :  19/12/2022 04:04:52
+Mobile Number :   919730180513 :  customer_number :  919730180513 | call_status : success | call_uuid : 122334 | call_date : 1232211 | call_time : 12345 :  19/12/2022 04:11:58
+Mobile Number :   919730180513 :  customer_number :  919730180513 | call_status : success | call_uuid : 122334 | call_date : 1232211 | call_time : 12345 :  19/12/2022 04:22:31
+Mobile Number :   919730180513 :  customer_number :  919730180513 | call_status : success | call_uuid : 122334 | call_date : 1232211 | call_time : 12345 :  19/12/2022 04:35:27
+Mobile Number :   919730180513 :  customer_number :  919730180513 | call_status : success | call_uuid : 122334 | call_date : 1232211 | call_time : 12345 :  19/12/2022 04:47:07
+Mobile Number :   919730180513 :  customer_number :  919730180513 | call_status : success | call_uuid : 122334 | call_date : 1232211 | call_time : 12345 :  19/12/2022 04:56:46

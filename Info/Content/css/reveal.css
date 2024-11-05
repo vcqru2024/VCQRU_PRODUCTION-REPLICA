@@ -1,0 +1,474 @@
+/*	--------------------------------------------------
+	Reveal Modals
+	-------------------------------------------------- */
+		
+	.reveal-modal-bg {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background: #000;
+	background: rgba(0, 0, 0, .8);
+	z-index: 200;
+	display: none;
+	top: 0;
+	left: 0;
+}
+.modal
+{
+	
+	
+	width: 400px;
+	height:auto;
+	background: #fafafa;
+	position: absolute;
+	z-index: 1000;
+	
+	border:solid 3px #0167c0;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+	-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+}
+.reveal-modal {
+	visibility: hidden;
+	top:20%;
+	left: 50%;
+	margin-left: -300px;
+	width: 600px;
+	height:400px;
+	background: #fafafa;
+	position: absolute;
+	z-index: 1000;
+	padding: 10px;
+	border:solid 3px #0167c0;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+	-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+}
+.reveal-modal .news_title_pop {
+	color:#106fc3;
+	font-size:22px;
+	font-family:calibri;
+	text-align:center;
+}
+.reveal-modal p {
+	font-family:calibri;
+	color:#333;
+	font-size:14px;
+	font-weight:normal;
+	font-family: FuturaL, Century Gothic, Arial, Helvetica, sans-serif;
+	line-height:20px;
+	margin-top:10px;
+	text-align:justify;
+}
+.reveal-modal .client_pop {
+	width:200px;
+	float:left;
+	height:400px;
+	background:#efefef;
+	border:solid 1px #E0E0E0;
+}
+.reveal-modal .client_pop img
+{
+	margin-left:5px;
+	margin-top:5px;
+}
+.reveal-modal .client_name_pop
+{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:12px;
+	color:#4a94cb;
+	font-weight:bold;
+	text-align:center;
+	margin-top:15px;
+}
+.reveal-modal .client_desig_pop
+{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:11px;
+	color:#8b8b8b;
+	font-weight:bold;
+	text-align:center;
+	margin-top:10px;
+}
+.reveal-modal .testimony_title_pop {
+	color:#106fc3;
+	font-size:22px;
+	font-family:calibri;
+	float:left;	
+	width:100%;
+	text-align:center;
+}
+.reveal-modal p.testimony_text
+{
+	font-family:FuturaL, Century Gothic, Arial, Helvetica, sans-serif;
+	color:#333;
+	font-size:14px;
+	margin-top:20px;
+	text-align:justify;
+	line-height:20px;
+	font-weight:normal !important;
+	float:none;
+}
+.reveal-modal.small {
+	width: 200px;
+	margin-left: -140px;
+}
+.reveal-modal.medium {
+	width: 400px;
+	margin-left: -240px;
+}
+.reveal-modal.large {
+	width: 600px;
+	margin-left: -340px;
+}
+.reveal-modal.xlarge {
+	width: 800px;
+	margin-left: -440px;
+}
+.reveal-modal .close-reveal-modal {
+	font-size: 22px;
+	line-height: .5;
+	position: absolute;
+	top: -12px;
+ *top:1px;
+	right: -9px;
+ *right:1px;
+	color: #aaa;
+	text-shadow: 0 -1px 1px rbga(0, 0, 0, .6);
+	font-weight: bold;
+	cursor: pointer;
+	width:23px;
+	height:23px;
+} 
+/*==========================Signup form===============================*/
+ 
+ .reveal-modal_signup {
+	visibility: hidden;
+	top:20%;
+	left: 55%;
+	margin-left: -300px;
+	width: 404px;
+	height:auto;
+	background: #fafafa;
+	position: absolute;
+	z-index: 1000;
+	padding: 0px;
+	border:solid 3px #0167c0;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+	-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+}
+.reveal-modal_signup .close-reveal-modal {
+	font-size: 22px;
+	line-height: .5;
+	position: absolute;
+	top: -12px;
+ *top:1px;
+	right: -9px;
+ *right:1px;
+	color: #aaa;
+	text-shadow: 0 -1px 1px rbga(0, 0, 0, .6);
+	font-weight: bold;
+	cursor: pointer;
+	width:23px;
+	height:23px;
+}
+.signup_heading {
+	width:97%;
+	height:30px;
+	background:#0167C0;
+	border-radius:4px 4px 0 0;
+	color:#fff;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight:bold;
+	font-size:13px;
+	line-height:30px;
+	padding-left:15px;
+}
+table {
+	width:360px;
+	margin:-1px;
+	margin-left:20px;
+	border:solid 1px #ccc;
+	padding:0px;
+}
+table tr td {
+	width:90px;
+	height:20px;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:11px;
+	color:#333;
+	font-weight:bold;
+}
+table tr td label
+{
+	padding:0 20px 0 0;
+}
+.txt_request
+{
+	border-radius:5px;
+	border:solid 1px #666;
+	width:200px;
+	height:20px;
+	padding-left:5px;
+}
+.txt_request:hover
+{
+	border-radius:5px;
+	border:solid 1px #0167C0;
+	width:200px;
+	height:20px;
+}
+.txt_request:focus
+{
+	border-radius:5px;
+	border:solid 1px #0167C0;
+	width:200px;
+	height:20px;
+}
+.close-reveal-modal1
+{
+	position: absolute;
+	top: -12px;
+ *top:1px;
+	right: -9px;
+ *right:1px;
+	color: #aaa;
+	text-shadow: 0 -1px 1px rbga(0, 0, 0, .6);
+	font-weight: bold;
+	cursor: pointer;
+	width:23px;
+	height:23px;
+}
+/*table tr td input {
+	border-radius:5px;
+	border:solid 1px #666;
+	width:200px;
+	height:20px;
+}
+table tr td input:hover {
+	border-radius:5px;
+	border:solid 1px #0167C0;
+	width:200px;
+	height:20px;
+}
+table tr td input:focus {
+	border-radius:5px;
+	border:solid 1px #0167C0;
+	width:200px;
+	height:20px;
+}
+#txtemail
+{
+	border-radius:5px;
+	border:solid 1px #666;
+	width:200px;
+	height:20px;
+}
+
+#txtemail:focus {
+	border-radius:5px;
+	border:solid 1px #0167C0;
+	width:200px;
+	height:20px;
+}
+table tr td select {
+	border-radius:5px;
+	border:solid 1px #666;
+	width:200px;
+	background:#06f;
+	padding:3px;
+}
+table tr td textarea {
+	border-radius:5px;
+	border:solid 1px #666;
+	width:190px;
+	height:70px;
+	overflow:auto;
+	background:#fff;
+	padding:4px;
+}
+table tr td textarea:hover{
+	
+	border:solid 1px #0167C0;
+	
+}
+table tr td textarea:focus{
+	
+	border:solid 1px #0167C0;
+	
+}
+table tr td button {
+	border-radius:5px;
+	border:solid 1px #06f;
+	width:80px;
+	height:30px;
+	overflow:auto;
+	background:#06f;
+	padding:4px;
+	margin-right:10px;
+	color:#fff;
+}
+table tr td button:hover {
+	border-radius:5px;
+	border:solid 1px #333;
+	width:80px;
+	height:30px;
+	overflow:auto;
+	background:#333;
+	padding:4px;
+	margin-right:10px;
+	color:#fff;
+	cursor:pointer;
+}*/
+.stylish-select ul.newList {
+	left:-9999px;
+}
+/*==================================
+red curvy example
+====================================*/
+ul.newList * {
+	margin:0;
+	padding:0;
+}
+ul.newList a {
+	color: #000;
+	text-decoration:none;
+	display:block;
+}
+ul.newList {
+	margin:0;
+	padding:0;
+	list-style:none;
+	color:#000;
+	width:200px;
+	background:#fff;
+	position:absolute;
+	border:1px solid #ccc;
+	top:0px;
+	left:0;
+	overflow:scroll;
+	height:200px;
+	z-index:9999;
+}
+.newListSelected {
+	width:202px;
+	color:#000;
+	height:23px;
+	
+	float:left;
+	background:url(../images/combo_box.png) no-repeat;
+}
+.newListSelected span {
+	width:284px;
+	display:block;
+}
+ul.newList li a {
+	padding:3px 8px;
+	display: block;
+}
+ul.newList li a:focus {
+	-moz-outline-style: none;
+}
+.selectedTxt {
+	
+	overflow:hidden;
+	height:24px;
+	padding:5px;
+	
+}
+.hiLite {
+	background:#06f!important;
+	color:#fff!important;
+}
+.hiLite a {
+	background:#650101!important;
+	color:#fff!important;
+}
+.newListHover {
+	background:#ccc!important;
+	color:#000!important;
+	cursor:default;
+}
+.newListSelHover, .newListSelFocus {
+	background:url(../images/combo_box_hover.png) no-repeat;
+	cursor:pointer;
+}
+.newListOptionTitle {
+	font-weight:bold;
+}
+.newListOptionTitle ul {
+	margin:0px 0 0;
+}
+.newListOptionTitle li {
+	font-weight:normal;
+	border-left:1px solid #ccc;
+}
+/*======================================
+windows xp style - div that contains the 
+<select> has been given an id of #win-xp
+(for the purposes of this example
+========================================*/
+
+ /*==========================End Signup form===============================*/
+
+
+
+/*==================Message============================================?*/
+
+
+.message
+{
+	width:325px;
+	border-right:2px solid #e7ebef;
+	border-bottom:2px solid #e7ebef;
+	border-top:1px solid #e7ebef;
+	border-left:1px solid #e7ebef;
+	background:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	padding:5px 15px 10px 15px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	display:inline-block;
+	-moz-box-shadow: 5px 5px 5px #ccc;
+  -webkit-box-shadow: 5px 5px 5px #ccc;
+  box-shadow: 5px 5px 5px #ccc;
+}
+.message div.msg_icon
+{
+	width:75px;
+	float:left;
+	margin-top:30px;
+}
+.message div.msg_text
+{
+	width:250px;
+	float:left;
+	padding-top:20px;
+}
+.message div.msg_text p
+{
+	color:#787879;
+	font-size:11px;
+	line-height:25px;
+	
+}
+.message div.msg_text p em
+{
+	color:#ca4552;
+	font-size:12px;
+	font-style:normal;
+}
+
+
+/*==================Message============================================?*/

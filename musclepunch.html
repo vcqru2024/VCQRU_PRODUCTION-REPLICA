@@ -1,0 +1,909 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>MUSCLE PUNCH</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #btnclick {
+            color: black;
+        }
+
+        a#btnNext {
+            /*background: white;
+            padding: 9px 23px;
+            color: #bf2324;
+            border-radius: 7px;
+            text-decoration: none;*/
+            background: #bd0d0d;
+            padding: 9px 23px;
+            color: #efefef;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+
+        /*.form-box {
+            padding: 0px 50px 50px 50px;
+        }*/
+
+        .muscle-punch-box {
+            padding: 0px;
+        }
+
+        .massage_box {
+            color: #ffffff !important;
+            overflow: hidden;
+            font-size: 13px !important;
+            max-width: 100%;
+            border: 2px dashed #f47932;
+            padding: 1em;
+            border-radius: 4px;
+            margin-top: -10px;
+        }
+
+            .massage_box strong {
+                color: #ffffff !important
+            }
+
+            .massage_box a {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: block;
+                color: #fb6405;
+                text-decoration: none;
+                font-weight: 600;
+                margin-top: 10px;
+            }
+
+
+        .muscle-punch {
+            background-image: url(https://static.wixstatic.com/media/8c976d_134accc1da184f7788681eef5232e7b9~mv2.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            position: relative;
+            display: table;
+            height: 100vh;
+        }
+
+        .muscle-punch-logo-header {
+            display: none;
+        }
+
+        .muscle-punch-logo-body {
+            position: absolute;
+            width: 16%;
+            top: 10%;
+        }
+
+        .muscle-punch-product {
+            position: absolute;
+            width: 44%;
+            bottom: 0px;
+            right: 10%;
+        }
+
+        .muscle-punch-form {
+            /*margin-top: 10%; */
+            background-color: #040d1b;
+            color: #fff;
+            width: 70%;
+        }
+
+        .muscle-punch-box {
+            padding: 25px;
+        }
+
+        .muscle-punch-form input {
+            margin-bottom: 10px;
+            border-radius: 0px;
+        }
+
+        .muscle-punch-form select {
+            margin-bottom: 10px;
+            border-radius: 0px;
+        }
+
+        .muscle-punch-form button {
+            border-radius: 50px;
+            background-color: #bf2324;
+            color: #fff;
+            margin-bottom: 10px;
+            border: 0px;
+        }
+
+        .muscle-punch-form input::placeholder {
+            font-size: 14px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .muscle-punch-form .option-bold {
+            font-size: 14px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .muscle-punch-form a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .muscle-punch-form h4 {
+            background-color: #bf2324;
+            padding: 40px;
+            border-bottom-left-radius: 200px;
+            border-bottom-right-radius: 200px;
+        }
+
+        footer a {
+            background-color: #bf2324;
+            color: #fff;
+            text-decoration: none;
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            padding: 5px;
+            text-align: center;
+        }
+
+
+        #p3msg a:hover {
+            color: #077e7a;
+        }
+        /************************/
+        @media screen and (max-width: 767px) {
+            .muscle-punch-logo-body {
+                display: none;
+            }
+
+            .muscle-punch header {
+                text-align: center;
+            }
+
+            .muscle-punch-logo-header {
+                display: initial;
+                width: 80%;
+                padding: 30px 30px 0px 30px;
+            }
+
+            .muscle-punch-product {
+                position: initial;
+                width: 100%;
+                padding: 10px;
+            }
+
+            .muscle-punch-form {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1000px) {
+            .muscle-punch-form {
+                width: 100%;
+            }
+
+            .muscle-punch-logo-body {
+                width: 40%;
+            }
+
+            .muscle-punch-product {
+                width: 75%;
+            }
+
+            .muscle-punch-form {
+                margin-top: 15%;
+            }
+        }
+
+        @media screen and (width: 1024px) {
+            .muscle-punch-form {
+                margin-bottom: 10%;
+            }
+
+            .muscle-punch-logo-body {
+                width: 30%;
+                left: 41%;
+            }
+        }
+
+        @media screen and (width: 1280px) {
+
+            .muscle-punch-logo-body {
+                width: 27%;
+                left: 41%;
+            }
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="vendor/modernizr/modernizr.min.js"></script>
+    <script src="https://www.vcqru.com/Content/js/jquery-1.11.1.min.js"></script>
+    <script src="https://www.vcqru.com/Content/js/toastr.min.js"></script>
+    <link href="https://www.vcqru.com/Content/css/toastr.min.css" rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
+            integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA="
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+        var getPosition = function (options) {
+            return new Promise(function (resolve, reject) {
+                navigator.geolocation.getCurrentPosition(resolve, reject, options);
+            });
+        }
+        $('#otherfield').hide();
+
+        function Getdata() {
+            debugger;
+            if ($('#purchagedForm').val() == "") {
+                toastr.error("Please Select purchaged From.");
+                $('#mobilenumber').val('');
+                $('#btnsubmit').attr('disabled', false);
+                return false;
+            }
+
+            if ($('#purchagedForm').val() == "Others") {
+                if ($('#txtother').val() == "") {
+                    toastr.error("Please Enter purchaged From.");
+                    $('txtother').focus();
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+            }
+            var mobileno = document.querySelector("#mobilenumber").value;
+            var d = mobileno.slice(0, 1);
+            var c = parseInt(d);
+            if ($('#mobilenumber').val() == "") {
+                toastr.error("Please enter mobile number");
+                $('#btnsubmit').attr('disabled', false);
+                return false;
+            }
+            if (mobileno.match(/[^$,.\d]/)) {
+                toastr.error("Please enter numeric value for mobile No.");
+                $('#mobilenumber').val() == "";
+                $('#btnsubmit').attr('disabled', false);
+                return false;
+            }
+            else {
+                if (mobileno.length == 10) {
+                    $.ajax({
+                        type: "Post",
+                        url: 'https://www.vcqru.com/Info/MasterHandler.ashx?method=ConsumerDetailsByMobileNo&MobileNo= ' + $("#mobilenumber").val(),
+                        success: function (data) {
+
+                            //alert(data);
+                            if (c <= 5) {
+                                toastr.error('Please Enter 10 Digit Mobile No');
+                                $('#mobilenumber').val('');
+                                return false;
+                            }
+                            else {
+
+                                //result = ConsumerName + "~" + Inox_User_Type + "~" + City + "~" + state + "~" + SellerName + "~" + Other_Role + "~" + PinCode;
+                                //alert(data.split('~')[6];);
+                                var Name = data.split('~')[0];
+                                var pin = data.split('~')[6];
+                                var city = data.split('~')[2];
+                                var state = data.split('~')[3];
+                                var shopname = data.split('~')[4];
+
+                                if (Name != "") {
+                                    $("#Name").val(Name);
+                                    $("#Name").readOnly = true;
+                                    document.getElementById('Name').readOnly = true;
+                                }
+                                else {
+
+                                    $('#ChkCode').hide();
+                                    $('#btnfinal').show();
+                                    $('#otherfield').show();
+                                    $('#mobilefield').hide();
+                                    $('#Chkfields').show();
+                                }
+                                if (state != "") {
+                                    $("#state").val(state);
+                                    $("#state").readOnly = true;
+                                    document.getElementById('state').readOnly = true;
+                                }
+                                else {
+
+                                    $('#ChkCode').hide();
+                                    $('#btnfinal').show();
+                                    $('#otherfield').show();
+                                    $('#mobilefield').hide();
+                                    $('#Chkfields').show();
+                                }
+
+                                if (pin != "") {
+                                    $("#pin").val(pin);
+                                    $("#pin").readOnly = true;
+                                    document.getElementById('pin').readOnly = true;
+                                }
+                                else {
+                                    $('#ChkCode').hide();
+                                    $('#btnfinal').show();
+                                    $('#otherfield').show();
+                                    $('#mobilefield').hide();
+                                    $('#Chkfields').show();
+                                }
+
+
+                                if (city != "") {
+                                    $("#city").val(city);
+                                    $("#city").readOnly = true;
+                                    document.getElementById('city').readOnly = true;
+                                }
+                                else {
+                                    $('#ChkCode').hide();
+                                    $('#otherfield').show();
+                                    $('#mobilefield').hide();
+                                    $('#Chkfields').show();
+                                }
+
+                            }
+                        }
+                    });
+                }
+            }
+            // });
+            //});
+        }
+
+
+        /*To Showing textbox after click on other*/
+        $(function () {
+            $("#purchagedForm").change(function () {
+                if ($(this).val() == "Others") {
+                    $("#txtother").show();
+                    $('#txtotherrole').prop('required', true);
+
+                } else {
+                    $("#txtother").hide();
+                    $("#txtother").value() == "";
+                    $('#txtother').removeAttr('required');
+
+                }
+            });
+        });
+        /*End To Showing textbox after click on other*/
+
+
+        function ValidateAlpha(evt) {
+            var keyCode = (evt.which) ? evt.which : evt.keyCode
+            if ((keyCode < 65 || keyCode > 90) && (keyCode < 97 || keyCode > 123) && keyCode != 32)
+
+                return false;
+            return true;
+        }
+
+        function onlyNumberKey(evt) {
+
+            // Only ASCII character in that range allowed
+            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+            if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+                return false;
+            return true;
+        }
+
+
+        function getaddress() {
+            let pin = document.getElementById("pin").value;
+            if (pin.length == 6) {
+                $.getJSON("https://api.postalpincode.in/pincode/" + pin, function (data) {
+                    createHTML(data);
+                })
+                function createHTML(data) {
+                    //alert(data);
+                    if (data[0].Status == "Success") {
+                        var city = "";
+                        var state = "";
+                        var pin = "";
+                        var city = data[0].PostOffice[0]['District'];
+                        var state = data[0].PostOffice[0]['State'];
+                        var Pin = data[0].PostOffice[0]['PinCode'];
+                        $("#city").val(city);
+                        $("#state").val(state);
+                        if (pin == "") {
+                            $("#pin").val();
+                        }
+                        else {
+                            $("#pin").val(Pin);
+                        }
+                        $('#btnsubmit').attr('disabled', false);
+                    }
+                    else {
+                        toastr.error("Please enter valid pin.");
+                        $('#btnsubmit').attr('disabled', true);
+                        return false;
+                    }
+                }
+            }
+        }
+
+
+
+
+        function pinval() {
+
+            var pin = $('#pin').val();
+            if (pin != undefined) {
+
+                if ($('#pin').val().length < 6) {
+                    toastr.error('Please Enter valid Pin Code');
+                    validate = false;
+                }
+                if (pin.match(/[^$,.\d]/)) {
+                    toastr.error("Please enter numeric value for Pin Code.");
+                    validate = false;
+                }
+
+                var matches1 = $('#pin').val().match(/[^a-zA-Z0-9 ]/);
+                if (matches1 != null) {
+                    toastr.error('Pin Code Should Not Contain any Special Character!');
+                    validate = false;
+                }
+            }
+        }
+
+
+        function namevalid() {
+            var name = $('#Name').val();
+            if (name != undefined) {
+
+                if ($('#Name').val().length < 1) {
+                    toastr.error('Please Enter valid Name');
+                    validate = false;
+                    return false;
+                }
+                var matches = $('#Name').val().match(/\d+/g);
+                if (matches != null) {
+                    toastr.error('Name Should be alphabet only!');
+                    //validate = false;
+                    return false;
+                }
+                var matches1 = $('#Name').val().match(/[^a-zA-Z0-9 ]/);
+                if (matches1 != null) {
+                    toastr.error('Name Should Not Contain any Special Character!');
+                    validate = false;
+                    return false;
+                }
+            }
+        }
+
+        function cityvalid() {
+            var city = $('#city').val();
+            if (city != undefined) {
+
+                if ($('#city').val().length < 1) {
+                    toastr.error('Please Enter valid City');
+                    validate = false;
+                }
+                var matches = $('#city').val().match(/\d+/g);
+                if (matches != null) {
+                    toastr.error('City Name Should be alphabet only!');
+                    validate = false;
+                }
+                var matches1 = $('#city').val().match(/[^a-zA-Z0-9 ]/);
+                if (matches1 != null) {
+                    toastr.error('City Name Should Not Contain any Special Character!');
+                    validate = false;
+                }
+            }
+        }
+
+        function valmobile() {
+            var phoneNumber = $('#mobilenumber').val();
+
+            if (phoneNumber != undefined) {
+                if (phoneNumber.length < 10) {
+                    toastr.error('Please Enter 10 Digit Mobile Number');
+                    return false;
+                }
+                if (phoneNumber.match(/[^$,.\d]/)) {
+                    toastr.error("Please enter numeric value for mobile No.");
+                    validate = false;
+                    return false;
+                }
+
+                var validate = false;
+                var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+
+                if (filter.test(phoneNumber)) {
+                    if (phoneNumber.length == 10) {
+                        var c = phoneNumber.slice(0, 1);
+                        if (c <= 5) {
+                            $('#p3msg').html('Not a valid mobile number');
+                            validate = false;
+                            $('#mobilenumber').val('');
+                        }
+                        else
+                            validate = true;
+                    } else {
+                        if (phoneNumber.length > 10) {
+                            $('#p3msg').html('Please put 10  digit mobile number');
+
+                            validate = false;
+                        }
+                        else {
+                            validate = false;
+                            $('#btnsubmit').attr('disabled', false);
+                        }
+                    }
+                }
+                else {
+                    if (phoneNumber.length == 9) {
+                        $('#p3msg').html('Please Enter  10 Digit mobile number');
+                        $('#mobilenumber').val('');
+                        validate = false;
+                    }
+                    else
+                        validate = false;
+                }
+                if (phoneNumber.match(/[^$,.\d]/)) {
+                    toastr.error("Please enter numeric value for mobile No.");
+                    validate = false;
+                    return false;
+                }
+            }
+        }
+        $(document).ready(function () {
+
+            $('#ChkCode').show();
+            $('#Chkfields').hide();
+            $('#mobilefield').hide();
+            firstfunction();
+            var id = $('#HdnID').val();
+            //alert();
+            if (id == "1") {
+
+                $('#ChkCode').show();
+                $('#Chkfields').hide();
+                $('#mobilefield').hide();
+            }
+
+            else if (id == "Nikolt") {
+                $('#ChkCode').hide();
+                $('#otherfield').hide();
+                $('#mobilefield').show();
+                $('#Chkfields').show();
+                var code = $('#HdnCode1').val() + '-' + $('#HdnCode2').val();
+                $("#codeone").val(code);
+            }
+            $("#codeone").mask("99999-99999999");
+
+            $("#btnnxt").on('click', function () {
+                var codeone = $('#codeone').val();
+                if (codeone != undefined) {
+
+                    if ($('#codeone').val().length < 14) {
+                        toastr.error('Please Enter 13 Digit Valid Code');
+                        validate = false;
+                        return false;
+                    }
+                }
+                $('#ChkCode').hide();
+                var rquestpage_Dcrypt = $("#codeone").val();
+                $.ajax({
+                    type: "POST",
+                    url: 'https://www.vcqru.com/Info/MasterHandler.ashx?method=chkgenuenity&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1],
+                    success: function (data) {
+                        $.ajax({
+                            type: "POST",
+                            url: 'https://www.vcqru.com/Info/MasterHandler.ashx?method=chkwarranty&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1] + '&lat=' + $('#lat').val() + '&long=' + $('#long').val(),
+                            success: function (data) {
+
+                                if (data.split('&')[0] === "1" && data.split('&')[1] === "Auto Max India") {
+                                }
+                                else {
+                                    $('#CompName').val(data.split('&')[1]);
+                                    $('#Chkfields').show();
+                                    $('#otherfield').hide();
+                                    $('#mobilefield').show();
+                                    $('#btnfinal').hide();
+                                }
+                            }
+                        });
+                    }
+                });
+                //}
+            });
+
+            $('#btnsubmit').on('click', function () {
+
+                $('#btnsubmit').attr('disabled', true);
+                var mobilenumber = $('#mobilenumber').val()
+                var pincode = $('#pin').val()
+                var d = mobilenumber.slice(0, 1);
+                var c = parseInt(d);
+                if (mobilenumber.match(/[^$,.\d]/)) {
+                    toastr.error("Please enter numeric value for mobile No.");
+                    $('#mobilenumber').val('');
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                if (mobilenumber.length == 10 && c <= 5) {
+                    // toastr.error("Please enter valid mobile No.");
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                if (mobilenumber.length != 10) {
+                    toastr.error("Please enter 10 digit of mobile No.");
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                else {
+
+                    if ($('#purchagedForm').val() == "Others") {
+                        if ($('#txtother').val() == "") {
+                            toastr.error("Please Enter purchaged From.");
+                            $('txtother').focus();
+                            $('#btnsubmit').attr('disabled', false);
+                            return false;
+                        }
+                    }
+
+
+                    var matches = $('#Name').val().match(/\d+/g);
+                    if (matches != null) {
+                        toastr.error('Name Should be alphabet only!');
+                        $('#btnsubmit').attr('disabled', false);
+                        $('#Name').val('');
+                        return false;
+                    }
+
+                    if ($('#Name').val() == "") {
+                        namevalid();
+                        $('#btnsubmit').attr('disabled', false);
+                        return false;
+                    }
+                    if (pincode.length != 6) {
+                        pinval();
+                        $('#btnsubmit').attr('disabled', false);
+                        return false;
+                    }
+                    if ($('#pin').val() == "") {
+                        pinval();
+                        $('#btnsubmit').attr('disabled', false);
+                        return false;
+                    }
+                    if ($('#city').val() == "") {
+                        cityvalid();
+                        $('#btnsubmit').attr('disabled', false);
+                        return false;
+                    }
+
+
+                    if ($('#purchagedForm').val() == "") {
+                        return false;
+                        $('#btnsubmit').attr('disabled', false);
+                        return false;
+                    }
+                    if ($('#purchagedForm').val() == "0") {
+                        toastr.error("Please select purchased from.");
+                        //$('#mobilenumber').val('');
+                        $('#btnsubmit').attr('disabled', false);
+                        return false;
+                    }
+
+
+                }
+                $('#p3msg').html('');
+                //var abcc =	'https://www.vcqru.com/Info/MasterHandler.ashx?method=verifyotp&mobile=' + $('#mobilenumber').val() + "&vCode=" + $('#codeone').val() + '&name=' + $('#Name').val() + '&city=' + $('#city').val() + '&state=' + $('#state').val() + '&PinCode=' + $('#pin').val() + '&SellerName=' + $("#purchagedForm").val() + '&SellerName=' + $("#txtother").val() + '&comp=MUSCLE PUNCH SUPPLEMENTS PRIVATE LIMITED&Comp_ID=Comp-1288';
+                //alert(abcc);
+                if (code != "") {
+                    $.ajax({
+                        type: "POST",
+                        contentType: false,
+                        processData: false,
+
+                        url: 'https://www.vcqru.com/Info/MasterHandler.ashx?method=verifyotp&mobile=' + $('#mobilenumber').val() + "&vCode=" + $('#codeone').val() + '&name=' + $('#Name').val() + '&city=' + $('#city').val() + '&state=' + $('#state').val() + '&PinCode=' + $('#pin').val() + '&SellerName=' + $("#purchagedForm").val() + '&SellerName=' + $("#txtother").val() + '&comp=MUSCLE PUNCH SUPPLEMENTS PRIVATE LIMITED&Comp_ID=Comp-1288',
+                        success: function (data) {
+                            if (data.split('~')[0] !== "failure") {
+                                //alert(data);
+                                //alert('fail');
+                                window.scrollTo(0, 0);
+                                if (data.indexOf("not valid") !== -1) {
+                                    data = data.split(".")[0];
+                                }
+                                //$('#head').hide();
+                                $('#Chkfields').hide();
+                                $('#mobilefield').hide();
+                                // $('#fields').hide();
+                                $('#ShowMessage').show();
+                                // $('#chkLine').hide();
+                                $('#p3msg').html(data.split('~')[1]);
+                                $('#p3msg:contains("not")').css('color', 'white');
+                            }
+                            else {
+                                //alert(data);
+                                //alert('pass');
+                                $('#msgcoats').hide();
+                                toastr.error('OTP is not valid. Please provide the valid OTP');
+                                $('#btnskyVerify1').attr('disabled', false);
+                            }
+                        }
+                    });
+                }
+                // }
+                else {
+
+                    $('#btnsubmit').attr('disabled', false);
+                }
+            });
+            $('#btnNext').click(function () {
+                window.location.href = 'https://www.musclepunchindia.com/';
+            });
+        });
+        async function firstfunction() {
+
+            if (navigator.geolocation) {
+                await getPosition()
+                    .then((position) => {
+                        $('#lat').val(position.coords.latitude);
+                        $('#long').val(position.coords.longitude);
+                    })
+                    .catch((err) => {
+                        console.error(err.message);
+                    });
+            } else {
+                // x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+
+            var lat = $('#lat').val();
+            var long = $('#long').val();
+
+            $.ajax({
+                type: "POST",
+                async: true,
+                url: 'https://www.vcqru.com/Info/MasterHandler.ashx?method=chklocation&lat=' + $('#lat').val() + '&long=' + $('#long').val(),
+                success: function (data) {
+
+
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <section class="muscle-punch">
+        <div class="container">
+            <header>
+                <img src="https://static.wixstatic.com/media/8c976d_fa9a68039bff4a91adb8a84e5e32d124~mv2.png" class="img-fluid muscle-punch-logo-header animate__animated animate__fadeInDown" alt="muscle-punch-logo" />
+            </header>
+            <div class="row">
+
+
+                <div class="col-md-6">
+                    <div id="fields">
+                        <form class="muscle-punch-form animate__animated animate__fadeInLeft" id="FormDiv">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h4 class="text-uppercase text-center">TO CHECK AUTHENTICITY AND AVAIL BENEFITS</h4>
+                                </div>
+                            </div>
+                            <div class="row muscle-punch-box width-box" id="TNTWarrentyFields">
+                                <div id="ChkCode">
+                                    <div class="col-sm-12">
+                                        <input type="text" id="codeone" class="form-control" placeholder="Enter 13 Digit Code*" minlength="13" maxlength="13" required />
+                                    </div>
+                                    <div>
+                                        <center>
+                                            <button type="button" id="btnnxt" class="btn form-control">Next</button>
+
+                                        </center>
+                                    </div>
+                                </div>
+                                <div id="mobilefield" style="display: none">
+
+                                    <div class="col-12">
+                                        <select class="form-control option-bold" id="purchagedForm" required>
+                                            <option value="">Purchased From*</option>
+                                            <option value="ONLINE – Official Website">ONLINE – Official Website</option>
+                                            <option value="ONLINE – Amazon Marketplace">ONLINE – Amazon Marketplace</option>
+                                            <option value="ONLINE – Flipkart Marketplace">ONLINE – Flipkart Marketplace</option>
+                                            <option value="OFFLINE – Authorised Retail Stores">OFFLINE – Authorised Retail Stores</option>
+                                            <option value="Others">Others – (Give Specify Option, if selected)</option>
+                                        </select>
+                                        <input type="text" id="txtother" style="display:none" placeholder="Enter Purchase From*" class="form-control" required />
+                                    </div>
+
+                                    <div class="col-12">
+                                        <input type="text" placeholder="Mobile Number*" data-msg-required="Please Enter 10 Digit Moblie Number" class="form-control" id="mobilenumber" onkeyup="Getdata()" required maxlength="10" minlength="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                    </div>
+                                    <!--<div>
+                                        <center>
+                                            <button type="button" id="btnnxt2" class="form-control">Next</button>
+
+                                        </center>
+                                    </div>-->
+                                </div>
+
+                                <div id="Chkfields">
+                                    <div id="otherfield">
+                                        <div class="col-12">
+                                            <input type="text" id="Name" class="form-control" placeholder="Name *" minlength="2" maxlength="50" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required />
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <!-- <label> Dealer / Retailer<sup>*</sup></label> -->
+                                            <input type="text" onkeyup="getaddress()" id="pin" placeholder="Pincode*" class="form-control" required maxlength="6" minlength="6" />
+                                        </div>
+                                        <div class="col-12">
+                                            <input type="text" id="city" required placeholder="City*" minlength="2" maxlength="50" data-msg-required="Please Enter Your Address." class="form-control" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" readonly required />
+                                        </div>
+
+                                        <div class="col-12">
+                                            <input type="text" id="state" placeholder="State*" minlength="2" maxlength="50" data-msg-required="Please Enter Your Address." class="form-control" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" readonly required />
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <div class="col-12 text-center">
+                                        <button type="button" data-toggle="modal" class="btn form-control" id="btnsubmit">SUBMIT</button>
+                                    </div>
+
+
+                                </div>
+                                <div style="display: none;" id="ShowMessage">
+                                    <div class="form-box">
+                                        <p id="p3msg" style="overflow: hidden; font-size: 13px !important; font-weight: 500;" class="displayNone massage_box"></p>
+                                        <center><a href="https://www.vcqru.com/musclepunch.html" class="form-control" id="btnclick">To Check another code Click Here</a></center>
+                                        <br /><center><a href="javascript:void(0)" class="btn form-control" id="btnNext">Close</a></center>
+                                        <br />
+                                        <!--<div class="row">
+                                            <div class="col-12">
+                                                <center>
+                                                    <a href="https://www.vcqru.com/musclepunch.html"><button class="btn form-control mt-4">To Check Another Code Click Here</button></a>
+                                                </center>
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                </div>
+
+                                <div class="col-12 text-center">
+                                    <p id="wlink" class="blink_me animate__animated animate__flash">
+                                        QR/Code  Related Support Available on <br> <i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:8047278314">08047278314</a> /
+                                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                        <a href="https://api.whatsapp.com/send?phone=+919355903119&amp;text&amp;type=phone_number&amp;app_absent=1" target="blank">9355903119</a>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-2 m-auto">
+                    <img src="https://static.wixstatic.com/media/8c976d_fa9a68039bff4a91adb8a84e5e32d124~mv2.png" class="img-fluid muscle-punch-logo-body animate__animated animate__fadeInDown" alt="muscle-punch-logo" />
+                </div>
+                <div class="col-md-4 ">
+                    <img src="https://static.wixstatic.com/media/8c976d_24594c1b2f5f49c28fb397accfd79059~mv2.png" class="img-fluid muscle-punch-product animate__animated animate__zoomIn" alt="muscle-punch-product" />
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <a href="https://www.musclepunchindia.com/">www.musclepunchindia.com</a>
+        </footer>
+    </section>
+</body>
+</html>

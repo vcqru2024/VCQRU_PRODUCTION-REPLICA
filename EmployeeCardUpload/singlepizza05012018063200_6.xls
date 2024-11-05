@@ -1,0 +1,12 @@
+@Name ,
+  @Address ,
+  @Email ,
+  @MobileNo ,
+   @Password ,
+  @City ,
+  @PinCode ,
+  @Emp_type ,
+  @createddate ,
+  @createdby ,
+  @active ,
+  @dalete

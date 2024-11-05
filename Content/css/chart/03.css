@@ -1,0 +1,19 @@
+#data-table {
+	display: none;
+}
+.chart{width:540px; padding-left:25px;}
+.bar span {
+	background: #fefefe url(../images/info-bg.gif) 0 100% repeat-x;
+}
+.fig0 {
+	background: url(../../images/chart/fig0.png) 0 0 repeat-y;
+	border:solid 1px #3e6796;
+}
+.fig1 {
+	background: url(../../images/chart/fig1.png) 0 0 repeat-y;
+	border:solid 1px #993f3c;
+}
+.fig2 {
+	background: url(../../images/chart/fig2.png) 0 0 repeat-y;
+	border:solid 1px #7b954c;
+}

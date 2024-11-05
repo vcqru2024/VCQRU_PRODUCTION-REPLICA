@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <!-- css -->
+    <link rel="stylesheet" href="assets_event/css/css.css">
+    <link rel="stylesheet" href="assets_event/css/style.css">
+    <!-- font-awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+    <!-- navbar -->
+    <div class="top-bar">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="iplcm-expo-event.html">
+                        <img src="https://www.vcqru.com/NewContent/img-home/logo.png" alt="Logo">
+                    </a>
+                    <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="socail-links navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li>
+                                <a href="tel:9350726162">
+                                    <i class="fa-solid fa-phone"></i>
+                                    +91 9350726162
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:9355903103">
+                                    <i class="fa-solid fa-phone"></i>
+                                    +91 9355903103
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:sales@vcqru.com">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    sales@vcqru.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- navbar-end -->
+    <!-- header -->
+    <section class="nlgi-header">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12">
+                    <div class="web-heading">
+                        <h1>Protect Your Brand From Counterfeiters And Stop Losing Revenues!</h1>
+                        <p>For Brands, counterfeit products not only result in lost revenue and profits, but also damage
+                            their reputation and brand image.</p>
+                    </div>
+                </div>
+                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div id="form-card">
+                                <h5 class="card-title">Let's connect and explore the possibilities together.</h5>
+                                <form action="" id="myForm" method="post"
+                                    class="row row-cols-xxl-2 row-cols-xl-2 row-cols-lg-2 row-cols-md-2 row-cols-1 g-3 needs-validation"
+                                    novalidate="">
+                                    <div class="col">
+                                        <label for="fullName" class="form-label">Full Name<span>*</span></label>
+                                        <input type="text" class="form-control" id="fullName" name="fullName" value=""
+                                            required="" pattern="[A-Za-z]+(?: [A-Za-z]+)*">
+
+                                    </div>
+                                    <div class="col">
+                                        <label for="phoneRpf" class="form-label">Mobile number<span>*</span></label>
+                                        <input type="number" class="form-control" id="phoneRpf" name="phoneRpf" value=""
+                                            required="" title="Please enter exactly 10 digits" oninput="if(this.value.length > 10) this.value = this.value.slice(0, 10); 
+                if(this.value.length !== 10) this.setCustomValidity('Phone number must be exactly 10 digits.');
+                else this.setCustomValidity('');">
+                                    </div>
+                                    <div class="col">
+                                        <label for="emailID" class="form-label">Email<span>*</span></label>
+                                        <input type="email" class="form-control" id="emailID" name="emailID" value=""
+                                            required="">
+                                    </div>
+                                    <div class="col">
+                                        <label for="companyName" class="form-label">company Name<span>*</span></label>
+                                        <input type="text" class="form-control" id="companyName" name="companyName"
+                                            value="" required="" pattern="[A-Za-z0-9]+(?: [A-Za-z0-9]+)*">
+
+                                    </div>
+                                    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-12">
+                                        <label for="commentMsg" class="form-label">Service Interested
+                                            In<span>*</span></label>
+                                        <input type="text" class="form-control" id="commentMsg" name="commentMsg"
+                                            value="" required="" pattern="[A-Za-z0-9]+(?: [A-Za-z0-9]+)*">
+                                    </div>
+                                    <div class="col">
+                                        <div class="invalid-feedback d-block" id="invalid-feedback"></div>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" class="btn btn-primary px-5 w-100"
+                                            onclick="submitForm()">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="thank-you" class="text-center" style="display: none;">
+                                <img src="assets_event/img/images.jpg" alt="Thank you" class="img-fluid">
+                                <p class="text-secondary mb-0">Thank you for submitting your details. Our team will get
+                                    back to you soon...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- header-end -->
+    <!-- about service -->
+    <section class="nlgi-services">
+        <div class="container">
+            <h1 class="text-lg-center">Strengthen Your Brand Defense with Our Anti-Counterfeiting Solutions & Loyalty
+                Program</h1>
+            <p class="text-lg-center">In today's marketplace, the threat of counterfeit products poses significant
+                challenges to
+                brand
+                reputation, revenue, and consumer trust. Here are some key challenges that brands may face
+                if
+                they do not utilize anti-counterfeiting solutions and loyalty programs:
+            </p>
+            <div class="row row-cols-xxl-4 row-cols-xl-4 row-cols-lg-2 row-cols-md-2 row-cols-1">
+                <div class="col my-2">
+                    <img src="assets_event/img/Damage-Brand.svg" alt="">
+                    <h5>Damage to Brand Reputation</h5>
+                    <p>If consumers purchase counterfeit lubricant products bearing your brand name, they may experience
+                        dissatisfaction or even harm because counterfeit products comes with low quality. This can
+                        tarnish your brand's reputation and erode consumer trust.</p>
+                </div>
+                <div class="col my-2">
+                    <img src="assets_event/img/Regulatory.svg" alt="">
+                    <h5>Legal and Regulatory Risks</h5>
+                    <p>If brands that do not take adequate measures to combat counterfeiting may face legal consequences
+                        like costly legal battles, fines, and damage awards.</p>
+                </div>
+                <div class="col my-2">
+                    <img src="assets_event/img/Customer-Loyalty.svg" alt="">
+                    <h5>Customer Loyalty Erosion</h5>
+                    <p>In lubricants industries: Without a good loyalty program, brands may struggle to retain customers
+                        and cultivate brand loyalty. In competitive market, consumers have numerous options to choose
+                        from and a lack of incentives or rewards for repeat purchases may lead customers to switch to
+                        competitors offering more attractive loyalty programs.</p>
+                </div>
+                <div class="col my-2">
+                    <img src="assets_event/img/Loss-Revenue.svg" alt="">
+                    <h5>Loss of Revenue</h5>
+                    <p>Counterfeit lubricants products compete directly with genuine ones, leading to revenue loss for
+                        the brand. Price-sensitive customers who opt for cheaper counterfeit alternatives without
+                        considering the potential risks that not only impact current sales but also reduce future
+                        revenue potential.</p>
+                </div>
+            </div>
+            <div class="mt-3">
+                <h5>Lot's of companies facing these problems and wants to comes out from these problem Or Looking a
+                    perfect solution for this.</h5>
+                <p>At VCQRU, we understand the critical importance of safeguarding your brand integrity, reputation
+                    and importance of nurturing long-term relationships with your valued customers. That's why we're
+                    excited to introduce our cutting-edge Anti-Counterfeiting Solutions and Build Loyalty Program
+                    tailored to your unique needs.</p>
+                <p>Our anti-counterfeiting solutions and build loyalty program utilize cutting-edge technology and
+                    strategic methodologies to safeguard your brand's reputation and protect your customers from
+                    fraudulent products. And simultaneously our comprehensive loyalty program designed to
+                    incentivize repeat purchases, reward customer engagement, and ultimately, strengthen brand
+                    loyalty.</p>
+                <p>By joining forces with us, not only will you gain access to industry-leading anti-counterfeiting
+                    solutions, but you'll also unlock a range of benefits and incentives aimed at maximizing your
+                    brand's potential.</p>
+            </div>
+        </div>
+    </section>
+    <!-- about service-end -->
+    <!-- footer -->
+    <footer class="bg-dark text-white py-1">
+        <div class="container">
+            <p class="text-center mb-0">© Copyright 2024 VCQRU Private Limited | All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- js -->
+    <script src="assets_event/js/index.js"></script>
+    <!-- Loader-js -->
+    <script>
+        // window-loader
+        document.addEventListener("DOMContentLoaded", function () {
+            // Hide the loader once the page has finished loading
+            var loader = document.getElementById("loader-wrapper");
+            loader.style.visibility = "hidden";
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#commentMsg').on('input', function () {
+                if ($(this).val().trim() !== "") {
+                    $('#invalid-feedback').text('');
+                }
+            });
+        });
+
+        function submitForm() {
+            // Show loading spinner
+            document.getElementById('loader-wrapper').style.visibility = 'visible';
+
+            // Regular expressions for validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phoneRegex = /^\d{10,10}$/;
+
+            // Get form values
+            var fullName = document.getElementById('fullName').value.trim();
+            var companyName = document.getElementById('companyName').value.trim();
+            var emailID = document.getElementById('emailID').value.trim();
+            var phoneRpf = document.getElementById('phoneRpf').value.trim();
+            var commentMsg = document.getElementById('commentMsg').value.trim();
+
+            // Clear previous validation messages
+            $('#invalid-feedback').text('');
+
+            // Keep track of the first invalid input field and corresponding message
+            var firstInvalidField = null;
+            var validationMessage = '';
+
+            // Validation for Full Name
+            if (fullName === "") {
+                firstInvalidField = document.getElementById('fullName');
+                validationMessage = 'Name is required.';
+            }
+
+            // Validation for Email
+            else if (!emailRegex.test(emailID)) {
+                firstInvalidField = document.getElementById('emailID');
+                validationMessage = 'Please enter email ID.';
+            }
+
+            // Validation for Phone Number
+            else if (!phoneRegex.test(phoneRpf)) {
+                firstInvalidField = document.getElementById('phoneRpf');
+                validationMessage = 'Mobile number is required.';
+            }
+
+            // Validation for Company Name
+            else if (companyName === "") {
+                firstInvalidField = document.getElementById('companyName');
+                validationMessage = 'Company name is required.';
+            }
+
+            // Validation for Comment Message
+            else if (commentMsg === "") {
+                firstInvalidField = document.getElementById('commentMsg');
+                validationMessage = 'Service name is required.';
+            }
+
+            // Display validation message
+            $('#invalid-feedback').text(validationMessage);
+
+            // Set focus on the first invalid input field
+            if (firstInvalidField) {
+                firstInvalidField.focus();
+                // Hide loading spinner
+                document.getElementById('loader-wrapper').style.visibility = 'hidden';
+                return false;
+            }
+
+            // AJAX Request
+            var xhr = new XMLHttpRequest();
+
+            // Define the AJAX request
+            xhr.open('POST', 'https://www.vcqru.com/Info/MasterHandler.ashx?method=sendqueryMVCRPF2&name=' + encodeURIComponent(fullName) + '&companyName=' + encodeURIComponent(companyName) + '&email=' + encodeURIComponent(emailID) + '&phone=' + encodeURIComponent(phoneRpf) + '&comment=' + encodeURIComponent(commentMsg), true);
+
+            // Set the content type for POST requests
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+            // Define the callback function when the request is successful
+            xhr.onload = function () {
+                // alert(xhr.response);
+                // Hide loading spinner
+                document.getElementById('loader-wrapper').style.visibility = 'hidden';
+                if (xhr.status === 200) {
+                    // Reset form fields to null
+                    document.getElementById('myForm').reset();
+                    // Redirect to thank-you.html after a successful form submission
+                    // window.location.href = 'thankyou.html';
+                    document.getElementById("thank-you").style.display = "block";
+                    document.getElementById("form-card").style.display = "none";
+                    setTimeout(function () {
+                        document.getElementById("thank-you").style.display = "none";
+                        document.getElementById("form-card").style.display = "block";
+                    }, 5000); // 3000 milliseconds = 3 seconds
+
+                }
+            };
+
+            // Define the callback function in case of an error
+            xhr.onerror = function (error) {
+                // Hide loading spinner
+                console.error('Error:', error);
+            };
+
+            // Send the request
+            xhr.send();
+        }
+
+    </script>
+
+    <!-- loder -->
+    <script>
+        document.onreadystatechange = function () {
+            var loaderWrapper = document.getElementById('loader-wrapper');
+
+            // Show loader when the page is still loading
+            if (document.readyState === 'loading') {
+                loaderWrapper.style.visibility = 'visible';
+            } else {
+                // Hide loader once the page has fully loaded
+                loaderWrapper.style.visibility = 'hidden';
+            }
+        };
+    </script>
+</body>
+
+</html>

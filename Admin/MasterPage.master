@@ -1,0 +1,519 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Admin/MasterPage.master.cs"
+    Inherits="MasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Vcqru | Trust me it's Original</title>
+  <meta name="google-site-verification" content="KIoiLaFt2yT8E3UYsjCd5-o98FMsgrjGK7BXFLU2KO0" />
+    <!--Analytics Code-->
+
+    <script type="text/javascript">
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-56329391-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    <link href="../Content/images/logoico.ico" rel="shortcut icon" type="../Content/images/x-icon" />
+    <!--<link href='http://fonts.googleapis.com/css?family="Myriad Pro"' rel='stylesheet' type='text/css'/>-->
+    <link href="../Content/styles/admin_styles.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/styles/admin_menu.css" rel="stylesheet" type="text/css" />
+    <!--provider Slider-->
+    <!--popup--->
+    <link rel="stylesheet" href="../Content/jquery/popup/popup.css" type="text/css" />
+    <%--
+  <script src="../Content/jquery/popup/jquery-latest.js" type="text/javascript"></script>
+  <script type="text/javascript" src="../Content/jquery/popup/popup.js"></script>--%>
+    <!--popup Close--->
+    <!--Left Menu accordian--->
+    <%--   <script type="text/javascript" src="../Content/jquery/accordian/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../Content/jquery/accordian/scriptbreaker-multiple-accordion-1.js"></script>
+<script language="JavaScript">
+
+    $(document).ready(function () {
+        $(".topnav").accordion({
+            accordion: false,
+            speed: 500,
+            closedSign: '[+]',
+            openedSign: '[-]'
+    });
+
+</script>--%>
+
+    <script type="text/javascript" language="javascript" src="../Content/js/scripts/JScript.js"></script>
+
+    <script type="text/javascript" src="../Content/jquery/collasp/jquery.js"></script>
+
+    <!------------Mp3 Player----------------->
+    <link rel="stylesheet" type="text/css" href="../Content/jquery/mp_player/inlineplayer.css">
+    <link rel="stylesheet" type="text/css" href="../Content/jquery/mp_player/flashblock.css">
+
+    <script type="text/javascript" src="../Content/jquery/mp_player/soundmanager2.js"></script>
+
+    <script type="text/javascript" src="../Content/jquery/mp_player/inlineplayer.js"></script>
+
+    <!------------Mp3 Player Close----------------->
+    <%--<script type="text/javascript">
+    $(document).ready(function () {
+
+        $(".accordion2 p").eq(0).addClass("active");
+        $(".accordion2 div.open").eq(0).show();
+
+        $(".accordion2 p").click(function () {
+            $(this).next("div.open").slideToggle("slow")
+		.siblings("div.open:visible").slideUp("slow");
+            $(this).toggleClass("active");
+            $(this).siblings("p").removeClass("active");
+        });
+
+    });
+</script>--%>
+    <!--Left Menu accordian close--->
+
+    <script type="text/javascript" src="../Content/js/jquery-1.7.2.min.js" language="javascript"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body onkeydown="return (event.keyCode != 116)">
+    <%--<script type="text/javascript" language="javascript" >
+    window.onload = function() {
+        document.onkeydown = function(e) {
+            return (e.which || e.keyCode) != 116;
+        };
+    }
+</script>--%>
+    <form id="form1" runat="server">
+    <!--top header-->
+    <div id="top_head_p">
+        <div id="top_head">
+            <div class="right_part_main right">
+                <div class="h_menu">
+                    <div class="username">
+                        <a href="#">Welcome,&nbsp;
+                            <asp:Label ID="lblloginName" runat="server"></asp:Label>
+                        </a>
+                    </div>
+                    <div class="admin_role">
+                        <ul>
+                            <li class="alert"><a href="Dashboard.aspx" class="sms_no">
+                                <asp:Label ID="lblallertcount" runat="server" Text="0"></asp:Label></a></li>
+                            <%--<li class="sms"><a href="#" class="sms_no">22</a></li>--%>
+                            <li>
+                                <asp:ImageButton ID="imglogout" OnClick="imglogout_Click" ToolTip="Logout" ImageUrl="../Content/images/logout.png"
+                                    CausesValidation="false" runat="server" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--top header close-->
+    <div id="header_p">
+        <div id="header">
+            <div class="logoarrange">
+                <a href="#">
+                    <img src="../Content/images/logo.png" alt="logo"  height="100px"/></a>
+            </div>
+        </div>
+    </div>
+    <div id="menu_p">
+        <div id="menu">
+            <div class="menu_mid">
+                <div class="btn_part left">
+                    <ul>
+                        <li class="left_radius active"><a href="Dashboard.aspx">Dashboard</a></li>
+                        <li class="left_radius"><a href="TransactionDetails.aspx">Transaction Details</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <asp:HiddenField ID="hdnUserType" runat="server" />
+        <input type="hidden" id="hdnv" value="Hello" />
+        <!--content starts-->
+        <div id="content">
+            <div class="user_panel">
+                <!--news panel-->
+                <div class="left_box_menu left">
+                    <div class="left_menu accordion2">
+                        <p>
+                            <a class="gen_code">Code Folio</a></p>
+                        <div class="open">
+                            <p class="non_back">
+                                <a href="CodeGeneration.aspx" class="gen_code">Code Bank</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="CodeLabelPrint.aspx" class="demo_code">Print Labels</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="frmDemoPrintLable.aspx" class="demo_code">Demo Print Labels</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="DemoCodeAllocation.aspx" class="demo_code">Demo Packet Allocation</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="ViewCodeWiseAllocation.aspx" class="daily_code">Daily Code Allocation</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="CodeUsesOfCompany.aspx" class="uses_code">Code Usage Status</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmCraeteLabel.aspx" class="pro_price_code">Create Label</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="ProductsWiseDetails.aspx" class="pro_wise_code">Products Wise Code Details</a></p>
+                            <div class="open">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left_menu accordion2">
+                        <p class="non_back">
+                            <a href="ProFileAuthentiCation.aspx" class="regd_comp_code">Registered Companies</a></p>
+                            <div class="open">
+                        </div>
+                    </div>                                                                                
+                    <div class="left_menu accordion2">
+                        <p class="non_back">
+                            <a href="FrmRetailers.aspx" class="brand_loyalty">Register Retailer</a>
+                        </p>
+                        <div class="open">
+                        </div>
+                    </div>
+                    <div class="left_menu accordion2">
+                        <p>
+                            <a class="up_comp">Service Setting</a></p>
+                        <div class="open">
+                            <p class="non_back">
+                                <a href="ServiceMaster.aspx" class="brand_loyalty">Service Master</a>
+                            </p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="ServiceFeatureMaster.aspx" class="redeem_history">Service Feature Master</a>
+                            </p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="ServicePriceMaster.aspx" class="brand_transaction">Service Price Master</a>
+                            </p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="ServiceAbouts.aspx" class="brand_transaction">Service Terms & Condition</a>
+                            </p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="ServicesRequest.aspx" class="brand_loyalty">Service Request</a>
+                            </p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmGracePeriod.aspx" class="gend_bills">Grace Period</a></p>
+                            <div class="open">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left_menu accordion2 ">
+                        <p>
+                            <a class="up_comp">Coupon Settings</a></p>
+                        <div class="open">
+                            <p class="non_back">
+                                <a href="FrmCouponProviderMaster.aspx" class="brand_loyalty">Coupon Provider Master</a>
+                            </p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmCouponMaster.aspx" class="brand_loyalty">Coupon Master</a>
+                            </p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmCouponRequest.aspx" class="brand_loyalty">Coupon Request</a>
+                            </p>
+                            <div class="open">
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="left_menu accordion2">                        
+                        <p class="non_back">
+                                <a href="LuckyDraw.aspx" class="brand_loyalty">Lucky Draw</a>
+                            </p>
+                            <div class="open">
+                        </div>
+                    </div>                    
+                    <div class="left_menu accordion2 ">
+                        <p>
+                            <a class="up_comp">Bills & Reports</a></p>
+                        <div class="open">  
+                            <p class="non_back">
+                                <a href="BigDataAnalysisMaster.aspx" class="brand_loyalty">Big Data Analysis Master</a>
+                            </p>
+                            <div class="open">
+                            </div>         
+                            <p class="non_back">
+                                <a href="BigDataAnalysis.aspx" class="brand_loyalty">Big Data Analysis</a>
+                            </p>
+                            <div class="open">
+                            </div>  
+                             <p class="non_back">
+                                <a href="BrandLoyaltyAwards.aspx" class="brand_loyalty">Brand Loyalty Awards</a>
+                            </p>
+                            <div class="open">
+                            </div>                                               
+                            <p class="non_back">
+                                <a href="FrmLuckyWinners.aspx" class="brand_loyalty">Lucky Winners</a>
+                            </p>
+                            <div class="open">
+                            </div>
+                           <%-- <p class="non_back">
+                                <a href="FrmLuckyWinners.aspx" class="brand_loyalty">Gift Winners</a>
+                            </p>
+                            <div class="open">
+                            </div>--%>
+                           <%-- <p class="non_back">
+                                <a href="FrmLuckyWinners.aspx" class="brand_loyalty">Coupon Winners</a>
+                            </p>
+                            <div class="open">
+                            </div>--%>
+                            <p class="non_back">
+                                <a href="FrmRunSurveys.aspx" class="brand_loyalty">Run Surveys Details</a>
+                            </p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                 <a href="CashDetails.aspx" class="brand_loyalty">Cash Transfer</a>
+                               <%-- <a href="FrmCashTransfer.aspx" class="brand_loyalty">Cash Transfer</a>--%>
+                            </p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="PointsDetails.aspx" class="brand_transaction">Points Transaction</a>
+                          
+                                <%-- <a href="PointsDetails.aspx">
+                                    <img src="../images/Points.png" />
+                                    Points Transaction
+                                </a>--%>
+                            </p>
+                            <div class="open">
+                            </div>
+                             <p class="non_back">
+                                <a href="GiftDetails.aspx" class="brand_loyalty">Award Details</a>
+                            </p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmRedeemHistory.aspx" class="redeem_history">Redeem History</a>
+                            </p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="frmProductEnquiry.aspx" class="pro_enquery">Product Enquiry Detail</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmGeneratedInvoices.aspx?ID=Label" class="gend_bills">Label Bills</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmGeneratedInvoices.aspx?ID=AMC" class="gend_bills">Service Bills</a></p>
+                            <div class="open">
+                            </div>
+                              <p class="non_back">
+                                <a href="EmployeeMaster.aspx" class="brand_loyalty">Employee Master</a>
+                            </p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="WebsiteHistory.aspx" class="brand_loyalty">Website Hit History</a>
+                            </p>
+                            <div class="open">
+                            </div>
+                             <p class="non_back">
+                                <a href="frmCareers.aspx" class="brand_loyalty">Careers</a>
+                            </p>
+                            <div class="open">
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="left_menu accordion2">
+                        <p>
+                            <a class="up_comp">Master Setting</a></p>
+                        <div class="open">
+                            <p class="non_back">
+                                <a href="FrmBankAccount.aspx" class="uses_bank">Add Bank Account</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmCourierMaster.aspx" class="uses_courier">Courier Master</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmCourierDispatch.aspx" class="uses_dispatch">Courier Dispatch</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmScrapEntryM.aspx" class="scrap_entry">Scrap Label Entry</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="InterestedForDemo.aspx" class="uses_bank">Interested For Demo</a></p>
+                            <div class="open">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left_menu accordion2">
+                        <p>
+                            <a class="up_comp">Pending Reports</a></p>
+                        <div class="open">
+                            <p class="non_back">
+                                <a href="FrmPendingLabelsReceipt.aspx" class="uses_pend">Pending Print Lables Receipt</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmChannelPartners.aspx" class="make_partner">Become Channel Partner</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmDispatchLabelStatsus.aspx" class="uses_dispatch">Pending Dispatch Labels</a>
+                            </p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="frmPastingReports.aspx" class="view_printed">View Label Pasting Report</a>
+                            </p>
+                            <div class="open">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left_menu accordion2 ">
+                        <p>
+                            <a class="up_comp">Additional Settings</a></p>
+                        <div class="open">
+                            <p class="non_back">
+                                <a href="FrmNewsLetters.aspx" class="change_pass">E-NewsLetter</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmSubscribeUsers.aspx" class="change_pass">Subscribe Users</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmLetsTalk.aspx" class="change_pass">Let's Talk</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmNewsUpdate.aspx" class="change_pass">News Master</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmGallary.aspx" class="change_pass">Album Master</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmUserContent.aspx" class="change_pass">Content Master</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmStateMaster.aspx" class="uses_bank">State Master</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmCityMaster.aspx" class="uses_bank">City Master</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmCategoryMaster.aspx" class="uses_bank">Category Master</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="FrmCustomerMaster.aspx" class="uses_bank">Customer Care Master</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="ClientTestimonialMaster.aspx" class="uses_bank">Client Testimonial</a></p>
+                            <div class="open">
+                            </div>
+                            <p class="non_back">
+                                <a href="Frmchangepassword.aspx" class="change_pass">Change Password</a></p>
+                            <div class="open">
+                            </div>
+                        </div>
+                    </div>                                                           
+                    <div class="left_menu accordion2">
+                        <p class="non_back">
+                            <a href="frmPayment.aspx" class="make_payment">&nbsp;&nbsp;Make / View Payments</a></p>
+                            <div class="open">
+                        </div>
+                    </div>
+                    <div class="left_menu accordion2">
+                        <p class="non_back">
+                            <a href="FrmSendMailaspx.aspx" class="uses_code2">Send Mail</a></p>
+                        <div class="open">
+                        </div>
+                    </div>
+                    <div class="left_menu accordion2">
+                        <p class="non_back">
+                            <a href="Customer_Care.aspx" class="pro_enquery">Customer Care Page</a></p>
+                            <div class="open">
+                        </div>
+                    </div>
+                    <div class="left_menu accordion2">
+                        <p class="non_back">
+                            <a href="login.aspx?Page=FrmResetData.aspx" class="uses_code">Reset Database</a>
+                        </p>
+                        <div class="open">
+                        </div>
+                    </div>
+                </div>
+                <!--news panel Close-->
+                <!--------user Panel right--------->
+                <div class="detail_right right">
+                    <div class="detail_container">
+                        <cc1:ToolkitScriptManager runat="Server" AsyncPostBackTimeout="20000" EnablePartialRendering="true"
+                            EnablePageMethods="true" ID="ScriptManager1" />
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <!--------user Panel right--------->
+            </div>
+        </div>
+        <!--content close-->
+    </div>
+    <!--container close-->
+    <!--footer starts-->
+    <div id="footer_p">
+        <div id="footer">
+            <div class="f_menu left_drag">
+                <p>
+                    © Copyright 2012, VCQRU.com. All right reserved.</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <asp:Label ID="lbldocflag" Visible="false" runat="server"></asp:Label>
+    </div>
+    <!--footer close-->
+    </form>
+</body>
+</html>

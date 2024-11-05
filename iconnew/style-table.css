@@ -1,0 +1,111 @@
+table { 
+    width: 750px; 
+    border-collapse: collapse; 
+    margin:50px auto;
+    background: #F1F1F1;
+        border-radius: 10px;
+    }
+
+tr {
+    background: #ffffff;
+    margin-bottom: 15px;
+    /* padding-bottom: 30px; */
+    display: table;
+    width: 100%;
+}
+
+    td img
+   {
+    
+    margin-right: 20px;
+   }
+
+   td p
+   {
+     font-size: 14px;
+     color: green;
+   }
+
+/* Zebra striping */
+
+
+th { 
+     background: #0194EF;
+; 
+    color: white; 
+    font-weight: bold; 
+        
+    }
+
+td, th { 
+    padding: 10px; 
+     
+    text-align: left; 
+    font-size: 18px;
+    width: 42%;
+    }
+
+
+   
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    table { 
+        width: 100%; 
+    }
+
+
+td, th { 
+
+width: 100%;
+
+}
+
+    
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr { 
+        display: block; 
+    }
+    
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    tr { border: 1px solid #ccc; }
+    
+    td { 
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding-left: 50%; 
+    }
+
+    td:before { 
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        font-size: 14px;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+        /* Label the data */
+        content: attr(data-column);
+
+        color: #000;
+        font-weight: bold;
+    }
+
+}

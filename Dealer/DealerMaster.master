@@ -1,0 +1,693 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DealerMaster.master.cs" Inherits="Dealer_DealerMaster" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="Keyword" content="security sticker,Brand Protection,Check Product Originality,Consumer Insights,counterfeit solution provider,customer loyalty service,Customized Solution,Digital Warranty,e-warranty,Fighting Product Duplicate,Identity Fakes,label provider in Delhi,label provider in India,Make Packing Smart,qr code provider in Delhi,qr code provider in India,Run Product Survey,Save Brand,security stickers,Track & Trace Services,Neurotags,Original4sure,o4s,sproxil,Nirmal Stickers,Monarch Graphic,Pro Labels,Cosmo Printers,Uflex,Syndicate Labels,Braggart,Coats & Pack,Excel Pack,Sai Pack,J K Label,Manipal Technologies Limited (H.O.),Kumbhat Holographics,Signor Labels,Hira Holovision,Nestor Labels,Durga Holographic,Vishal Holo Solutions [Pvt] Ltd,Hi-Tech Print System,Verma Enterprises,DIPS technologies,Alpha Lasertek India,Holosafe Security Labels,Arora Printing,Cousin Enterprises,Smart Tech Solutions,Prem Printing,S. Anand,Packso Print,Latest Labeling And Solutions,Hira Print Solutions Private Limited,JJ Print Packs,3S Industries,G Mamu ji,Sanskar Printers,ColorBlast,VideoJet,Perfact Color Digital Prints Pvt Ltd,Mahindra and Mahindra,MFN,Windsor,Steelbird,Nutriglow cosmetics,1 Stop Nutrition,Bansi lal and sons,Olympic Auto Industries,JR Fragrence,Deeksha mineral water,ELA group,Suresh Confectionary,Welgo,Mysha Healthworld,Mysha,White Horse,Mstar Oil,Mahindra tractors,Mahindra MStar Super 7.5,Mahindra MStar Super 5,Mahindra MStar Super 6,Mahindra MStar Super 2,Mahindra MStar Super 1,Mahindra MStar Premium 10,Mahindra MStar Premium 7.5,Mahindra MStar Premium 1,Mahindra MStar Classic OIB 20,Mahindra MStar Classic OIB 10,Mahindra MStar Classic OIB  5,Mahindra MStar Classic OIB 1,Mechanic coupon,Flora,competent electricals,energy meters,VCQRU Counterfeit Prevention Solution,VCQRU Refer & Win,VCQRU Thank you customer,VCQRU Customer satisfaction feedback,VCQRU Customer loyalty voucher,VCQRU Lotto,VCQRU Consumer action insights,VCQRU Customization,VCQRU Direct Money Transfer,VCQRU Smart Warrranty Solution,Secure Track & Trace,Companies who provide counterfeit solutions,QR code providers,QR Code label providers in delhi,security stickers,customer loyalty service,digital warranty,e-warranty,track and trace service,Anti counterfeiting,boost sales,make packaging smart,fight against duplicity,save brand,Make packaging work for you,customized solutions,secure track and trace,consumer insights,brand protection,identify fakes,check product originality,run product survey,customer rewards program,customer loyalty program,product promotions,electrical appliances,FMCG Anti counterfeiting,dairy products,buy genuine products,warranty labels,security labels,unique digital codes,advanced technical solutions/services,end to end marketing and packaging solution,unique labeling,variable number codes,data analysis,insure customer safety,consumer trust,product visibility,effective branding and marketing strategies,label sticker printing service,(incorporating the qr code),security sticker,Brand Protection,Check Product Originality,Consumer Insights,counterfeit solution provider,customer loyalty service,Customized Solution,Digital Warranty,e-warranty,Fighting Product Duplicate,Identify Fakes,label provider in Delhi,label provider in India,Make Packing Smartqr code provider in Delhi,qr code provider in India,Run Product Survey,Save Brand,security stickers,Track & Trace Services," />
+    <meta name="Description" content="Every person has the right to know whether the product they are buying is genuine or not. We use truly secure and encrypted codes printed on the labels of the product which are impossible to replicate. With the help of secure mobile/web tools, the authenticity of the product can be checked." />
+ 
+    
+        <%--<title>VCQRU | We secure you</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="KIoiLaFt2yT8E3UYsjCd5-o98FMsgrjGK7BXFLU2KO0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Keyword" content="VCQRU Company, It Company in Gurgon ,IT Company in India ,Check Product Originality ,Consumer Insights ,counterfeit solution provider,customer loyalty service,Customized Solution,Digital Warranty,e-warranty,Fighting Product Duplicate,Identity Fakes,label provider in Delhi,label provider in India,Make Packing Smart,QR code provider in Delhi,QR code provider in India,Run Product Survey,Save Brand,security stickers,Track & Trace Services,security sticker,Brand Protection,Check Product Originality,Consumer Insights,counterfeit solution provider,customer loyalty service,Customized Solution,Digital Warranty,e-warranty,Fighting Product Duplicate,Identity Fakes,label provider in Delhi,label provider in India,Make Packing Smart,qr code provider in Delhi,qr code provider in India,Run Product Survey,Save Brand,security stickers,Track & Trace Services" />
+    <meta name="Description" content="Every person has the right to know whether the product they are buying is genuine or not. We use truly secure and encrypted codes printed on the labels of the product which are impossible to replicate. With the help of secure mobile/web tools, the authenticity of the product can be checked." />
+    
+    <script src="Content/js/jquery.min.js" type="text/javascript"></script>
+    <script src="Content/js/jquery-1.11.1.min.js"></script>
+    <script src="Content/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="Content/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="Content/css/bootstrap.css" rel='stylesheet' type='text/css' />
+ 
+    <link href="Content/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="Content/css/my.css" rel="stylesheet" type='text/css' />
+    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css">
+  
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+  
+    <script src="Content/js/jquery.magnific-popup.js" type="text/javascript"></script>
+    <link href="Content/css/popup.css" rel="stylesheet" type="text/css">
+ 
+    <script src="Content/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="Content/js/toastr.min.js"></script>
+    <link href="Content/css/toastr.min.css" rel="stylesheet" />
+    <link href="/Content/css/jquery-confirm.css" rel="stylesheet" />
+    <script src="/Content/js/jquery-confirm.js" type="text/javascript"></script>--%>
+    <meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+		<title>VCQRU | We secure you</title>	
+
+		<meta name="keywords" content="HTML5 Template" />
+		<meta name="description" content="VCQRU - Responsive HTML5 Template" />
+		<meta name="author" content="bhanguz.com" />
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="../img-1/favicon.png" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="../img-1/favicon.png" />
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+		<!-- Web Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css" />
+
+		<!-- Vendor CSS -->
+    
+   
+
+		<link rel="stylesheet" href="../content/vendor/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../content/vendor/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../content/vendor/animate/animate.min.css" />
+		<link rel="stylesheet" href="../content/vendor/simple-line-icons/css/simple-line-icons.min.css" />
+		<link rel="stylesheet" href="../content/vendor/owl.carousel/assets/owl.carousel.min.css" />
+		<link rel="stylesheet" href="../content/vendor/owl.carousel/assets/owl.theme.default.min.css" />
+		<link rel="stylesheet" href="../content/vendor/magnific-popup/magnific-popup.min.css" />
+    <link href="Brand_Promotion/css/font-awesome.min.css" rel="stylesheet" />
+		<!-- Theme CSS -->
+    <link rel="stylesheet" href="../css/theme.css" />
+		<link rel="stylesheet" href="../css/theme.css" />
+		<link rel="stylesheet" href="../css/theme-elements.css" />
+		<link rel="stylesheet" href="../css/theme-blog.css" />
+		<link rel="stylesheet" href="../css/theme-shop.css" />
+
+		<!-- Current Page CSS -->
+		<link rel="stylesheet" href="../content/vendor/rs-plugin/css/settings.css" />
+		<link rel="stylesheet" href="../content/vendor/rs-plugin/css/layers.css" />
+		<link rel="stylesheet" href="../content/vendor/rs-plugin/css/navigation.css" />
+		<link rel="stylesheet" href="../content/vendor/circle-flip-slideshow/css/component.css" />
+		
+		<!-- Demo CSS -->
+
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="../css/skins/default.css" />
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="../css/custom.css" />
+
+		<!-- Head Libs -->
+		<script src="../content/vendor/modernizr/modernizr.min.js"></script>
+
+
+    <script src="../Content/js/jquery-1.11.1.min.js"></script>
+    <%--<script src="Content/js/jquery.min.js"></script>--%>
+    <%--<script src="vendor/jquery/jquery.js"></script>--%>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <!-- Add fancyBox main JS and CSS files -->
+   <%-- <script src="Content/js/jquery.magnific-popup.js" type="text/javascript"></script>
+    <link  href="Content/css/popup.css" rel="stylesheet" type="text/css" />--%>
+   <%-- <script src="../Content/js/toastr.min.js"></script>    
+    <link href="../Content/css/toastr.min.css" rel="stylesheet" />
+
+       
+       
+    <link href="../Content/css/jquery-confirm.css" rel="stylesheet" />
+    <script src="../Content/js/jquery-confirm.js" type="text/javascript"></script>--%>
+    <!--<script type="text/javascript"-->
+   
+    
+
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+            
+           // CatchWebsiteHit();
+            $('#menuone').show();
+            $('#menutwo').hide();
+            $('#quote-carousel').carousel({
+                pause: true,
+                closeBtnInside: true,
+                interval: 4000, // chenged by shweta from 4000 to 50000
+            });
+            $('.popup-with-zoom-anim').magnificPopup({
+                type: 'inline',
+                fixedContentPos: false,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-in'
+            });
+
+
+            $('#cssmenu #menu-button').on('click', function () {
+                
+                var menu = $(this).next('ul');
+                if (menu.hasClass('open')) {
+                    menu.removeClass('open');
+                } else {
+                    menu.addClass('open');
+                }
+            });
+            FillNews();
+            GetIP();
+         
+            //getQueryStrings();
+            getQueryStrings_ResetPwd();
+            
+           //// $('#mainNav li a').removeClass("nav-link active");
+           // $('#mainNav li a').on('click', function () {
+           //     $('#mainNav li a').removeClass("nav-link active");
+           //     $(this).addClass('nav-link active');                
+                
+           //    // $("nav").removeClass("show");
+           // //    $("#btnmenu").addClass("collapsed");
+           //     //alert($(window).scrollTop());
+           //     //alert($(window).scrollTop() -50);
+           //     //$(window).scrollTop($(window).scrollTop() -50);
+           //     //if (menu.hasClass('open')) { 
+           //     //    menu.removeClass('open');
+           //     //} else {
+           //     //    menu.addClass('open');
+           //     //}
+           // });
+
+           //$("#menurow").css("margin-top", "-5px");
+             
+           // $(window).scroll(function () {
+           //     //alert($(window).scrollTop());
+           //     if ($(window).scrollTop() == 0) {
+           //         $("#menurow").css("margin-top", "-5px");
+           //     }
+           //     else if ($(window).scrollTop() > 50) {
+           //         $("#menurow").css("margin-top", "35px");
+
+           //     }
+           // });
+
+        });
+
+<%--        function showclose() {
+            if (<%=IsMobile%> == "1")
+            {
+                //$('#btnmenu').addClass("btn header-btn-collapse-nav collapsed");
+                $("#btnmenu").trigger("click");
+            }
+        }--%>
+            </script>
+    <script type="text/javascript">
+        function CatchWebsiteHit() {
+            $.ajax({
+                type: "post",
+                url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=CatchWebsiteHit',
+                success: function (data) {
+                   
+                }
+            });
+    
+        }
+        function ConfirmResetPWD() {            
+            if ($('#pwd1').val() != $('#pwdConfirm1').val())
+            {
+                // $('#pwdNotMatch').text("Password did not match.");
+                toastr.error("Password did not match.");
+                //  return false;
+            }
+            else{
+
+            
+                var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+                var queryString = location.search.substring(1);
+                var keyValues = queryString.split('&');
+                for (var i in keyValues) {
+                    var key = keyValues[i].split('=');
+                    $.ajax({
+                        type: "post",
+                        url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=setpassword&pwd=' + $('#pwd1').val() + '&value=' + key[1],
+                        success: function (data) {
+                            var result = data;
+                            toastr.info(result);
+                            $('#ResetPwdModal').modal('hide');
+                            
+                        },
+                    });
+                }
+            }
+        }
+         function getQueryStrings_ResetPwd() {
+           
+                var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+                var queryString = location.search.substring(1);
+                var keyValues = queryString.split('&');
+                for (var i in keyValues) {
+                    var key = keyValues[i].split('=');
+                    rquestpage = key[0];
+                    if (rquestpage == "mlt") {
+                        $.ajax({
+                            type: "post",
+                            url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=verifyresetpwd&mlt=' + key[1],
+                            success: function (data) {
+                                debugger;
+                                var result = data;
+                                if (result == "yes") {
+                                    $('#ResetPwdModal').modal();
+                                }
+                            },
+                        });
+                    }
+                    if (rquestpage == "key") {
+                        $('#progress').show();
+                        $.ajax({
+                            type: "post",
+                            url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=verifyaccount&key=' + key[1],
+                            success: function (data) {
+                                var result = data;
+                                toastr.info(result);
+                            },
+                        });
+                        $('#progress').hide();
+                    }
+                    if (rquestpage == "Del") {
+                        $.ajax({
+                            type: "post",
+                            url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=deleteaccount&Del',
+                            success: function (data) {
+                                var result = data;
+                                toastr.info(result);
+                            },
+                        });
+                    }
+                } 
+
+            }
+            function getQueryStrings() {
+           
+                var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+                var queryString = location.search.substring(1);
+                var keyValues = queryString.split('&');
+                for (var i in keyValues) {
+                    var key = keyValues[i].split('=');
+                    rquestpage = key[0];
+                    if (rquestpage == "mlt") {
+                        $.ajax({
+                            type: "post",
+                            url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=verifyresetpwd&mlt=' + key[1],
+                            success: function (data) {
+                                var result = data;
+                                if (result == "yes") {
+                                    $.confirm({
+                                        title: 'Reset Password',
+                                        content: 'url:resetpassword.html',
+                                        onContentReady: function () {
+                                            this.$content.find('label#mltid').text(key[1]);
+                                        },
+                                        boxWidth: '800px',
+                                        useBootstrap: false,
+                                        buttons: {
+                                            sayMyName: {
+                                                text: 'Confirm',
+                                                btnClass: 'btn-warning',
+                                                action: function () {
+                                                    
+                                                    var input = this.$content.find('input#newpwd').val();
+                                                    var cnfinput = this.$content.find('input#confirmpwd').val();
+                                                    var errorText = this.$content.find('.text-danger');
+                                                    if (input == '') {
+                                                        errorText.html('<div class="text-danger help-block">Please enter new password<div>').slideDown(200);
+                                                        return false;
+                                                    } else if (cnfinput == '') {
+                                                        errorText.html('<div class="text-danger help-block">Please enter confirm password<div>').slideDown(200);
+                                                        return false;
+                                                    }
+                                                    if (input == cnfinput) {
+                                                      
+                                                        $.ajax({
+                                                            type: "post",
+                                                            url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=setpassword&pwd=' + cnfinput + '&value=' + key[1],
+                                                            success: function (data) {
+                                                                var result = data;
+                                                                toastr.info(result);
+                                                            },
+                                                        });
+                                                    }
+                                                    else {
+                                                        errorText.html('<div class="text-danger help-block">Password not match<div>').slideDown(200);
+                                                        return false;
+                                                    }
+                                                }
+                                            },
+                                            cancel: function () {
+                                                $.alert('Canceled!');
+                                            }
+                                        }
+                                    });
+                                }
+                                else {
+                                    toastr.info(result);
+                                }
+                            },
+                        });
+                    }
+                    if (rquestpage == "key") {
+                        $('#progress').show();
+                        $.ajax({
+                            type: "post",
+                            url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=verifyaccount&key=' + key[1],
+                            success: function (data) {
+                                var result = data;
+                                toastr.info(result);
+                            },
+                        });
+                        $('#progress').hide();
+                    }
+                    if (rquestpage == "Del") {
+                        $.ajax({
+                            type: "post",
+                            url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=deleteaccount&Del',
+                            success: function (data) {
+                                var result = data;
+                                toastr.info(result);
+                            },
+                        });
+                    }
+                }
+
+            }
+
+            function toggleIcon(e) {
+                $(e.target)
+                    .prev('.panel-heading')
+                    .find(".more-less")
+                    .toggleClass('glyphicon-plus glyphicon-minus');
+            }
+            $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+            $('.panel-group').on('shown.bs.collapse', toggleIcon);
+
+            function FillNews() {
+        
+                $.ajax({
+                    type: "post",
+                     url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=fillnews',
+                    success: function (data) {
+                        var result = data;
+                        $("#news").html(result);
+                    },
+                });
+            }
+            function GetIP() {
+            
+                $.ajax({
+                    type: "POST",
+                    url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=GetIP',
+                    success: function (data) {
+                        var result = data;
+                        $("#AddIP").text(result);
+                    },
+                });
+            }
+            function checkproduct(vl) {
+                //alert(vl);
+                PageMethods.checkNewProduct(vl, onCompleteProduct)
+            }
+            function onCompleteProduct(Result) {
+                if (Result == true) {
+                    document.getElementById("lblRegMsg").innerHTML = "Email Id Already exist.";
+                    //document.getElementById("btnSave").disabled = true;
+                    //document.getElementById("btnSave").className = "save_btn_Sec";
+                    $find("ModalPopupMessage").show();
+                }
+                else {
+                    document.getElementById("lblRegMsg").innerHTML = "";
+                    //document.getElementById("btnSave").disabled = false;
+                    //document.getElementById("btnSave").className = "save_btn";
+                    $find("ModalPopupMessage").hide();
+
+                }
+            }
+
+
+            function logout() {
+         
+                $.ajax({
+                    type: "POST",
+                    url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=logout',
+                    success: function (data) {
+                        var result = data;
+                        $('#menuone').hide();
+                        $('#menutwo').show();
+                        if (result == 1) {
+                            window.location.href = "../Admin/Login.aspx";
+                        }
+                        toastr.success("Logout Sucessfully !");
+                    },
+                });
+            }
+            function subscribenewsletter() {
+           
+                if ($('#txtSend').val() == '') {
+                    toastr.error("Please enter your mail id."); msg = "no"; return false
+                }
+                if ($('#txtSend').val() != '') {
+                    var emailReg = new RegExp("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$");
+                    var valid = emailReg.test($('#txtSend').val());
+                    if (!valid) {
+                        toastr.error("Please enter the correct email."); return false;
+                    }
+                    else {
+                        $.ajax({
+                            type: "POST",
+                            url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=subscribenewsletter&email=' + $('#txtSend').val(),
+                            success: function (data) {
+                                $('#txtSend').val('');
+                                toastr.info(data);
+                            },
+                        });
+                    }
+                }
+            }
+            function sendquery() {
+         
+                if ($('#name').val() == '') {
+                    toastr.error("Please enter Name"); msg = "no"; return false
+                }
+                else {
+                    if ($('#email').val() == '') {
+                        toastr.error("Please enter email"); msg = "no"; return false
+                    }
+                    else {
+                        var emailReg = new RegExp("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$");
+                        var valid = emailReg.test($('#email').val());
+                        if (!valid) {
+                            toastr.error("Please enter the correct email."); return false;
+                        }
+                        else {
+
+                            if ($('#cmobile1').val() == '') {
+                                toastr.error("Please enter your mobile no."); msg = "no"; return false
+                            }
+                       
+                            var v = $('#cmobile1').val().length;
+                            if (v < 10 || v > 12) {
+                                toastr.error("Please enter correct Mobile Number."); return false;
+                            }
+                            // var MobileReg = new RegExp("^[0-9_.+-]+$");
+                            var MobileReg = /[0-9]|\./;
+                            var valid = MobileReg.test($('#cmobile1').val());
+                            if (!valid) {
+                                toastr.error("Please enter the correct mobile no.");
+                                return false;
+                            }
+                            if ($('#comment').val() == '') {
+                                toastr.error("Please enter your message."); msg = "no"; return false
+                            }
+                            else {
+                                $('#progress').show();
+                                $.ajax({
+                                    type: "POST",
+                                    url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=sendquery&name=' + $('#name').val() + '&email=' + $('#email').val() + '&comment=' + $('#comment').val() + '&cmobile=' + $('#cmobile1').val(),
+                                    success: function (data) {
+                                        $('#progress').hide();
+                                        $('#name').val('');
+                                        $('#email').val('');
+                                        $('#cmobile').val('');
+                                        $('#comment').val('');
+                                        toastr.info(data);
+                                    },
+                                });
+                            }
+                        }
+                    }
+                }
+                //$('#progress').hide();
+            }
+            function chkgenuenity() {
+                //alert('');
+                if ($('#codeone').val() == '') {
+                    toastr.error("Please enter Code1"); msg = "no"; return false
+                }
+                else {
+                    if ($('#codetwo').val() == '') {
+                        toastr.error("Please enter Code2"); msg = "no"; return false
+                    }
+                    else {
+                        if ($('#mobile').val() == '') {
+                            toastr.error("Please enter your mobile No."); msg = "no"; return false
+                        }
+                        else {
+                            var v = $('#mobile').val().length;
+                            if (v != 10) {
+                                toastr.error("Please enter correct Mobile Number."); msg = "no"; return false
+                            }
+                            else {
+                                $('#progress').show();
+                                $.ajax({
+                                    type: "POST",
+                                    url: '<%=ProjectSession.absoluteSiteBrowseUrl%>/Info/MasterHandler.ashx?method=chkgenuenity&codeone=' + $('#codeone').val() + '&codetwo=' + $('#codetwo').val() + '&mobile=' + $('#mobile').val() + '&RefCd=' + $('#RefCd').val(),
+                                    success: function (data) {
+                                        $('#progress').hide();
+                                        $('#codeone').val('');
+                                        $('#codetwo').val('');
+                                        $('#mobile').val('');
+                                        $('#RefCd').val('');
+                                        //toastr.info(data);
+                                        // $.alert(data);
+                                        $('#p1msg').html(data);
+                                        $('#smallModal').modal();
+                                    },
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+            function validate(evt) {
+                var theEvent = evt || window.event; var key = theEvent.keyCode || theEvent.which; key = String.fromCharCode(key);
+                var regex = /[0-9]|\./;
+                if (!regex.test(key)) {
+                    theEvent.returnValue = false; toastr.error("Input is not Numeric \n Enter numbers only (Like 0 to 9) Or select the letter and press delete button to remove");
+                    if (theEvent.preventDefault) theEvent.preventDefault();
+                }
+            }
+            function alphanumeric(inputtxt) {
+                var TCode = document.getElementById('name').value;
+                if (/[^a-zA-Z ]/.test(TCode)) {
+                    document.getElementById("name").value = TCode.replace(/\d+/g, '');
+                    toastr.error('Input is not alphanumeric \n Enter Characters only between A to Z or a to z');
+                    return false;
+                }
+                return true;
+            }
+            function loadDoc(url) {
+                var result = "No Data Found";
+                if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest();
+                }
+                else {// code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.open("GET", url, false);
+                //sleep.php?milliSeconds=' + milliSeconds + '&nochache=' + nocache
+                xmlhttp.send(null);
+                result = xmlhttp.responseText;
+                return result;
+            }
+
+            function validate(evt) {
+                var theEvent = evt || window.event; var key = theEvent.keyCode || theEvent.which; key = String.fromCharCode(key);
+                var regex = /[0-9]|\./;
+                if (!regex.test(key)) {
+                    theEvent.returnValue = false; toastr.error("Input is not Numeric \n Enter numbers only (Like 0 to 9)");
+                    if (theEvent.preventDefault) theEvent.preventDefault();
+                }
+            }
+        
+        
+    </script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+           <cc1:ToolkitScriptManager runat="Server" AsyncPostBackTimeout="20000" EnablePartialRendering="true"
+                            EnablePageMethods="true" ID="ScriptManager1" />
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+     <!-- Vendor New design -->
+		<script src="../vendor/jquery/jquery.min.js"></script>
+		<script src="../vendor/jquery.appear/jquery.appear.min.js"></script>
+		<script src="../vendor/jquery.easing/jquery.easing.min.js"></script>
+		<script src="../vendor/jquery-cookie/jquery-cookie.min.js"></script>
+		<script src="../vendor/popper/umd/popper.min.js"></script>
+		<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../vendor/common/common.min.js"></script>
+		<%--<script src="../vendor/jquery.validation/jquery.validation.min.js"></script>--%>
+		<script src="../vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+		<script src="../vendor/jquery.gmap/jquery.gmap.min.js"></script>
+		<script src="../vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+		<script src="../vendor/isotope/jquery.isotope.min.js"></script>
+		<script src="../vendor/owl.carousel/owl.carousel.min.js"></script>
+		<script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script src="../vendor/vide/vide.min.js"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="../js/theme.js"></script>
+		
+		<!-- Current Page Vendor and Views -->
+		<script src="../vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+		<script src="../vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="../vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
+		<script src="../js/views/view.home.js"></script>
+		
+		<!-- Theme Custom -->
+		<script src="../js/custom.js"></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="../js/theme.init.js"></script>
+
+		<!-- Examples -->
+		<script src="../js/examples/examples.demos.js"></script>
+     <script src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js'></script>
+        <script src='https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js'></script>+
+         <link href="../Content/css/jquery-confirm.css" rel="stylesheet" />
+    <script src="../Content/js/jquery-confirm.js" type="text/javascript"></script>
+        <script>
+
+  $(document).ready( function () {
+   $('.table').dataTable( {
+     responsive: true,
+     "paging":   false,
+     "ordering": false,
+       "search":false,
+     //"info": true
+    } );
+  } );
+
+
+
+        </script>
+    <!-- End Vendor New design -->
+  
+      <script src="../Content/js/toastr.min.js"></script>    
+    <link href="../Content/css/toastr.min.css" rel="stylesheet" />
+      
+       
+    <link href="../Content/css/jquery-confirm.css" rel="stylesheet" />
+    <script src="../Content/js/jquery-confirm.js" type="text/javascript"></script>
+    <link href="../Content/css/flexslider.css" rel='stylesheet' type='text/css' />
+    <%--<script defer src="Content/js/jquery.flexslider.js"></script>--%>
+    <script type="text/javascript">
+//        $(function () {
+//            SyntaxHighlighter.all();
+//        });
+        //$(window).load(function () {
+        //    $('.flexslider').flexslider({
+        //        animation: "slide",
+        //        start: function (slider) {
+        //            $('body').removeClass('loading');
+        //        }
+        //    });
+        //});
+    </script>
+</body>
+</html>

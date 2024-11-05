@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Verify</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .next_btn {
+            background: #ffffff;
+            padding: 5px 30px;
+            color: #073136 !important;
+            text-transform: uppercase;
+            font-size: 14px;
+            border: 1px solid white;
+            margin-top: 20px;
+            margin: 20px auto 0px;
+            text-align: center;
+            float: right;
+            border-radius: 3px;
+            text-align: center;
+            display: table;
+            float: none !important;
+            /*margin: 0 auto;*/
+            font-weight: 600;
+            text-decoration: none !important;
+            outline: none;
+            transition: all 0.5s ease;
+        }
+
+            .next_btn:hover {
+                background: #f36828;
+                color: #FFF !important;
+                border-color: #f36828;
+                box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+            }
+
+
+        input:-internal-autofill-selected {
+            appearance: menulist-button;
+            background-image: none !important;
+            background-color: -internal-light-dark(rgb(0, 0, 0), rgba(0, 0, 0, 0.4)) !important;
+            color: -internal-light-dark(black, #000) !important;
+        }
+
+        .wraper_main {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-bg {
+            background: url(images/code-checkbg.png);
+            height: 100vh;
+            padding: 2em 0;
+        }
+
+        .container-max {
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        .massage_box strong {
+            color: #12af84 !important
+        }
+
+        .massage_box a {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: block;
+            color: #fb6405;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+
+        .form-section {
+            max-width: 100%;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+
+
+
+        em {
+            color: red;
+        }
+
+        .form-section img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .form-section .main-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-section .column-1 {
+            width: 30%;
+            padding: 0 10px;
+        }
+
+        .form-section .column-2 {
+            width: 70%;
+            padding: 0 10px;
+        }
+
+        .form-section .form-box {
+            background: #000 url(images/form-bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 30px;
+            padding: 4em;
+            position: relative;
+            z-index: 2;
+        }
+            /*.form-section .form-box::after{
+          background: url(images/brand-bg.png) no-repeat;
+          background-position: right bottom;
+          content: '';
+          position: absolute;
+          right: 50px;
+          width: 250px;
+          height: 250px;
+          position: absolute;
+          background-size: contain;
+          opacity: 0.6;
+          bottom: 1em;
+        }*/
+            .form-section .form-box h4 {
+                font-size: 27px;
+                font-weight: 500;
+                color: #cfcfcf;
+                line-height: 1.1;
+                margin-bottom: 1em;
+            }
+
+        .form-section input::placeholder {
+            color: red;
+            font-size: 1em;
+            font-style: normal;
+        }
+
+        .form-section input::placeholder {
+            color: #373435;
+        }
+
+        .form-section input::placeholder {
+            opacity: 1;
+        }
+
+        .form-section .form-box .form-group {
+            margin-bottom: 1.5em;
+        }
+
+        .form-section input {
+            outline: none;
+        }
+
+        .form-section .form-box .form-control {
+            border: 2px solid #444444;
+            background: rgb(150 152 154 / 65%);
+            font-family: "Open Sans", sans-serif;
+            font-size: 0.9rem;
+            padding: 0.8rem 0.75rem;
+            line-height: 14px;
+            font-weight: 600;
+            border-radius: 30px;
+            display: block;
+            width: 100%;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+
+            .form-section .form-box .form-control:focus {
+                border-color: #96989a;
+                background: #373435;
+                color: #96989a;
+            }
+
+        .form-section .form-box .form-group label {
+            color: #b2b4b7;
+            margin-bottom: 0.3em;
+            display: inline-block;
+            font-weight: 500;
+        }
+
+        .form-section .form-box .form-group .btn {
+            background: #2c292a;
+            color: #FFF;
+            font-weight: 500 !important;
+            border-radius: 30px;
+            padding: 1em 1em;
+            border: none;
+            cursor: pointer;
+            min-width: 250px;
+            width: 30%;
+            font-size: 18px;
+            text-align: center;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+
+            .form-section .form-box .form-group .btn:hover, .form-section .form-box .form-group .btn:focus {
+                background: #ededed;
+                color: #373435;
+            }
+
+        @media only screen and (max-width: 1366px) {
+            .container-max {
+                max-width: 90%;
+                margin: 0 auto;
+            }
+
+            .form-section .form-box h4 {
+                font-size: 17px;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .main-bg {
+                height: 100%;
+                background: rgb(235 235 235 / 72%) url(images/code-checkbg.png);
+                background-blend-mode: overlay;
+            }
+
+            .container-max {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            .form-section {
+                position: relative;
+                left: auto;
+                right: 0;
+                transform: none;
+            }
+
+                .form-section .form-box {
+                    padding: 2em;
+                }
+
+                .form-section .main-row {
+                    display: block;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .form-section .column-1, .form-section .column-2 {
+                    width: 100%;
+                    padding: 0 10px;
+                    margin: 0 auto;
+                }
+
+            .logo-brand {
+                width: 200px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        function myfunction() {
+
+
+            $.ajax({
+                type: "POST",
+
+
+                url: '/Info/MasterHandler.ashx?method=chkgenuenity&codeone=' + $("#field_r0655").val().substring(0, 5) + '&codetwo=' + $("#field_r0655").val().substring(5, 13) + '&mobile=' + $("#field_h1bqb").val() + '&name=' + $("#field_nrnx1").val() + '&client=Comp-1366',
+
+
+                success: function (data) {
+
+                    $('#ShowMessage').show();
+                    $('#mainform').hide();
+
+                    $('#p3msg').html(data);
+                    $('#p3msg:contains("not")').css('color', 'white');
+
+                }
+            });
+
+
+
+        }
+
+
+        $(document).on("click", "#btnNext", () => {
+
+            debugger;
+            window.location.href = 'https://gymford.com/';
+
+        });
+
+
+    </script>
+
+</head>
+
+<body>
+    <div class="wraper_main">
+        <div class="main-bg">
+            <section class="form-section">
+                <div class="container-max">
+                    <div class="main-row">
+                        <div class="column-1">
+                            <div class="logo-brand"><img src="images/brand-logo.png" alt="brand-logo" /></div>
+                        </div>
+                        <div class="column-2" id="mainform">
+                            <div class="form-box">
+                                <div><h4>Fill the below details to check Authenticity of the product</h4></div>
+                                <form id="formtest" action="" onsubmit="myfunction(); return false;">
+                                    <div class="form-group">
+                                        <label>Name<em>*</em></label>
+                                        <div><input type="text" id="field_nrnx1" required class="form-control" placeholder="Enter Your Full Name.."></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Mobile No.<em>*</em></label>
+                                        <div><input type="text" id="field_h1bqb" maxlength="10" minlength="10" required class="form-control" placeholder="Enter Your Mobile Number.."></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Your Code<em>*</em></label>
+                                        <div><input type="text" id="field_r0655" maxlength="13" minlength="13" required class="form-control" placeholder="Type Your 13-digits code.."></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div><button type="submit" class="btn" id="btnsubmit">Verify</button></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="column-3" style="display:none;" id="ShowMessage">
+                            <div class="form-box">
+
+                                <p id="p3msg" style="color: white !important; overflow: hidden; font-size: 14px !important;" class="displayNone massage_box"></p>
+                                <a href="javascript:void(0)" class="next_btn" id="btnNext">Close</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- container-scroller -->
+    <!-- End custom js for this page-->
+</body>
+
+
+
+
+<!-- Mirrored from www.bootstrapdash.com/demo/radiant/jquery/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Dec 2021 05:07:09 GMT -->
+</html>
+

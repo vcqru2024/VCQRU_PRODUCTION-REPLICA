@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+ul, li{list-style:none;}
+input, textarea, select{outline:none;}
+.clr{clear:both;}
+.f_left{float:left;}
+.f_right{float:right;}
+
+@font-face
+{
+	font-family:ptsans;
+	src:url(../font/PT_Sans-Web-Regular.ttf);
+}
+@font-face
+{
+	font-family:aller;
+	src:url(../font/Aller_Rg.ttf);
+}
+@font-face
+{
+	font-family:lobster;
+	src:url(../font/Lobster 1.4.otf);
+}
+@font-face
+{
+	font-family:oswald;
+	src:url(../font/Oswald-Light.ttf);
+}
+@font-face {
+    font-family: 'open_sanscondensed_light';
+    src: url('../font/OpenSans-CondLight-webfont.eot');
+    src: url('../font/OpenSans-CondLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/OpenSans-CondLight-webfont.woff') format('woff'),
+         url('../font/OpenSans-CondLight-webfont.ttf') format('truetype'),
+         url('../font/OpenSans-CondLight-webfont.svg#open_sanscondensed_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

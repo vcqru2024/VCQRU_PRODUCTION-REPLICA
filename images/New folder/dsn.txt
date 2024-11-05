@@ -1,0 +1,37 @@
+ private void NewCreateDsn()
+        {
+            sdb.xmlReadFun();
+            string ODBC_PATH = "SOFTWARE\\ODBC\\ODBC.INI\\";
+            string driverName = "SQL Server";
+            string dsnName = "WinSer";
+            string database = "WindowServiceData";
+            string description = "This DSN was created from code!";
+            string server = SQL_DB.sr.Trim();
+            bool trustedConnection = false;
+
+            // Lookup driver path from driver name         
+            string driverPath = "C:\\WINDOWS\\System32\\sqlsrv32.dll";
+
+            var datasourcesKey = Registry.LocalMachine.CreateSubKey(ODBC_PATH + "ODBC Data Sources");
+            if (datasourcesKey == null)
+            {
+                throw new Exception("ODBC Registry key does not exist");
+            }
+            datasourcesKey.SetValue(dsnName, driverName);
+            // Create new key in odbc.ini with dsn name and add values        
+            var dsnKey = Registry.LocalMachine.CreateSubKey(ODBC_PATH + dsnName);
+            if (dsnKey == null)
+            {
+                throw new Exception("ODBC Registry key for DSN was not created");
+            }
+
+            dsnKey.SetValue("Database", database);
+            dsnKey.SetValue("Description", description);
+            dsnKey.SetValue("Driver", driverPath);
+            dsnKey.SetValue("LastUser", "sa");
+            dsnKey.SetValue("Server", server);
+            dsnKey.SetValue("Database", database);
+            dsnKey.SetValue("username", "sa");
+            dsnKey.SetValue("password", "system123#");
+            dsnKey.SetValue("Trusted_Connection", trustedConnection ? "Yes" : "No");
+        }

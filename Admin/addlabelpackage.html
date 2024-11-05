@@ -1,0 +1,47 @@
+﻿<fieldset id="ftg" class="Newfield Newfield_width2">
+    <legend>
+        Package Info
+    </legend>
+        <table class="tab_regis" width="98%" cellspacing="2" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td colspan="3" align="center">
+                        <h3 class="header blue lighter smaller">Available Codes</h3> <b><label id="lblAvailableCodes" style="color:Red;font-family: Arial; font-size: 16px;"></label></b>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 36%;" align="right">
+                        <strong><h3 class="blue lighter smaller">No of Packet</h3></strong>
+                    </td>
+                    <td colspan="2" style="text-align:center">
+                        <input id="ddlNoPacket" onkeypress="return isNumberKey(this, event);" class="textbox_pop" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 36%;" align="right">
+                        <strong><h3 class="blue lighter smaller">Code Per Packet</h3></strong>
+                    </td>
+                    <td colspan="2" style="text-align:center">
+                        <input id="lblNoCode" onkeyup="return totallabels();" onkeypress="return isNumberKey(this, event);" class="textbox_pop" />
+
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="width: 36%; vertical-align: top;" align="right">
+                        <strong><h3 class="blue lighter smaller">Printed Codes</h3></strong>
+                    </td>
+                    <td colspan="2" style="text-align:center">
+                        <label id="lblCodes" class="textbox_pop"></label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="text-danger help-block" style="display:none"></p>
+    
+</fieldset>
+<!--<script type="text/javascript">
+    function totallabels() {
+        $('#lblCodes').text = parseInt($('#ddlNoPacket').val()) * parseInt($('#lblNoCode').val());
+    }
+</script>-->

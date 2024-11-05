@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<!--Make sure page contains valid doctype at the very top!-->
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="stepcarousel.js"></script>
+<link href="tech_gal.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+<script type="text/javascript">
+
+stepcarousel.setup({
+	galleryid: 'mygallery', //id of carousel DIV
+	beltclass: 'belt', //class of inner "belt" DIV containing all the panel DIVs
+	panelclass: 'panel1', //class of panel DIVs each holding content
+	autostep: {enable:true, moveby:1, pause:2000},
+	panelbehavior: {speed:500, wraparound:true, wrapbehavior:'slide', persist:true},
+	defaultbuttons: {enable: true, moveby: 1, leftnav: ['317e0s5.gif', -5, 80], rightnav: ['33o7di8.gif', -20, 80]},
+	statusvars: ['statusA', 'statusB', 'statusC'], //register 3 variables that contain current panel (start), current panel (last), and total panels
+	contenttype: ['inline'] //content setting ['inline'] or ['ajax', 'path_to_external_file']
+})
+
+</script>
+
+</head>
+
+<body>
+
+<div id="mygallery" class="stepcarousel">
+<div class="belt">
+
+<div class="panel1">
+
+<img src="http://i26.tinypic.com/11l7ls0.jpg" />
+
+</div>
+
+<div class="panel1">
+<img src="http://i26.tinypic.com/11l7ls0.jpg" />
+
+</div>
+
+<div class="panel1">
+<img src="http://i26.tinypic.com/11l7ls0.jpg" />
+</div>
+
+<div class="panel1">
+<img src="http://i31.tinypic.com/119w28m.jpg" />
+</div>
+
+<div class="panel1">
+<img src="http://i27.tinypic.com/34fcrxz.jpg" />
+</div>
+
+</div>
+</div>
+
+<p>
+<b>Current Panel:</b> <span id="statusA"></span> <b style="margin-left: 30px">Total Panels:</b> <span id="statusC"></span>
+</p>
+
+<p id="mygallery-paginate" style="width: 250px; text-align:center">
+<img src="opencircle.png" data-over="graycircle.png" data-select="graycircle.png" data-moveby="1" />
+</p>
+
+<p>
+<a href="javascript:stepcarousel.stepBy('mygallery', -1)">Back 1 Panel</a> <a href="javascript:stepcarousel.stepBy('mygallery', 1)" style="margin-left: 80px">Forward 1 Panel</a> <br />
+
+<a href="javascript:stepcarousel.stepTo('mygallery', 1)">To 1st Panel</a> <a href="javascript:stepcarousel.stepBy('mygallery', 2)" style="margin-left: 80px">Forward 2 Panels</a>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+Mobile App API
+http://www.vcqru.com/MobileApp/CodeCheck.aspx?Code1=456464&Code2=5465476544&MobileNo=45565465467&Mode=iOS&DeviceToken=gfdgdgdfgdfr54645645
+
+
+IVR API
+http://www.vcqru.com/solutionAPI/codeCheck.aspx?Code1=456464&Code2=5465476544
+
+Resolving menu not closing on adbout us click in mobile view.
+show menu content properly as it is hiding inside menu.
+integrated all pages in one screen ie home page.
+
+Putting proper validation message and remove unwanted  fields  from Signup and login for user and vendor .
+
+Task
+
+new Logo  implement.
+Meeting with rakesh and design team for designing issues.
+show all screens in one page to avoid screen blinking.
+show login screen by selecting login as user and vendor.
+show sign up screen by selecting sign up as user and vendor.
+
+design setting for our services.
+capture hit history of vcqru.com
+Add tab for services in menu bar in home page.

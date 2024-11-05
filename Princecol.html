@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principle Adhesive</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/0.9.0/jquery.mask.min.js"></script>
+    <!-- icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- font-family -->
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        body {
+            font-family: 'Jost' !important;
+            background-color: #F3F2AA;
+        }
+
+        .landing-ui {
+            /* padding: 3rem 0; */
+            /* min-height: 100vh; */
+        }
+
+            .landing-ui .card {
+                border: 0;
+                box-shadow: var(--bs-box-shadow-sm);
+                margin: 2rem 0 3rem 0;
+                /* width: 100%; */
+            }
+
+        .product-img {
+            width: 100%;
+            /* background: url('~/assets/images/Princecol/bg-product-img.png'); */
+            background: url('assets/images/Princecol/product.png');
+            background-position: left top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            /* background-attachment: fixed; */
+            position: sticky;
+            top: 0;
+        }
+
+        .landing-ui .card .card-body {
+            padding: 2rem;
+        }
+
+            .landing-ui .card .card-body .logo {
+                margin-bottom: 1rem;
+            }
+
+                .landing-ui .card .card-body .logo img {
+                    height: 4rem;
+                }
+
+            /* form */
+            /* .landing-ui .card .card-body .tab .card-title {
+            margin-bottom: 0.75rem;
+        } */
+
+            .landing-ui .card .card-body .tab .card-text {
+                margin-bottom: 0;
+                color: #4B5563;
+            }
+
+            .landing-ui .card .card-body .tab {
+                margin: 1rem 0;
+            }
+
+            .landing-ui .card .card-body .form-btns .btn {
+                width: 100%;
+                border-radius: 2px;
+                background-color: #FF0804;
+                box-shadow: var(--bs-box-shadow-sm);
+                color: var(--bs-white);
+                font-weight: 600;
+                text-transform: uppercase;
+                padding: 0.75rem;
+            }
+
+            .landing-ui .card .card-body .tab {
+                display: none;
+            }
+
+                .landing-ui .card .card-body .tab .success-msg {
+                    padding: 2rem;
+                    background-color: rgba(52, 199, 89, 16%);
+                    border-radius: var(--bs-border-radius-lg);
+                    border: 1px solid #34C759;
+                    text-align: center;
+                    margin-top: 1.50rem;
+                }
+
+                    .landing-ui .card .card-body .tab .success-msg h5 {
+                        color: #34C759;
+                        margin-bottom: 1rem;
+                    }
+
+                    .landing-ui .card .card-body .tab .success-msg p {
+                        color: var(--bs-secondary);
+                        margin-bottom: 0;
+                    }
+
+                    .landing-ui .card .card-body .tab .success-msg .animation-gif {
+                        mix-blend-mode: darken;
+                        height: 4rem;
+                    }
+
+            /* .landing-ui .card .card-body .card-title {
+            margin-bottom: 0.25rem;
+        } */
+
+            .landing-ui .card .card-body .card-text {
+                margin-bottom: 0;
+                color: var(--bs-secondary);
+            }
+
+            .landing-ui .card .card-body .form-control {
+                border-radius: 2px;
+                background-color: #F3F4F6;
+                font-weight: 600;
+                padding: 0.75rem;
+            }
+
+                .landing-ui .card .card-body .form-control::placeholder {
+                    color: #ADAAAF;
+                }
+
+            .landing-ui .card .card-body .form-label {
+                font-weight: 700;
+                text-transform: capitalize;
+                color: #5F5E62;
+            }
+
+                .landing-ui .card .card-body .form-label span {
+                    color: var(--bs-danger);
+                }
+
+        /* footer */
+        .footer {
+            background-color: #FF0804;
+            padding: 0.25rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            z-index: 1000;
+        }
+
+            .footer a {
+                color: var(--bs-white);
+            }
+
+            .footer p {
+                margin-bottom: 0;
+                font-size: 14px;
+                color: var(--bs-white);
+            }
+
+        @media screen and (max-width:768px) {
+            .footer p {
+                font-size: 12px;
+            }
+
+            .landing-ui .card {
+                margin: 2rem 0 0 0;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        // it is the variable initialized for the location purpose.
+
+        var baseurl = "../";
+        var Codeone = "";
+        var Codetwo = "";
+        var comp = "";
+        var Id = "";
+
+        var lat = "";
+        var long = "";
+        var getPosition = function (options) {
+            return new Promise(function (resolve, reject) {
+                navigator.geolocation.getCurrentPosition(resolve, reject, options);
+            });
+        }
+        $('#otherfield').hide();
+
+
+        // Read a page's GET URL variables and return them as an associative array.
+        function getUrlVars() {
+            var vars = [], hash;
+
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+
+        // form this function we may easily collect the data to the our database by using the post api
+
+
+        function Mobile_check() {
+            // // debugger;
+            var mobile_val = $('#mobile').val();
+            var d = mobile_val.slice(0, 1);
+            var c = parseInt(d);
+
+            if ((mobile_val.length == '') || (mobile_val.length != 10)) {
+                $('#mobilecheck').show();
+                $('#mobilecheck').html("**Please Enter Correct mobile number");
+                $('#mobilecheck').css("color", "red");
+                mobile_err = false;
+                return false;
+            }
+
+
+            if (mobile_val.length == 10) {
+                $('#mobilecheck').hide();
+                $.ajax({
+                    type: "Post",
+                    url: baseurl + 'Info/MasterHandler.ashx?method=ConsumerDetailsByMobileNo&MobileNo=' + $("#mobile").val() + '&compid=Comp-1738',
+                    success: function (data) {
+                        // alert(data);
+                        // debugger;
+                        if (c <= 5) {
+                            $('#mobilecheck').text('Please Enter Correct Mobile Number');
+                            $('#mobile').val('');
+                            return false;
+                        }
+
+                        else {
+
+                            var Name = data.split('~')[0];
+                            var city = data.split('~')[2];
+                            var state = data.split('~')[3];
+                            var pin = data.split('~')[6];
+                            var AccountNumber = data.split('~')[9];
+                            var IfscCode = data.split('~')[10];
+
+
+                            $("#AccountNumber").val(AccountNumber);
+                            $("#ConfirmAccountNumber").val(AccountNumber);
+                            $("#IfscCode").val(IfscCode);
+                            //$("#AccountHolderName").val(AccountHolderName);
+
+                            /*$("#upi").val(UpiId);*/
+
+
+                            if (/*$("#AccountHolderName").val() != "" && */$("#IfscCode").val() != "" && $("#AccountHolderName").val() != "") {
+                                $("#AccountNumber").attr('readonly', true);
+                                $("#ConfirmAccountNumber").attr('readonly', true);
+                                $("#IfscCode").attr('readonly', true);
+                                /*$("#AccountHolderName").attr('readonly', true);*/
+                            }
+
+                            // debugger;
+
+                            if (Name != "") {
+                                $("#name").val(Name);
+                                $("#name").attr('readonly', true);
+                                $('#Otherfield').hide();
+                                $('#divbank').show();
+                                //alert('1');
+                            }
+
+                            else if (Name == "" && AccountNumber != "" && IfscCode != "") {
+                                $('#ChkCode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                                $('#divbank').show();
+                                //alert('2');
+                            }
+                            else {
+                                $('#ChkCode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                                $('#divbank').show();
+                                //alert('3');
+                            }
+                            if (pin != "") {
+                                $("#Pincode").val(pin);
+                                $("#Pincode").attr('readonly', true);
+                                $('#Otherfield').hide();
+                                $('#divbank').show();
+                                //alert('4');
+                            }
+                            else if (pin == "" && AccountNumber != "" && IfscCode != "") {
+                                $('#ChkCode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                                $('#divbank').hide();
+                                //alert('5');
+                            }
+                            else {
+                                $('#ChkCode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                                $('#divbank').show();
+                                //alert('6');
+                            }
+
+                            if (city != "") {
+                                $("#city").val(city);
+                                $('#Otherfield').hide();
+                                $('#divbank').show();
+                                //alert('7');
+                            }
+                            else if (city == "" && AccountNumber != "" && IfscCode != "") {
+                                $('#ChkCode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                                $('#divbank').hide();
+                                //alert('8');
+                            }
+                            else {
+                                $('#ChkCode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                                $('#divbank').show();
+                                //alert('9');
+                            }
+
+                            if (state != "") {
+                                $("#State").val(state);
+                                $('#Otherfield').hide();
+                                $('#divbank').show();
+                                //alert('10');
+                            }
+                            else if (state == "" && AccountNumber != "" && IfscCode != "") {
+                                $('#ChkCode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                                $('#divbank').hide();
+                                //alert('11');
+                            }
+                            else {
+                                $('#ChkCode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                                $('#divbank').show();
+                                //alert('12');
+                            }
+                            if (AccountNumber != "" && IfscCode != "" && (Name == "" || pin == "" || city == "" || state == "")) {
+                                $('#ChkCode').hide();
+                                $('#mobilefield').hide();
+                                $('#Chkfields').show();
+                                $('#Otherfield').show();
+                                $('#divbank').hide();
+                                //alert('16');
+                            }
+
+                            if (Name != "" && pin != "" && city != "" && state != "") {
+
+                                if (AccountNumber != "" && IfscCode != "") {
+                                    $("#AccountNumber").val(AccountNumber);
+                                    $("#ConfirmAccountNumber").val(AccountNumber);
+                                    $("#IfscCode").val(IfscCode);
+                                    $('#Chkfields').show();
+                                    $('#mobilefield').show();
+                                    $('#Otherfield').hide();
+                                    $('#divbank').hide();
+                                    //alert('17');
+                                }
+                                else {
+                                    $('#ChkCode').hide();
+                                    $('#mobilefield').hide();
+                                    $('#Chkfields').show();
+                                    $('#Otherfield').hide();
+                                    $('#divbank').show();
+                                    //alert('18');
+                                }
+
+                            }
+                        }
+                    }
+                });
+            }
+            else {
+                $("#name").val('');
+                $("#Pincode").val('');
+                $("#city").val('');
+                $("#State").val('');
+            }
+        }
+
+        function onlyNumberKey(evt) {
+
+            // Only ASCII character in that range allowed
+            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+            if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+                return false;
+            return true;
+        }
+        function getaddress() {
+            // debugger;
+            let pin = document.getElementById("Pincode").value;
+            if (pin.length == 6) {
+                $.getJSON("https://api.postalpincode.in/pincode/" + pin, function (data) {
+                    createHTML(data);
+                })
+                function createHTML(data) {
+                    if (data[0].Status == "Success") {
+                        var city = "";
+                        var State = "";
+                        var pin = "";
+                        // debugger;
+
+                        var city = data[0].PostOffice[0]['District'];
+                        var State = data[0].PostOffice[0]['State'];
+                        var Pin = data[0].PostOffice[0]['PinCode'];
+                        $("#city").val(city);
+                        $("#city").attr("readonly", true);
+                        $("#State").val(State);
+                        $("#State").attr("readonly", true);
+
+                        if (pin == "") {
+                            $("#Pincode").val();
+                            $('#pincheck').html("");
+
+                        }
+                        else {
+                            $("#Pincode").val(Pin);
+
+                        }
+                        $('#btnsubmit').attr('disabled', false);
+                    }
+
+                }
+            }
+            else {
+                $('#city').val('');
+                $("#State").val('');
+            }
+
+        }
+
+
+        // for the 13 digit code check
+        $(document).ready(function () {
+
+            $('#Chkcode').show();
+            $('#Chkfields').hide();
+            $('#mobilefield').hide();
+            $('#Otherfield').hide();
+
+
+            var code_err = true;
+            var mobile_err = true;
+            var name_err = true;
+            var pin_err = true;
+            var city_err = true;
+            var village_err = true;
+
+
+
+            function getUrlVars() {
+                // debugger;
+                var vars = [], hash;
+                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                for (var i = 0; i < hashes.length; i++) {
+                    hash = hashes[i].split('=');
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                return vars;
+            };
+            Codeone = getUrlVars()["codeone"];
+            Codetwo = getUrlVars()["codetwo"];
+            comp = getUrlVars()["Comp"];
+            Id = getUrlVars()["ID"];
+
+            if (comp === undefined || comp === "undefined") {
+                comp = comp;
+            }
+            else {
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+                comp = comp.replace("%20", " ");
+            }
+            if (Codeone === undefined || Codeone === undefined) {
+                Codeone = Codeone;
+            }
+            else {
+                var HdnCode1 = Codeone;
+                var HdnCode2 = Codetwo;
+                // $("#codeone").val(code);
+            }
+
+            var id = comp;
+
+            if (id == "1") {
+
+                $('#ChkCode').show();
+                $('#Chkfields').hide();
+                $('#mobilefield').hide();
+                $('#divbank').hide();
+            }
+
+            else if (id == "PRINCIPLE ADHESIVES PRIVATE LIMITED") {
+                $('#Chkcode').hide();
+                $('#Chkfields').show();
+                $('#mobilefield').show();
+                $('#divbank').hide();
+                var code = Codeone + '-' + Codetwo
+                // var code = $('#HdnCode1').val() + '-' + $('#HdnCode2').val();
+                $("#example13-digit-number").val(code);
+            }
+
+
+
+
+
+            // check for the 13-digit number when the user is enter to check the code is correct or else
+
+            $('#example13-digit-number').mask("99999-99999999");
+
+            $("#btnnxt").on('click', function (e) {
+                e.preventDefault();
+                // debugger;
+
+                var codeone = $('#example13-digit-number').val();
+
+                if (codeone == "" || codeone == undefined) {
+                    $('#codecheck').html('**Please Enter 13- Digit-Code');
+                    $('#codecheck').css("color", "red");
+                    return false;
+                }
+                else {
+                    $('#nextcheck').text('');
+                }
+
+                if (codeone != undefined) {
+                    if ($('#example13-digit-number').val().length < 14) {
+                        $('#codecheck').text('**Please Enter 13-Digit-Code');
+                        $('#codecheck').css("color", "red");
+                        return false;
+                    }
+                    else {
+                        $('#codecheck').text('');
+                        $('#codecheck').hide();
+                    }
+                }
+
+                var rquestpage_Dcrypt = $("#example13-digit-number").val();
+
+                $('#btnnxt').hide();
+                $('#btnloadnxt').show();
+                // debugger;
+                $.ajax({
+                    type: "POST",
+                    url: baseurl + 'Info/MasterHandler.ashx?method=chkgenuenity&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1],
+                    success: function (data) {
+
+                        $.ajax({
+                            type: "POST",
+                            url: baseurl + 'Info/MasterHandler.ashx?method=chkwarranty&codeone=' + rquestpage_Dcrypt.split('-')[0] + '&codetwo=' + rquestpage_Dcrypt.split('-')[1] + '&lat=' + lat + '&long=' + long,
+                            success: function (data) {
+
+                                $('#btnnxt').show();
+                                $('#btnloadnxt').hide();
+                                // debugger;
+                                if (data.split('&')[0] === "1" && data.split('&')[1] === "PRINCIPLE ADHESIVES PRIVATE LIMITED") {
+
+
+
+                                }
+                                else {
+                                    // this is used to know from api  which company name
+
+
+                                    if (data.split('&')[1] == "PRINCIPLE ADHESIVES PRIVATE LIMITED" || data.split('&')[1] == "" || data.split('&')[1] == undefined) {
+                                        $('#Chkcode').hide();
+                                        $('#Chkfields').show();
+                                        $('#mobilefield').show();
+                                        $('#divbank').hide();
+
+
+                                    }
+                                    else {
+                                        // alert('Invalid Code');
+                                        $('#Chkcode').show();
+                                        $('#Chkfields').hide();
+                                        $('#mobilefield').hide();
+                                        $('#divbank').hide();
+                                        return false;
+                                    }
+                                }
+                            }
+                        });
+                    }
+                });
+
+            });
+
+            $("#mobile").mask("9999999999");
+
+            $('#mobile').keyup(function () {
+                Mobile_check();
+            })
+
+            // Validation for the pincode
+            $("#Pincode").mask("999999");
+            $('#Pincode').keyup(function () {
+                Pin_check();
+
+            });
+
+            // validation for the namecheck
+            $('#name').keyup(function () {
+                Name_check();
+
+            });
+
+
+
+            $('#example13-digit-number').keyup(function () {
+                $('#codecheck').hide();
+                $('#codecheck').html("");
+                $('#codecheck').css("color", "white");
+
+            });
+            $('#name').keyup(function () {
+                $('#namecheck').hide();
+                $('#namecheck').html("");
+                $('#namecheck').css("color", "white");
+
+            });
+            $('#Pincode').keyup(function () {
+                $('#pincheck').hide();
+                $('#pincheck').html("");
+                $('#pincheck').css("color", "white");
+
+            });
+            $('#city').keyup(function () {
+                $('#citycheck').hide();
+                $('#citycheck').html("");
+                $('#citycheck').css("color", "white");
+
+            });
+            $('#State').keyup(function () {
+                $('#statecheck').hide();
+                $('#statecheck').html("");
+                $('#statecheck').css("color", "white");
+
+            });
+
+            function Name_check() {
+                var Name_val = $('#name').val();
+
+                if (Name_val.charAt(0) === ' ') {
+                    $('#namecheck').html("**Please Enter Valid Name");
+                    $('#namecheck').css("color", "red");
+                    /* toastr.error('Please Enter a Valid UPI ID');*/
+                    return false;
+                }
+                if ((Name_val.length == '')) {
+                    $('#namecheck').show();
+                    $('#namecheck').html("**Please Enter Name");
+                    $('#namecheck').css("color", "red");
+                    name_err = false;
+                    return false;
+                }
+
+                if ($('#name').val().match('^[a-z A-Z]{3,40}$')) {
+                    $('#namecheck').hide();
+                }
+                else {
+                    $('#namecheck').show();
+                    $('#namecheck').html("**Please Enter valid name");
+                    $('#namecheck').css("color", "red");
+                    name_err = false;
+                    return false;
+                }
+
+            }
+            function pinval() {
+                // debugger;
+                var pin = $('#Pincode').val();
+                if (pin != undefined) {
+
+                    if ($('#Pincode').val().length < 1) {
+                        $('#pincheck').html("**Please Enter  Pincode");
+                        $('#pincheck').css("color", "red");
+                        $('#city').val() = '';
+                        $('#State').val() = '';
+                        validate = false;
+                    }
+                    if (pin.match(/[^$,.\d]/)) {
+                        $('#pincheck').html("**Please Enter Valid Pincode");
+                        $('#pincheck').css("color", "red");
+                        validate = false;
+                    }
+
+                    var matches1 = $('#pin').val().match(/[^a-zA-Z0-9 ]/);
+                    if (matches1 != null) {
+                        $('#pincheck').html("**Please Enter Valid Pincode");
+                        $('#pincheck').css("color", "red");
+                        validate = false;
+                    }
+                }
+            }
+            // validation for the city
+            $('#city').keyup(function () {
+                city_check();
+
+            });
+
+            function city_check() {
+
+                var city_val = $('#city').val();
+                /*// debugger;*/
+                if (city_val.charAt(0) === ' ') {
+                    $('#citycheck').html("**Please Enter  City");
+                    $('#citycheck').css("color", "red");
+                    /* toastr.error('Please Enter a Valid UPI ID');*/
+                    return false;
+                }
+                if ($('#city').val().match('^[a-z A-Z]{3,40}$')) {
+                    $('#citycheck').hide();
+                }
+                else if ($('#city').val() == '') {
+                    $('#citycheck').hide();
+
+                }
+                else {
+                    $('#citycheck').show();
+                    $('#citycheck').html("**Please enter valid city name");
+                    $('#citycheck').css("color", "red");
+                    city_err = false;
+                    return false;
+                }
+            }
+
+
+            // validation for states
+            $('#State').keyup(function () {
+                State_check();
+
+            });
+
+            function State_check() {
+                /*// debugger;*/
+                var State_val = $('#State').val();
+                if (State_val.charAt(0) === ' ') {
+                    $('#statecheck').html("**Please Enter  State");
+                    $('#statecheck').css("color", "red");
+                    /* toastr.error('Please Enter a Valid UPI ID');*/
+                    return false;
+                }
+                if ($('#State').val().match('^[a-z A-Z]{3,40}$')) {
+                    $('#statecheck').hide();
+                }
+                else if ($('#State').val() == '') {
+                    $('#statecheck').hide();
+
+                }
+                else {
+
+                    $('#statecheck').show();
+                    $('#statecheck').html("**Please Enter State name");
+                    $('#statecheck').css("color", "red");
+                    Vill_err = false;
+                    return false;
+                }
+            }
+
+            $('#Pincode').keyup(function () {
+                $('#pincheck').hide();
+                $('#pincheck').html("");
+                $('#pincheck').css("color", "purple");
+
+            });
+            $("#mobile").on('input', function () {
+                $("#mobilecheck").text("");
+            });
+            $("#AccountNumber").on('input', function () {
+                $("#AccountNumbercheck").text("");
+            });
+            $("#ConfirmAccountNumber").on('input', function () {
+                $("#ConfirmAccountNumbercheck").text("");
+            });
+            $('#btnsubmit').on('click', function (e) {
+                e.preventDefault();
+                // debugger;
+
+                $('#mobilecheck').text('');
+                // debugger;
+                var Mobile = $('#mobile').val()
+                var pincode = $('#pincode').val()
+                var d = Mobile.slice(0, 1);
+                var c = parseInt(d);
+                if (Mobile.match(/[^$,.\d]/)) {
+                    $('#mobilecheck').text(" Mobile number should not contain any special characters.");
+                    $('#mobile').val('');
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                if (Mobile.length == 10 && c <= 5) {
+                    $('#mobilecheck').text("Please enter a valid mobile number.");
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                if (Mobile.length != 10) {
+                    $('#mobilecheck').text("Please enter your mobile number.");
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                if ($('#name').val().replace(/\s+/g, '').length == 0) {
+                    $('#namecheck').text('Please Enter Your Name!');
+                    $('#namecheck').css("color", "red");
+                    $('#name').focus();
+                    $('#name').val('');
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                var name = $('#name').val();
+                if (name != undefined) {
+
+                    if ($('#name').val().length < 1) {
+                        $('#namecheck').text('Please Enter Valid Name');
+                        $('#namecheck').css("color", "red");
+                        return false;
+                    }
+                    var matches = $('#name').val().match(/\d+/g);
+                    if (matches != null) {
+                        $('#namecheck').text('Name should be alphabet only!');
+                        $('#namecheck').css("color", "red");
+                        return false;
+                    }
+                    var matches1 = $('#name').val();
+                    if (matches1.includes('~') || matches1.includes('!') || matches1.includes('@') || matches1.includes('#') || matches1.includes(')') || matches1.includes('_') || matches1.includes('-') || matches1.includes('>') || matches1.includes(',') || matches1.includes('?')
+                        || matches1.includes('$') || matches1.includes('%') || matches1.includes('^') || matches1.includes('&') || matches1.includes('*') || matches1.includes('(') || matches1.includes('+') || matches1.includes('<') || matches1.includes('.')
+                        || matches1.includes('=') || matches1.includes('{') || matches1.includes('}') || matches1.includes('[') || matches1.includes(']') || matches1.includes(':') || matches1.includes(';') || matches1.includes('"') || matches1.includes('/')
+                    ) {
+                        $('#namecheck').text('Special characters are not allowed.*');
+                        $('#namecheck').css("color", "red");
+                        $('#name').focus();
+                        $('#btnsubmit').attr('disabled', false);
+                        $('#name').val('');
+                        return false;
+                    }
+                }
+
+
+
+                var pin = $('#Pincode').val();
+                if (pin != undefined) {
+
+                    if ($('#Pincode').val().length < 6) {
+                        $('#pincheck').text('Please Enter Valid Pin Code');
+                        $('#pincheck').css("color", "red");
+                        return false;
+                    }
+                    if (pin.match(/[^$,.\d]/)) {
+                        $('#pincheck').text("Please Enter Numeric Value For Pin Code.");
+                        $('#pincheck').css("color", "red");
+                        return false;
+                    }
+
+                    var matches1 = $('#Pincode').val().match(/[^a-zA-Z0-9 ]/);
+                    if (matches1 != null) {
+                        $('#pincheck').text('Pin Code Should Not Contain Any Special Character!');
+                        $('#pincheck').css("color", "red");
+                        return false;
+                    }
+                }
+
+                if ($('#city').val().replace(/\s+/g, '').length == 0) {
+                    $('#citycheck').text('Please Enter Your City Name!');
+                    $('#citycheck').css("color", "red");
+                    $('#city').focus();
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                var city = $('#city').val();
+                if (city != undefined) {
+
+                    if ($('#city').val().length < 1) {
+                        $('#citycheck').text('Please Enter valid City');
+                        $('#citycheck').css("color", "red");
+                        return false;
+                    }
+                    var matches = $('#city').val().match(/\d+/g);
+                    if (matches != null) {
+                        $('#citycheck').text('City Name Should be alphabet only!');
+                        $('#citycheck').css("color", "red");
+                        return false;
+                    }
+                    var matchescity = $('#city').val();
+                    if (matchescity.includes('~') || matchescity.includes('!') || matchescity.includes('@') || matchescity.includes('#') || matchescity.includes(')') || matchescity.includes('_') || matchescity.includes('-') || matchescity.includes('>') || matchescity.includes(',') || matchescity.includes('?')
+                        || matchescity.includes('$') || matchescity.includes('%') || matchescity.includes('^') || matchescity.includes('&') || matchescity.includes('*') || matchescity.includes('(') || matchescity.includes('+') || matchescity.includes('<') || matchescity.includes('.')
+                        || matchescity.includes('=') || matchescity.includes('{') || matchescity.includes('}') || matchescity.includes('[') || matchescity.includes(']') || matchescity.includes(':') || matchescity.includes(';') || matchescity.includes('"') || matchescity.includes('/')
+                    ) {
+                        $('#citycheck').text('Special characters are not allowed.*');
+                        $('#citycheck').css("color", "red");
+                        $('#city').focus();
+                        $('#btnsubmit').attr('disabled', false);
+                        $('#city').val('');
+                        return false;
+                    }
+                }
+
+
+                if ($('#State').val().replace(/\s+/g, '').length == 0) {
+                    $('#statecheck').text('Please Enter Your State Name!');
+                    $('#statecheck').css("color", "red");
+                    $('#State').focus();
+                    $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                var State = $('#State').val();
+                if (State != undefined) {
+
+                    if ($('#State').val().length < 1) {
+                        $('#statecheck').text('Please Enter Valid State Name');
+                        $('#statecheck').css("color", "red");
+                        return false;
+                    }
+                    var matches = $('#State').val().match(/\d+/g);
+                    if (matches != null) {
+                        $('#statecheck').text('State Name Should be alphabet only!');
+                        $('#statecheck').css("color", "red");
+                        return false;
+                    }
+                    var matchesstate = $('#State').val();
+                    if (matchesstate.includes('~') || matchesstate.includes('!') || matchesstate.includes('@') || matchesstate.includes('#') || matchesstate.includes(')') || matchesstate.includes('_') || matchesstate.includes('-') || matchesstate.includes('>') || matchesstate.includes(',') || matchesstate.includes('?')
+                        || matchesstate.includes('$') || matchesstate.includes('%') || matchesstate.includes('^') || matchesstate.includes('*') || matchesstate.includes('(') || matchesstate.includes('+') || matchesstate.includes('<') || matchesstate.includes('.')
+                        || matchesstate.includes('=') || matchesstate.includes('{') || matchesstate.includes('}') || matchesstate.includes('[') || matchesstate.includes(']') || matchesstate.includes(':') || matchesstate.includes(';') || matchesstate.includes('"') || matchesstate.includes('/')
+                    ) {
+                        $('#statecheck').text('Special characters are not allowed.*');
+                        $('#statecheck').css("color", "red");
+                        $('#State').focus();
+                        $('#btnsubmit').attr('disabled', false);
+                        $('#State').val('');
+                        return false;
+                    }
+                }
+
+                if ($('#AccountNumber').val() == "") {
+                    $('#AccountNumbercheck').text('Please Enter valid account number');
+                    $('#AccountNumbercheck').css("color", "red");
+                    return false;
+                }
+
+                if ($('#ConfirmAccountNumber').val() == "") {
+                    $('#ConfirmAccountNumbercheck').text('Confirm account number should be same as per account number');
+                    $('#AccountNumbercheck').css("color", "red");
+                    return false;
+                }
+
+                var x = $('#AccountNumber').val();
+                var y = $('#ConfirmAccountNumber').val();
+                if (x != y) {
+                    $('#ConfirmAccountNumbercheck').text("Confirm account number should be same as per account number");
+                    $('#AccountNumbercheck').css("color", "red");
+                    return false;
+                }
+
+                if ($('#AccountNumber').val().length < 9) {
+                    $('#AccountNumbercheck').text('Please Enter valid account number');
+                    $('#AccountNumbercheck').css("color", "red");
+                    return false;
+                }
+
+                if ($('#ConfirmAccountNumber').val().length < 9) {
+                    $('#ConfirmAccountNumbercheck').text('Please Enter valid confirm account number');
+                    $('#ConfirmAccountNumbercheck').css("color", "red");
+                    return false;
+                }
+
+                var IfscCode = $('#IfscCode').val();
+                if (IfscCode.length != 11) {
+                    $('#IfscCodecheck').text("Please enter 11 digit of Ifsc code.");
+                    $('#IfscCodecheck').css("color", "red");
+                    return false;
+                }
+
+                $.ajax({
+                    type: "Post",
+                    url: baseurl + 'Info/MasterHandler.ashx?method=CheckIfcCode&IfcCode=' + IfscCode,
+                    success: function (data) {
+                        // debugger;
+                        if (data == "0") {
+                            $('#IfscCodecheck').text("Invalid IFSC Code!");
+                            $('#IfscCodecheck').css("color", "red");
+                            return false;
+                        } else {
+                            $('#IfscCodecheck').text('');
+
+                            // Proceed with form submission
+                            $('#btnsubmit').hide();
+                            $('#btnloadsubmit').show();
+
+                            var code = $('#example13-digit-number').val();
+                            if (code != "") {
+                                $.ajax({
+                                    type: "POST",
+                                    contentType: false,
+                                    processData: false,
+                                    url: baseurl + 'Info/MasterHandler.ashx?method=verifyotp&mobile=' + $('#mobile').val() + "&vCode=" + $('#example13-digit-number').val() + '&name=' + $('#name').val() + '&city=' + $('#city').val() + '&state=' + $('#State').val() + '&PinCode=' + $('#Pincode').val() + '&AccountNumber=' + $('#AccountNumber').val() + '&IfscCode=' + $('#IfscCode').val() + '&comp=PRINCIPLE ADHESIVES PRIVATE LIMITED&Comp_ID=Comp-1738',
+                                    success: function (data) {
+                                        debugger;
+                                        $('#btnsubmit').show();
+                                        $('#btnloadsubmit').hide();
+                                        if (data.split('~')[0] !== "failure") {
+                                            window.scrollTo(0, 0);
+                                            if (data.includes("invalid")) {
+                                                data = "0~“The code is invalid. Kindly visit <a href='https://princecol.com/'>here</a> or call on 8010835355 for further assistance”.";
+
+                                            }
+                                            if (data.indexOf("invalid") !== -1) {
+                                                data = data;
+                                            }
+
+                                            $('#Chkfields').hide();
+                                            $('#mobilefield').hide();
+                                            $('#Otherfield').hide();
+                                            $('#Chkcode').hide();
+                                            $('#ShowMessage').show();
+                                            $('#p3msg').html(data.split('~')[1]);
+                                            $('#p3msg:contains("not")').css('color', 'black');
+                                        } else if (data.split('~')[0] === "failure") {
+                                            alert(data.split('~')[1]);
+                                        } else {
+                                            toastr.error('OTP is not valid. Please provide the valid OTP');
+                                            $('#btnskyVerify1').attr('disabled', false);
+                                        }
+                                    }
+                                });
+                            } else {
+                                $('#btnsubmit').attr('disabled', false);
+                            }
+                        }
+                    }
+                });
+            });
+
+
+
+            $('#btnNext').click(function () {
+                window.location.href = 'https://princecol.com/';
+            });
+
+        });
+
+    </script>
+    <section class="landing-ui">
+        <div class="container-fluid">
+            <div class="row gy-4">
+                <div class="col mx-xl-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="logo">
+                                <img src="assets/images/Princecol/logo.svg" alt="Logo">
+                            </div>
+                            
+                            <form id="regForm" action="" class="needs-validation" novalidate>
+                                <!-- One "tab" for each step in the form: -->
+                                <div class="tab" style="display: block;">
+                                    <div class="row row-cols-1 g-3">
+                                        
+                                        <div class="col" id="Chkcode">
+                                            <h4 class="card-title mb-0">Welcome to the Princecol loyalty program.</h4>
+                                            <div class="form-group">
+                                                <label for="example13-digit-numbe" class="form-label">
+                                                    Enter 13 digit
+                                                    code/13 अंकों
+                                                    का कोड दर्ज करें*
+                                                </label>
+                                                <input type="text" id="example13-digit-number" class="form-control" />
+                                                <h6 id="codecheck" class="invalid-feedback d-block"></h6>
+                                                <div class="form-btns">
+                                                    <button type="button" id="btnnxt" data-toggle="modal"
+                                                            class="form-buttom btn">
+                                                        Next
+                                                    </button>
+                                                    <button type="button" id="btnloadnxt" style="display: none"
+                                                            data-toggle="modal" class="form-control login-btn">
+                                                        <i class="fa fa-spinner fa-spin"></i>Loading..
+                                                    </button>
+                                                </div>
+                                                <h6 id="nextcheck"></h6>
+                                            </div>
+                                        </div>
+                                        <div id="Chkfields">
+                                            
+                                            <div id="mobilefield">
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="mobile" class="form-label">
+                                                            Mobile No/मोबाइल
+                                                            नंबर*
+                                                        </label>
+
+                                                        <span class="">
+                                                            <input type="text" maxlength="10"
+                                                                   id="mobile"
+                                                                   onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
+                                                                   class="form-control" />
+                                                        </span>
+                                                        <h6 id="mobilecheck" class="invalid-feedback d-block"></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="Otherfield">
+                                                <!--<div class="col">
+                                                    <h5 class="card-title text-dark-emphasis">Personal Details</h5>
+                                                    <p class="card-text">
+                                                        Please make sure to fill in all required fields before
+                                                        proceeding to get benefits.
+                                                    </p>
+                                                </div>-->
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="name" class="form-label">Name/नाम*</label>
+                                                        <input type="text" maxlength="40" id="name"
+                                                               onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode == 32)"
+                                                               class="form-control" />
+                                                        <h6 id="namecheck" class="invalid-feedback d-block"></h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputtext4" class="form-label">
+                                                            Pin Code/पिन
+                                                            कोड*
+                                                        </label>
+                                                        <input type="text" minlegth="6" maxlength="6" id="Pincode"
+                                                               onkeyup="getaddress()" class="form-control" />
+                                                        <h6 id="pincheck" class="invalid-feedback d-block"></h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="city" class="form-label">City/शहर*</label>
+                                                        <input type="text" maxlength="40" id="city" class="form-control" />
+                                                        <h6 id="citycheck" class="invalid-feedback d-block"></h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputtext6"
+                                                               class="form-label">
+                                                            State/राज्य*
+                                                        </label>
+                                                        <input type="text" maxlength="40" id="State" class="form-control" />
+                                                        <h6 id="statecheck" class="invalid-feedback d-block"></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab" id="divbank">
+                                                <div class="row g-3">
+                                                    <!--<div class="col-12">
+                                                        <h5 class="card-title text-dark-emphasis">KYC Details</h5>
+                                                        <p class="card-text">Please select one payment method.</p>
+                                                    </div>-->
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label for="accountNumber" class="form-label">Account Number Details /खाता विवरण*</label>
+                                                            <input type="text" minlength="9" maxlength="18" id="AccountNumber"
+                                                                   onkeypress="return onlyNumberKey(event);"
+                                                                   class="form-control" />
+                                                            <h6 id="AccountNumbercheck" class="invalid-feedback d-block"></h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label for="confirmAccountNumber" class="form-label">Confirm account number details /खाता विवरण की पुष्टि करें*</label>
+                                                            <input type="text" minlength="9" maxlength="18" id="ConfirmAccountNumber"
+                                                                   onkeypress="return onlyNumberKey(event);"
+                                                                   class="form-control" />
+                                                            <h6 id="ConfirmAccountNumbercheck" class="invalid-feedback d-block"></h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label for="ifscCode" class="form-label">Ifsc Code /आईएफएससी कोड*</label>
+                                                            <input type="text" maxlength="11" id="IfscCode"
+                                                                   class="form-control" />
+                                                            <h6 id="IfscCodecheck" class="invalid-feedback d-block"></h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-btns">
+                                                <button type="button" id="btnsubmit" class="btn btn-dark">
+                                                    Submit/जमा
+                                                    करना
+                                                </button>
+                                                <button type="button" id="btnloadsubmit" style="display: none"
+                                                        data-toggle="modal" class="form-control login-btn">
+                                                    <i class="fa fa-spinner fa-spin"></i>Loading..
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div style="display: none;" id="ShowMessage">
+
+                                    <div class="">
+                                        <p id="p3msg"
+                                           style="overflow: hidden;  font-size: 15px !important; font-weight: 500; margin: 7px; margin-right: 7px; color:black"
+                                           class="displayNone text-center"></p>
+                                        <center>
+                                            <a href="javascript:void(0)"
+                                               style="color:black; font-size:medium" class=" "
+                                               id="btnNext">Close/बंद</a>
+                                        </center>
+                                    </div>
+
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 pe-lg-0">
+                    <div class="product-img d-none d-md-block"></div>
+                    <img src="assets/images/Princecol/product.png" alt="bg-product-img" class="img-fluid d-block d-md-none">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row row-cols-xxl-2 row-cols-xl-2 row-cols-lg-2 row-cols-md-2 row-cols-1">
+                <div class="col">
+                    <p class="text-md-start text-center">
+                        Copyright © 2024 Principle Adhesives Pvt Ltd. All Rights
+                        Reserved.
+                    </p>
+                </div>
+                <div class="col">
+                    <p class="text-md-end text-center">
+                        Design and development by <a href="https://www.vcqru.com/"
+                                                     target="_blank">
+                            VCQRU
+                            Private Limited.
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-end -->
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- form with next and prev-->
+    <script>
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+        showTab(currentTab); // Display the current tab
+
+        function showTab(n) {
+            // This function will display the specified tab of the form...
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            //... and fix the Previous/Next buttons:
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "Submit";
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Next";
+            }
+            //... and run a function that will display the correct step indicator:
+            fixStepIndicator(n)
+        }
+
+        function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // if you have reached the end of the form...
+            if (currentTab >= x.length) {
+                // ... the form gets submitted:
+                document.getElementById("regForm").submit();
+                return false;
+            }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+        }
+
+        function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps...
+            var i, x = document.getElementsByClassName("step");
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+            }
+            //... and adds the "active" class on the current step:
+            x[n].className += " active";
+        }
+    </script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+</body>
+
+</html>

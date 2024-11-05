@@ -1,0 +1,245 @@
+/* landing-navbar */
+.landing-navbar {
+    background-color: var(--bs-white);
+    border-bottom: 1px solid var(--bs-border-color);
+    top: 0;
+    position: sticky;
+    z-index: 10000;
+}
+
+.landing-navbar .navbar-brand img {
+    height: 3rem;
+}
+
+.landing-navbar .navbar-nav .nav-item .nav-link {
+    color: var(--bs-dark);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.landing-navbar .navbar-nav .nav-item .nav-link i {
+    color: var(--bs-primary);
+    line-height: 1.5;
+}
+
+.why-choose-landing {
+    padding: 3rem 0;
+    background-color: var(--bs-light);
+}
+
+.why-choose-landing .card {
+    border: 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 0;
+}
+
+.why-choose-landing .card .card-body .card-title {
+    font-weight: 600;
+    margin-bottom: 0.50rem;
+    line-height: 1.4;
+}
+
+.why-choose-landing .card .card-body {
+    padding: 2rem;
+}
+
+.why-choose-landing .card .card-body p {
+    color: var(--bs-secondary);
+    margin-bottom: 0;
+}
+
+.why-choose-landing .why-choose-list ul li i {
+    font-size: 25px;
+    color: var(--bs-primary);
+}
+
+.why-choose-landing .why-choose-list ul li {
+    margin-bottom: 0.50rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.why-choose-landing .why-choose-list {
+    margin-top: 1rem;
+}
+
+.why-choose-landing .why-choose-list ul li h6 {
+    font-weight: 500;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.why-choose-landing .why-choose-list ul li p {
+    color: var(--bs-secondary);
+    margin-bottom: 0;
+}
+
+.why-choose-landing .why-choose-list ul li img {
+    height: 2rem;
+}
+
+.why-choose-landing .why-choose-list ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    column-count: 2;
+}
+
+.left-card {
+    margin-left: -120px;
+}
+
+.why-choose-landing img {
+    height: 100%;
+}
+
+.landing-footer {
+    padding: 0.50rem 0;
+}
+
+.landing-footer p {
+    font-size: 14px;
+    color: var(--bs-secondary);
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.landing-footer ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+}
+
+.landing-footer ul {
+    color: var(--bs-secondary);
+}
+
+.landing-footer ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--bs-secondary);
+}
+
+.landing-header {
+    /* background-color: var(--bs-primary-bg-subtle); */
+    padding: 3rem 0;
+    background: url('../img/landing-icons/landing-banner.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    /* background-position: center; */
+}
+
+.landing-header .card {
+    border: 0;
+    border-radius: var(--bs-border-radius-lg);
+}
+
+.landing-header .card .card-body .card-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--bs-primary);
+}
+
+.landing-header .card .card-body .form-label {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.landing-header .card .card-body .form-label span {
+    color: var(--bs-danger);
+}
+
+.landing-header .card .card-body .form-control {
+    border-radius: 2px;
+}
+
+.landing-header .card .card-body .form-select {
+    border-radius: 2px;
+}
+
+.landing-header .card .card-body button {
+    width: 100%;
+    border-radius: 2px;
+    text-transform: capitalize;
+}
+
+.landing-header h1 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    color: var(--bs-white);
+}
+.landing-header p{
+    color: var(--bs-white);
+}
+/* landing-about-us */
+.landing-about-us {
+    margin: 5rem 0 3rem 0;
+}
+
+.landing-about-us p {
+    color: var(--bs-secondary);
+}
+
+.landing-about-us img {
+    border-radius: var(--bs-border-radius-lg);
+    height: 100%;
+}
+
+.landing-about-us h4 {
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* landing-cal-outs */
+.landing-cal-outs img {
+    display: block;
+    height: 3rem;
+    margin-bottom: 0.50rem;
+}
+.why-choose-landing .how-our-landing .card .card-body .web-heading a{
+    border-radius: 2px;
+}
+/* reponsive */
+@media screen and (max-width:1024px) {}
+
+@media screen and (max-width:768px) {
+    .landing-about-us .card {
+        float: unset;
+        margin: 0 0 1rem 0;
+        width: 100%;
+    }
+    .landing-footer ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .why-choose-landing .why-choose-list ul li h5 {
+        font-size: 16px;
+    }
+
+    .why-choose-landing .card .card-body {
+        padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    }
+    
+    .landing-header h1 {
+        font-size: 28px;
+    }
+    .landing-header{
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .why-choose-landing .why-choose-list ul{
+        column-count: 1;
+    }
+}

@@ -1,0 +1,761 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NVinfotech</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.vcqru.com/Content/js/toastr.min.js"></script>
+    <link href="https://www.vcqru.com/Content/css/toastr.min.css" rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
+            integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA="
+            crossorigin="anonymous"></script>
+    <style type="text/css">
+        .clbl {
+            color: #ff0101;
+            /* background-color: red; */
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .background {
+            position: relative;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            width: 100%;
+            display: table;
+            height: 100vh;
+            background-image: url('../assets/images/Viguni/background.jpg');
+        }
+
+        .logo-img img {
+            width: 18%;
+        }
+
+        form {
+            background: #030303;
+            border-radius: 10px;
+            box-shadow: 0px 0px 2px #2f2e2e;
+        }
+
+        .btn {
+            width: 100%;
+            background-color: #eb3438;
+            outline: none;
+            border: none;
+        }
+
+        .form-maine input::placeholder {
+            color: #0a0a0a !important;
+        }
+
+        form input {
+            background: #dce0ec !important;
+            border-radius: 3px !important;
+        }
+
+        .HEADING {
+            border-radius: 98px 98px 500% 500%;
+            background: #fff;
+            padding: 25px;
+            text-align: center;
+            color: #fff;
+        }
+
+            .HEADING h6 {
+                color: red;
+            }
+
+        .form-select {
+            background-color: #dce0ec;
+        }
+
+
+        footer {
+            padding: 8px;
+            background: #eb3438;
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+        }
+
+        .termscss {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .number-style a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .product-img img {
+            position: absolute;
+            width: 55%;
+            top: 0%;
+            right: 7%;
+            padding: 0 5%;
+        }
+
+        .form-maine {
+            padding: 25px 28px 5px;
+        }
+
+        @media screen and (max-width: 767px) {
+
+            .product-img img {
+                position: unset;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .product-img {
+                margin-bottom: 30px;
+            }
+
+            .qr-heading {
+                font-size: 16px;
+            }
+
+            .logo-img {
+                text-align: center;
+            }
+
+                .logo-img img {
+                    width: 64%;
+                }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            .product-img img {
+                position: unset;
+                width: 100%;
+                top: 16%;
+                right: 2%;
+                padding: 0 5%;
+            }
+
+            .qr-heading {
+                font-size: 17px;
+                text-align: center;
+            }
+        }
+    </style>
+    <script>
+        $("#codeone").mask("99999-99999999");
+        $("#mobile").mask("9999999999");
+        $("#Pincode").mask("999999");
+        var getPosition = function (options) {
+            return new Promise(function (resolve, reject) {
+                navigator.geolocation.getCurrentPosition(resolve, reject, options);
+            });
+        }
+
+        function getaddress() {
+            debugger;
+            let pin = document.getElementById("pin").value;
+            if (pin.length == 6) {
+                $.getJSON("https://api.postalpincode.in/pincode/" + pin, function (data) {
+                    createHTML(data);
+                })
+                function createHTML(data) {
+                    if (data[0].Status == "Success") {
+                        var city = "";
+                        var state = "";
+                        var pin = "";
+                        var city = data[0].PostOffice[0]['District'];
+                        var state = data[0].PostOffice[0]['State'];
+                        var Pin = data[0].PostOffice[0]['PinCode'];
+                        $("#city").val(city);
+                        if (pin == "") {
+                            $("#pin").val();
+                        }
+                        else {
+                            $("#pin").val(Pin);
+                        }
+                        //$('#btnsubmit').attr('disabled', false);
+                    }
+                    else {
+                        $('#lblddl').text('Please enter valid pin*');
+                        $('#lblddl').css("color", "red");
+                        $('#pin').focus();
+                        //$('#btnsubmit').attr('disabled', true);
+                        return false;
+                    }
+                }
+            }
+        }
+
+
+        function ValidateAccount() {
+            var AccountNumber = $('#AccountNumber').val();
+            if (AccountNumber != undefined) {
+
+                if ($('#AccountNumber').val().length < 1) {
+                    $('#lbl').text('Please Enter valid account number');
+                    return false;
+                }
+
+            }
+
+            var ConfirmAccountNumber = $('#ConfirmAccountNumber').val();
+            if (ConfirmAccountNumber != undefined) {
+
+                if ($('#ConfirmAccountNumber').val().length < 1) {
+                    $('#lbl').text('Please Enter valid confirm account number');
+                    return false;
+                }
+
+            }
+        }
+
+        function ACNamevalid() {
+            var name = $('#AccountHolderName').val();
+            if (name != undefined) {
+
+                if ($('#AccountHolderName').val().length < 1) {
+                    $('#lbl').text('Please Enter valid account holder name');
+                    return false;
+                }
+                var matches = $('#AccountHolderName').val().match(/\d+/g);
+                if (matches != null) {
+                    $('#lbl').text('account holder name should be alphabet only!');
+                    return false;
+                }
+                var matches1 = $('#AccountHolderName').val().match(/[^a-zA-Z0-9 ]/);
+                if (matches1 != null) {
+                    $('#lbl').text('account holder name should Not Contain any special sharacter!');
+                    return false;
+                }
+            }
+        }
+
+
+
+
+        function Getdata() {
+            debugger;
+            var mobileno = $('#mobile').val();
+            var d = mobileno.slice(0, 1);
+            var c = parseInt(d);
+            if ($('#mobile').val() == "") {
+                $('#lblmob').text('Please Enter Mobile Number!');
+                toastr.error("Please enter mobile number");
+                $('#mobile').focus();
+                return false;
+            }
+            if (mobileno.length < 10) {
+                $('#lblmob').text('Please Enter 10 Digit Mobile Number!');
+                $('#mobile').focus();
+                return false;
+            }
+            if (mobileno.match(/[^$,.\d]/)) {
+                $('#lblmob').text('Mobile Number Shoud Not be Alphabet!');
+                $('#mobile').val('');
+                return false;
+            }
+            else {
+                if (mobileno.length == 10) {
+                    var codes = $('#codeone').val();
+                    var code1 = codes.split('-')[0];
+                    var code2 = codes.split('-')[1];
+                    $.ajax({
+                        type: "Post",
+                        url: 'https://www.vcqru.com/Info/MasterHandler.ashx?method=ConsumerDetailsByMobileNo2&MobileNo= ' + $("#mobile").val() + '&codeone= ' + code1 + '&codetwo= ' + code2,
+                        success: function (data) {
+                            if (c <= 5) {
+                                $('#lblmob').text('Please Enter Valid Mobile Number!');
+                                $('#mobile').val('');
+                                $('#mobile').focus();
+                                return false;
+                            }
+                            else {
+                                var count = data.split('~');
+                                var Name = data.split('~')[0];
+                                var pin = data.split('~')[6];
+                                var city = data.split('~')[2];
+                                var BankName = data.split('~')[7];
+                                var AccountNumber = data.split('~')[8];
+                                var IfscCode = data.split('~')[9];
+                                var AccountHolderName = data.split('~')[10];
+                                var BranchName = data.split('~')[11];
+
+
+
+
+                                if (Name != "") {
+                                    $("#Name").val(Name);
+                                    //$("#Name").readOnly = true;
+                                    document.getElementById("Name").readOnly = true;
+                                }
+                                else {
+
+                                    $('#ChkCode').hide();
+                                    $('#otherfield').show();
+                                    $('#mobilefield').hide();
+                                    $('#Chkfields').show();
+                                    $('#DivBankDetails').hide();
+
+                                }
+
+                                if (pin != "") {
+                                    $("#pin").val(pin);
+                                    //$("#pin").readOnly = true;
+                                    document.getElementById("pin").readOnly = true;
+                                }
+                                else {
+                                    $('#ChkCode').hide();
+                                    $('#otherfield').show();
+                                    $('#mobilefield').hide();
+                                    $('#Chkfields').show();
+                                    $('#DivBankDetails').hide();
+                                }
+
+
+                                if (city != "") {
+                                    $("#city").val(city);
+                                    //$("#city").readOnly = true;
+                                    document.getElementById("city").readOnly = true;
+                                }
+                                else {
+                                    $('#ChkCode').hide();
+                                    $('#otherfield').show();
+                                    $('#mobilefield').hide();
+                                    $('#Chkfields').show();
+                                    $('#DivBankDetails').hide();
+                                }
+
+
+                                if (AccountNumber == "") {
+                                    $('#otherfield').show();
+                                    $('#mobilefield').hide();
+                                    $('#Chkfields').show();
+                                    $('#DivBankDetails').show();
+                                }
+                                else {
+                                    $('#AccountNumber').val(AccountNumber);
+                                    $('#ConfirmAccountNumber').val(AccountNumber);
+                                    document.getElementById("AccountNumber").readOnly = true;
+                                }
+                                if (IfscCode == "") {
+                                    $('#otherfield').show();
+                                    $('#mobilefield').hide();
+                                    $('#Chkfields').show();
+                                    $('#DivBankDetails').show();
+                                }
+                                else {
+                                    $('#IfscCode').val(IfscCode);
+                                    document.getElementById("IfscCode").readOnly = true;
+                                }
+                                if (AccountHolderName == "") {
+                                    $('#otherfield').show();
+                                    $('#mobilefield').hide();
+                                    $('#Chkfields').show();
+                                    $('#DivBankDetails').show();
+                                }
+                                else {
+                                    $('#AccountHolderName').val(AccountHolderName);
+                                    document.getElementById("AccountHolderName").readOnly = true;
+                                }
+
+
+                            }
+                        }
+                    });
+                }
+            }
+
+        }
+
+        $(document).ready(function () {
+            $('#ChkCode').show();
+            $('#Chkfields').hide();
+            $('#mobilefield').hide();
+            $('#DivBankDetails').hide();
+            $("#codeone").mask("99999-99999999");
+            $("#btnnxt").on('click', function () {
+                // debugger;
+                var codeone = $('#codeone').val();
+
+                if (codeone != undefined) {
+                    if ($('#codeone').val().length < 14) {
+                        $('#lblcode').text('Please Enter 13 Digit Code*');
+                        $('#codeone').focus();
+                        return false;
+                    }
+                    else {
+                        $('#lblcode').text('');
+                    }
+                    if ($('#codeone').val().length > 14) {
+                        $('#lblcode').text('Please Enter 13 Digit Code*');
+                        $('#codeone').focus();
+                        return false;
+                    }
+
+                    else {
+                        $('#lblcode').text('');
+                        $('#ChkCode').hide();
+                        $('#Chkfields').show();
+                        $('#otherfield').hide();
+                        $('#mobilefield').show();
+                    }
+                }
+                else {
+                    $('#lblcode').text('Please Enter 13 Digit Code*');
+                    $('#codeone').focus();
+                    return false;
+                }
+            });
+
+            $('#btnsubmit').on('click', function (e) {
+                e.preventDefault();
+                debugger;
+                //$('#btnsubmit').attr('disabled', true);
+                var pincode = $('#pin').val();
+                var code = $('#codeone').val();
+                var mobileno = $('#mobile').val();
+                var d = mobileno.slice(0, 1);
+                var c = parseInt(d);
+                //alert(code);
+                if ($('#mobile').val() == "") {
+                    $('#lblmob').text('Please Enter Mobile Number!');
+                    $('#mobile').focus();
+                    //$('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                if (mobileno.length < 10) {
+                    $('#lblmob').text('Please Enter 10 Digit Mobile Number!');
+                    $('#mobile').focus();
+                    //$('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                if (mobileno.match(/[^$,.\d]/)) {
+                    $('#lblmob').text('Mobile Number Shoud Not be Alphabet!');
+                    $('#mobile').val('');
+                    // $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+
+                if ($('#Name').val() == "") {
+                    $('#lbl').text('Please Enter Your Name!');
+                    $('#Name').focus();
+                    //$('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                var matches = $('#Name').val().match(/\d+/g);
+                if (matches != null) {
+                    $('#lbl').text('Name should be lphabet only!');
+                    $('#Name').focus();
+                    //$('#btnsubmit').attr('disabled', false);
+                    $('#Name').val('');
+                    return false;
+                }
+                var matches1 = $('#Name').val().match(/[^a-zA-Z0-9 ]/);
+                if (matches1 != null) {
+                    $('#lbl').text('Name Should Not Contain any Special Character!');
+                    $('#Name').focus();
+                    // $('#btnsubmit').attr('disabled', false);
+                    $('#Name').val('');
+                    return false;
+                }
+                if ($('#pin').val() == "") {
+                    $('#lbl').text('Please Enter Pin Code!');
+                    $('#pin').focus();
+                    // $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                if (pincode.length != 6) {
+                    $('#lbl').text('Please Enter 6 Digit Pin Code!');
+                    $('#pin').focus();
+                    //  $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                if ($('#city').val() == "") {
+                    $('#lbl').text('Please Enter Your Nearest City!');
+                    $('#city').focus();
+                    // $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                var matches2 = $('#city').val().match(/\d+/g);
+                if (matches2 != null) {
+                    $('#lbl').text('City name should be lphabet only!');
+                    $('#city').focus();
+                    //$('#btnsubmit').attr('disabled', false);
+                    $('#city').val('');
+                    return false;
+                }
+
+                if ($('#AccountHolderName').val() == "") {
+                    ACNamevalid();
+                    // $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                if ($('#AccountNumber').val() == "") {
+
+                    ValidateAccount();
+                    // $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                if ($('#ConfirmAccountNumber').val() == "") {
+
+                    ValidateAccount();
+                    // $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                var x = $('#AccountNumber').val();
+                var y = $('#ConfirmAccountNumber').val();
+                if (x == y) {
+
+                }
+                else {
+                    $('#lbl').text("Entered account number should be same in confirm account number field.");;
+
+                    // $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+                if ($('#AccountNumber').val().length < 9) {
+                    $('#lbl').text('Please Enter valid account number');
+                    return false;
+                }
+
+                if ($('#ConfirmAccountNumber').val().length < 9) {
+                    $('#lbl').text('Please Enter valid confirm account number');
+                    return false;
+                }
+
+                var IfscCode = $('#IfscCode').val();
+
+                if (IfscCode.length != 11) {
+                    $('#lbl').text("Please enter 11 digit of Ifsc code .");
+                    // $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                if (IfscCode.length == 11) {
+
+                    var reg = /[A-Z|a-z]{4}[0][0-9|A-Z|a-z]{6}$/;
+                    if (!IfscCode.match(reg)) {
+
+                        $('#lbl').text("Please enter valid IFSC code(First 4 alphabet then zero then other ).");
+                        return false;
+                    }
+                    else {
+                        ValidateIfccode(IfscCode);
+                    }
+
+                }
+
+                //if (!$('#chkbox').prop('checked')) {
+                //    $('#lbl').text("Please accept temrs and condition to move ahead .");
+                //    $('#chkbox').focus();
+                //    $('#btnsubmit').attr('disabled', false);
+                //    return false;
+                //}
+
+
+                if (!$('#chkterm').prop('checked')) {
+                    $('#lbl').text('Please Click On Checkbox!');
+                    $('#chkterm').focus();
+                    // $('#btnsubmit').attr('disabled', false);
+                    return false;
+                }
+
+                $('#p3msg').html('');
+
+                if (code != "") {
+                    $.ajax({
+                        type: "POST",
+                        contentType: false,
+                        processData: false,
+
+                        url: 'https://www.vcqru.com/Info/MasterHandler.ashx?method=verifyotp&mobile=' + $('#mobile').val() + "&vCode=" + $('#codeone').val() + '&name=' + $('#Name').val() + '&city=' + $('#city').val() + '&PinCode=' + $('#pin').val() + '&AccountNumber=' + $('#AccountNumber').val() + '&IfscCode=' + $('#IfscCode').val() + '&AccountHolderName=' + $('#AccountHolderName').val() + '&Comp_ID=Comp-1531' + '&comp=NV INFOTECH DOMAIN PRIVATE LIMITED',
+                        success: function (data) {
+                            //alert(data);
+		if (data == "Kindly enter valid IFSC code !.")
+                                {
+                                    toastr.error(data);
+                                    $("#btnsubmit").removeAttr("disabled");
+                                    return false;
+                                }
+                            if (data.split('~')[0] !== "failure") {
+                                window.scrollTo(0, 0);
+                                if (data.indexOf("not valid") !== -1) {
+                                    data = data.split(".")[0];
+                                }
+                                $('#HEADING').hide();
+                                $('#ChkCode').hide();
+                                $('#Chkfields').hide();
+                                $('#ShowMessage').show();
+                                $('#p3msg').html(data.split('~')[1]);
+                                $('#p3msg:contains("not")').css('color', 'white');
+                            }
+                            else {
+                                alert('Invalid Request!');
+                            }
+                        }
+                    });
+                }
+                else {
+                    //$('#btnsubmit').attr('disabled', false);
+                    //alert('code!');
+                    //alert(code);
+                }
+
+            });
+            $('#btnNext').click(function () {
+                window.location.href = 'https://viguni.co.in/';
+            });
+        });
+
+        function ValidateIfccode(ifscCode) {
+            //alert(ifscCode);
+            var ann = 'https://www.vcqru.com/Info/MasterHandler.ashx?method=CheckIfcCode&IfcCode=' + ifscCode;
+            //alert(ann);
+            $.ajax({
+                type: "Post",
+                url: 'https://www.vcqru.com/Info/MasterHandler.ashx?method=CheckIfcCode&IfcCode=' + ifscCode,
+                success: function (data) {
+                    // alert(data);
+                    if (data == "0") {
+                        // alert("Invalid ifc code");
+                        $('#lbl').text("Invalid IFSC Code!");
+                        return false
+                    } else {
+                        return true
+                    }
+                }
+            });
+        }
+    </script>
+
+</head>
+<body>
+    <section class="background">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="logo-img mt-3">
+                        <img src="./assets/images/Viguni/logo.png" class="animate__backInDown animate__animated img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-12 col-12">
+                    <div id="fields">
+                        <form class="animate__backInLeft animate__animated mt-4" autocomplete="off">
+                            <div class="row">
+                                <div class="HEADING">
+                                    <h6><b>TO CHECK AUTHENTICITY AND<br> AVAIL BENEFITS</b></h6>
+                                </div>
+                            </div>
+                            <div class="form-maine">
+                                <div id="ChkCode">
+                                    <div class="">
+                                        <input type="text" class="form-control" id="codeone" maxlength="13" minlength="13" placeholder="Enter 13 Digit Code*" aria-describedby="13-digit-number" autocomplete="off">
+                                    </div>
+                                    <label class="clbl" id="lblcode"></label>
+                                    <div>
+                                        <center>
+                                            <button type="button" id="btnnxt" class="btn btn-primary">Next</button>
+                                        </center>
+                                    </div>
+                                </div>
+
+                                <div id="Chkfields">
+                                    <div id="mobilefield" style="display: none">
+                                        <div class="">
+                                            <input type="text" class="form-control" id="mobile" onkeyup="Getdata()" maxlength="10" placeholder="Mobile Number*" oninput="this.value = this.value.replace(/[^0-9. ]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
+                                        </div>
+                                        <label class="clbl" id="lblmob"></label>
+                                    </div>
+                                    <div id="otherfield">
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" maxlength="50" id="Name" placeholder="Name*" autocomplete="off" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.charCode==32">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" maxlength="6" minlength="6" onkeyup="getaddress()" id="pin" placeholder="Pincode*" autocomplete="off" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" maxlength="50" id="city" placeholder="City*" autocomplete="off" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.charCode==32">
+                                        </div>
+
+
+                                    </div>
+
+                                    <div id="DivBankDetails" runat="server">
+                                        <div class="mb-3">
+
+                                            <input type="text" class="form-control" id="AccountHolderName" placeholder="Bank Account Holder Name *" maxlength="30" autocomplete="off" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.charCode==32">
+                                        </div>
+                                        <div class="mb-3">
+
+                                            <input type="text" placeholder="Bank Account Number*" id="AccountNumber" minlength="9" maxlength="18" data-msg-required="Please Enter Bank Account Number*" class="form-control" pattern="[0-9]+" title="only numbers" autocomplete="off" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                        </div>
+
+                                        <div class="mb-3">
+
+                                            <input type="text" placeholder="Confirm bank Account number*" minlength="9" maxlength="18" class="form-control" id="ConfirmAccountNumber" pattern="[0-9]+" title="only numbers" autocomplete="off" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                                        </div>
+                                        <div class="mb-3">
+
+                                            <input type="text" placeholder="IFSC Code*" onkeypress="return ValidateAlphaNumeric1(event);" id="IfscCode" maxlength="11" data-msg-required="Please Enter Your IFSC Code*." class="form-control" style="text-transform:uppercase" pattern="[A-Za-z0-9]+" title="letters or numbers only" autocomplete="off" />
+                                        </div>
+                                        <!--<div class="col-12">
+
+                                            <input type="checkbox" id="chkbox" data-msg-required="Please select checkbox*" /><span style="color:#fff;"> Please Accept <a style="color:#fff; text-decoration:none;" href="TermsNCondtions.aspx"><b>Terms and Conditions</b></a></span>
+                                        </div>-->
+                                    </div>
+
+                                    <div class="mb-3 text-center text-white">
+                                        <input type="checkbox" id="chkterm" name="Term_condition" value="Terms_Condition">
+                                        <label for="Term_condition"><a href="assets/images/Viguni/terms_condition.html" class="termscss" target="_blank">Terms & condition*</a></label>
+                                    </div>
+                                    <label class="clbl" id="lbl"></label>
+                                    <button type="submit" id="btnsubmit" class="btn btn-primary">Submit</button>
+                                </div>
+                                <div style="display: none;" id="ShowMessage">
+                                    <div class="form-box">
+                                        <p id="p3msg" style="overflow: hidden; color:white; font-size: 13px !important; font-weight: 500;" class="displayNone massage_box"></p>
+                                        <!--<center><a href="https://www.vcqru.com/muclepunch.html" class="form-control" id="btnclick">To Check another code Click Here</a></center>-->
+                                        <br /><center><a href="javascript:void(0)" class="btn btn-primary" id="btnNext">Close</a></center>
+                                    </div>
+                                </div>
+                                <h6 class="text-white pt-2 qr-heading">QR/Code Related Support Available on</h6>
+                                <p class="text-white text-center number-style">
+                                    <img src="../assets/images/Viguni/telephone.png" style="width: 20px;">  <a href="tel:8047278314">08047278314</a> /
+                                    <img src="../assets/images/Viguni/whatsapp.png" style="width: 20px;">  <a href="https://api.whatsapp.com/send?phone=+919355903119&amp;text&amp;type=phone_number&amp;app_absent=1" target="blank">9355903119</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                    <p class="mt-sm-3 pb-sm-5  text-center animate__backInUp animate__animated"><b>For sales related query 9654444944</b></p>
+                </div>
+                <div class="col-lg-8 col-sm-12 col-12 mb-sm-5">
+                    <div class="product-img ">
+                        <img src="../assets/images/Viguni/product.png" class="img-fluid animate__fadeInDown animate__animated ">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h6 class="text-center text-white"><a href="" class="text-white" style="text-decoration: none;">www.viguni.com</a></h6>
+        </footer>
+    </section>
+</body>
+</html>

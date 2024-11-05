@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=PopPincodes:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+    <title>Hypersonic</title>
+
+    <style>
+        .mobile-view{
+                display: none;
+  
+            }
+        .hypersonic-section {
+            background-image: url(assets/images/hypersonic/bg.jpg);
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: table;
+        }
+        .hyper-right-box{
+            position: relative;
+            height: 100vh;
+        }
+
+        .hypersonic-form {
+            /* text-align: center; */
+            padding: 30px;
+            background-color: #000;
+            color: #fff;
+            margin: 30px auto;
+            margin-top: 44%;
+        }
+
+        .text-img {
+            padding: 32px 0px 22px 22px;
+            position: absolute;
+            right: 0px;
+            top: auto;
+            left: 0px;
+        }
+
+        .hypersonic-form h5 {
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .hyper-logo {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 34%;
+            padding: 10px 0;
+        }
+
+        .hypersonic-form input,select {
+            margin-bottom: 8px;
+            -webkit-appearance: auto !important;
+            -moz-appearance: auto !important;
+            appearance: auto !important;
+        }
+        
+
+            /* .hypersonic-form input::placeholder,.hypersonic-form select::placeholder {
+                font-size: 12px;
+            } */
+
+        .hypersonic-form button, #btnnxt {
+            padding: 8px 50px;
+            background-color: #cce92c;
+            color: #000;
+            font-size: 14px;
+            font-weight: 700;
+            margin: 10px 0 30px 0;
+        }
+
+        #mobilefield {
+            margin-bottom: -10px;
+        }
+
+        .hyper-product-img {
+            width: 100%;
+            /* padding: 0 0 32px; */
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: 30px 0;
+        }
+
+        .hypersonic-form label {
+            text-align: start !important;
+        }
+
+        #wlink {
+            color: #fff;
+            margin: auto;
+            text-align: center;
+        }
+
+            #wlink a {
+                text-decoration: none;
+                color: #fff;
+                font-weight: 600;
+            }
+
+        .sm-icons {
+            background-color: #000;
+            padding: 5px 20px;
+            justify-content: end;
+        }
+
+            .sm-icons a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            .sm-icons img {
+                width: 24px;
+                margin-left: 12px;
+            }
+
+        .ts-text {
+            margin-bottom: 49px;
+            padding: 10px 5px;
+            font-size: 23px;
+            font-weight: 700;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #000;
+            padding: 10px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+
+
+        @media screen and (max-width:767px) {
+            .hyper-logo {
+                width: 60%;
+            }
+
+            .hypersonic-form {
+                margin-top: 0%;
+            }
+
+            .sm-icons a {
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 600;
+                text-align: center;
+                padding: 0 6px;
+                margin: auto;
+            }
+
+            .ts-text {
+                font-size: 14px;
+            }
+
+            .hyper-product-img {
+                width: 100%;
+                position: initial;
+            }
+            .hyper-right-box {
+                height: auto;
+            }
+            .text-img {
+                padding:0px;
+                position: initial;
+            }
+            .desktop-view{
+                display: none;
+            }
+            .mobile-view{
+                display: block;
+                margin-top: 25%;
+            }
+        }
+    </style>
+
+
+
+   
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var baseurl = "https://www.vcqru.com";
+            mobile_val = "";
+            var lat = "";
+            var long = "";
+            var Codeone = "";
+            var Codetwo = "";
+            var comp = "";
+            var ID = "";
+            var alphabetCheck = /[a-zA-Z]/;
+            var digitCheck = /\d/;
+            var currentDate = new Date();
+
+            $("#Chkcode").show();
+            $("#Chkfields").hide();
+            $("#mobilefield").hide();
+            $("#Otherfield").hide();
+            $("#billnofield").hide();
+            $("#textheading").show();
+
+            $("#purchasedate").click(function () {
+                //alert();
+                currentDate.setDate(currentDate.getDate() - 5);
+                // Format the dates to be used in the input field
+                var maxDate = new Date().toISOString().split('T')[0];
+                var minDate = currentDate.toISOString().split('T')[0];
+                // Set the 'min' and 'max' attributes of the date input
+                document.getElementById('purchasedate').min = minDate;
+                document.getElementById('purchasedate').max = maxDate;
+                //$("#your_fieldname").next().data("DateTimePicker").maxDate(moment().add(5,'days'))
+            });
+
+            function getUrlVars() {
+                debugger;
+                var vars = [],
+                    hash;
+                var hashes = window.location.href.slice(window.location.href.indexOf("?") + 1).split("&");
+                for (var i = 0; i < hashes.length; i++) {
+                    hash = hashes[i].split("=");
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                return vars;
+            }
+            Codeone = getUrlVars()["codeone"];
+            Codetwo = getUrlVars()["codetwo"];
+            comp = getUrlVars()["codetwo"];
+            ID = getUrlVars()["ID"];
+            if (Codeone != "" && Codetwo != "" && ID != "") {
+                $("#HdnCode1").val(Codeone);
+                $("#HdnCode2").val(Codetwo);
+                $("#HdnID").val(ID);
+                $("#CompName").val(comp);
+            }
+            $("#example13_digit_number").mask("99999-99999999");
+            $("#mobile").mask("9999999999");
+            function Mobile_check() {
+                $("#err_msg").html("");
+                $("#err_msg").css("color", "black");
+                var mobile_val = $("#mobile").val();
+                var d = mobile_val.slice(0, 1);
+                var c = parseInt(d);
+                if (mobile_val.length == "" || mobile_val.length != 10) {
+                    $("#mobilecheck").show();
+                    $("#mobilecheck").html("**Please Enter mobile number");
+                    $("#mobilecheck").css("color", "red");
+                    flag = false;
+                    return false;
+                }
+                if (mobile_val.length == 10) {
+                    $("#err_msg").html("");
+                    $("#err_msg").css("color", "black");
+                    debugger;
+                    $("#mobilecheck").hide();
+                    var snn = baseurl + "/Info/MasterHandler.ashx?method=ConsumerDetailsByMobileNo&MobileNo= " + $("#mobile").val();
+                   // alert(snn);
+                    $.ajax({
+                        type: "Post",
+                        url: baseurl + "/Info/MasterHandler.ashx?method=ConsumerDetailsByMobileNo&MobileNo=" + $("#mobile").val(),
+                        success: function (data) {
+                            if (c <= 5) {
+                                $("#mobilecheck").text("Please Enter correct Mobile Number");
+                                $("#mobile").val("");
+                                return false;
+                            } else {
+                                //alert(data);
+                                var Name = data.split("~")[0];
+                                var pin = data.split("~")[6];
+                                var city = data.split("~")[2];
+                                var Email = data.split("~")[7];
+                                //alert(Name);
+                                $("#name").val(Name);
+                                $("#Pincode").val(pin);
+                                $("#city").val(city);
+                                $("#emailAddress").val(Email);
+                                //var alreadystatus = $("#alreadystatus").val();
+                                //alert(Name);
+                           
+                                if (Name != "" && pin != "" && city != "" && Email != "") {
+                                   // alert('1');
+                                    $("#Chkcode").hide();
+                                    $("#mobilefield").hide();
+                                    $("#Chkfields").show();
+                                    $("#Otherfield").hide();
+                                    /*if (alreadystatus == "Already") { $("#billnofield").hide(); } else { $("#billnofield").show();} */
+                                    $("#billnofield").show();
+                                } else {
+                                    //alert('2');
+                                    $("#Chkcode").hide();
+                                    $("#mobilefield").hide();
+                                    $("#Chkfields").show();
+                                    $("#Otherfield").show();
+                                    /*if (alreadystatus == "Already") { $("#billnofield").hide(); } else { $("#billnofield").show(); } */
+                                    $("#billnofield").show();
+                                }
+                            }
+                        },
+                    });
+                } else {
+                    $("#name").val("");
+                    $("#Pincode").val("");
+                    $("#city").val("");
+                }
+            }
+
+                    /*Pincode Api for the city and the state  */ function Pin_check() {
+                debugger;
+                let pin = document.getElementById("Pincode").value;
+                if (pin.length == 6) {
+                    $.getJSON("https://api.postalpincode.in/pincode/" + pin, function (data) {
+                        createHTML(data);
+                    });
+                    function createHTML(data) {
+                        if (data[0].Status == "Success") {
+                            var city = "";
+                            var state = "";
+                            var pin = "";
+                            var city = data[0].PostOffice[0]["District"];
+                            var Pin = data[0].PostOffice[0]["PinCode"];
+                            $("#Pincode").text("");
+                            $("#city").val(city);
+                            $("#city").attr("readonly", true);
+                            $("#pincheck").hide();
+                            $("#citycheck").hide();
+                            if ($("#city").val() != "") {
+                            }
+                            if ($("#state").val() != "") {
+                            }
+                        } else {
+                            $("#pincheck").show();
+                            $("#pincheck").html("**Please Enter Valid Pincode");
+                            $("#pincheck").css("color", "red");
+                            $("#city").attr("readonly", false);
+                            flag = false;
+                            pin_err = false;
+                            return false;
+                        }
+                    }
+                } else {
+                    $("#city").val("");
+                    $("#city").attr("readonly", false);
+                    $("#state").attr("readonly", false);
+                    $("#pincheck").show();
+                    $("#pincheck").html("**Please Enter the 6-digits pin code");
+                    $("#pincheck").css("color", "red");
+                    flag = false;
+                    return false;
+                }
+            }
+            function Name_check() {
+                var Name_val = $("#name").val();
+                if (Name_val.length == "") {
+                    $("#err_msg").show();
+                    $("#err_msg").html("**Please Enter Name");
+                    $("#err_msg").css("color", "red");
+                    flag = false;
+                    return false;
+                }
+                if ($("#name").val().match("^[a-z A-Z]{3,30}$")) {
+                    $("#err_msg").hide();
+                } else {
+                    $("#namecheck").show();
+                    $("#err_msg").html("**Please Enter valid name");
+                    $("#err_msg").css("color", "red");
+                    flag = false;
+                    return false;
+                }
+            }
+            function city_check() {
+                var city_val = $("#city").val();
+                if ($("#city").val().match("^[a-z A-Z]{3,40}$")) {
+                    $("#err_msg").hide();
+                } else {
+                    $("#err_msg").show();
+                    $("#err_msg").html("**Please enter valid city name");
+                    $("#err_msg").css("color", "red");
+                    flag = false;
+                    return false;
+                }
+            }
+            debugger;
+                                                /* debugger;*/ var id = $("#HdnID").val();
+            if (id == "1") {
+                $("#ChkCode").show();
+                $("#Chkfields").hide();
+            } else if (id == "Hypersonic") {
+                $("#Chkcode").hide();
+                $("#otherfield").hide();
+                $("#billnofield").hide();
+                $("#mobilefield").show();
+                $("#Chkfields").show();
+                var code = $("#HdnCode1").val() + "-" + $("#HdnCode2").val();
+                $("#example13_digit_number").val(code);
+            }
+            $("#btnnxt").on("click", function (e) {
+                e.preventDefault();
+                debugger;
+                var codeone = $("#example13_digit_number").val();
+                if (codeone == "" || codeone == undefined) {
+                    $("#nextcheck").html("**Please Enter 13 Digit Code");
+                    $("#nextcheck").css("color", "red");
+                    return false;
+                } else {
+                    $("#nextcheck").text("");
+                }
+                if (codeone != undefined) {
+                    if ($("#example13_digit_number").val().length < 14) {
+                        $("#nextcheck").text("**Please Enter 13 Digit Code");
+                        $("#nextcheck").css("color", "red");
+                        return false;
+                    } else {
+                        $("#nextcheck").text("");
+                        $("#nextcheck").hide();
+                    }
+                }
+                var rquestpage_Dcrypt = $("#example13_digit_number").val();
+                debugger;
+                $("#btnnxt").hide();
+                $("#btnloadnxt").show();
+                // var abbb = baseurl + "/Info/MasterHandler.ashx?method=chkwarranty&codeone=" + rquestpage_Dcrypt.split("-")[0] + "&codetwo=" + rquestpage_Dcrypt.split("-")[1] + "&lat=" + lat + "&long=" + long;
+                $.ajax({
+                    type: "POST",
+                    url: baseurl + "/Info/MasterHandler.ashx?method=chkwarranty&codeone=" + rquestpage_Dcrypt.split("-")[0] + "&codetwo=" + rquestpage_Dcrypt.split("-")[1] + "&lat=" + lat + "&long=" + long,
+                    success: function (data) {
+                       // alert(data);
+                        $("#btnnxt").show();
+                        $("#btnloadnxt").hide();
+                        /*  if (data.split("&")[1] == "TECHNICAL MINDS PRIVATE LIMITED" && data.toUpperCase().includes("ALREADY")) {
+
+                              /* $("#alreadystatus").val("Already"); */
+                        /*
+                        $("#TNTWarrentyFields").hide();
+                        $("#ShowMessage").show();
+                        $("#textheading").hide();
+                        var alreadymsg = "This code has already been verified and the product is already registered for warranty, kindly <a href='https://uat.vcqru.com/hypersonic.html'>click here<a/> to check another code or to claim the warranty <a href='https://qa.vcqru.com/login.aspx'>click here</a> <br>यह कोड पहले ही सत्यापित हो चुका है और उत्पाद पहले से ही वारंटी के लिए पंजीकृत है, कृपया किसी अन्य कोड की जांच करने के लिए <a href='https://qa.vcqru.com/hypersonic.html'>यहां क्लिक<a/> करें या वारंटी का दावा करने के लिए <a href='https://qa.vcqru.com/login.aspx'>यहां क्लिक</a> करें.";
+                        $("#p3msg").html(alreadymsg);
+                        $('#p3msg:contains("not")').css("color", "white");
+                        */
+                        /*
+                       $("#Chkcode").hide();
+                       $("#Chkfields").show();
+                       $("#Otherfield").hide();
+                       $("#mobilefield").show();
+                       $("#textheading").show();
+                       $("#billnofield").hide();
+
+
+                    } else */
+
+                        if (data.split("&")[1] == "TECHNICAL MINDS PRIVATE LIMITED" || data.split("&")[0] == "TECHNICAL MINDS PRIVATE LIMITED" || data.split("&")[1] == "") {
+                            $("#Chkcode").hide();
+                            $("#Chkfields").show();
+                            $("#Otherfield").hide();
+                            $("#mobilefield").show();
+                            $("#textheading").show();
+                        } else if (data.toUpperCase().includes("NOT VALID")) {
+                            $("#Chkcode").hide();
+                            $("#Chkfields").show();
+                            $("#Otherfield").hide();
+                            $("#mobilefield").show();
+                            $("#textheading").show();
+                        } else {
+                            var invalidmsg = "The code " + rquestpage_Dcrypt + " is invalid. Please check and try again!\n\nदर्ज किया गया कोड अमान्य है. कृपया जाँच करें और पुनः प्रयास करें";
+                            $("#TNTWarrentyFields").hide();
+                            $("#ShowMessage").show();
+                            $("#p3msg").html(invalidmsg);
+                            $("#textheading").hide();
+                            $('#p3msg:contains("not")').css("color", "white");
+                            return false;
+                        }
+                    },
+                });
+            });
+            $("#mobile").keyup(function () {
+                Mobile_check();
+            });
+            $("#name").keyup(function () {
+                Name_check();
+            });
+            $("#Pincode").mask("999999");
+            $("#Pincode").keyup(function () {
+                Pin_check();
+            });
+            $("#city").keyup(function () {
+                city_check();
+            });
+            $("#name").keypress(function (e) {
+                var regex = new RegExp("^[a-zA-Z \s]+$");
+                var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+                if (regex.test(str)) {
+                    return true;
+                } else {
+                    e.preventDefault();
+                    flag = false;
+                    return false;
+                }
+            });
+
+
+
+
+
+            $("#vehicleNumber").keypress(function (e) {
+                var regex = new RegExp("^[a-zA-Z0-9\s]+$");
+                var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+                if (regex.test(str)) {
+                    return true;
+                } else {
+                    e.preventDefault();
+                    flag = false;
+                    return false;
+                }
+            });
+            $("#btnsubmit").on("click", function () {
+                debugger;
+                $("#err_msg").html("");
+                $("#err_msg").css("color", "black");
+                $("#nextcheck").html("");
+                $("#nextcheck").css("color", "black");
+                var emailaddressVal = $("#emailAddress").val();
+                var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                if ($("#mobile").val().length != 10) {
+                    $("#mobilecheck").html("");
+                    $("#mobilecheck").css("color", "black");
+                    $("#err_msg").show();
+                    $("#err_msg").html("**Please enter valid mobile number");
+                    $("#err_msg").css("color", "red");
+                    $("#mobile").focus();
+                    flag = false;
+                    return false;
+                } else if ($("#name").val().length < 2) {
+                    $("#err_msg").show();
+                    $("#err_msg").html("**Please enter valid name");
+                    $("#err_msg").css("color", "red");
+                    $("#name").focus();
+                    flag = false;
+                    return false;
+                } else if (emailaddressVal.length <= 3) {
+                    $("#err_msg").show();
+                    $("#err_msg").html("**Please enter email address");
+                    $("#err_msg").css("color", "red");
+                    $("#emailAddress").focus();
+                    return false;
+                    flag = false;
+                } else if (!emailReg.test(emailaddressVal)) {
+                    $("#err_msg").show();
+                    $("#err_msg").html("**Please enter valid email address");
+                    $("#err_msg").css("color", "red");
+                    $("#emailAddress").focus();
+                    return false;
+                    flag = false;
+                } else if (!document.querySelector("#emailAddress").checkValidity()) {
+                    $("#err_msg").show();
+                    $("#err_msg").html("**Please enter valid email address");
+                    $("#err_msg").css("color", "red");
+                    $("#emailAddress").focus();
+                    flag = false;
+                    return false;
+                } else if ($("#Pincode").val().length < 6) {
+                    $("#err_msg").show();
+                    $("#err_msg").html("**Please enter valid pin code");
+                    $("#err_msg").css("color", "red");
+                    $("#Pincode").focus();
+                    flag = false;
+                    return false;
+                } else if ($("#city").val().length < 2) {
+                    $("#err_msg").show();
+                    $("#err_msg").html("**Please enter valid city");
+                    $("#err_msg").css("color", "red");
+                    $("#city").focus();
+                    flag = false;
+                    return false;
+                } else if ($("#purchasedate").val().length <= 8) {
+                    $("#err_msg").show();
+                    $("#err_msg").html("**Please select purchase date ");
+                    $("#err_msg").css("color", "red");
+                    $("#purchasedate").focus();
+                    flag = false;
+                    return false;
+                } else if ($("#vehicleNumber").val().length != 10) {
+                    $("#err_msg").show();
+                    $("#err_msg").html("**Please enter 10 digit vehicle number");
+                    $("#err_msg").css("color", "red");
+                    $("#vehicleNumber").focus();
+                    flag = false;
+                    return false;
+                } else if (!alphabetCheck.test($("#vehicleNumber").val())) {
+                    $("#err_msg").show();
+                    $("#err_msg").html("**Please enter valid vehicle number");
+                    $("#err_msg").css("color", "red");
+                    $("#vehicleNumber").focus();
+                    flag = false;
+                    return false;
+
+                } else if (!digitCheck.test($("#vehicleNumber").val())) {
+                    $("#err_msg").show();
+                    $("#err_msg").html("**Please enter valid vehicle number");
+                    $("#err_msg").css("color", "red");
+                    $("#vehicleNumber").focus();
+                    flag = false;
+                    return false;
+                } else if ($("#purchagedForm").val() == "") {
+                    $("#err_msg").show();
+                    $("#err_msg").html("**Please select device");
+                    $("#err_msg").css("color", "red");
+                    $("#purchagedForm").focus();
+                    flag = false;
+                    return false;
+                } else if ($(".img_bill").val().length < 2) {
+                    $("#err_msg").text("Please upload GST Invoice / Challan of Authorised Dealer / Company QC Date Mentioned on Product");
+                    $("#err_msg").css("color", "red");
+                    $(".img_bill").focus();
+                    flag = false;
+                    return false;
+                } else {
+                    $("#err_msg").hide();
+                    $("#err_msg").html("");
+                    flag = true;
+                }
+                var code = $("#example13_digit_number").val();
+                if (code != "" && flag == true) {
+                    $("#btnsubmit").hide();
+                    $("#btnloadsubmit").show();
+                    $("#btnsubmit").prop("disabled", true);
+                    var fd = new FormData();
+                    var files = $("#file-input")[0].files[0];
+                    fd.append("file", files);
+                    var datamsg = "";
+                    debugger;
+                    var abdb = "/Info/MasterHandler.ashx?method=chkgenuenity&codeone=" + code.substring(0, 5) + "&codetwo=" + code.substring(6, 14) + "&mobile=" + $("#mobile").val() + "&city=" + $("#city").val() + "&PinCode=" + $("#Pincode").val() + "&name=" + $("#name").val() + "&email=" + $("#emailAddress").val() + "&purchasedate=" + $("#purchasedate").val();
+                   // alert(abdb);
+                    $.ajax({
+                        type: "POST",
+                        contentType: false,
+                        processData: false,
+                        data: fd,
+                        url:
+                            baseurl +
+                            "/Info/MasterHandler.ashx?method=chkgenuenity&codeone=" + code.substring(0, 5) + "&codetwo=" + code.substring(6, 14) +"&mobile=" +  $("#mobile").val() + "&city=" + $("#city").val() + "&PinCode=" + $("#Pincode").val() + "&name=" + $("#name").val() +"&email=" + $("#emailAddress").val() + "&purchasedate=" + $("#purchasedate").val(),
+                        success: function (datamsg) {
+                            //alert(datamsg);
+                            if (datamsg.toUpperCase().includes("ALREADY")) {
+                               
+                                $("#TNTWarrentyFields").hide();
+                                $("#ShowMessage").show();
+                                $("#textheading").hide();
+                                $("#p3msg").html(datamsg);
+                                $('#p3msg:contains("not")').css("color", "white");
+                            } else if (datamsg.toUpperCase().includes("INVALID")) {
+                                var invalidmsg = "The code " + code + " is invalid. Please check and try again! \n\nदर्ज किया गया कोड अमान्य है. कृपया जाँच करें और पुनः प्रयास करें";
+                                $("#TNTWarrentyFields").hide();
+                                $("#ShowMessage").show();
+                                $("#textheading").hide();
+                                $("#p3msg").html(invalidmsg);
+                                $('#p3msg:contains("not")').css("color", "white");
+                            } else if (datamsg.toUpperCase().includes("DEACTIVATED")) {
+                                var sercodeprb = "The service of this coupon has been deactivated , Please contact to your service provider.!";
+                                $("#TNTWarrentyFields").hide();
+                                $("#ShowMessage").show();
+                                $("#textheading").hide();
+                                $("#p3msg").html(sercodeprb);
+                                $('#p3msg:contains("not")').css("color", "white");
+                            }
+
+                            
+                            else {
+                                $.ajax({
+                                    type: "POST",
+                                    contentType: false,
+                                    processData: false,
+                                    data: fd,
+                                    url:
+                                        baseurl +
+                                        "/Info/MasterHandler.ashx?method=browsesave&email=" + $("#emailAddress").val() + "&mobile=" +
+                                        $("#mobile").val() +
+                                        "&billno=" +
+                                        $("#vehicleNumber").val() +
+                                        "&state=" +
+                                        $("#purchagedForm").val() +
+                                        "&purchasedate=" +
+                                        $("#purchasedate").val() +
+                                        "&code=" +
+                                        code +
+                                        "&city=" +
+                                        $("#city").val() +
+                                        "&dealerName=" +
+                                        $("#name").val() +
+                                        "&email=" +
+                                        $("#emailAddress").val(),
+                                    success: function (data) {
+                                        if (data != "") {
+                                         //   alert(data);
+                                            var msg11 = datamsg.split("<br/>")[0];
+                                            var msg22 = "";
+                                            var datamsg22 = msg11 + msg22;
+                                            var datexp = msg11.substr(-11);
+                                            $("#TNTWarrentyFields").hide();
+                                            $("#ShowMessage").show();
+                                            $("#p3msg").html(data);
+                                            $('#p3msg:contains("not")').css("color", "white");
+                                            $("#textheading").hide();
+                                        } else {
+                                            $("#TNTWarrentyFields").hide();
+                                            $("#ShowMessage").show();
+                                            $("#textheading").hide();
+                                            $("#p3msg").html(datamsg);
+                                            $('#p3msg:contains("not")').css("color", "white");
+                                        }
+                                    },
+                                });
+                            }
+                        },
+                    });
+                } else {
+                    $("#btnsubmit").attr("disabled", false);
+                }
+            });
+        });
+        $(document).on("click", "#btnNext", () => {
+            window.location.href = "https://hypersonic.club/e-warranty/";
+        });
+    </script>
+</head>
+<body>
+    <section class="hypersonic-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4">
+				  <div class="row">
+                        <div class="col-sm-12">
+                            <img src="assets/images/hypersonic/text.png" alt="text" class="img-fluid text-img mobile-view" />
+                        </div>
+                    </div>
+                    <a href="https://hypersonic.club/" target="_blank"><img src="assets/images/hypersonic/hypersonic-logo.svg" alt="logo" class="img-fluid hyper-logo" /></a>
+                    <div class="hypersonic-form">
+                        <form>
+                            <input type="hidden" id="HdnID" value="" /> <input type="hidden" id="HdnCode1" value="" /> <input type="hidden" id="HdnCode2" value="" /> <input type="hidden" id="CompName" value="" />
+                            <input type="hidden" id="long" value="" /> <input type="hidden" id="lat" value="" />
+                            <input type="hidden" id="alreadystatus" value="" /> <input type="hidden" id="lat" value="" />
+                            <h5 id="textheading">Register for E Warranty, fill below details/ ई वारंटी के लिए पंजीकरण करें, नीचे विवरण भरें</h5>
+                            <div class="row">
+                                <div id="TNTWarrentyFields">
+                                    <div id="Chkcode">
+                                        <div class="col-sm-12">
+                                            <input type="text"
+                                                   placeholder="13 Digit No./13 अंकों की संख्या*"
+                                                   data-msg-required="Please Enter Your13 Digit Code"
+                                                   class="form-control"
+                                                   id="example13_digit_number"
+                                                   minlength="13"
+                                                   maxlength="13"
+                                                   required
+                                                   oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                   title="Enter 13 digit code" />
+                                            <div class="col-sm-12 text-center mb-3"><label id="nextcheck"></label></div>
+                                            <div class="col-sm-12 text-center"><button type="button" class="submit-btn" id="btnnxt" style="margin-top: -5px;">Next/ अगला</button></div>
+                                            <button type="submit" style="display: none;" id="btnloadnxt" class="form-control"><i class="fa fa-sPincodener fa-sPincode"></i>Loading..</button>
+                                        </div>
+                                    </div>
+                                    <div id="Chkfields">
+                                        <div class="mobilefield" id="mobilefield">
+                                            <div class="col-sm-12">
+                                                <input type="text"
+                                                       placeholder="Mobile No/मोबाइल नंबर*"
+                                                       class="form-control"
+                                                       id="mobile"
+                                                       required
+                                                       minlength="10"
+                                                       maxlength="10"
+                                                       required
+                                                       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                       title="Enter 10 digit mobile number" />
+                                                   <center><label id="mobilecheck"></label></center>
+                                            </div>
+                                        </div>
+                                        <div class="Otherfield" id="Otherfield" style="display: none;">
+                                            <div class="col-sm-12"><input type="text" placeholder="Name/नाम*" class="form-control" id="name" required /></div>
+                                            <div class="col-sm-12">
+                                                <input type="email" placeholder="Email ID/ ईमेल आईडी*" data-msg-required="Please enter the e-mail address." class="form-control" name="emailAddress" id="emailAddress" required />
+                                            </div>
+                                            <div class="col-sm-12"><input type="text" placeholder="Pincode/पिन कोड*" class="form-control" id="Pincode" /></div>
+                                            <div class="col-sm-12"><input type="text" placeholder="City/शहर*" class="form-control" id="city" required /></div>
+                                        </div>
+                                        <div class="billnofield" id="billnofield" style="display: none;">
+                                            <div class="col-sm-12">
+                                                <label id="purhase_label" class="">Enter Purchase Date/खरीद तिथि दर्ज करें <sup>*</sup></label>
+                                                <input type="date" class="form-control datepicker" id="purchasedate" placeholder="Purchase Date - खरीद की तारीख" required />
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <input type="text" placeholder="Vehicle number - वाहन क्रमांक *" class="form-control" id="vehicleNumber" minlength="10" maxlength="10" required style="text-transform: uppercase;" pattern="[A-Z0-9]" />
+                                            </div>
+                                            <div class="col-12">
+                                                <select class="col-sm-12 form-control" id="purchagedForm" required>
+                                                    <option value="">Select Device/डिवाइस का चयन करें <sup>*</sup></option>
+                                                    <option value="Incar Infotainment Non Android">Incar Infotainment Non Android</option>
+                                                    <option value="Car Lighting">Car Lighting</option>
+                                                    <option value="Car Audio">Car Audio</option>
+                                                    <option value="Add on Accessories">Add on Accessories</option>
+                                                </select>
+                                            </div>
+                                            <!--div class="col-sm-12">                                                <input type="text" placeholder="Bill No./बिल संख्या*" data-msg-required="Please Enter Your13 Digit Code" class="form-control" id="billNumber" minlength="13" maxlength="13" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" title="Enter 13 digit code warranty number" />                                            </div-->
+                                            <div class="col-sm-12">
+                                                <label>Bill/Invoice Upload/बिल/चालान अपलोड करें <sup>*</sup></label> <input type="file" id="file-input" class="form-control file-box img_bill" accept="image/*,application/pdf" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 text-center" id="err_msg"></div>
+                                        <div class="col-sm-12 text-center">
+                                            <button type="button" class="submit-btn" id="btnsubmit">Submit/ जमा करना</button>
+                                            <button type="submit" style="display: none;" id="btnloadsubmit" class="btn btn-primary"><i class="fa fa-spinner fa-spin"></i>Loading..</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="display: none; padding: 30px 30px 30px -10px; border-radius: 15px;" id="ShowMessage">
+                                    <div class="form-box text-center" style="text-align: center;"><p id="p3msg" style="overflow: hidden;" class="massage_box"></p></div>
+                                    <div class="text-center" style="margin-top: -5px;"><button type="button" class="submit-btn text-center" id="btnNext">Close</button></div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <p id="wlink" class="blink_me animate__animated animate__flash">
+                                        QR/Code Related Support Available on <br />
+                                        <i class="fa fa-phone" aria-hidden="true"></i><a href="tel:7353000903"> 7353000903 </a> / <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                        <a href="https://api.whatsapp.com/send?phone=+919355903119&amp;text&amp;type=phone_number&amp;app_absent=1" target="blank"> 9355903119 </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-8 hyper-right-box">
+                    <div class="row">
+                        <div class="col-sm-12"><img src="assets/images/hypersonic/text.png" alt="text" class="img-fluid text-img desktop-view" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-center"><img src="assets/images/hypersonic/product-img.png" alt="product-img" class="img-fluid hyper-product-img" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-0">
+            <div class="d-flex sm-icons">
+                <a href="https://www.instagram.com/hypersonicclub/?hl=en" target="_blank"> <img src="assets/images/hypersonic/instagram.png" alt="instagram" /> hypersonicclub </a>
+                <a href="https://twitter.com/Hypersonicclub" target="_blank"> <img src="assets/images/hypersonic/twitter.png" alt="twitter" /> @Hypersonicclub </a>
+                <a href="https://www.facebook.com/hypersonic.club/" target="_blank"> <img src="assets/images/hypersonic/facebook.png" alt="facebook" /> Hypersonic Android Official </a>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12"><h5 class="text-end ts-text">For Technical Support and Queries 011-45096630</h5></div>
+            </div>
+        </div>
+        <footer class="text-center"><a href="https://hypersonic.club/">www.hypersonic.club</a></footer>
+    </section>
+</body>
+</html>

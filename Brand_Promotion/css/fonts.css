@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face
+{
+	font-family:roboto-regular;
+	src:url(../fonts/roboto/Roboto-Regular.ttf);
+}
+@font-face
+{
+	font-family:roboto-light;
+	src:url(../fonts/roboto/Roboto-Light.ttf);
+}
+@font-face
+{
+	font-family:ptsan-regular;
+	src:url(../fonts/PTS55F.ttf);
+}
+@font-face
+{
+	font-family:ptsan-bold;
+	src:url(../fonts/PTS75F.ttf);
+}
+
+@font-face
+{
+	font-family:oswald-regular;
+	src:url(../fonts/Oswald-Regular.otf);
+}
+@font-face
+{
+	font-family:oswald-light;
+	src:url(../fonts/oswald-light.ttf);
+}
+@font-face
+{
+	font-family:oswald-bold;
+	src:url(../fonts/Oswald-Bold.otf);
+}
+
+@font-face
+{
+	font-family:lato-light;
+	src:url(../fonts/Lato-Light.ttf);
+}
+@font-face
+{
+	font-family:lato-regular;
+	src:url(../fonts/Lato-Regular.ttf);
+}
+@font-face
+{
+	font-family:domine-regular;
+	src:url(../fonts/Domine-Regular.ttf);
+}
+@font-face
+{
+	font-family:domine-bold;
+	src:url(../fonts/Domine-Bold.ttf);
+}
+@font-face
+{
+	font-family:robotoslab-bold;
+	src:url(../fonts/Domine-Bold.ttf);
+}
+@font-face
+{
+	font-family:robotoslab-regular;
+	src:url(../fonts/Domine-Regular.ttf);
+}
+@font-face
+{
+	font-family:robotoslab-light;
+	src:url(../fonts/Domine-Light.ttf);
+}
